@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Miles Calculator & Business Class Map from Zürich | Meilenguru</title>
+  <meta name="description" content="Free tools: estimate how many Miles & More or Flying Blue miles you need for Business Class, and see all destinations reachable from ZRH on the interactive map.">
+  <link rel="canonical" href="https://meilenguru.ch/tools.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --black: #0a0a0a; --white: #faf9f7; --warm-white: #f5f3ef;
+    --gold: #b8962e; --gold-light: #d4ae4e; --muted: #888580;
+    --border: rgba(10,10,10,0.1); --border-mid: rgba(10,10,10,0.15);
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'DM Sans', sans-serif;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font-body); background: var(--white); color: var(--black); font-size: 15px; line-height: 1.6; overflow-x: hidden; }
+
+  /* NAV */
+  nav { position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.1rem 2rem; background: rgba(250,249,247,0.95); backdrop-filter: blur(12px); border-bottom: 0.5px solid var(--border); }
+  .logo { font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; color: var(--black); text-decoration: none; }
+  .logo span { color: var(--gold); }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--black); text-decoration: none; font-weight: 400; transition: color 0.2s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--gold); }
+  .nav-cta { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--black); color: var(--white); padding: 0.45rem 1.1rem; text-decoration: none; transition: background 0.2s; }
+  .nav-cta:hover { background: #2a2a2a; }
+  .nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+  .nav-toggle span { display: block; width: 22px; height: 1px; background: var(--black); }
+  .mobile-menu { display: none; flex-direction: column; background: var(--white); border-bottom: 0.5px solid var(--border); padding: 1.5rem 2rem; gap: 1.25rem; }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a { font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--black); text-decoration: none; }
+  .mobile-menu .mobile-cta { display: inline-block; margin-top: 0.5rem; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--black); color: var(--white); padding: 0.6rem 1.25rem; text-align: center; text-decoration: none; }
+
+  /* PAGE HERO */
+  .page-hero { background: var(--black); padding: 5rem 2rem 4rem; position: relative; overflow: hidden; }
+  .page-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 80% at 80% 50%, rgba(184,150,46,0.07) 0%, transparent 65%); pointer-events: none; }
+  .hero-inner { max-width: 1000px; margin: 0 auto; position: relative; z-index: 1; }
+  .hero-eyebrow { font-size: 0.67rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; font-weight: 500; }
+  .hero-title { font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 300; line-height: 1.05; color: var(--white); margin-bottom: 1rem; }
+  .hero-title em { font-style: italic; color: var(--gold); }
+  .hero-subtitle { font-size: 0.95rem; color: rgba(250,249,247,0.5); font-weight: 300; line-height: 1.75; max-width: 520px; }
+
+  /* TOOL SECTIONS */
+  .tool-section { padding: 5rem 2rem; }
+  .tool-section.warm { background: var(--warm-white); }
+  .tool-inner { max-width: 1000px; margin: 0 auto; }
+  .tool-header { margin-bottom: 2.5rem; }
+  .tool-eyebrow { font-size: 0.67rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); font-weight: 500; margin-bottom: 0.75rem; }
+  .tool-title { font-family: var(--font-display); font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 300; line-height: 1.1; margin-bottom: 0.75rem; }
+  .tool-title em { font-style: italic; color: var(--gold); }
+  .tool-subtitle { font-size: 0.9rem; color: var(--muted); font-weight: 300; line-height: 1.75; max-width: 560px; }
+
+  /* CALCULATOR */
+  .calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start; }
+  .calc-controls { background: var(--white); border: 0.5px solid var(--border); padding: 2rem; }
+  .calc-results { background: var(--black); padding: 2rem; }
+
+  .form-group { margin-bottom: 1.5rem; }
+  .form-label { font-size: 0.67rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); font-weight: 500; display: block; margin-bottom: 0.5rem; }
+  .form-select {
+    width: 100%; background: var(--warm-white); border: 0.5px solid var(--border-mid);
+    padding: 0.6rem 0.85rem; font-family: var(--font-body); font-size: 0.88rem;
+    color: var(--black); appearance: none; cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23888580' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: right 0.85rem center;
+    transition: border-color 0.2s;
+  }
+  .form-select:hover { border-color: var(--gold); }
+  .form-select:focus { outline: none; border-color: var(--gold); }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+  /* Result cards */
+  .result-eyebrow { font-size: 0.63rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(250,249,247,0.35); font-weight: 500; margin-bottom: 1.5rem; }
+  .result-primary { margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 0.5px solid rgba(250,249,247,0.08); }
+  .result-primary-label { font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(250,249,247,0.4); font-weight: 500; margin-bottom: 0.35rem; }
+  .result-primary-value { font-family: var(--font-display); font-size: 2.8rem; font-weight: 300; color: var(--gold); line-height: 1; }
+  .result-primary-sub { font-size: 0.78rem; color: rgba(250,249,247,0.3); margin-top: 0.3rem; }
+
+  .result-secondary-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(250,249,247,0.08); margin-bottom: 1.5rem; }
+  .result-secondary-cell { background: var(--black); padding: 1rem; }
+  .result-secondary-label { font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(250,249,247,0.35); margin-bottom: 0.3rem; }
+  .result-secondary-value { font-family: var(--font-display); font-size: 1.4rem; font-weight: 300; color: var(--white); }
+
+  .result-amex { background: rgba(184,150,46,0.08); border: 0.5px solid rgba(184,150,46,0.2); padding: 1rem; margin-bottom: 1.5rem; display: none; }
+  .result-amex-label { font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.3rem; }
+  .result-amex-value { font-family: var(--font-display); font-size: 1.6rem; font-weight: 300; color: var(--gold-light); }
+
+  .result-note { font-size: 0.78rem; color: rgba(250,249,247,0.35); line-height: 1.65; font-weight: 300; }
+
+  .calc-disclaimer { font-size: 0.75rem; color: var(--muted); margin-top: 1.5rem; line-height: 1.65; font-weight: 300; }
+
+  /* MAP */
+  .map-container { position: relative; border: 0.5px solid var(--border); overflow: hidden; background: var(--warm-white); }
+  .map-tooltip {
+    position: absolute; background: var(--black); border: 0.5px solid rgba(184,150,46,0.3);
+    padding: 1rem 1.25rem; font-size: 0.82rem; pointer-events: none; display: none;
+    min-width: 200px; z-index: 10;
+  }
+  .map-tooltip-city { font-family: var(--font-display); font-size: 1.15rem; font-weight: 400; color: var(--white); margin-bottom: 0.5rem; }
+  .map-tooltip-row { font-size: 0.78rem; color: rgba(250,249,247,0.55); font-weight: 300; margin-bottom: 0.2rem; }
+  .map-tooltip-row span { color: var(--gold); font-weight: 500; }
+  .map-tooltip-cash { font-size: 0.72rem; color: rgba(250,249,247,0.3); margin-top: 0.4rem; font-weight: 300; }
+
+  .map-legend { display: flex; gap: 1.5rem; flex-wrap: wrap; margin-top: 1.25rem; }
+  .map-legend-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.75rem; color: var(--muted); font-weight: 300; }
+  .map-legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+  .map-legend-line { width: 18px; height: 2px; flex-shrink: 0; background: var(--gold); border-radius: 1px; }
+
+  /* CTA */
+  .cta-section { background: var(--black); padding: 5rem 2rem; text-align: center; }
+  .cta-inner { max-width: 580px; margin: 0 auto; }
+  .cta-eyebrow { font-size: 0.67rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; font-weight: 500; }
+  .cta-title { font-family: var(--font-display); font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 300; color: var(--white); line-height: 1.15; margin-bottom: 1rem; }
+  .cta-title em { font-style: italic; color: var(--gold); }
+  .cta-text { font-size: 0.9rem; color: rgba(250,249,247,0.5); font-weight: 300; line-height: 1.8; margin-bottom: 2rem; }
+  .btn-primary { display: inline-block; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--white); color: var(--black); padding: 0.8rem 1.75rem; text-decoration: none; transition: background 0.2s; font-family: var(--font-body); }
+  .btn-primary:hover { background: #e8e6e2; }
+
+  /* FOOTER */
+  footer { background: var(--warm-white); border-top: 0.5px solid var(--border); padding: 2rem 2rem 1.5rem; }
+  .footer-bottom { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; }
+  .footer-bottom p { font-size: 0.7rem; color: var(--muted); }
+  .footer-nav { display: flex; gap: 1.5rem; }
+  .footer-nav a { font-size: 0.72rem; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+  .footer-nav a:hover { color: var(--black); }
+
+  /* MOBILE */
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.25rem; }
+    .nav-links { display: none; }
+    .nav-cta { display: none; }
+    .nav-toggle { display: flex; }
+    .tool-section { padding: 3.5rem 1.25rem; }
+    .page-hero { padding: 3.5rem 1.25rem 3rem; }
+    .calc-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .result-secondary-grid { grid-template-columns: 1fr; }
+    .footer-bottom { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+
+</head>
+<body>
+
+
+<nav>
+  <a href="index.html" class="logo">Meilen<span>guru</span></a>
+  <ul class="nav-links">
+    <li><a href="strategies.html">Strategies</a></li>
+    <li><a href="referrals.html">Referrals</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="tools.html" class="active">Tools</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="consultation.html">Consult</a></li>
+  </ul>
+  <a href="consultation.html" class="nav-cta">Book a Session</a>
+  <button class="nav-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="strategies.html" onclick="closeMenu()">Strategies</a>
+  <a href="referrals.html" onclick="closeMenu()">Referrals</a>
+  <a href="blog.html" onclick="closeMenu()">Blog</a>
+  <a href="tools.html" onclick="closeMenu()">Tools</a>
+  <a href="about.html" onclick="closeMenu()">About</a>
+  <a href="consultation.html" onclick="closeMenu()">Consult</a>
+  <a href="consultation.html" class="mobile-cta" onclick="closeMenu()">Book a Session</a>
+</div>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">Free tools · No signup required</p>
+    <h1 class="hero-title">Miles calculator<br><em>& destination map</em></h1>
+    <p class="hero-subtitle">Work out roughly how many miles you need, what they're worth vs. the cash price, and where you could fly from Zürich right now. All estimates — always verify before transferring.</p>
+  </div>
+</div>
+
+<!-- CALCULATOR -->
+<section class="tool-section" id="calculator">
+  <div class="tool-inner">
+    <div class="tool-header">
+      <p class="tool-eyebrow">Tool 01 — Miles calculator</p>
+      <h2 class="tool-title">How many miles<br><em>do you actually need?</em></h2>
+      <p class="tool-subtitle">Select your programme, cabin, and destination. The calculator shows estimated miles required, taxes, cash equivalent, and value per mile.</p>
+    </div>
+
+    <div class="calc-grid">
+      <!-- Controls -->
+      <div class="calc-controls">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="c-programme">Programme</label>
+            <select class="form-select" id="c-programme">
+              <option value="mm">Miles & More</option>
+              <option value="fb">Flying Blue</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="c-cabin">Cabin class</label>
+            <select class="form-select" id="c-cabin">
+              <option value="business">Business Class</option>
+              <option value="first">First Class</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="c-dest">Destination from Switzerland</label>
+          <select class="form-select" id="c-dest">
+            <option value="europe_short">Europe — short haul (LHR, CDG, FCO...)</option>
+            <option value="europe_medium">Europe — long haul (LIS, ATH, HEL...)</option>
+            <option value="usa">North America (JFK, LAX, YYZ...)</option>
+            <option value="latam">Latin America / Caribbean (GRU, CUN, BOG...)</option>
+            <option value="middle_east">Middle East (DXB, DOH, MCT...)</option>
+            <option value="east_africa">East Africa (NBO, ADD...)</option>
+            <option value="south_asia">South Asia (DEL, BOM, CMB...)</option>
+            <option value="southeast_asia">Southeast Asia (BKK, SIN, KUL...)</option>
+            <option value="east_asia">East Asia (NRT, ICN, HKG...)</option>
+            <option value="australia">Australia / NZ (SYD, MEL, AKL...)</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="c-trip">Trip type</label>
+            <select class="form-select" id="c-trip">
+              <option value="1">One way</option>
+              <option value="2">Return</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="c-amex">Using Amex MR?</label>
+            <select class="form-select" id="c-amex">
+              <option value="no">No — direct card miles</option>
+              <option value="yes">Yes — transferring from Amex</option>
+            </select>
+          </div>
+        </div>
+
+        <p class="calc-disclaimer">Estimates based on typical award rates. Dynamic pricing means real costs vary — particularly for Miles & More (LH Group routes) and all Flying Blue redemptions. Always confirm on the programme's website before moving miles. Taxes shown are approximate.</p>
+      </div>
+
+      <!-- Results -->
+      <div class="calc-results">
+        <p class="result-eyebrow">Estimated redemption</p>
+
+        <div class="result-primary">
+          <p class="result-primary-label">Miles required</p>
+          <p class="result-primary-value" id="r-miles">—</p>
+          <p class="result-primary-sub" id="r-miles-sub"></p>
+        </div>
+
+        <div class="result-secondary-grid">
+          <div class="result-secondary-cell">
+            <p class="result-secondary-label">Taxes & fees</p>
+            <p class="result-secondary-value" id="r-fees">—</p>
+          </div>
+          <div class="result-secondary-cell">
+            <p class="result-secondary-label">Cash equivalent</p>
+            <p class="result-secondary-value" id="r-cash">—</p>
+          </div>
+          <div class="result-secondary-cell">
+            <p class="result-secondary-label">Value per mile</p>
+            <p class="result-secondary-value" id="r-cpm">—</p>
+          </div>
+          <div class="result-secondary-cell">
+            <p class="result-secondary-label">Saving vs cash</p>
+            <p class="result-secondary-value" id="r-saving">—</p>
+          </div>
+        </div>
+
+        <div class="result-amex" id="r-amex-box">
+          <p class="result-amex-label">Amex MR points needed (2:1 Swiss ratio)</p>
+          <p class="result-amex-value" id="r-amex">—</p>
+        </div>
+
+        <p class="result-note" id="r-note"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<section class="tool-section warm" id="map">
+  <div class="tool-inner">
+    <div class="tool-header">
+      <p class="tool-eyebrow">Tool 02 — Destination map</p>
+      <h2 class="tool-title">Where could you fly<br><em>from Zürich right now?</em></h2>
+      <p class="tool-subtitle">Business Class miles required from ZRH. Hover or tap any destination to see M&M and Flying Blue estimates alongside the cash equivalent.</p>
+    </div>
+
+    <div class="map-container">
+      <svg id="worldMap" viewBox="0 0 960 480" style="width:100%;display:block;"></svg>
+      <div class="map-tooltip" id="mapTooltip">
+        <p class="map-tooltip-city" id="tt-city"></p>
+        <p class="map-tooltip-row">M&M: <span id="tt-mm"></span> miles one-way</p>
+        <p class="map-tooltip-row">Flying Blue: <span id="tt-fb"></span> miles one-way</p>
+        <p class="map-tooltip-cash" id="tt-cash"></p>
+      </div>
+    </div>
+
+    <div class="map-legend">
+      <div class="map-legend-item"><span class="map-legend-dot" style="background:#ba7517;"></span>Under 60k miles</div>
+      <div class="map-legend-item"><span class="map-legend-dot" style="background:#7a4f0b;"></span>60k–100k miles</div>
+      <div class="map-legend-item"><span class="map-legend-dot" style="background:#412402;"></span>Over 100k miles</div>
+      <div class="map-legend-item"><span class="map-legend-line"></span>Flight path from ZRH</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <p class="cta-eyebrow">Want a personalised estimate?</p>
+    <h2 class="cta-title">These are ballparks.<br><em>Your situation is specific.</em></h2>
+    <p class="cta-text">The calculator gives you a starting point. A consultation gives you the exact route, the right transfer timing, and the best card setup for your specific balance and travel goals.</p>
+    <a href="consultation.html" class="btn-primary">Book a session — CHF 79</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-bottom">
+    <a href="index.html" class="logo" style="font-size:1.2rem;">Meilen<span style="color:var(--gold);">guru</span></a>
+    <p>© 2025 Meilenguru · meilenguru.ch · Zürich, Switzerland</p>
+    <nav class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="strategies.html">Strategies</a>
+      <a href="blog.html">Blog</a>
+      <a href="tools.html">Tools</a>
+      <a href="consultation.html">Book a Session</a>
+    </nav>
+  </div>
+</footer>
+
+<!-- D3 + TOPOJSON for map -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+
+<script>
+function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
+function closeMenu() { document.getElementById('mobileMenu').classList.remove('open'); }
+
+/* ── CALCULATOR ── */
+const calcData = {
+  mm: {
+    business: {
+      europe_short:   { miles: 35000,  fees: 80,  cash: 800 },
+      europe_medium:  { miles: 50000,  fees: 120, cash: 1400 },
+      usa:            { miles: 70000,  fees: 350, cash: 4500 },
+      latam:          { miles: 80000,  fees: 400, cash: 5000 },
+      middle_east:    { miles: 45000,  fees: 200, cash: 2500 },
+      east_africa:    { miles: 60000,  fees: 300, cash: 3500 },
+      south_asia:     { miles: 55000,  fees: 280, cash: 3200 },
+      southeast_asia: { miles: 65000,  fees: 320, cash: 4000 },
+      east_asia:      { miles: 75000,  fees: 380, cash: 5500 },
+      australia:      { miles: 110000, fees: 450, cash: 7000 },
+    },
+    first: {
+      europe_short:   { miles: 60000,  fees: 100, cash: 1500 },
+      europe_medium:  { miles: 80000,  fees: 140, cash: 2500 },
+      usa:            { miles: 110000, fees: 400, cash: 9000 },
+      latam:          { miles: 130000, fees: 480, cash: 11000 },
+      middle_east:    { miles: 70000,  fees: 250, cash: 5000 },
+      east_africa:    { miles: 100000, fees: 380, cash: 7000 },
+      south_asia:     { miles: 90000,  fees: 350, cash: 6500 },
+      southeast_asia: { miles: 100000, fees: 400, cash: 8000 },
+      east_asia:      { miles: 120000, fees: 450, cash: 10000 },
+      australia:      { miles: 160000, fees: 550, cash: 13000 },
+    }
+  },
+  fb: {
+    business: {
+      europe_short:   { miles: 20000,  fees: 80,  cash: 700 },
+      europe_medium:  { miles: 35000,  fees: 120, cash: 1200 },
+      usa:            { miles: 60000,  fees: 350, cash: 4000 },
+      latam:          { miles: 65000,  fees: 380, cash: 4500 },
+      middle_east:    { miles: 40000,  fees: 180, cash: 2200 },
+      east_africa:    { miles: 50000,  fees: 260, cash: 3000 },
+      south_asia:     { miles: 50000,  fees: 250, cash: 2800 },
+      southeast_asia: { miles: 60000,  fees: 300, cash: 3800 },
+      east_asia:      { miles: 65000,  fees: 350, cash: 4500 },
+      australia:      { miles: 80000,  fees: 420, cash: 6000 },
+    },
+    first: {
+      europe_short:   { miles: 40000,  fees: 100, cash: 1200 },
+      europe_medium:  { miles: 60000,  fees: 140, cash: 2200 },
+      usa:            { miles: 90000,  fees: 380, cash: 7500 },
+      latam:          { miles: 100000, fees: 450, cash: 9000 },
+      middle_east:    { miles: 65000,  fees: 220, cash: 4000 },
+      east_africa:    { miles: 80000,  fees: 340, cash: 5500 },
+      south_asia:     { miles: 75000,  fees: 320, cash: 5000 },
+      southeast_asia: { miles: 85000,  fees: 370, cash: 6500 },
+      east_asia:      { miles: 95000,  fees: 420, cash: 8000 },
+      australia:      { miles: 120000, fees: 500, cash: 10000 },
+    }
+  }
+};
+
+const calcNotes = {
+  mm: 'Miles & More uses dynamic pricing for LH Group flights (SWISS, Lufthansa, Austrian). Star Alliance partner redemptions use the fixed chart — often better value, especially long-haul.',
+  fb: 'Flying Blue is fully dynamic. Check Promo Awards on the 1st of each month — discounts of 25–50% mean these estimates may be significantly lower for certain routes.'
+};
+
+function fmtMiles(n) { return (n >= 1000 ? (n / 1000).toFixed(0) + ',000' : n).toString(); }
+function fmtK(n) { return (n / 1000).toFixed(0) + 'k'; }
+
+function calcUpdate() {
+  const prog = document.getElementById('c-programme').value;
+  const cabin = document.getElementById('c-cabin').value;
+  const dest = document.getElementById('c-dest').value;
+  const trip = parseInt(document.getElementById('c-trip').value);
+  const useAmex = document.getElementById('c-amex').value === 'yes';
+
+  const d = calcData[prog][cabin][dest];
+  const miles = d.miles * trip;
+  const fees = d.fees * trip;
+  const cash = d.cash * trip;
+  const saving = cash - fees;
+  const cpm = ((saving) / miles * 100).toFixed(1);
+  const amexPts = miles * 2;
+  const tripLabel = trip === 1 ? 'one-way' : 'return';
+
+  document.getElementById('r-miles').textContent = fmtMiles(miles);
+  document.getElementById('r-miles-sub').textContent = 'Business Class · ' + tripLabel + ' from ZRH';
+  document.getElementById('r-fees').textContent = 'CHF ' + fees.toLocaleString();
+  document.getElementById('r-cash').textContent = 'CHF ' + cash.toLocaleString();
+  document.getElementById('r-cpm').textContent = 'CHF ' + cpm + ' / mile';
+  document.getElementById('r-saving').textContent = 'CHF ' + saving.toLocaleString();
+  document.getElementById('r-note').textContent = calcNotes[prog];
+
+  const amexBox = document.getElementById('r-amex-box');
+  if (useAmex) {
+    amexBox.style.display = 'block';
+    document.getElementById('r-amex').textContent = fmtMiles(amexPts) + ' MR pts';
+  } else {
+    amexBox.style.display = 'none';
+  }
+}
+
+['c-programme','c-cabin','c-dest','c-trip','c-amex'].forEach(id => {
+  document.getElementById(id).addEventListener('change', calcUpdate);
+});
+calcUpdate();
+
+/* ── MAP ── */
+const destinations = [
+  { city: 'New York', code: 'JFK', lon: -73.8, lat: 40.6, mm: 70000, fb: 60000, cash: 4500, tier: 2 },
+  { city: 'Los Angeles', code: 'LAX', lon: -118.4, lat: 33.9, mm: 75000, fb: 65000, cash: 5000, tier: 2 },
+  { city: 'Toronto', code: 'YYZ', lon: -79.6, lat: 43.7, mm: 70000, fb: 60000, cash: 4200, tier: 2 },
+  { city: 'São Paulo', code: 'GRU', lon: -46.5, lat: -23.4, mm: 80000, fb: 65000, cash: 5000, tier: 2 },
+  { city: 'Cancún', code: 'CUN', lon: -86.9, lat: 21.0, mm: 80000, fb: 65000, cash: 4800, tier: 2 },
+  { city: 'Singapore', code: 'SIN', lon: 103.9, lat: 1.4, mm: 65000, fb: 60000, cash: 4500, tier: 2 },
+  { city: 'Bangkok', code: 'BKK', lon: 100.7, lat: 13.7, mm: 60000, fb: 55000, cash: 3800, tier: 1 },
+  { city: 'Tokyo', code: 'NRT', lon: 140.4, lat: 35.8, mm: 75000, fb: 65000, cash: 5500, tier: 2 },
+  { city: 'Hong Kong', code: 'HKG', lon: 113.9, lat: 22.3, mm: 70000, fb: 62000, cash: 4800, tier: 2 },
+  { city: 'Seoul', code: 'ICN', lon: 126.4, lat: 37.5, mm: 75000, fb: 65000, cash: 5200, tier: 2 },
+  { city: 'Sydney', code: 'SYD', lon: 151.2, lat: -33.9, mm: 110000, fb: 80000, cash: 7000, tier: 3 },
+  { city: 'Perth', code: 'PER', lon: 115.9, lat: -31.9, mm: 110000, fb: 80000, cash: 6500, tier: 3 },
+  { city: 'Dubai', code: 'DXB', lon: 55.4, lat: 25.3, mm: 45000, fb: 40000, cash: 2500, tier: 1 },
+  { city: 'Muscat', code: 'MCT', lon: 58.3, lat: 23.6, mm: 45000, fb: 40000, cash: 2200, tier: 1 },
+  { city: 'Nairobi', code: 'NBO', lon: 36.9, lat: -1.3, mm: 60000, fb: 50000, cash: 3500, tier: 1 },
+  { city: 'London', code: 'LHR', lon: -0.5, lat: 51.5, mm: 35000, fb: 20000, cash: 900, tier: 1 },
+  { city: 'Paris', code: 'CDG', lon: 2.5, lat: 49.0, mm: 30000, fb: 18000, cash: 700, tier: 1 },
+  { city: 'New Delhi', code: 'DEL', lon: 77.1, lat: 28.6, mm: 55000, fb: 50000, cash: 3200, tier: 1 },
+  { city: 'Johannesburg', code: 'JNB', lon: 28.2, lat: -26.1, mm: 65000, fb: 55000, cash: 3800, tier: 2 },
+];
+
+const tierColors = { 1: '#ba7517', 2: '#7a4f0b', 3: '#412402' };
+const zrh = { lon: 8.55, lat: 47.46 };
+
+const svgEl = d3.select('#worldMap');
+const W = 960, H = 480;
+const proj = d3.geoNaturalEarth1().scale(153).translate([W / 2 - 10, H / 2 + 20]);
+const pathGen = d3.geoPath(proj);
+const tooltip = document.getElementById('mapTooltip');
+const mapWrap = document.querySelector('.map-container');
+const zrhPt = proj([zrh.lon, zrh.lat]);
+
+d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json').then(world => {
+  svgEl.append('rect').attr('width', W).attr('height', H).attr('fill', '#d8eaf2').attr('opacity', 0.5);
+
+  svgEl.append('g').selectAll('path')
+    .data(topojson.feature(world, world.objects.countries).features)
+    .join('path')
+    .attr('d', pathGen)
+    .attr('fill', '#e8e4dc')
+    .attr('stroke', '#faf9f7')
+    .attr('stroke-width', 0.6);
+
+  const lineGen = d3.line().x(d => d[0]).y(d => d[1]).curve(d3.curveBasis);
+
+  destinations.forEach(dest => {
+    const pt = proj([dest.lon, dest.lat]);
+    if (!pt) return;
+    const mx = (zrhPt[0] + pt[0]) / 2;
+    const my = (zrhPt[1] + pt[1]) / 2 - Math.abs(pt[0] - zrhPt[0]) * 0.22;
+    svgEl.append('path')
+      .datum([[zrhPt[0], zrhPt[1]], [mx, my], [pt[0], pt[1]]])
+      .attr('d', lineGen)
+      .attr('fill', 'none')
+      .attr('stroke', '#b8962e')
+      .attr('stroke-width', 0.9)
+      .attr('stroke-dasharray', '4,4')
+      .attr('opacity', 0.4);
+  });
+
+  svgEl.append('circle').attr('cx', zrhPt[0]).attr('cy', zrhPt[1]).attr('r', 7).attr('fill', '#b8962e').attr('stroke', '#faf9f7').attr('stroke-width', 2);
+  svgEl.append('text').attr('x', zrhPt[0] + 10).attr('y', zrhPt[1] + 4).attr('font-size', 11).attr('font-weight', '600').attr('fill', '#7a5e1a').attr('font-family', 'DM Sans, sans-serif').text('ZRH');
+
+  destinations.forEach(dest => {
+    const pt = proj([dest.lon, dest.lat]);
+    if (!pt) return;
+    const col = tierColors[dest.tier];
+    const r = dest.tier === 3 ? 8 : 6;
+
+    const g = svgEl.append('g').style('cursor', 'pointer');
+
+    g.append('circle').attr('cx', pt[0]).attr('cy', pt[1]).attr('r', r)
+      .attr('fill', col).attr('stroke', '#faf9f7').attr('stroke-width', 1.5);
+
+    g.append('text').attr('x', pt[0] + r + 3).attr('y', pt[1] + 4)
+      .attr('font-size', 10).attr('font-family', 'DM Sans, sans-serif').attr('fill', '#5f5e5a').text(dest.code);
+
+    g.on('mouseover', function(event) {
+      d3.select(this).select('circle').attr('r', r + 3).attr('stroke-width', 2);
+      document.getElementById('tt-city').textContent = dest.city + ' (' + dest.code + ')';
+      document.getElementById('tt-mm').textContent = '~' + (dest.mm / 1000).toFixed(0) + 'k';
+      document.getElementById('tt-fb').textContent = '~' + (dest.fb / 1000).toFixed(0) + 'k';
+      document.getElementById('tt-cash').textContent = 'Cash equiv: CHF ' + dest.cash.toLocaleString() + ' (Business)';
+
+      const svgBox = svgEl.node().getBoundingClientRect();
+      const wrapBox = mapWrap.getBoundingClientRect();
+      const scaleX = svgBox.width / W;
+      const scaleY = svgBox.height / H;
+      const px = pt[0] * scaleX + (svgBox.left - wrapBox.left);
+      const py = pt[1] * scaleY + (svgBox.top - wrapBox.top);
+      const ttW = 210;
+      const left = px + 12 + ttW > wrapBox.width ? px - ttW - 6 : px + 12;
+      tooltip.style.left = left + 'px';
+      tooltip.style.top = Math.max(4, py - 40) + 'px';
+      tooltip.style.display = 'block';
+    })
+    .on('mouseout', function() {
+      d3.select(this).select('circle').attr('r', r).attr('stroke-width', 1.5);
+      tooltip.style.display = 'none';
+    });
+  });
+}).catch(() => {
+  svgEl.append('text').attr('x', W/2).attr('y', H/2).attr('text-anchor', 'middle')
+    .attr('fill', '#888580').attr('font-size', 14).attr('font-family', 'DM Sans, sans-serif')
+    .text('Map loading failed — check your connection and reload.');
+});
+</script>
+
+</body>
+</html>

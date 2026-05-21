@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Meilenguru — Swiss Frequent Flyer Miles Consultant</title>
+  <meta name="description" content="The story behind Meilenguru.ch — a Swiss-based miles consultant helping residents earn Business Class seats from everyday credit card spending.">
+  <link rel="canonical" href="https://meilenguru.ch/about.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+ *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+ :root {
+ --black: #0a0a0a;
+ --white: #faf9f7;
+ --warm-white: #f5f3ef;
+ --gold: #b8962e;
+ --gold-light: #d4ae4e;
+ --gold-dim: rgba(184,150,46,0.12);
+ --muted: #888580;
+ --border: rgba(10,10,10,0.1);
+ --border-gold: rgba(184,150,46,0.3);
+ --font-display: 'Cormorant Garamond', Georgia, serif;
+ --font-body: 'DM Sans', sans-serif;
+ }
+
+ html { scroll-behavior: smooth; }
+
+ body {
+ font-family: var(--font-body);
+ background: var(--white);
+ color: var(--black);
+ font-size: 15px;
+ line-height: 1.6;
+ overflow-x: hidden;
+ }
+
+ /* ── LANG BANNER ── */
+ .lang-banner {
+ background: var(--black);
+ font-size: 0.68rem;
+ letter-spacing: 0.12em;
+ text-transform: uppercase;
+ padding: 0.5rem 2rem;
+ display: flex;
+ justify-content: flex-end;
+ gap: 1.5rem;
+ }
+ .lang-banner a { color: rgba(250,249,247,0.5); text-decoration: none; transition: color 0.2s; }
+ .lang-banner a:hover { color: var(--gold-light); }
+
+ /* ── NAV ── */
+ nav {
+ position: sticky; top: 0; z-index: 100;
+ display: flex; align-items: center; justify-content: space-between;
+ padding: 1.1rem 2rem;
+ background: rgba(250,249,247,0.95);
+ backdrop-filter: blur(12px);
+ border-bottom: 0.5px solid var(--border);
+ }
+ .logo {
+ font-family: var(--font-display);
+ font-size: 1.5rem; font-weight: 600;
+ letter-spacing: 0.02em; color: var(--black); text-decoration: none;
+ }
+ .logo span { color: var(--gold); }
+ .nav-links { display: flex; gap: 2rem; list-style: none; }
+ .nav-links a {
+ font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase;
+ color: var(--black); text-decoration: none; font-weight: 400; transition: color 0.2s;
+ }
+ .nav-links a:hover, .nav-links a.active { color: var(--gold); }
+ .nav-cta {
+ font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase;
+ background: var(--black); color: var(--white);
+ padding: 0.45rem 1.1rem; text-decoration: none; transition: background 0.2s;
+ }
+ .nav-cta:hover { background: #2a2a2a; }
+ .nav-toggle {
+ display: none; flex-direction: column; gap: 5px;
+ cursor: pointer; background: none; border: none; padding: 4px;
+ }
+ .nav-toggle span { display: block; width: 22px; height: 1px; background: var(--black); transition: all 0.3s; }
+ .mobile-menu {
+ display: none; flex-direction: column;
+ background: var(--white); border-bottom: 0.5px solid var(--border);
+ padding: 1.5rem 2rem; gap: 1.25rem;
+ }
+ .mobile-menu.open { display: flex; }
+ .mobile-menu a { font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--black); text-decoration: none; }
+ .mobile-menu .mobile-cta {
+ display: inline-block; margin-top: 0.5rem; font-size: 0.75rem;
+ letter-spacing: 0.1em; text-transform: uppercase;
+ background: var(--black); color: var(--white);
+ padding: 0.6rem 1.25rem; text-align: center; text-decoration: none;
+ }
+
+ /* ── HERO ── */
+ .hero {
+ background: var(--black);
+ padding: 7rem 2rem 0;
+ overflow: hidden;
+ position: relative;
+ }
+
+ /* Subtle background texture */
+ .hero::before {
+ content: '';
+ position: absolute;
+ inset: 0;
+ background:
+ radial-gradient(ellipse 80% 60% at 70% 40%, rgba(184,150,46,0.07) 0%, transparent 70%),
+ radial-gradient(ellipse 50% 80% at 10% 80%, rgba(184,150,46,0.04) 0%, transparent 60%);
+ pointer-events: none;
+ }
+
+ .hero-inner {
+ max-width: 1000px;
+ margin: 0 auto;
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 5rem;
+ align-items: end;
+ position: relative;
+ z-index: 1;
+ }
+
+ .hero-left { padding-bottom: 5rem; }
+
+ .hero-eyebrow {
+ font-size: 0.67rem;
+ letter-spacing: 0.2em;
+ text-transform: uppercase;
+ color: var(--gold);
+ margin-bottom: 1.5rem;
+ font-weight: 500;
+ opacity: 0;
+ animation: fadeUp 0.7s 0.1s ease forwards;
+ }
+
+ .hero-title {
+ font-family: var(--font-display);
+ font-size: clamp(3rem, 6vw, 5.5rem);
+ font-weight: 300;
+ line-height: 1.0;
+ letter-spacing: -0.01em;
+ color: var(--white);
+ margin-bottom: 2rem;
+ opacity: 0;
+ animation: fadeUp 0.7s 0.2s ease forwards;
+ }
+ .hero-title em { font-style: italic; color: var(--gold); display: block; }
+
+ .hero-intro {
+ font-size: 1.05rem;
+ color: rgba(250,249,247,0.55);
+ line-height: 1.8;
+ font-weight: 300;
+ max-width: 420px;
+ opacity: 0;
+ animation: fadeUp 0.7s 0.3s ease forwards;
+ }
+
+ .hero-right {
+ align-self: stretch;
+ display: flex;
+ align-items: flex-end;
+ justify-content: center;
+ opacity: 0;
+ animation: fadeUp 0.7s 0.2s ease forwards;
+ }
+
+ /* Decorative flight path visual */
+ .flight-visual {
+ width: 100%;
+ max-width: 380px;
+ padding-bottom: 4rem;
+ }
+
+ .flight-stat-stack {
+ display: flex;
+ flex-direction: column;
+ gap: 1px;
+ background: rgba(250,249,247,0.08);
+ }
+
+ .flight-stat {
+ background: rgba(10,10,10,0.6);
+ backdrop-filter: blur(8px);
+ padding: 1.5rem 1.75rem;
+ border-left: 2px solid var(--gold);
+ transition: border-color 0.2s;
+ }
+
+ .flight-stat:hover { border-left-color: var(--gold-light); }
+
+ .flight-stat-num {
+ font-family: var(--font-display);
+ font-size: 2.5rem;
+ font-weight: 300;
+ color: var(--white);
+ line-height: 1;
+ margin-bottom: 0.3rem;
+ }
+ .flight-stat-num span { color: var(--gold); font-style: italic; }
+
+ .flight-stat-label {
+ font-size: 0.7rem;
+ letter-spacing: 0.12em;
+ text-transform: uppercase;
+ color: rgba(250,249,247,0.4);
+ }
+
+ /* ── STORY SECTION ── */
+ .story-section {
+ padding: 7rem 2rem;
+ }
+
+ .story-inner {
+ max-width: 1000px;
+ margin: 0 auto;
+ display: grid;
+ grid-template-columns: 200px 1fr;
+ gap: 5rem;
+ }
+
+ .story-nav {
+ position: sticky;
+ top: 7rem;
+ align-self: start;
+ }
+
+ .story-nav-label {
+ font-size: 0.62rem;
+ letter-spacing: 0.18em;
+ text-transform: uppercase;
+ color: var(--muted);
+ margin-bottom: 1.25rem;
+ font-weight: 500;
+ }
+
+ .story-nav ul {
+ list-style: none;
+ display: flex;
+ flex-direction: column;
+ gap: 0;
+ border-left: 0.5px solid var(--border);
+ }
+
+ .story-nav ul li a {
+ display: block;
+ font-size: 0.78rem;
+ color: var(--muted);
+ text-decoration: none;
+ padding: 0.6rem 0 0.6rem 1.25rem;
+ border-left: 2px solid transparent;
+ margin-left: -0.5px;
+ transition: color 0.2s, border-color 0.2s;
+ font-weight: 300;
+ line-height: 1.4;
+ }
+
+ .story-nav ul li a:hover {
+ color: var(--black);
+ border-left-color: var(--gold);
+ }
+
+ /* ── STORY CHAPTERS ── */
+ .story-chapters {
+ display: flex;
+ flex-direction: column;
+ gap: 5rem;
+ }
+
+ .chapter { scroll-margin-top: 7rem; }
+
+ .chapter-marker {
+ display: flex;
+ align-items: center;
+ gap: 1rem;
+ margin-bottom: 1.75rem;
+ }
+
+ .chapter-num {
+ font-family: var(--font-display);
+ font-size: 0.85rem;
+ font-weight: 400;
+ color: var(--gold);
+ letter-spacing: 0.08em;
+ flex-shrink: 0;
+ }
+
+ .chapter-line {
+ height: 0.5px;
+ background: var(--border);
+ flex: 1;
+ }
+
+ .chapter-tag {
+ font-size: 0.62rem;
+ letter-spacing: 0.14em;
+ text-transform: uppercase;
+ color: var(--muted);
+ flex-shrink: 0;
+ }
+
+ .chapter h2 {
+ font-family: var(--font-display);
+ font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+ font-weight: 300;
+ line-height: 1.15;
+ margin-bottom: 1.5rem;
+ letter-spacing: -0.01em;
+ }
+ .chapter h2 em { font-style: italic; color: var(--gold); }
+
+ .chapter p {
+ font-size: 0.95rem;
+ color: #3a3836;
+ line-height: 1.85;
+ font-weight: 300;
+ margin-bottom: 1.25rem;
+ max-width: 580px;
+ }
+
+ .chapter p:last-child { margin-bottom: 0; }
+
+ /* Pullquote */
+ .pullquote {
+ border-left: 2px solid var(--gold);
+ padding: 1.1rem 1.75rem;
+ margin: 2rem 0;
+ background: var(--warm-white);
+ }
+
+ .pullquote p {
+ font-family: var(--font-display);
+ font-size: 1.35rem;
+ font-weight: 300;
+ font-style: italic;
+ line-height: 1.5;
+ color: var(--black) !important;
+ margin: 0;
+ max-width: 100%;
+ }
+
+ /* Inline highlight box */
+ .highlight-box {
+ border: 0.5px solid var(--border-gold);
+ background: var(--gold-dim);
+ padding: 1.25rem 1.5rem;
+ margin: 1.75rem 0;
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 1rem;
+ }
+
+ .highlight-item { text-align: center; }
+
+ .highlight-num {
+ font-family: var(--font-display);
+ font-size: 2rem;
+ font-weight: 300;
+ color: var(--gold);
+ line-height: 1;
+ margin-bottom: 0.3rem;
+ }
+
+ .highlight-label {
+ font-size: 0.68rem;
+ letter-spacing: 0.1em;
+ text-transform: uppercase;
+ color: var(--muted);
+ }
+
+ /* ── PHILOSOPHY ── */
+ .philosophy-section {
+ background: var(--black);
+ padding: 6rem 2rem;
+ position: relative;
+ overflow: hidden;
+ }
+
+ .philosophy-section::before {
+ content: '';
+ position: absolute;
+ inset: 0;
+ background: radial-gradient(ellipse 60% 80% at 80% 50%, rgba(184,150,46,0.06) 0%, transparent 70%);
+ pointer-events: none;
+ }
+
+ .philosophy-inner {
+ max-width: 1000px;
+ margin: 0 auto;
+ position: relative;
+ z-index: 1;
+ }
+
+ .philosophy-label {
+ font-size: 0.67rem;
+ letter-spacing: 0.2em;
+ text-transform: uppercase;
+ color: var(--gold);
+ margin-bottom: 1.25rem;
+ font-weight: 500;
+ }
+
+ .philosophy-title {
+ font-family: var(--font-display);
+ font-size: clamp(2.2rem, 4vw, 3.5rem);
+ font-weight: 300;
+ line-height: 1.1;
+ color: var(--white);
+ margin-bottom: 3.5rem;
+ max-width: 600px;
+ }
+ .philosophy-title em { font-style: italic; color: var(--gold); }
+
+ .principles {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 0;
+ border: 0.5px solid rgba(250,249,247,0.08);
+ }
+
+ .principle {
+ padding: 2rem 1.75rem;
+ border-right: 0.5px solid rgba(250,249,247,0.08);
+ transition: background 0.2s;
+ }
+ .principle:hover { background: rgba(184,150,46,0.04); }
+ .principle:last-child { border-right: none; }
+
+ .principle-icon {
+ color: var(--gold);
+ font-size: 1rem;
+ margin-bottom: 1rem;
+ }
+
+ .principle h3 {
+ font-family: var(--font-display);
+ font-size: 1.3rem;
+ font-weight: 400;
+ color: var(--white);
+ margin-bottom: 0.65rem;
+ line-height: 1.2;
+ }
+
+ .principle p {
+ font-size: 0.83rem;
+ color: rgba(250,249,247,0.45);
+ line-height: 1.75;
+ font-weight: 300;
+ }
+
+ /* ── CTA SECTION ── */
+ .cta-section {
+ padding: 6rem 2rem;
+ background: var(--warm-white);
+ border-top: 0.5px solid var(--border);
+ }
+
+ .cta-inner {
+ max-width: 700px;
+ margin: 0 auto;
+ text-align: center;
+ }
+
+ .cta-eyebrow {
+ font-size: 0.67rem;
+ letter-spacing: 0.2em;
+ text-transform: uppercase;
+ color: var(--gold);
+ margin-bottom: 1.25rem;
+ font-weight: 500;
+ }
+
+ .cta-title {
+ font-family: var(--font-display);
+ font-size: clamp(2.2rem, 4vw, 3.2rem);
+ font-weight: 300;
+ line-height: 1.15;
+ margin-bottom: 1.25rem;
+ }
+ .cta-title em { font-style: italic; color: var(--gold); }
+
+ .cta-text {
+ font-size: 0.93rem;
+ color: var(--muted);
+ line-height: 1.8;
+ font-weight: 300;
+ margin-bottom: 2.5rem;
+ max-width: 500px;
+ margin-left: auto;
+ margin-right: auto;
+ }
+
+ .cta-buttons {
+ display: flex;
+ gap: 1rem;
+ justify-content: center;
+ flex-wrap: wrap;
+ }
+
+ .btn-primary {
+ font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase;
+ background: var(--black); color: var(--white);
+ padding: 0.8rem 1.75rem; text-decoration: none; transition: background 0.2s;
+ font-family: var(--font-body); font-weight: 400; cursor: pointer; border: none;
+ }
+ .btn-primary:hover { background: #2a2a2a; }
+ .btn-primary:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+ .btn-primary:active { background: #1a1a1a; }
+
+ .btn-outline {
+ font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase;
+ border: 0.5px solid var(--black); color: var(--black);
+ padding: 0.8rem 1.75rem; text-decoration: none; transition: all 0.2s;
+ font-family: var(--font-body); font-weight: 400;
+ }
+ .btn-outline:hover { background: var(--black); color: var(--white); }
+ .btn-outline:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+ .btn-outline:active { background: #1a1a1a; color: var(--white); }
+
+ /* ── FOOTER ── */
+ footer {
+ background: var(--warm-white);
+ border-top: 0.5px solid var(--border);
+ padding: 2rem 2rem 1.5rem;
+ }
+ .footer-bottom {
+ max-width: 1100px; margin: 0 auto;
+ display: flex; justify-content: space-between; align-items: center;
+ flex-wrap: wrap; gap: 0.75rem;
+ }
+ .footer-bottom p { font-size: 0.7rem; color: var(--muted); letter-spacing: 0.05em; }
+ .footer-nav { display: flex; gap: 1.5rem; }
+ .footer-nav a {
+ font-size: 0.72rem; color: var(--muted); text-decoration: none;
+ letter-spacing: 0.05em; transition: color 0.2s;
+ }
+ .footer-nav a:hover { color: var(--black); }
+
+ /* ── ANIMATIONS ── */
+ @keyframes fadeUp {
+ from { opacity: 0; transform: translateY(20px); }
+ to { opacity: 1; transform: translateY(0); }
+ }
+
+ /* ── MOBILE ── */
+ @media (max-width: 768px) {
+ nav { padding: 1rem 1.25rem; }
+ .nav-links { display: none; }
+ .nav-cta { display: none; }
+ .nav-toggle { display: flex; }
+
+ .hero { padding: 4.5rem 1.5rem 0; }
+ .hero-inner {
+ grid-template-columns: 1fr;
+ gap: 3rem;
+ }
+ .hero-left { padding-bottom: 0; }
+ .hero-right { justify-content: flex-start; padding-bottom: 3rem; }
+ .flight-visual { max-width: 100%; }
+ .flight-stat-stack { flex-direction: row; gap: 1px; background: rgba(250,249,247,0.08); }
+ .flight-stat { flex: 1; padding: 1.1rem 1rem; }
+ .flight-stat-num { font-size: 1.8rem; }
+
+ .story-section { padding: 4rem 1.5rem; }
+ .story-inner {
+ grid-template-columns: 1fr;
+ gap: 2.5rem;
+ }
+ .story-nav { display: none; }
+ .story-chapters { gap: 3.5rem; }
+ .chapter p { max-width: 100%; }
+
+ .highlight-box { grid-template-columns: 1fr; gap: 1.25rem; }
+
+ .philosophy-section { padding: 4rem 1.5rem; }
+ .principles {
+ grid-template-columns: 1fr;
+ }
+ .principle { border-right: none; border-bottom: 0.5px solid rgba(250,249,247,0.08); }
+ .principle:last-child { border-bottom: none; }
+
+ .cta-section { padding: 4rem 1.5rem; }
+ .cta-buttons { flex-direction: column; align-items: center; }
+
+ .footer-bottom { flex-direction: column; align-items: flex-start; }
+ }
+
+ @media (max-width: 480px) {
+ .hero { padding: 3.5rem 1.25rem 0; }
+ .story-section { padding: 3.5rem 1.25rem; }
+ .flight-stat-stack { flex-direction: column; }
+ }
+</style>
+
+</head>
+<body>
+
+
+
+<nav>
+ <a href="index.html" class="logo">Meilen<span>guru</span></a>
+ <ul class="nav-links">
+ <li><a href="strategies.html">Strategies</a></li>
+ <li><a href="referrals.html">Referrals</a></li>
+ <li><a href="blog.html">Blog</a></li>
+    <li><a href="tools.html">Tools</a></li>
+ <li><a href="about.html" class="active">About</a></li>
+ <li><a href="consultation.html">Consult</a></li>
+ </ul>
+ <a href="consultation.html" class="nav-cta">Book a Session</a>
+ <button class="nav-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+ <span></span><span></span><span></span>
+ </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+ <a href="strategies.html" onclick="closeMenu()">Strategies</a>
+ <a href="referrals.html" onclick="closeMenu()">Referrals</a>
+ <a href="blog.html" onclick="closeMenu()">Blog</a>
+  <a href="tools.html" onclick="closeMenu()">Tools</a>
+ <a href="about.html" onclick="closeMenu()">About</a>
+ <a href="consultation.html" onclick="closeMenu()">Consult</a>
+ <a href="consultation.html" class="mobile-cta" onclick="closeMenu()">Book a Session</a>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+ <div class="hero-inner">
+ <div class="hero-left">
+ <p class="hero-eyebrow">About Meilenguru · Swiss Miles & More Consultant</p>
+ <h1 class="hero-title">I flew economy<br>for years.<br><em>Then I stopped.</em></h1>
+ <p class="hero-intro">Not because I got rich. Not because my company started paying for it. I just figured out how the system works. Took a few years, a lot of reading, and one very good Cornèrcard. Now I fly Business on every long-haul flight and I've never paid more than CHF 2,500 for one.</p>
+ </div>
+ <div class="hero-right">
+ <div class="flight-visual">
+ <div class="flight-stat-stack">
+ <div class="flight-stat">
+ <div class="flight-stat-num">5<span>+</span></div>
+ <div class="flight-stat-label">Years of long-haul flights exclusively in Business or First</div>
+ </div>
+ <div class="flight-stat">
+ <div class="flight-stat-num">CHF <span>0</span></div>
+ <div class="flight-stat-label">Ever paid above CHF 2,500 for a long-haul Business ticket</div>
+ </div>
+ <div class="flight-stat">
+ <div class="flight-stat-num"><span>∞</span></div>
+ <div class="flight-stat-label">Years of long-haul flights because my family decided to live far apart</div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+</div>
+
+<!-- STORY -->
+<section class="story-section">
+ <div class="story-inner">
+
+ <!-- Sticky side nav -->
+ <nav class="story-nav" aria-label="Story navigation">
+ <p class="story-nav-label">The Story</p>
+ <ul>
+ <li><a href="#chapter-roots">Roots in travel</a></li>
+ <li><a href="#chapter-economy">Years in economy</a></li>
+ <li><a href="#chapter-discovery">The discovery</a></li>
+ <li><a href="#chapter-today">Where I am today</a></li>
+ <li><a href="#chapter-why">Why Meilenguru</a></li>
+ </ul>
+ </nav>
+
+ <!-- Chapters -->
+ <div class="story-chapters">
+
+ <div class="chapter" id="chapter-roots">
+ <div class="chapter-marker">
+ <span class="chapter-num">01</span>
+ <div class="chapter-line"></div>
+ <span class="chapter-tag">Origins</span>
+ </div>
+ <h2>I didn't choose to fly a lot.<br><em>My family did that for me.</em></h2>
+ <p>My family has the geographical consideration of being spread across opposite ends of the planet. So I've been on long-haul flights since before I could read the safety card. Not for fun. Not for Instagram. Just because that's what you do when the people you love live 10,000km away.</p>
+ <p>Airports became a second home. Not in a glamorous way — in a "I know exactly which security lane is fastest at ZRH at 6am" kind of way. Long before travel content was a thing, getting on planes was just how my life worked.</p>
+ <p>I also work in aviation — which gives me a slightly unfair advantage. When you understand how airlines think about inventory and pricing from the inside, the frequent flyer system stops looking like a loyalty programme and starts looking like a loophole. A legal one. A very comfortable one.</p>
+ </div>
+
+ <div class="chapter" id="chapter-economy">
+ <div class="chapter-marker">
+ <span class="chapter-num">02</span>
+ <div class="chapter-line"></div>
+ <span class="chapter-tag">The assumption</span>
+ </div>
+ <h2>I assumed Business Class<br><em>wasn't for people like me.</em></h2>
+ <p>For an embarrassingly long time, I sat in economy. Every long-haul. 14 hours to Asia, knees against the seat in front, pretending the tiny pillow was doing something. Not because I couldn't have done better — because I genuinely thought Business Class was for a different type of person.</p>
+
+ <div class="pullquote">
+ <p>I thought you needed to be rich. Or fly 200 times a year on business. Or know someone at the airline. Turns out none of that is true. Turns out I just needed a better credit card and about three months of reading.</p>
+ </div>
+
+ <p>I also assumed frequent flyer programmes were essentially useless for people like me. The common logic seemed to be: you need to fly constantly with one airline, accumulate miles slowly over years, and even then the seats you actually want are never available. So what's the point?</p>
+ <p>This is exactly why most Swiss travellers are still in economy. Not because they can't afford better — because the programmes are deliberately confusing and nobody's explaining them in a way that makes sense for someone spending CHF, living in Zürich, flying out of Kloten.</p>
+ </div>
+
+ <div class="chapter" id="chapter-discovery">
+ <div class="chapter-marker">
+ <span class="chapter-num">03</span>
+ <div class="chapter-line"></div>
+ <span class="chapter-tag">The shift</span>
+ </div>
+ <h2>A few years of figuring it out.<br><em>Worth every minute.</em></h2>
+ <p>I went deep. In a "I'm going to work out how this actually functions" way. How award seats get released. When to transfer Amex points. Which routes punch above their weight. How to combine a Cornèrcard signup bonus with an Amex transfer bonus and end up with enough miles for Business Class before you've even flown anywhere.</p>
+ <p>The conclusion was hard to argue with: the gap between economy and Business Class isn't a money gap. It's a knowledge gap. That realisation was equal parts exciting and slightly annoying — all those cramped long-haul flights I didn't need to take.</p>
+
+ <div class="highlight-box">
+ <div class="highlight-item">
+ <div class="highlight-num">2–3</div>
+ <div class="highlight-label">Years to fully optimise</div>
+ </div>
+ <div class="highlight-item">
+ <div class="highlight-num">CHF 0</div>
+ <div class="highlight-label">Spent on most Business redemptions</div>
+ </div>
+ <div class="highlight-item">
+ <div class="highlight-num">100%</div>
+ <div class="highlight-label">Long-haul flights in Business or First since</div>
+ </div>
+ </div>
+
+ <p>The thing that surprised me most: you don't need to fly to earn miles. The most powerful tool is your credit card. Specifically, a Swiss Amex card and a Cornèrcard Diners. Put your regular spending through the right cards and you'll accumulate enough miles for a Business Class seat without booking a single flight to get there.</p>
+ <p>The aviation background helps. Understanding how airlines think about inventory — when they release award seats, why they release them, what drives the pricing — means I spot opportunities that most people walk straight past. I've tried to put all of that into Meilenguru in a way that's actually usable.</p>
+ </div>
+
+ <div class="chapter" id="chapter-today">
+ <div class="chapter-marker">
+ <span class="chapter-num">04</span>
+ <div class="chapter-line"></div>
+ <span class="chapter-tag">Today</span>
+ </div>
+ <h2>Five years.<br>Not once in economy<br><em>on a long-haul.</em></h2>
+ <p>Five years. Every long-haul in Business or First. Some on miles. Some on genuinely competitive cash fares (I have a rule: never more than CHF 2,500 one-way — if it's above that, I wait for the miles). It's not a flex. It's just what happens when you know what to look for.</p>
+ <p>The point isn't to show off. The point is: this works. Consistently. For someone with a regular job, a regular salary, and CHF 1,500 a month of ordinary spending. The only unusual thing is knowing how to use it.</p>
+
+ <div class="pullquote">
+ <p>The seat I'm sitting in at 35,000 feet has nothing to do with my salary. It has everything to do with knowing when the award space opens up and having the miles ready when it does.</p>
+ </div>
+ </div>
+
+ <div class="chapter" id="chapter-why">
+ <div class="chapter-marker">
+ <span class="chapter-num">05</span>
+ <div class="chapter-line"></div>
+ <span class="chapter-tag">The mission</span>
+ </div>
+ <h2>Why I built<br><em>this thing</em></h2>
+ <p>I got tired of having the same conversation. "Wait, you flew Business Class? How much did that cost?" "CHF 270 in taxes." "...What?" Every time. With everyone. So I built a place to send people instead of explaining it from scratch over a coffee.</p>
+ <p>Switzerland is genuinely well-positioned for this. Good Amex products. SWISS out of Zürich. Air France via Geneva. The infrastructure is right here. The only thing missing was someone explaining it clearly, in the context of CHF spending and Swiss card products, without trying to sell you a course or get you to sign up for a newsletter.</p>
+ <p>That's what Meilenguru is. Swiss-specific, practically focused, . If you've ever looked at a Business Class seat and thought "that's not for me" — this site exists to prove you wrong.</p>
+ <p>I keep my name out of it deliberately. Not out of mystery — just because the advice either works or it doesn't, and a name doesn't change that. So far, it works.</p>
+ </div>
+
+ </div>
+ </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section class="philosophy-section">
+ <div class="philosophy-inner">
+ <p class="philosophy-label">The Meilenguru approach</p>
+ <h2 class="philosophy-title">Three things I've learned<br>that <em>actually matter</em></h2>
+ <div class="principles">
+ <div class="principle">
+ <div class="principle-icon">◈</div>
+ <h3>Knowledge beats money</h3>
+ <p>Business Class is not a reward for earning more. It's a reward for knowing more. Airlines make the system opaque on purpose. Understanding it — even partially — puts you ahead of almost everyone on the plane.</p>
+ </div>
+ <div class="principle">
+ <div class="principle-icon">◈</div>
+ <h3>Swiss-specific beats generic</h3>
+ <p>Most miles content is written by Americans, for Americans. The cards are different. The transfer ratios are different. The hubs are different. Following US advice from Switzerland is like using a map of the wrong city.</p>
+ </div>
+ <div class="principle">
+ <div class="principle-icon">◈</div>
+ <h3>Timing beats planning</h3>
+ <p>The best redemptions aren't booked months in advance. They're booked by someone who already has their miles ready and is watching for the right availability window. Position first, book when the seat appears.</p>
+ </div>
+ </div>
+ </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+ <div class="cta-inner">
+ <p class="cta-eyebrow">Ready to start?</p>
+ <h2 class="cta-title">Want to figure out<br><em>your situation?</em></h2>
+ <p class="cta-text">Whether you're starting from scratch or have a miles account you've been ignoring for three years — 30 minutes is enough to work out what you've got, what you need, and what to do next.</p>
+ <div class="cta-buttons">
+ <a href="consultation.html" class="btn-primary">Book a 30-min session — CHF 79</a>
+ <a href="blog.html" class="btn-outline">Read the Blog</a>
+ </div>
+ </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+ <div class="footer-bottom">
+ <a href="index.html" class="logo" style="font-size:1.2rem;">Meilen<span style="color:var(--gold);">guru</span></a>
+ <p>© 2025 Meilenguru · meilenguru.ch · Zürich, Switzerland</p>
+ <nav class="footer-nav">
+ <a href="index.html">Home</a>
+ <a href="blog.html">Blog</a>
+  <a href="tools.html" onclick="closeMenu()">Tools</a>
+ <a href="about.html">About</a>
+ <a href="consultation.html">Book a Session</a>
+ </nav>
+ </div>
+</footer>
+
+<script>
+ function toggleMenu() {
+ document.getElementById('mobileMenu').classList.toggle('open');
+ }
+ function closeMenu() {
+ document.getElementById('mobileMenu').classList.remove('open');
+ }
+</script>
+
+</body>
+</html>
