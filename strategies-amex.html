@@ -1,652 +1,1243 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Amex Membership Rewards Switzerland — Miles Transfer Guide</title>
-  <meta name="description" content="Swiss Amex Membership Rewards explained. Transfer ratios to Miles & More and <a href="strategies-flying-blue.html" style="color:var(--gold);">Flying Blue</a>, when to transfer, current welcome bonuses, and the 2:1 Swiss ratio.">
-  <link rel="canonical" href="https://meilenguru.ch/strategies-amex.html">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
- *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amex Membership Rewards Switzerland — Miles Transfer Guide</title>
+    <meta
+      name="description"
+      content="Swiss Amex Membership Rewards explained. Transfer ratios to Miles & More and Flying Blue, when to transfer, current welcome bonuses, and the 2:1 Swiss ratio."
+    />
+    <link rel="canonical" href="https://meilenguru.ch/strategies-amex.html" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
- :root {
- --black: #0a0a0a;
- --white: #faf9f7;
- --warm-white: #f5f3ef;
- --gold: #b8962e;
- --gold-light: #d4ae4e;
- --gold-dim: rgba(184,150,46,0.1);
- --muted: #888580;
- --border: rgba(10,10,10,0.1);
- --border-light: rgba(10,10,10,0.06);
- --mm-blue: #001A70;
- --fb-blue: #1A1B8B;
- --amex-blue: #016FD0;
- --revolut-black: #191C1F;
- --font-display: 'Lora', Georgia, serif;
- --font-body: 'DM Sans', sans-serif;
- }
+      :root {
+        --black: #0a0a0a;
+        --white: #faf9f7;
+        --warm-white: #f5f3ef;
+        --gold: #b8962e;
+        --gold-light: #d4ae4e;
+        --gold-dim: rgba(184, 150, 46, 0.1);
+        --muted: #888580;
+        --border: rgba(10, 10, 10, 0.1);
+        --border-light: rgba(10, 10, 10, 0.06);
+        --mm-blue: #001a70;
+        --fb-blue: #1a1b8b;
+        --amex-blue: #016fd0;
+        --revolut-black: #191c1f;
+        --font-display: "Lora", Georgia, serif;
+        --font-body: "DM Sans", sans-serif;
+      }
 
- html { scroll-behavior: smooth; }
+      html {
+        scroll-behavior: smooth;
+      }
 
- body {
- font-family: var(--font-body);
- background: var(--white);
- color: var(--black);
- font-size: 15px;
- line-height: 1.6;
- overflow-x: hidden;
- }
+      body {
+        font-family: var(--font-body);
+        background: var(--white);
+        color: var(--black);
+        font-size: 15px;
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
 
- /* ── LANG BANNER ── */
- .lang-banner {
- background: var(--black);
- font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase;
- padding: 0.5rem 2rem; display: flex; justify-content: flex-end; gap: 1.5rem;
- }
- .lang-banner a { color: rgba(250,249,247,0.5); text-decoration: none; transition: color 0.2s; }
- .lang-banner a:hover { color: var(--gold-light); }
+      /* ── LANG BANNER ── */
+      .lang-banner {
+        background: var(--black);
+        font-size: 0.68rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        padding: 0.5rem 2rem;
+        display: flex;
+        justify-content: flex-end;
+        gap: 1.5rem;
+      }
+      .lang-banner a {
+        color: rgba(250, 249, 247, 0.5);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      .lang-banner a:hover {
+        color: var(--gold-light);
+      }
 
- /* ── NAV ── */
- nav {
- position: sticky; top: 0; z-index: 100;
- display: flex; align-items: center; justify-content: space-between;
- padding: 1.1rem 2rem;
- background: rgba(250,249,247,0.95);
- backdrop-filter: blur(12px);
- border-bottom: 0.5px solid var(--border);
- }
- .logo { font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; letter-spacing: 0.02em; color: var(--black); text-decoration: none; }
- .logo span { color: var(--gold); }
- .nav-links { display: flex; gap: 2rem; list-style: none; }
- .nav-links a { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--black); text-decoration: none; font-weight: 400; transition: color 0.2s; }
- .nav-links a:hover, .nav-links a.active { color: var(--gold); }
- .nav-cta { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--black); color: var(--white); padding: 0.45rem 1.1rem; text-decoration: none; transition: background 0.2s; }
- .nav-cta:hover { background: #2a2a2a; }
- .nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
- .nav-toggle span { display: block; width: 22px; height: 1px; background: var(--black); }
- .mobile-menu { display: none; flex-direction: column; background: var(--white); border-bottom: 0.5px solid var(--border); padding: 1.5rem 2rem; gap: 1.25rem; }
- .mobile-menu.open { display: flex; }
- .mobile-menu a { font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--black); text-decoration: none; }
- .mobile-menu .mobile-cta { display: inline-block; margin-top: 0.5rem; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--black); color: var(--white); padding: 0.6rem 1.25rem; text-align: center; text-decoration: none; }
+      /* ── NAV ── */
+      nav {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.1rem 2rem;
+        background: rgba(250, 249, 247, 0.95);
+        backdrop-filter: blur(12px);
+        border-bottom: 0.5px solid var(--border);
+      }
+      .logo {
+        font-family: var(--font-display);
+        font-size: 1.5rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        color: var(--black);
+        text-decoration: none;
+      }
+      .logo span {
+        color: var(--gold);
+      }
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+      }
+      .nav-links a {
+        font-size: 0.75rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--black);
+        text-decoration: none;
+        font-weight: 400;
+        transition: color 0.2s;
+      }
+      .nav-links a:hover,
+      .nav-links a.active {
+        color: var(--gold);
+      }
+      .nav-cta {
+        font-size: 0.72rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        background: var(--black);
+        color: var(--white);
+        padding: 0.45rem 1.1rem;
+        text-decoration: none;
+        transition: background 0.2s;
+      }
+      .nav-cta:hover {
+        background: #2a2a2a;
+      }
+      .nav-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 4px;
+      }
+      .nav-toggle span {
+        display: block;
+        width: 22px;
+        height: 1px;
+        background: var(--black);
+      }
+      .mobile-menu {
+        display: none;
+        flex-direction: column;
+        background: var(--white);
+        border-bottom: 0.5px solid var(--border);
+        padding: 1.5rem 2rem;
+        gap: 1.25rem;
+      }
+      .mobile-menu.open {
+        display: flex;
+      }
+      .mobile-menu a {
+        font-size: 0.8rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--black);
+        text-decoration: none;
+      }
+      .mobile-menu .mobile-cta {
+        display: inline-block;
+        margin-top: 0.5rem;
+        font-size: 0.75rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        background: var(--black);
+        color: var(--white);
+        padding: 0.6rem 1.25rem;
+        text-align: center;
+        text-decoration: none;
+      }
 
- /* ── PAGE HERO ── */
- .page-hero {
- background: var(--black);
- padding: 6rem 2rem 5rem;
- position: relative;
- overflow: hidden;
- }
- .page-hero::before {
- content: '';
- position: absolute; inset: 0;
- background: radial-gradient(ellipse 70% 80% at 80% 50%, rgba(184,150,46,0.07) 0%, transparent 65%);
- pointer-events: none;
- }
- .page-hero-inner { max-width: 1000px; margin: 0 auto; position: relative; z-index: 1; }
- .page-eyebrow { font-size: 0.67rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem; font-weight: 500; animation: fadeUp 0.6s ease both; }
- .page-title { font-family: var(--font-display); font-size: clamp(2.8rem, 5.5vw, 5rem); font-weight: 300; line-height: 1.05; color: var(--white); margin-bottom: 1.5rem; animation: fadeUp 0.6s 0.1s ease both; }
- .page-title em { font-style: italic; color: var(--gold); display: block; }
- .page-subtitle { font-size: 1rem; color: rgba(250,249,247,0.5); max-width: 560px; line-height: 1.8; font-weight: 300; animation: fadeUp 0.6s 0.2s ease both; }
+      /* ── PAGE HERO ── */
+      .page-hero {
+        background: var(--black);
+        padding: 6rem 2rem 5rem;
+        position: relative;
+        overflow: hidden;
+      }
+      .page-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(ellipse 70% 80% at 80% 50%, rgba(184, 150, 46, 0.07) 0%, transparent 65%);
+        pointer-events: none;
+      }
+      .page-hero-inner {
+        max-width: 1000px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+      }
+      .page-eyebrow {
+        font-size: 0.67rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 1.25rem;
+        font-weight: 500;
+        animation: fadeUp 0.6s ease both;
+      }
+      .page-title {
+        font-family: var(--font-display);
+        font-size: clamp(2.8rem, 5.5vw, 5rem);
+        font-weight: 300;
+        line-height: 1.05;
+        color: var(--white);
+        margin-bottom: 1.5rem;
+        animation: fadeUp 0.6s 0.1s ease both;
+      }
+      .page-title em {
+        font-style: italic;
+        color: var(--gold);
+        display: block;
+      }
+      .page-subtitle {
+        font-size: 1rem;
+        color: rgba(250, 249, 247, 0.5);
+        max-width: 560px;
+        line-height: 1.8;
+        font-weight: 300;
+        animation: fadeUp 0.6s 0.2s ease both;
+      }
 
- /* ── PROGRAMME TABS ── */
- .tab-nav {
- background: var(--warm-white);
- border-bottom: 0.5px solid var(--border);
- position: sticky;
- top: 57px;
- z-index: 90;
- overflow-x: auto;
- -webkit-overflow-scrolling: touch;
- }
- .tab-nav-inner {
- max-width: 1000px;
- margin: 0 auto;
- display: flex;
- gap: 0;
- }
- .tab-btn {
- font-size: 0.72rem;
- letter-spacing: 0.12em;
- text-transform: uppercase;
- color: var(--muted);
- font-family: var(--font-body);
- font-weight: 400;
- padding: 1.1rem 2rem;
- border: none;
- background: none;
- cursor: pointer;
- border-bottom: 2px solid transparent;
- transition: color 0.2s, border-color 0.2s;
- white-space: nowrap;
- text-decoration: none;
- display: block;
- }
- .tab-btn:hover { color: var(--black); }
- .tab-btn.active { color: var(--black); border-bottom-color: var(--gold); }
+      /* ── PROGRAMME TABS ── */
+      .tab-nav {
+        background: var(--warm-white);
+        border-bottom: 0.5px solid var(--border);
+        position: sticky;
+        top: 57px;
+        z-index: 90;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+      .tab-nav-inner {
+        max-width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        gap: 0;
+      }
+      .tab-btn {
+        font-size: 0.72rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--muted);
+        font-family: var(--font-body);
+        font-weight: 400;
+        padding: 1.1rem 2rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        border-bottom: 2px solid transparent;
+        transition:
+          color 0.2s,
+          border-color 0.2s;
+        white-space: nowrap;
+        text-decoration: none;
+        display: block;
+      }
+      .tab-btn:hover {
+        color: var(--black);
+      }
+      .tab-btn.active {
+        color: var(--black);
+        border-bottom-color: var(--gold);
+      }
 
- /* ── SECTION LAYOUT ── */
- .programme-section {
- padding: 5rem 2rem;
- scroll-margin-top: 110px;
- }
- .programme-section:nth-child(even) { background: var(--warm-white); }
+      /* ── SECTION LAYOUT ── */
+      .programme-section {
+        padding: 5rem 2rem;
+        scroll-margin-top: 110px;
+      }
+      .programme-section:nth-child(even) {
+        background: var(--warm-white);
+      }
 
- .section-inner { max-width: 1000px; margin: 0 auto; }
+      .section-inner {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
 
- /* Programme header */
- .prog-header {
- display: grid;
- grid-template-columns: 1fr auto;
- gap: 2rem;
- align-items: start;
- margin-bottom: 3rem;
- padding-bottom: 2rem;
- border-bottom: 0.5px solid var(--border);
- }
- .prog-eyebrow { font-size: 0.67rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; font-weight: 500; }
- .prog-title { font-family: var(--font-display); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 300; line-height: 1.1; }
- .prog-title em { font-style: italic; color: var(--gold); }
- .prog-desc { font-size: 0.9rem; color: var(--muted); line-height: 1.8; font-weight: 300; max-width: 520px; margin-top: 1rem; }
- .prog-badge {
- display: inline-flex;
- flex-direction: column;
- align-items: center;
- gap: 0.25rem;
- padding: 1.25rem 1.5rem;
- border: 0.5px solid var(--border);
- text-align: center;
- flex-shrink: 0;
- }
- .prog-badge-num { font-family: var(--font-display); font-size: 2.2rem; font-weight: 300; color: var(--gold); line-height: 1; }
- .prog-badge-label { font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+      /* Programme header */
+      .prog-header {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 2rem;
+        align-items: start;
+        margin-bottom: 3rem;
+        padding-bottom: 2rem;
+        border-bottom: 0.5px solid var(--border);
+      }
+      .prog-eyebrow {
+        font-size: 0.67rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 0.75rem;
+        font-weight: 500;
+      }
+      .prog-title {
+        font-family: var(--font-display);
+        font-size: clamp(2rem, 3.5vw, 3rem);
+        font-weight: 300;
+        line-height: 1.1;
+      }
+      .prog-title em {
+        font-style: italic;
+        color: var(--gold);
+      }
+      .prog-desc {
+        font-size: 0.9rem;
+        color: var(--muted);
+        line-height: 1.8;
+        font-weight: 300;
+        max-width: 520px;
+        margin-top: 1rem;
+      }
+      .prog-badge {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.25rem;
+        padding: 1.25rem 1.5rem;
+        border: 0.5px solid var(--border);
+        text-align: center;
+        flex-shrink: 0;
+      }
+      .prog-badge-num {
+        font-family: var(--font-display);
+        font-size: 2.2rem;
+        font-weight: 300;
+        color: var(--gold);
+        line-height: 1;
+      }
+      .prog-badge-label {
+        font-size: 0.65rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
 
- /* Sub-section heading */
- .sub-heading {
- font-size: 0.67rem;
- letter-spacing: 0.18em;
- text-transform: uppercase;
- color: var(--muted);
- margin-bottom: 1.25rem;
- margin-top: 2.75rem;
- font-weight: 500;
- display: flex;
- align-items: center;
- gap: 1rem;
- }
- .sub-heading::after { content: ''; flex: 1; height: 0.5px; background: var(--border); }
+      /* Sub-section heading */
+      .sub-heading {
+        font-size: 0.67rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 1.25rem;
+        margin-top: 2.75rem;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      .sub-heading::after {
+        content: "";
+        flex: 1;
+        height: 0.5px;
+        background: var(--border);
+      }
 
- /* ── CARD GRID ── */
- .card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); }
- .card-grid-2 { grid-template-columns: repeat(2, 1fr); }
- .card-grid-4 { grid-template-columns: repeat(4, 1fr); }
+      /* ── CARD GRID ── */
+      .card-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+        background: var(--border);
+      }
+      .card-grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .card-grid-4 {
+        grid-template-columns: repeat(4, 1fr);
+      }
 
- .earn-card {
- background: var(--white);
- padding: 1.75rem 1.5rem;
- position: relative;
- transition: background 0.2s;
- }
- .programme-section:nth-child(even) .earn-card { background: var(--white); }
- .earn-card:hover { background: rgba(184,150,46,0.03); }
+      .earn-card {
+        background: var(--white);
+        padding: 1.75rem 1.5rem;
+        position: relative;
+        transition: background 0.2s;
+      }
+      .programme-section:nth-child(even) .earn-card {
+        background: var(--white);
+      }
+      .earn-card:hover {
+        background: rgba(184, 150, 46, 0.03);
+      }
 
- .earn-card-tag {
- font-size: 0.62rem;
- letter-spacing: 0.12em;
- text-transform: uppercase;
- color: var(--gold);
- font-weight: 500;
- margin-bottom: 0.6rem;
- }
- .earn-card h3 {
- font-family: var(--font-display);
- font-size: 1.15rem;
- font-weight: 400;
- margin-bottom: 0.5rem;
- line-height: 1.25;
- }
- .earn-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.7; font-weight: 300; margin-bottom: 0.85rem; }
- .earn-card-stat {
- font-family: var(--font-display);
- font-size: 1.6rem;
- font-weight: 300;
- color: var(--black);
- line-height: 1;
- }
- .earn-card-stat span { color: var(--gold); font-style: italic; }
- .earn-card-stat-label { font-size: 0.68rem; color: var(--muted); letter-spacing: 0.08em; margin-top: 0.2rem; }
+      .earn-card-tag {
+        font-size: 0.62rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--gold);
+        font-weight: 500;
+        margin-bottom: 0.6rem;
+      }
+      .earn-card h3 {
+        font-family: var(--font-display);
+        font-size: 1.15rem;
+        font-weight: 400;
+        margin-bottom: 0.5rem;
+        line-height: 1.25;
+      }
+      .earn-card p {
+        font-size: 0.82rem;
+        color: var(--muted);
+        line-height: 1.7;
+        font-weight: 300;
+        margin-bottom: 0.85rem;
+      }
+      .earn-card-stat {
+        font-family: var(--font-display);
+        font-size: 1.6rem;
+        font-weight: 300;
+        color: var(--black);
+        line-height: 1;
+      }
+      .earn-card-stat span {
+        color: var(--gold);
+        font-style: italic;
+      }
+      .earn-card-stat-label {
+        font-size: 0.68rem;
+        color: var(--muted);
+        letter-spacing: 0.08em;
+        margin-top: 0.2rem;
+      }
 
- /* ── BENCHMARK TABLE ── */
- .benchmark-table {
- width: 100%;
- border-collapse: collapse;
- margin-top: 0.5rem;
- font-size: 0.86rem;
- }
- .benchmark-table thead tr { border-bottom: 0.5px solid var(--border); }
- .benchmark-table th {
- font-size: 0.62rem;
- letter-spacing: 0.14em;
- text-transform: uppercase;
- color: var(--muted);
- font-weight: 500;
- padding: 0.65rem 0.85rem;
- text-align: left;
- }
- .benchmark-table td {
- padding: 0.9rem 0.85rem;
- border-bottom: 0.5px solid var(--border-light);
- font-weight: 300;
- color: #2a2826;
- vertical-align: top;
- }
- .benchmark-table tr:last-child td { border-bottom: none; }
- .benchmark-table td:first-child { font-weight: 500; color: var(--black); }
- .benchmark-table .highlight-row td { background: var(--gold-dim); }
- .benchmark-table .highlight-row td:first-child { color: var(--gold); }
- .miles-val { font-family: var(--font-display); font-size: 1.1rem; font-weight: 400; color: var(--gold); }
- .cash-val { font-size: 0.78rem; color: var(--muted); }
+      /* ── BENCHMARK TABLE ── */
+      .benchmark-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 0.5rem;
+        font-size: 0.86rem;
+      }
+      .benchmark-table thead tr {
+        border-bottom: 0.5px solid var(--border);
+      }
+      .benchmark-table th {
+        font-size: 0.62rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--muted);
+        font-weight: 500;
+        padding: 0.65rem 0.85rem;
+        text-align: left;
+      }
+      .benchmark-table td {
+        padding: 0.9rem 0.85rem;
+        border-bottom: 0.5px solid var(--border-light);
+        font-weight: 300;
+        color: #2a2826;
+        vertical-align: top;
+      }
+      .benchmark-table tr:last-child td {
+        border-bottom: none;
+      }
+      .benchmark-table td:first-child {
+        font-weight: 500;
+        color: var(--black);
+      }
+      .benchmark-table .highlight-row td {
+        background: var(--gold-dim);
+      }
+      .benchmark-table .highlight-row td:first-child {
+        color: var(--gold);
+      }
+      .miles-val {
+        font-family: var(--font-display);
+        font-size: 1.1rem;
+        font-weight: 400;
+        color: var(--gold);
+      }
+      .cash-val {
+        font-size: 0.78rem;
+        color: var(--muted);
+      }
 
- /* ── CALCULATOR ── */
- .calculator {
- background: var(--black);
- padding: 2.5rem 2rem;
- margin-top: 2rem;
- }
- .calc-title { font-family: var(--font-display); font-size: 1.5rem; font-weight: 300; color: var(--white); margin-bottom: 0.5rem; }
- .calc-subtitle { font-size: 0.8rem; color: rgba(250,249,247,0.45); margin-bottom: 2rem; font-weight: 300; }
- .calc-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
- .calc-item { }
- .calc-label { font-size: 0.67rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(250,249,247,0.4); margin-bottom: 0.4rem; }
- .calc-value { font-family: var(--font-display); font-size: 2rem; font-weight: 300; color: var(--white); line-height: 1; }
- .calc-value span { color: var(--gold); font-style: italic; }
- .calc-sub { font-size: 0.72rem; color: rgba(250,249,247,0.35); margin-top: 0.2rem; font-weight: 300; }
- .calc-divider { display: flex; align-items: center; justify-content: center; color: rgba(250,249,247,0.2); font-size: 1.2rem; }
- .calc-equals { color: var(--gold); font-size: 1.5rem; display: flex; align-items: center; justify-content: center; }
- .calc-result { background: rgba(184,150,46,0.1); border: 0.5px solid rgba(184,150,46,0.3); padding: 1rem; }
- .calc-result .calc-value { color: var(--gold); font-size: 2.5rem; }
+      /* ── CALCULATOR ── */
+      .calculator {
+        background: var(--black);
+        padding: 2.5rem 2rem;
+        margin-top: 2rem;
+      }
+      .calc-title {
+        font-family: var(--font-display);
+        font-size: 1.5rem;
+        font-weight: 300;
+        color: var(--white);
+        margin-bottom: 0.5rem;
+      }
+      .calc-subtitle {
+        font-size: 0.8rem;
+        color: rgba(250, 249, 247, 0.45);
+        margin-bottom: 2rem;
+        font-weight: 300;
+      }
+      .calc-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.25rem;
+      }
+      .calc-item {
+      }
+      .calc-label {
+        font-size: 0.67rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: rgba(250, 249, 247, 0.4);
+        margin-bottom: 0.4rem;
+      }
+      .calc-value {
+        font-family: var(--font-display);
+        font-size: 2rem;
+        font-weight: 300;
+        color: var(--white);
+        line-height: 1;
+      }
+      .calc-value span {
+        color: var(--gold);
+        font-style: italic;
+      }
+      .calc-sub {
+        font-size: 0.72rem;
+        color: rgba(250, 249, 247, 0.35);
+        margin-top: 0.2rem;
+        font-weight: 300;
+      }
+      .calc-divider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(250, 249, 247, 0.2);
+        font-size: 1.2rem;
+      }
+      .calc-equals {
+        color: var(--gold);
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .calc-result {
+        background: rgba(184, 150, 46, 0.1);
+        border: 0.5px solid rgba(184, 150, 46, 0.3);
+        padding: 1rem;
+      }
+      .calc-result .calc-value {
+        color: var(--gold);
+        font-size: 2.5rem;
+      }
 
- /* ── TRANSFER PARTNERS ── */
- .transfer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); }
- .transfer-card {
- background: var(--white);
- padding: 1.25rem;
- display: flex;
- flex-direction: column;
- gap: 0.4rem;
- transition: background 0.2s;
- }
- .programme-section:nth-child(even) .transfer-card { background: var(--white); }
- .transfer-card:hover { background: rgba(184,150,46,0.03); }
- .transfer-airline { font-size: 0.88rem; font-weight: 500; color: var(--black); }
- .transfer-ratio { font-family: var(--font-display); font-size: 1.2rem; font-weight: 300; color: var(--gold); }
- .transfer-program { font-size: 0.72rem; color: var(--muted); font-weight: 300; letter-spacing: 0.03em; }
- .transfer-highlight { border-top: 2px solid var(--gold); }
+      /* ── TRANSFER PARTNERS ── */
+      .transfer-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1px;
+        background: var(--border);
+      }
+      .transfer-card {
+        background: var(--white);
+        padding: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        transition: background 0.2s;
+      }
+      .programme-section:nth-child(even) .transfer-card {
+        background: var(--white);
+      }
+      .transfer-card:hover {
+        background: rgba(184, 150, 46, 0.03);
+      }
+      .transfer-airline {
+        font-size: 0.88rem;
+        font-weight: 500;
+        color: var(--black);
+      }
+      .transfer-ratio {
+        font-family: var(--font-display);
+        font-size: 1.2rem;
+        font-weight: 300;
+        color: var(--gold);
+      }
+      .transfer-program {
+        font-size: 0.72rem;
+        color: var(--muted);
+        font-weight: 300;
+        letter-spacing: 0.03em;
+      }
+      .transfer-highlight {
+        border-top: 2px solid var(--gold);
+      }
 
- /* ── TIPS BOX ── */
- .tips-box {
- border-left: 2px solid var(--gold);
- background: var(--gold-dim);
- padding: 1.25rem 1.5rem;
- margin-top: 2rem;
- }
- .tips-box-title { font-size: 0.67rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); font-weight: 500; margin-bottom: 0.75rem; }
- .tips-box ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
- .tips-box ul li { font-size: 0.86rem; color: #2a2826; font-weight: 300; line-height: 1.6; padding-left: 1.1rem; position: relative; }
- .tips-box ul li::before { content: '◈'; position: absolute; left: 0; color: var(--gold); font-size: 0.6rem; top: 4px; }
+      /* ── TIPS BOX ── */
+      .tips-box {
+        border-left: 2px solid var(--gold);
+        background: var(--gold-dim);
+        padding: 1.25rem 1.5rem;
+        margin-top: 2rem;
+      }
+      .tips-box-title {
+        font-size: 0.67rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--gold);
+        font-weight: 500;
+        margin-bottom: 0.75rem;
+      }
+      .tips-box ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .tips-box ul li {
+        font-size: 0.86rem;
+        color: #2a2826;
+        font-weight: 300;
+        line-height: 1.6;
+        padding-left: 1.1rem;
+        position: relative;
+      }
+      .tips-box ul li::before {
+        content: "◈";
+        position: absolute;
+        left: 0;
+        color: var(--gold);
+        font-size: 0.6rem;
+        top: 4px;
+      }
 
- /* ── IMPORTANT NOTE ── */
- .note-box {
- border: 0.5px solid var(--border);
- background: var(--warm-white);
- padding: 1.1rem 1.4rem;
- margin-top: 1.5rem;
- font-size: 0.82rem;
- color: var(--muted);
- line-height: 1.7;
- font-weight: 300;
- }
- .note-box strong { color: var(--black); font-weight: 500; }
+      /* ── IMPORTANT NOTE ── */
+      .note-box {
+        border: 0.5px solid var(--border);
+        background: var(--warm-white);
+        padding: 1.1rem 1.4rem;
+        margin-top: 1.5rem;
+        font-size: 0.82rem;
+        color: var(--muted);
+        line-height: 1.7;
+        font-weight: 300;
+      }
+      .note-box strong {
+        color: var(--black);
+        font-weight: 500;
+      }
 
- /* ── CTA SECTION ── */
- .cta-section {
- background: var(--black);
- padding: 5rem 2rem;
- text-align: center;
- }
- .cta-inner { max-width: 620px; margin: 0 auto; }
- .cta-eyebrow { font-size: 0.67rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.1rem; font-weight: 500; }
- .cta-title { font-family: var(--font-display); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 300; color: var(--white); line-height: 1.15; margin-bottom: 1.1rem; }
- .cta-title em { font-style: italic; color: var(--gold); }
- .cta-text { font-size: 0.9rem; color: rgba(250,249,247,0.5); line-height: 1.8; font-weight: 300; margin-bottom: 2.25rem; }
- .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
- .btn-primary { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--white); color: var(--black); padding: 0.8rem 1.75rem; text-decoration: none; transition: background 0.2s; font-family: var(--font-body); }
- .btn-primary:hover { background: #e8e6e2; }
- .btn-primary:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
- .btn-outline { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; border: 0.5px solid rgba(250,249,247,0.3); color: rgba(250,249,247,0.7); padding: 0.8rem 1.75rem; text-decoration: none; transition: all 0.2s; font-family: var(--font-body); }
- .btn-outline:hover { border-color: var(--white); color: var(--white); }
+      /* ── CTA SECTION ── */
+      .cta-section {
+        background: var(--black);
+        padding: 5rem 2rem;
+        text-align: center;
+      }
+      .cta-inner {
+        max-width: 620px;
+        margin: 0 auto;
+      }
+      .cta-eyebrow {
+        font-size: 0.67rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 1.1rem;
+        font-weight: 500;
+      }
+      .cta-title {
+        font-family: var(--font-display);
+        font-size: clamp(2rem, 3.5vw, 3rem);
+        font-weight: 300;
+        color: var(--white);
+        line-height: 1.15;
+        margin-bottom: 1.1rem;
+      }
+      .cta-title em {
+        font-style: italic;
+        color: var(--gold);
+      }
+      .cta-text {
+        font-size: 0.9rem;
+        color: rgba(250, 249, 247, 0.5);
+        line-height: 1.8;
+        font-weight: 300;
+        margin-bottom: 2.25rem;
+      }
+      .cta-buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .btn-primary {
+        font-size: 0.75rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        background: var(--white);
+        color: var(--black);
+        padding: 0.8rem 1.75rem;
+        text-decoration: none;
+        transition: background 0.2s;
+        font-family: var(--font-body);
+      }
+      .btn-primary:hover {
+        background: #e8e6e2;
+      }
+      .btn-primary:focus-visible {
+        outline: 2px solid var(--gold);
+        outline-offset: 3px;
+      }
+      .btn-outline {
+        font-size: 0.75rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        border: 0.5px solid rgba(250, 249, 247, 0.3);
+        color: rgba(250, 249, 247, 0.7);
+        padding: 0.8rem 1.75rem;
+        text-decoration: none;
+        transition: all 0.2s;
+        font-family: var(--font-body);
+      }
+      .btn-outline:hover {
+        border-color: var(--white);
+        color: var(--white);
+      }
 
- /* ── FOOTER ── */
- footer { background: var(--warm-white); border-top: 0.5px solid var(--border); padding: 2rem 2rem 1.5rem; }
- .footer-bottom { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; }
- .footer-bottom p { font-size: 0.7rem; color: var(--muted); letter-spacing: 0.05em; }
- .footer-nav { display: flex; gap: 1.5rem; }
- .footer-nav a { font-size: 0.72rem; color: var(--muted); text-decoration: none; letter-spacing: 0.05em; transition: color 0.2s; }
- .footer-nav a:hover { color: var(--black); }
+      /* ── FOOTER ── */
+      footer {
+        background: var(--warm-white);
+        border-top: 0.5px solid var(--border);
+        padding: 2rem 2rem 1.5rem;
+      }
+      .footer-bottom {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+      .footer-bottom p {
+        font-size: 0.7rem;
+        color: var(--muted);
+        letter-spacing: 0.05em;
+      }
+      .footer-nav {
+        display: flex;
+        gap: 1.5rem;
+      }
+      .footer-nav a {
+        font-size: 0.72rem;
+        color: var(--muted);
+        text-decoration: none;
+        letter-spacing: 0.05em;
+        transition: color 0.2s;
+      }
+      .footer-nav a:hover {
+        color: var(--black);
+      }
 
- /* ── DISCLAIMER BANNER ── */
- .disclaimer-banner {
- background: #fff8e8;
- border-bottom: 1px solid #e8d08a;
- padding: 0.85rem 2rem;
- }
- .disclaimer-inner {
- max-width: 1000px;
- margin: 0 auto;
- display: flex;
- align-items: flex-start;
- gap: 0.75rem;
- font-size: 0.78rem;
- color: #7a6020;
- line-height: 1.55;
- font-weight: 300;
- }
- .disclaimer-icon { font-size: 0.9rem; flex-shrink: 0; margin-top: 1px; }
- .disclaimer-inner strong { font-weight: 500; color: #5a4510; }
- .disclaimer-inner a { color: #7a6020; text-decoration: underline; text-underline-offset: 2px; }
+      /* ── DISCLAIMER BANNER ── */
+      .disclaimer-banner {
+        background: #fff8e8;
+        border-bottom: 1px solid #e8d08a;
+        padding: 0.85rem 2rem;
+      }
+      .disclaimer-inner {
+        max-width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+        font-size: 0.78rem;
+        color: #7a6020;
+        line-height: 1.55;
+        font-weight: 300;
+      }
+      .disclaimer-icon {
+        font-size: 0.9rem;
+        flex-shrink: 0;
+        margin-top: 1px;
+      }
+      .disclaimer-inner strong {
+        font-weight: 500;
+        color: #5a4510;
+      }
+      .disclaimer-inner a {
+        color: #7a6020;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+      }
 
- /* ── CARD LINKS ── */
- .earn-card-link {
- display: inline-flex;
- align-items: center;
- gap: 0.3rem;
- margin-top: 0.75rem;
- font-size: 0.7rem;
- letter-spacing: 0.1em;
- text-transform: uppercase;
- color: var(--gold);
- text-decoration: none;
- border-bottom: 0.5px solid var(--gold);
- padding-bottom: 1px;
- transition: opacity 0.2s;
- }
- .earn-card-link:hover { opacity: 0.7; }
- .earn-card-link:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+      /* ── CARD LINKS ── */
+      .earn-card-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+        margin-top: 0.75rem;
+        font-size: 0.7rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--gold);
+        text-decoration: none;
+        border-bottom: 0.5px solid var(--gold);
+        padding-bottom: 1px;
+        transition: opacity 0.2s;
+      }
+      .earn-card-link:hover {
+        opacity: 0.7;
+      }
+      .earn-card-link:focus-visible {
+        outline: 2px solid var(--gold);
+        outline-offset: 3px;
+      }
 
- /* Transfer card links */
- .transfer-card a {
- font-size: 0.7rem;
- color: var(--gold);
- text-decoration: none;
- letter-spacing: 0.05em;
- border-bottom: 0.5px solid rgba(184,150,46,0.4);
- transition: opacity 0.2s;
- margin-top: 0.25rem;
- display: inline-block;
- }
- .transfer-card a:hover { opacity: 0.7; }
+      /* Transfer card links */
+      .transfer-card a {
+        font-size: 0.7rem;
+        color: var(--gold);
+        text-decoration: none;
+        letter-spacing: 0.05em;
+        border-bottom: 0.5px solid rgba(184, 150, 46, 0.4);
+        transition: opacity 0.2s;
+        margin-top: 0.25rem;
+        display: inline-block;
+      }
+      .transfer-card a:hover {
+        opacity: 0.7;
+      }
 
- /* ── ANIMATIONS ── */
- @keyframes fadeUp {
- from { opacity: 0; transform: translateY(20px); }
- to { opacity: 1; transform: translateY(0); }
- }
+      /* ── ANIMATIONS ── */
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
 
- /* ── MOBILE ── */
- @media (max-width: 768px) {
- nav { padding: 1rem 1.25rem; }
- .nav-links { display: none; }
- .nav-cta { display: none; }
- .nav-toggle { display: flex; }
- .page-hero { padding: 4rem 1.5rem 3.5rem; }
- .programme-section { padding: 3.5rem 1.5rem; }
- .prog-header { grid-template-columns: 1fr; }
- .prog-badge { display: none; }
- .card-grid { grid-template-columns: 1fr; }
- .card-grid-2 { grid-template-columns: 1fr; }
- .card-grid-4 { grid-template-columns: 1fr 1fr; }
- .calc-grid { grid-template-columns: 1fr 1fr; }
- .transfer-grid { grid-template-columns: 1fr 1fr; }
- .benchmark-table { font-size: 0.78rem; }
- .benchmark-table th, .benchmark-table td { padding: 0.6rem 0.5rem; }
- .tab-btn { padding: 1rem 1.25rem; font-size: 0.68rem; }
- .cta-section { padding: 4rem 1.5rem; }
- .footer-bottom { flex-direction: column; align-items: flex-start; }
- }
- @media (max-width: 480px) {
- .card-grid-4 { grid-template-columns: 1fr; }
- .calc-grid { grid-template-columns: 1fr; }
- .transfer-grid { grid-template-columns: 1fr; }
- }
+      /* ── MOBILE ── */
+      @media (max-width: 768px) {
+        nav {
+          padding: 1rem 1.25rem;
+        }
+        .nav-links {
+          display: none;
+        }
+        .nav-cta {
+          display: none;
+        }
+        .nav-toggle {
+          display: flex;
+        }
+        .page-hero {
+          padding: 4rem 1.5rem 3.5rem;
+        }
+        .programme-section {
+          padding: 3.5rem 1.5rem;
+        }
+        .prog-header {
+          grid-template-columns: 1fr;
+        }
+        .prog-badge {
+          display: none;
+        }
+        .card-grid {
+          grid-template-columns: 1fr;
+        }
+        .card-grid-2 {
+          grid-template-columns: 1fr;
+        }
+        .card-grid-4 {
+          grid-template-columns: 1fr 1fr;
+        }
+        .calc-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .transfer-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .benchmark-table {
+          font-size: 0.78rem;
+        }
+        .benchmark-table th,
+        .benchmark-table td {
+          padding: 0.6rem 0.5rem;
+        }
+        .tab-btn {
+          padding: 1rem 1.25rem;
+          font-size: 0.68rem;
+        }
+        .cta-section {
+          padding: 4rem 1.5rem;
+        }
+        .footer-bottom {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+      @media (max-width: 480px) {
+        .card-grid-4 {
+          grid-template-columns: 1fr;
+        }
+        .calc-grid {
+          grid-template-columns: 1fr;
+        }
+        .transfer-grid {
+          grid-template-columns: 1fr;
+        }
+      }
 
-  /* Tab active override */
-  .tab-btn[href="strategies-amex.html"] { color: var(--black); border-bottom-color: var(--gold); }
-</style>
+      /* Tab active override */
+      .tab-btn[href="strategies-amex.html"] {
+        color: var(--black);
+        border-bottom-color: var(--gold);
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html" class="logo">Meilen<span>guru</span></a>
+      <ul class="nav-links">
+        <li><a href="strategies.html" class="active">Strategies</a></li>
+        <li><a href="referrals.html">Referrals</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="tools.html">Tools</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="consultation.html">Consult</a></li>
+      </ul>
+      <a href="consultation.html" class="nav-cta">Book a Session</a>
+      <button class="nav-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
 
-</head>
-<body>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="strategies.html" onclick="closeMenu()">Strategies</a>
+      <a href="referrals.html" onclick="closeMenu()">Referrals</a>
+      <a href="blog.html" onclick="closeMenu()">Blog</a>
+      <a href="tools.html" onclick="closeMenu()">Tools</a>
+      <a href="about.html" onclick="closeMenu()">About</a>
+      <a href="consultation.html" onclick="closeMenu()">Consult</a>
+      <a href="consultation.html" class="mobile-cta" onclick="closeMenu()">Book a Session</a>
+    </div>
 
+    <!-- DISCLAIMER BANNER -->
 
-<nav>
- <a href="index.html" class="logo">Meilen<span>guru</span></a>
- <ul class="nav-links">
- <li><a href="strategies.html" class="active">Strategies</a></li>
- <li><a href="referrals.html">Referrals</a></li>
- <li><a href="blog.html">Blog</a></li>
-    <li><a href="tools.html">Tools</a></li>
- <li><a href="about.html">About</a></li>
- <li><a href="consultation.html">Consult</a></li>
- </ul>
- <a href="consultation.html" class="nav-cta">Book a Session</a>
- <button class="nav-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
- <span></span><span></span><span></span>
- </button>
-</nav>
+    <div class="disclaimer-banner">
+      <div class="disclaimer-inner">
+        <span class="disclaimer-icon">⚠</span>
+        <span
+          ><strong>Information changes frequently.</strong> Welcome bonuses, earning rates, transfer ratios, and annual
+          fees shown on this page are based on publicly available information at the time of writing and are subject to
+          change without notice. Promotional offers are time-limited and may not be available when you apply. Card
+          issuers run bonus promotions periodically — current offers may be higher or lower than the standard figures
+          shown. Always verify current terms directly with the card issuer before applying. Meilenguru is not a
+          financial adviser. This page is for informational purposes only.</span
+        >
+      </div>
+    </div>
 
-<div class="mobile-menu" id="mobileMenu">
- <a href="strategies.html" onclick="closeMenu()">Strategies</a>
- <a href="referrals.html" onclick="closeMenu()">Referrals</a>
- <a href="blog.html" onclick="closeMenu()">Blog</a>
-  <a href="tools.html" onclick="closeMenu()">Tools</a>
- <a href="about.html" onclick="closeMenu()">About</a>
- <a href="consultation.html" onclick="closeMenu()">Consult</a>
- <a href="consultation.html" class="mobile-cta" onclick="closeMenu()">Book a Session</a>
-</div>
+    <div class="page-hero">
+      <div class="page-hero-inner">
+        <p class="page-eyebrow">The engine — flexible currency</p>
+        <h1 class="page-title">Amex Membership Rewards —<br /><em>your flexible reserve</em></h1>
+        <p class="page-subtitle">
+          Swiss Amex cards, transfer partners, and the golden rules of keeping your points flexible until the right
+          award appears.
+        </p>
+      </div>
+    </div>
+    <div class="tab-nav">
+      <div class="tab-nav-inner">
+        <a href="strategies-miles-more.html" class="tab-btn">Miles & More</a>
+        <a href="strategies-flying-blue.html" class="tab-btn">Flying Blue</a>
+        <a href="strategies-amex.html" class="tab-btn">Amex MR</a>
+        <a href="strategies-benchmark.html" class="tab-btn">The Benchmark</a>
+        <a href="referrals.html" class="tab-btn" style="color: var(--gold); border-bottom-color: var(--gold)"
+          >✦ Referral Codes →</a
+        >
+      </div>
+    </div>
+    <section class="programme-section" id="amex">
+      <div class="section-inner">
+        <div class="prog-header">
+          <div>
+            <p class="prog-eyebrow">The engine</p>
+            <h2 class="prog-title">Amex Membership Rewards —<br /><em>your flexible reserve</em></h2>
+            <p class="prog-desc">
+              Amex MR isn't a frequent flyer programme — it's a points bank that feeds into them. Hold your points in
+              Amex until you've confirmed the award you want, then transfer. The flexibility is the whole point. (One
+              important caveat for Swiss residents: the transfer ratios here are worse than the global Amex rates. More
+              on that below.)
+            </p>
+          </div>
+          <div class="prog-badge">
+            <div class="prog-badge-num">45,000</div>
+            <div class="prog-badge-label">Platinum welcome bonus</div>
+          </div>
+        </div>
 
-<!-- DISCLAIMER BANNER -->
+        <!-- SWISS AMEX CARDS -->
+        <p class="sub-heading">Swiss Amex cards available in Switzerland</p>
 
-<div class="disclaimer-banner">
- <div class="disclaimer-inner">
- <span class="disclaimer-icon">⚠</span>
- <span><strong>Information changes frequently.</strong> Welcome bonuses, earning rates, transfer ratios, and annual fees shown on this page are based on publicly available information at the time of writing and are subject to change without notice. Promotional offers are time-limited and may not be available when you apply. Card issuers run bonus promotions periodically — current offers may be higher or lower than the standard figures shown. Always verify current terms directly with the card issuer before applying. Meilenguru is not a financial adviser. This page is for informational purposes only.</span>
- </div>
-</div>
+        <div class="card-grid card-grid-2">
+          <div class="earn-card">
+            <div class="earn-card-tag">Swisscard · Amex Platinum CH</div>
+            <h3>American Express Platinum</h3>
+            <p>
+              Switzerland's most powerful points-earning card. 1 MR point per CHF 1 on all purchases. 45,000-point
+              welcome bonus (current standard offer). Includes Priority Pass, CHF 100 SWISS voucher, CHF 200 Sixt
+              credit, and access to 1,400+ lounges worldwide. Annual fee CHF 900.
+            </p>
+            <div class="earn-card-stat"><span>45,000</span></div>
+            <div class="earn-card-stat-label">Welcome MR points · 1 point/CHF 1</div>
+            <a
+              href="https://www.americanexpress.ch/en/cards/private-customers-cards/platinum-card"
+              target="_blank"
+              rel="noopener"
+              class="earn-card-link"
+              >View card →</a
+            >
+          </div>
+          <div class="earn-card">
+            <div class="earn-card-tag">Swisscard · Amex Gold CH</div>
+            <h3>American Express Gold</h3>
+            <p>
+              Lower annual fee entry point (CHF 220). Earns 1 MR point per CHF 1. Welcome bonus typically 15,000–20,000
+              points. Good as a second Amex card to combine with the Platinum for additional household earning.
+            </p>
+            <div class="earn-card-stat"><span>15,000–20,000</span></div>
+            <div class="earn-card-stat-label">Welcome MR points · CHF 220 p.a.</div>
+            <a
+              href="https://www.americanexpress.ch/en/cards/private-customers-cards/gold-card"
+              target="_blank"
+              rel="noopener"
+              class="earn-card-link"
+              >View card →</a
+            >
+          </div>
+        </div>
 
+        <!-- TRANSFER PARTNERS -->
+        <p class="sub-heading">Swiss Amex MR transfer partners</p>
 
-<div class="page-hero">
-  <div class="page-hero-inner">
-    <p class="page-eyebrow">The engine — flexible currency</p>
-    <h1 class="page-title">Amex Membership Rewards —<br><em>your flexible reserve</em></h1>
-    <p class="page-subtitle">Swiss Amex cards, transfer partners, and the golden rules of keeping your points flexible until the right award appears.</p>
-  </div>
-</div>
-<div class="tab-nav">
-  <div class="tab-nav-inner">
-    <a href="strategies-miles-more.html" class="tab-btn">Miles & More</a>
-    <a href="strategies-flying-blue.html" class="tab-btn">Flying Blue</a>
-    <a href="strategies-amex.html" class="tab-btn">Amex MR</a>
-    <a href="strategies-benchmark.html" class="tab-btn">The Benchmark</a>
-    <a href="referrals.html" class="tab-btn" style="color:var(--gold);border-bottom-color:var(--gold);">✦ Referral Codes →</a>
-  </div>
-</div>
-<section class="programme-section" id="amex">
- <div class="section-inner">
+        <div class="transfer-grid">
+          <div class="transfer-card transfer-highlight">
+            <div class="transfer-airline">
+              <a href="https://www.miles-and-more.com/ch/en" target="_blank" rel="noopener">Miles & More</a>
+            </div>
+            <div class="transfer-ratio">2:1</div>
+            <div class="transfer-program">Star Alliance · SWISS / Lufthansa</div>
+          </div>
+          <div class="transfer-card transfer-highlight">
+            <div class="transfer-airline">
+              <a href="https://www.flyingblue.com" target="_blank" rel="noopener">Flying Blue</a>
+            </div>
+            <div class="transfer-ratio">2:1</div>
+            <div class="transfer-program">SkyTeam · Air France / KLM</div>
+          </div>
+          <div class="transfer-card">
+            <div class="transfer-airline">
+              <a href="https://www.britishairways.com/en-gb/executive-club" target="_blank" rel="noopener"
+                >British Airways Avios</a
+              >
+            </div>
+            <div class="transfer-ratio">3:2</div>
+            <div class="transfer-program">oneworld · BA / Iberia / Qatar</div>
+          </div>
+          <div class="transfer-card">
+            <div class="transfer-airline">
+              <a href="https://www.delta.com/us/en/skymiles/overview" target="_blank" rel="noopener">Delta SkyMiles</a>
+            </div>
+            <div class="transfer-ratio">2:1</div>
+            <div class="transfer-program">SkyTeam · Delta Air Lines</div>
+          </div>
+          <div class="transfer-card">
+            <div class="transfer-airline">
+              <a href="https://www.etihad.com/en/etihad-guest" target="_blank" rel="noopener">Etihad Guest</a>
+            </div>
+            <div class="transfer-ratio">2:1</div>
+            <div class="transfer-program">Non-alliance · Etihad Airways</div>
+          </div>
+          <div class="transfer-card">
+            <div class="transfer-airline">
+              <a href="https://www.emirates.com/english/skywards/" target="_blank" rel="noopener">Emirates Skywards</a>
+            </div>
+            <div class="transfer-ratio">2:1</div>
+            <div class="transfer-program">Non-alliance · Emirates</div>
+          </div>
+          <div class="transfer-card">
+            <div class="transfer-airline">
+              <a href="https://www.singaporeair.com/en_UK/ppsclub-krisflyer/" target="_blank" rel="noopener"
+                >Singapore KrisFlyer</a
+              >
+            </div>
+            <div class="transfer-ratio">2:1</div>
+            <div class="transfer-program">Star Alliance · Singapore Airlines</div>
+          </div>
+          <div class="transfer-card">
+            <div class="transfer-airline">
+              <a href="https://www.ana.co.jp/en/uk/amc/" target="_blank" rel="noopener">ANA Mileage Club</a>
+            </div>
+            <div class="transfer-ratio">2:1</div>
+            <div class="transfer-program">Star Alliance · ANA Japan</div>
+          </div>
+          <div class="transfer-card">
+            <div class="transfer-airline">
+              <a href="https://www.hilton.com/en/hilton-honors/" target="_blank" rel="noopener">Hilton Honors</a>
+            </div>
+            <div class="transfer-ratio">2:1</div>
+            <div class="transfer-program">Hotel · Hilton worldwide</div>
+          </div>
+          <div class="transfer-card">
+            <div class="transfer-airline">
+              <a href="https://www.marriott.com/loyalty/mergeAccounts/default.mi" target="_blank" rel="noopener"
+                >Marriott Bonvoy</a
+              >
+            </div>
+            <div class="transfer-ratio">2:1</div>
+            <div class="transfer-program">Hotel · Marriott worldwide</div>
+          </div>
+        </div>
 
- <div class="prog-header">
- <div>
- <p class="prog-eyebrow">The engine</p>
- <h2 class="prog-title">Amex Membership Rewards —<br><em>your flexible reserve</em></h2>
- <p class="prog-desc">Amex MR isn't a frequent flyer programme — it's a points bank that feeds into them. Hold your points in Amex until you've confirmed the award you want, then transfer. The flexibility is the whole point. (One important caveat for Swiss residents: the transfer ratios here are worse than the global Amex rates. More on that below.)</p>
- </div>
- <div class="prog-badge">
- <div class="prog-badge-num">45,000</div>
- <div class="prog-badge-label">Platinum welcome bonus</div>
- </div>
- </div>
+        <div class="note-box">
+          <strong>Important: Swiss Amex MR transfer ratios differ from global rates.</strong> In Switzerland, Amex
+          Membership Rewards transfer at <strong>2:1 to virtually all airline partners</strong> (2 MR points = 1 mile) —
+          including Miles & More, Flying Blue, Delta, Emirates, Etihad, Singapore Airlines, and ANA. British Airways
+          Avios is slightly better at 3:2 (3 MR = 2 Avios). This is significantly worse than the 1:1 ratios available on
+          US or some other Amex cards. Factor this into your strategy: the Amex Platinum welcome bonus of 45,000 MR
+          points converts to 22,500 miles in most programmes. The earning rate on spend (1 MR/CHF 1) effectively yields
+          0.5 airline miles per CHF spent when transferred. This makes the Amex best used for its welcome bonus and as a
+          flexible reserve — not as your primary day-to-day miles earner.
+        </div>
 
- <!-- SWISS AMEX CARDS -->
- <p class="sub-heading">Swiss Amex cards available in Switzerland</p>
+        <div class="tips-box">
+          <div class="tips-box-title">The golden rule of Amex points</div>
+          <ul>
+            <li>
+              <strong>Keep points flexible for as long as possible.</strong> Once transferred, they cannot be returned.
+              Hold Amex points until you've confirmed award availability and are ready to book immediately.
+            </li>
+            <li>
+              <strong>Watch for transfer bonuses.</strong> Amex Switzerland periodically offers 25% or 30% bonuses on
+              transfers to Flying Blue (and occasionally other partners). These represent a significant boost in value.
+            </li>
+            <li>
+              <strong>Points don't expire while the card is active.</strong> Unlike M&M or Flying Blue, Amex MR points
+              remain valid as long as you hold an Amex card in Switzerland. This gives you time to wait for the right
+              opportunity.
+            </li>
+            <li>
+              <strong>Combining programmes is the power move.</strong> Hold Amex points as a reserve. Build M&M
+              separately through Cornèrcard. When the right award appears, deploy from whichever pool gives the best
+              value.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
- <div class="card-grid card-grid-2">
- <div class="earn-card">
- <div class="earn-card-tag">Swisscard · Amex Platinum CH</div>
- <h3>American Express Platinum</h3>
- <p>Switzerland's most powerful points-earning card. 1 MR point per CHF 1 on all purchases. 45,000-point welcome bonus (current standard offer). Includes Priority Pass, CHF 100 SWISS voucher, CHF 200 Sixt credit, and access to 1,400+ lounges worldwide. Annual fee CHF 900.</p>
- <div class="earn-card-stat"><span>45,000</span></div>
- <div class="earn-card-stat-label">Welcome MR points · 1 point/CHF 1</div>
- <a href="https://www.americanexpress.ch/en/cards/private-customers-cards/platinum-card" target="_blank" rel="noopener" class="earn-card-link">View card →</a>
- </div>
- <div class="earn-card">
- <div class="earn-card-tag">Swisscard · Amex Gold CH</div>
- <h3>American Express Gold</h3>
- <p>Lower annual fee entry point (CHF 220). Earns 1 MR point per CHF 1. Welcome bonus typically 15,000–20,000 points. Good as a second Amex card to combine with the Platinum for additional household earning.</p>
- <div class="earn-card-stat"><span>15,000–20,000</span></div>
- <div class="earn-card-stat-label">Welcome MR points · CHF 220 p.a.</div>
- <a href="https://www.americanexpress.ch/en/cards/private-customers-cards/gold-card" target="_blank" rel="noopener" class="earn-card-link">View card →</a>
- </div>
- </div>
-
- <!-- TRANSFER PARTNERS -->
- <p class="sub-heading">Swiss Amex MR transfer partners</p>
-
- <div class="transfer-grid">
- <div class="transfer-card transfer-highlight">
- <div class="transfer-airline"><a href="https://www.miles-and-more.com/ch/en" target="_blank" rel="noopener">Miles & More</a></div>
- <div class="transfer-ratio">2:1</div>
- <div class="transfer-program">Star Alliance · SWISS / Lufthansa</div>
- </div>
- <div class="transfer-card transfer-highlight">
- <div class="transfer-airline"><a href="https://www.flyingblue.com" target="_blank" rel="noopener">Flying Blue</a></div>
- <div class="transfer-ratio">2:1</div>
- <div class="transfer-program">SkyTeam · Air France / KLM</div>
- </div>
- <div class="transfer-card">
- <div class="transfer-airline"><a href="https://www.britishairways.com/en-gb/executive-club" target="_blank" rel="noopener">British Airways Avios</a></div>
- <div class="transfer-ratio">3:2</div>
- <div class="transfer-program">oneworld · BA / Iberia / Qatar</div>
- </div>
- <div class="transfer-card">
- <div class="transfer-airline"><a href="https://www.delta.com/us/en/skymiles/overview" target="_blank" rel="noopener">Delta SkyMiles</a></div>
- <div class="transfer-ratio">2:1</div>
- <div class="transfer-program">SkyTeam · Delta Air Lines</div>
- </div>
- <div class="transfer-card">
- <div class="transfer-airline"><a href="https://www.etihad.com/en/etihad-guest" target="_blank" rel="noopener">Etihad Guest</a></div>
- <div class="transfer-ratio">2:1</div>
- <div class="transfer-program">Non-alliance · Etihad Airways</div>
- </div>
- <div class="transfer-card">
- <div class="transfer-airline"><a href="https://www.emirates.com/english/skywards/" target="_blank" rel="noopener">Emirates Skywards</a></div>
- <div class="transfer-ratio">2:1</div>
- <div class="transfer-program">Non-alliance · Emirates</div>
- </div>
- <div class="transfer-card">
- <div class="transfer-airline"><a href="https://www.singaporeair.com/en_UK/ppsclub-krisflyer/" target="_blank" rel="noopener">Singapore KrisFlyer</a></div>
- <div class="transfer-ratio">2:1</div>
- <div class="transfer-program">Star Alliance · Singapore Airlines</div>
- </div>
- <div class="transfer-card">
- <div class="transfer-airline"><a href="https://www.ana.co.jp/en/uk/amc/" target="_blank" rel="noopener">ANA Mileage Club</a></div>
- <div class="transfer-ratio">2:1</div>
- <div class="transfer-program">Star Alliance · ANA Japan</div>
- </div>
- <div class="transfer-card">
- <div class="transfer-airline"><a href="https://www.hilton.com/en/hilton-honors/" target="_blank" rel="noopener">Hilton Honors</a></div>
- <div class="transfer-ratio">2:1</div>
- <div class="transfer-program">Hotel · Hilton worldwide</div>
- </div>
- <div class="transfer-card">
- <div class="transfer-airline"><a href="https://www.marriott.com/loyalty/mergeAccounts/default.mi" target="_blank" rel="noopener">Marriott Bonvoy</a></div>
- <div class="transfer-ratio">2:1</div>
- <div class="transfer-program">Hotel · Marriott worldwide</div>
- </div>
- </div>
-
- <div class="note-box"><strong>Important: Swiss Amex MR transfer ratios differ from global rates.</strong> In Switzerland, Amex Membership Rewards transfer at <strong>2:1 to virtually all airline partners</strong> (2 MR points = 1 mile) — including Miles & More, Flying Blue, Delta, Emirates, Etihad, Singapore Airlines, and ANA. British Airways Avios is slightly better at 3:2 (3 MR = 2 Avios). This is significantly worse than the 1:1 ratios available on US or some other Amex cards. Factor this into your strategy: the Amex Platinum welcome bonus of 45,000 MR points converts to 22,500 miles in most programmes. The earning rate on spend (1 MR/CHF 1) effectively yields 0.5 airline miles per CHF spent when transferred. This makes the Amex best used for its welcome bonus and as a flexible reserve — not as your primary day-to-day miles earner.</div>
-
- <div class="tips-box">
- <div class="tips-box-title">The golden rule of Amex points</div>
- <ul>
- <li><strong>Keep points flexible for as long as possible.</strong> Once transferred, they cannot be returned. Hold Amex points until you've confirmed award availability and are ready to book immediately.</li>
- <li><strong>Watch for transfer bonuses.</strong> Amex Switzerland periodically offers 25% or 30% bonuses on transfers to Flying Blue (and occasionally other partners). These represent a significant boost in value.</li>
- <li><strong>Points don't expire while the card is active.</strong> Unlike M&M or Flying Blue, Amex MR points remain valid as long as you hold an Amex card in Switzerland. This gives you time to wait for the right opportunity.</li>
- <li><strong>Combining programmes is the power move.</strong> Hold Amex points as a reserve. Build M&M separately through Cornèrcard. When the right award appears, deploy from whichever pool gives the best value.</li>
- </ul>
- </div>
- </div>
-</section>
-
-<!-- ══════════════════════════════
+    <!-- ══════════════════════════════
  SECTION 4: BENCHMARK
 ══════════════════════════════ -->
 
-<section class="cta-section">
-  <div class="cta-inner">
-    <p class="cta-eyebrow">Want a personalised version of this?</p>
-    <h2 class="cta-title">Your cards. Your spending.<br><em>Your redemption.</em></h2>
-    <p class="cta-text">The strategies above are general. Your situation is specific. In 30 minutes we go through your actual cards, your actual spending, and work out the fastest path to your first Business Class redemption.</p>
-    <div class="cta-buttons">
-      <a href="referrals.html" class="btn-primary">View Referral Codes</a>
-      <a href="consultation.html" class="btn-outline">Book a Session — CHF 79</a>
-    </div>
-  </div>
-</section>
-<footer>
- <div class="footer-bottom">
- <a href="index.html" class="logo" style="font-size:1.2rem;">Meilen<span style="color:var(--gold);">guru</span></a>
- <p>© 2025 Meilenguru · meilenguru.ch · Zürich, Switzerland</p>
- <nav class="footer-nav">
- <a href="index.html">Home</a>
- <a href="strategies.html">Strategies</a>
- <a href="referrals.html">Referral Codes</a>
- <a href="blog.html">Blog</a>
-  <a href="tools.html" onclick="closeMenu()">Tools</a>
- <a href="about.html">About</a>
- <a href="consultation.html">Book a Session</a>
- </nav>
- </div>
-</footer>
+    <section class="cta-section">
+      <div class="cta-inner">
+        <p class="cta-eyebrow">Want a personalised version of this?</p>
+        <h2 class="cta-title">Your cards. Your spending.<br /><em>Your redemption.</em></h2>
+        <p class="cta-text">
+          The strategies above are general. Your situation is specific. In 30 minutes we go through your actual cards,
+          your actual spending, and work out the fastest path to your first Business Class redemption.
+        </p>
+        <div class="cta-buttons">
+          <a href="referrals.html" class="btn-primary">View Referral Codes</a>
+          <a href="consultation.html" class="btn-outline">Book a Session — CHF 79</a>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-bottom">
+        <a href="index.html" class="logo" style="font-size: 1.2rem"
+          >Meilen<span style="color: var(--gold)">guru</span></a
+        >
+        <p>© 2025 Meilenguru · meilenguru.ch · Zürich, Switzerland</p>
+        <nav class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="strategies.html">Strategies</a>
+          <a href="referrals.html">Referral Codes</a>
+          <a href="blog.html">Blog</a>
+          <a href="tools.html" onclick="closeMenu()">Tools</a>
+          <a href="about.html">About</a>
+          <a href="consultation.html">Book a Session</a>
+        </nav>
+      </div>
+    </footer>
 
-<script>
- function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
- function closeMenu() { document.getElementById('mobileMenu').classList.remove('open'); }
+    <script>
+      function toggleMenu() {
+        document.getElementById("mobileMenu").classList.toggle("open");
+      }
+      function closeMenu() {
+        document.getElementById("mobileMenu").classList.remove("open");
+      }
 
- function setActive(el) {
- document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
- el.classList.add('active');
- }
- // Update active tab on scroll
- const sections = ['miles-more', 'flying-blue', 'amex', 'benchmark'];
- window.addEventListener('scroll', () => {
- const scrollY = window.scrollY + 130;
- sections.forEach(id => {
- const el = document.getElementById(id);
- if (!el) return;
- if (el.offsetTop <= scrollY && el.offsetTop + el.offsetHeight > scrollY) {
- document.querySelectorAll('.tab-btn').forEach(b => {
- b.classList.toggle('active', b.getAttribute('href') === '#' + id);
- });
- }
- });
- });
-</script>
+      function setActive(el) {
+        document.querySelectorAll(".tab-btn").forEach((b) => b.classList.remove("active"));
+        el.classList.add("active");
+      }
+      // Update active tab on scroll
+      const sections = ["miles-more", "flying-blue", "amex", "benchmark"];
+      window.addEventListener("scroll", () => {
+        const scrollY = window.scrollY + 130;
+        sections.forEach((id) => {
+          const el = document.getElementById(id);
+          if (!el) return;
+          if (el.offsetTop <= scrollY && el.offsetTop + el.offsetHeight > scrollY) {
+            document.querySelectorAll(".tab-btn").forEach((b) => {
+              b.classList.toggle("active", b.getAttribute("href") === "#" + id);
+            });
+          }
+        });
+      });
+    </script>
 
-
-<script>
-  function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
-  function closeMenu() { document.getElementById('mobileMenu').classList.remove('open'); }
-</script>
-</body>
+    <script>
+      function toggleMenu() {
+        document.getElementById("mobileMenu").classList.toggle("open");
+      }
+      function closeMenu() {
+        document.getElementById("mobileMenu").classList.remove("open");
+      }
+    </script>
+  </body>
 </html>

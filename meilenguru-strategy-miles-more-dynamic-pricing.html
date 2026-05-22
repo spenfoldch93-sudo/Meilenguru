@@ -1,376 +1,978 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Miles & More Dynamic Pricing: What Changed in 2025 and How to Win | Meilenguru</title>
-<meta name="description" content="Miles & More switched to dynamic award pricing in June 2025. What it means for Swiss residents earning miles on Cornèrcard and Amex — and where the real sweet spots are now from Zürich and Geneva.">
-  <link rel="canonical" href="https://meilenguru.ch/meilenguru-strategy-miles-more-dynamic-pricing.html">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-  :root {
-    --black: #0a0a0a; --white: #faf9f7; --warm-white: #f5f3ef;
-    --gold: #b8962e; --gold-light: #d4ae4e; --muted: #888580;
-    --border: rgba(10,10,10,0.1); --blue: #1a3a5c;
-    --font-display: 'Lora', Georgia, serif;
-    --font-body: 'DM Sans', sans-serif;
-  }
-  html { scroll-behavior: smooth; }
-  body { font-family: var(--font-body); background: var(--white); color: var(--black); font-size: 15px; line-height: 1.6; overflow-x: hidden; }
-
-  nav { position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.1rem 2rem; background: rgba(250,249,247,0.95); backdrop-filter: blur(12px); border-bottom: 0.5px solid var(--border); }
-  .logo { font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; color: var(--black); text-decoration: none; }
-  .logo span { color: var(--gold); }
-  .nav-back { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
-  .nav-back:hover { color: var(--gold); }
-  .nav-cta { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--black); color: var(--white); padding: 0.45rem 1.1rem; text-decoration: none; }
-  .nav-cta:hover { background: #2a2a2a; }
-
-  .article-header { max-width: 780px; margin: 0 auto; padding: 5rem 2rem 3rem; }
-  .article-meta { display: flex; gap: 0.75rem; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; }
-  .tag { font-size: 0.67rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); border: 0.5px solid var(--gold); padding: 0.28rem 0.7rem; font-weight: 500; }
-  .meta-text { font-size: 0.77rem; color: var(--muted); }
-  h1 { font-family: var(--font-display); font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 300; line-height: 1.1; margin-bottom: 1.25rem; }
-  h1 em { font-style: italic; color: var(--gold); }
-  .article-subtitle { font-size: 1.05rem; color: var(--muted); font-weight: 300; line-height: 1.75; max-width: 580px; margin-bottom: 2rem; }
-
-  .toc { background: var(--warm-white); border-left: 2px solid var(--gold); padding: 1.25rem 1.5rem; margin-bottom: 2rem; max-width: 780px; margin-left: auto; margin-right: auto; padding-left: 2rem; padding-right: 2rem; }
-  .toc-title { font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); font-weight: 500; margin-bottom: 0.75rem; }
-  .toc ol { padding-left: 1.25rem; display: flex; flex-direction: column; gap: 0.3rem; }
-  .toc li { font-size: 0.85rem; font-weight: 300; }
-  .toc a { color: var(--black); text-decoration: none; }
-  .toc a:hover { color: var(--gold); }
-
-  .article-body { max-width: 700px; margin: 0 auto; padding: 0 2rem 6rem; }
-  .article-body p { margin-bottom: 1.4rem; font-weight: 300; color: #2a2826; line-height: 1.85; }
-  .article-body p strong { font-weight: 500; color: var(--black); }
-  h2 { font-family: var(--font-display); font-size: 1.85rem; font-weight: 400; line-height: 1.2; margin: 3.5rem 0 1.1rem; scroll-margin-top: 80px; }
-  h2 em { font-style: italic; color: var(--gold); }
-  h3 { font-size: 0.82rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); font-weight: 500; margin: 2.5rem 0 0.75rem; }
-
-  .pullquote { border-left: 2px solid var(--gold); padding: 1rem 1.75rem; margin: 2.5rem 0; background: var(--warm-white); }
-  .pullquote p { font-family: var(--font-display); font-size: 1.3rem; font-weight: 300; font-style: italic; line-height: 1.5; color: var(--black) !important; margin: 0; }
-
-  .info-box { border: 0.5px solid var(--border); padding: 1.6rem 1.6rem 1.4rem; margin: 2rem 0; background: var(--warm-white); }
-  .info-box-title { font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); font-weight: 500; margin-bottom: 0.9rem; }
-  .info-box ul { list-style: none; display: flex; flex-direction: column; gap: 0.55rem; }
-  .info-box ul li { font-size: 0.88rem; font-weight: 300; color: #2a2826; padding-left: 1.2rem; position: relative; line-height: 1.6; }
-  .info-box ul li::before { content: "◈"; position: absolute; left: 0; color: var(--gold); font-size: 0.6rem; top: 4px; }
-  .info-box ul li strong { font-weight: 500; color: var(--black); }
-
-  .price-grid { background: var(--black); padding: 2rem; margin: 2rem 0; }
-  .price-grid-label { font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: #d4ae4e; font-weight: 500; margin-bottom: 1rem; }
-  .price-grid-inner { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px; background: rgba(250,249,247,0.08); }
-  .price-cell { background: #111; padding: 1rem; }
-  .price-cell-label { font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(250,249,247,0.6); margin-bottom: 0.3rem; font-weight: 500; }
-  .price-cell-value { font-family: var(--font-display); font-size: 1.4rem; font-weight: 400; color: var(--white); }
-  .price-cell-value.gold { color: var(--gold); }
-  .price-grid-note { font-size: 0.78rem; color: #c8c5c0; margin-top: 1rem; font-weight: 300; line-height: 1.6; }
-
-  .faq-item { border-bottom: 0.5px solid var(--border); padding: 1.25rem 1.5rem; }
-  .faq-item summary { cursor: pointer; font-family: var(--font-display); font-size: 1.1rem; font-weight: 400; padding: 0; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
-  .faq-item summary::after { content: "+"; font-family: var(--font-body); font-size: 1.2rem; color: var(--gold); flex-shrink: 0; font-weight: 300; }
-  .faq-item[open] summary::after { content: "−"; }
-  .faq-item p { margin: 0.85rem 0 0; padding: 0; font-size: 0.88rem; font-weight: 300; color: #2a2826; line-height: 1.75; }
-  .faq-item a { color: var(--gold); }
-
-  .cta-box { background: var(--black); padding: 2.5rem 2rem; margin-top: 3.5rem; }
-  .cta-box-eyebrow { font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem; font-weight: 500; }
-  .cta-box h3 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 300; color: var(--white); margin: 0 0 0.7rem; text-transform: none; letter-spacing: 0; }
-  .cta-box p { font-size: 0.85rem; color: #d0cdc8; font-weight: 300; margin-bottom: 1.4rem; line-height: 1.7; }
-  .cta-btn { display: inline-block; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--white); color: var(--black); padding: 0.75rem 1.75rem; text-decoration: none; }
-  .cta-btn:hover { background: #e8e6e2; }
-
-  footer { background: var(--warm-white); border-top: 0.5px solid var(--border); padding: 2rem 2rem 1.5rem; }
-  .footer-bottom { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; }
-  .footer-bottom p { font-size: 0.7rem; color: var(--muted); }
-  .footer-nav { display: flex; gap: 1.5rem; }
-  .footer-nav a { font-size: 0.72rem; color: var(--muted); text-decoration: none; transition: color 0.2s; }
-  .footer-nav a:hover { color: var(--black); }
-
-  @media (max-width: 600px) {
-    .article-header, .article-body { padding-left: 1.25rem; padding-right: 1.25rem; }
-    nav { padding: 0.9rem 1.25rem; }
-    h1 { font-size: 2rem; }
-    .toc { padding-left: 1.25rem; padding-right: 1.25rem; }
-    .price-grid-inner { grid-template-columns: 1fr; }
-  }
-</style>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Does Miles & More dynamic pricing mean award flights are more expensive?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Not categorically. Peak-season and popular routes have often increased in price compared to the old fixed chart. Off-peak routes and flexible-date searches have in many cases become cheaper. The right answer depends entirely on when and where you are flying."
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Miles & More Dynamic Pricing: What Changed in 2025 and How to Win | Meilenguru</title>
+    <meta
+      name="description"
+      content="Miles & More switched to dynamic award pricing in June 2025. What it means for Swiss residents earning miles on Cornèrcard and Amex — and where the real sweet spots are now from Zürich and Geneva."
+    />
+    <link rel="canonical" href="https://meilenguru.ch/meilenguru-strategy-miles-more-dynamic-pricing.html" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I still book SWISS Business Class from Zürich on Miles & More?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, but the price is now dynamic. SWISS (LX) flights have been included in the dynamic pricing system since June 2025. Award prices for Zürich departures on LX vary by date and demand. Data from early 2026 shows an average of roughly 73,000 miles for long-haul Business Class plus carrier surcharges."
+      :root {
+        --black: #0a0a0a;
+        --white: #faf9f7;
+        --warm-white: #f5f3ef;
+        --gold: #b8962e;
+        --gold-light: #d4ae4e;
+        --muted: #888580;
+        --border: rgba(10, 10, 10, 0.1);
+        --blue: #1a3a5c;
+        --font-display: "Lora", Georgia, serif;
+        --font-body: "DM Sans", sans-serif;
       }
-    },
-    {
-      "@type": "Question",
-      "name": "Are partner redemptions on Miles & More (Singapore Airlines, United) also dynamic?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. Award flights on non-Lufthansa Group partner carriers — Singapore Airlines, United, Air Canada, Thai Airways — still use a fixed partner award chart when booked through Miles & More. Dynamic pricing applies only to Lufthansa, SWISS, Austrian Airlines, Brussels Airlines, Discover Airlines, and Air Dolomiti."
+      html {
+        scroll-behavior: smooth;
       }
-    },
-    {
-      "@type": "Question",
-      "name": "What Swiss credit cards earn Miles & More miles?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The main earning cards for Miles & More in Switzerland are the SWISS Miles & More cards (Classic, Gold, Platinum) issued by Swisscard, and the Cornèrcard Miles & More range. American Express Membership Rewards points can also be transferred to Miles & More at a 2:1 ratio."
+      body {
+        font-family: var(--font-body);
+        background: var(--white);
+        color: var(--black);
+        font-size: 15px;
+        line-height: 1.6;
+        overflow-x: hidden;
       }
-    }
-  ]
-}
-</script>
-<link rel="alternate" hreflang="en" href="https://meilenguru.ch/meilenguru-strategy-miles-more-dynamic-pricing.html">
-<link rel="alternate" hreflang="de" href="https://meilenguru.ch/miles-more-dynamische-preise-schweiz.html">
-<link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/meilenguru-strategy-miles-more-dynamic-pricing.html">
-</head>
-<body>
 
-<nav>
-  <a href="index.html" class="logo">Meilen<span>guru</span></a>
-  <a href="blog.html" class="nav-back">← Back to Blog</a>
-  <a href="consultation.html" class="nav-cta">Book a Session</a>
-</nav>
+      nav {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.1rem 2rem;
+        background: rgba(250, 249, 247, 0.95);
+        backdrop-filter: blur(12px);
+        border-bottom: 0.5px solid var(--border);
+      }
+      .logo {
+        font-family: var(--font-display);
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--black);
+        text-decoration: none;
+      }
+      .logo span {
+        color: var(--gold);
+      }
+      .nav-back {
+        font-size: 0.72rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--muted);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      .nav-back:hover {
+        color: var(--gold);
+      }
+      .nav-cta {
+        font-size: 0.72rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        background: var(--black);
+        color: var(--white);
+        padding: 0.45rem 1.1rem;
+        text-decoration: none;
+      }
+      .nav-cta:hover {
+        background: #2a2a2a;
+      }
 
-<div style="background:var(--warm-white);border-bottom:0.5px solid var(--border);padding:0.5rem 2rem;font-size:0.75rem;color:var(--muted);display:flex;justify-content:flex-end;align-items:center;gap:1rem;">
-  <a href="miles-more-dynamische-preise-schweiz.html" style="color:var(--gold);text-decoration:none;">🇩🇪 Auf Deutsch lesen →</a>
-</div>
+      .article-header {
+        max-width: 780px;
+        margin: 0 auto;
+        padding: 5rem 2rem 3rem;
+      }
+      .article-meta {
+        display: flex;
+        gap: 0.75rem;
+        align-items: center;
+        margin-bottom: 1.5rem;
+        flex-wrap: wrap;
+      }
+      .tag {
+        font-size: 0.67rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--gold);
+        border: 0.5px solid var(--gold);
+        padding: 0.28rem 0.7rem;
+        font-weight: 500;
+      }
+      .meta-text {
+        font-size: 0.77rem;
+        color: var(--muted);
+      }
+      h1 {
+        font-family: var(--font-display);
+        font-size: clamp(2.2rem, 5vw, 3.6rem);
+        font-weight: 300;
+        line-height: 1.1;
+        margin-bottom: 1.25rem;
+      }
+      h1 em {
+        font-style: italic;
+        color: var(--gold);
+      }
+      .article-subtitle {
+        font-size: 1.05rem;
+        color: var(--muted);
+        font-weight: 300;
+        line-height: 1.75;
+        max-width: 580px;
+        margin-bottom: 2rem;
+      }
 
-<div class="article-header">
-  <div class="article-meta">
-    <span class="tag">Strategy</span>
-    <span class="tag">Miles & More</span>
-    <span class="meta-text">May 2026 · 14 min read</span>
-  </div>
-  <h1>Miles & More Dynamic Pricing —<br><em>what changed,<br>and how to win anyway</em></h1>
-  <p class="article-subtitle">In June 2025, Miles & More scrapped its fixed award chart for Lufthansa Group flights and replaced it with demand-based pricing. Most people saw this as bad news. For the well-positioned Swiss resident — earning miles on Cornèrcard, Swisscard, or Amex and booking business class from Zürich — it is actually a better system once you understand how to use it.</p>
-</div>
+      .toc {
+        background: var(--warm-white);
+        border-left: 2px solid var(--gold);
+        padding: 1.25rem 1.5rem;
+        margin-bottom: 2rem;
+        max-width: 780px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+      .toc-title {
+        font-size: 0.65rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--gold);
+        font-weight: 500;
+        margin-bottom: 0.75rem;
+      }
+      .toc ol {
+        padding-left: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+      }
+      .toc li {
+        font-size: 0.85rem;
+        font-weight: 300;
+      }
+      .toc a {
+        color: var(--black);
+        text-decoration: none;
+      }
+      .toc a:hover {
+        color: var(--gold);
+      }
 
-<div class="toc">
-  <div class="toc-title">In this guide</div>
-  <ol>
-    <li><a href="#what-changed">What changed — and when</a></li>
-    <li><a href="#what-you-lost">What you actually lost</a></li>
-    <li><a href="#the-upside">The upside nobody's talking about</a></li>
-    <li><a href="#sweet-spots">Sweet spots from Zürich and Geneva</a></li>
-    <li><a href="#how-to-search">How to search in the new system</a></li>
-    <li><a href="#swiss-cards">What Cornèrcard and Amex holders should do</a></li>
-    <li><a href="#faq">FAQ</a></li>
-  </ol>
-</div>
+      .article-body {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 0 2rem 6rem;
+      }
+      .article-body p {
+        margin-bottom: 1.4rem;
+        font-weight: 300;
+        color: #2a2826;
+        line-height: 1.85;
+      }
+      .article-body p strong {
+        font-weight: 500;
+        color: var(--black);
+      }
+      h2 {
+        font-family: var(--font-display);
+        font-size: 1.85rem;
+        font-weight: 400;
+        line-height: 1.2;
+        margin: 3.5rem 0 1.1rem;
+        scroll-margin-top: 80px;
+      }
+      h2 em {
+        font-style: italic;
+        color: var(--gold);
+      }
+      h3 {
+        font-size: 0.82rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--muted);
+        font-weight: 500;
+        margin: 2.5rem 0 0.75rem;
+      }
 
-<div class="article-body">
+      .pullquote {
+        border-left: 2px solid var(--gold);
+        padding: 1rem 1.75rem;
+        margin: 2.5rem 0;
+        background: var(--warm-white);
+      }
+      .pullquote p {
+        font-family: var(--font-display);
+        font-size: 1.3rem;
+        font-weight: 300;
+        font-style: italic;
+        line-height: 1.5;
+        color: var(--black) !important;
+        margin: 0;
+      }
 
-  <h2 id="what-changed">What changed —<br><em>and when</em></h2>
+      .info-box {
+        border: 0.5px solid var(--border);
+        padding: 1.6rem 1.6rem 1.4rem;
+        margin: 2rem 0;
+        background: var(--warm-white);
+      }
+      .info-box-title {
+        font-size: 0.65rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--gold);
+        font-weight: 500;
+        margin-bottom: 0.9rem;
+      }
+      .info-box ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.55rem;
+      }
+      .info-box ul li {
+        font-size: 0.88rem;
+        font-weight: 300;
+        color: #2a2826;
+        padding-left: 1.2rem;
+        position: relative;
+        line-height: 1.6;
+      }
+      .info-box ul li::before {
+        content: "◈";
+        position: absolute;
+        left: 0;
+        color: var(--gold);
+        font-size: 0.6rem;
+        top: 4px;
+      }
+      .info-box ul li strong {
+        font-weight: 500;
+        color: var(--black);
+      }
 
-  <p>June 3, 2025. That's the date everything shifted. Miles & More retired its fixed award chart for Lufthansa Group flights and replaced it with a system where the miles price of an award ticket changes based on demand, timing, route, and factors the airline won't fully disclose. From March 2026, Discover Airlines and Air Dolomiti joined as well — covering effectively the full Lufthansa Group under one dynamic umbrella.</p>
+      .price-grid {
+        background: var(--black);
+        padding: 2rem;
+        margin: 2rem 0;
+      }
+      .price-grid-label {
+        font-size: 0.62rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #d4ae4e;
+        font-weight: 500;
+        margin-bottom: 1rem;
+      }
+      .price-grid-inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1px;
+        background: rgba(250, 249, 247, 0.08);
+      }
+      .price-cell {
+        background: #111;
+        padding: 1rem;
+      }
+      .price-cell-label {
+        font-size: 0.6rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: rgba(250, 249, 247, 0.6);
+        margin-bottom: 0.3rem;
+        font-weight: 500;
+      }
+      .price-cell-value {
+        font-family: var(--font-display);
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: var(--white);
+      }
+      .price-cell-value.gold {
+        color: var(--gold);
+      }
+      .price-grid-note {
+        font-size: 0.78rem;
+        color: #c8c5c0;
+        margin-top: 1rem;
+        font-weight: 300;
+        line-height: 1.6;
+      }
 
-  <p>The carriers now priced dynamically: <strong>Lufthansa (LH)</strong>, <strong>SWISS (LX)</strong>, <strong>Austrian Airlines (OS)</strong>, <strong>Brussels Airlines (SN)</strong>, <strong>Discover Airlines</strong>, and <strong>Air Dolomiti</strong>. If you're based in Switzerland and flying on SWISS or connecting through Frankfurt or Vienna, you're in the dynamic system.</p>
+      .faq-item {
+        border-bottom: 0.5px solid var(--border);
+        padding: 1.25rem 1.5rem;
+      }
+      .faq-item summary {
+        cursor: pointer;
+        font-family: var(--font-display);
+        font-size: 1.1rem;
+        font-weight: 400;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+      }
+      .faq-item summary::after {
+        content: "+";
+        font-family: var(--font-body);
+        font-size: 1.2rem;
+        color: var(--gold);
+        flex-shrink: 0;
+        font-weight: 300;
+      }
+      .faq-item[open] summary::after {
+        content: "−";
+      }
+      .faq-item p {
+        margin: 0.85rem 0 0;
+        padding: 0;
+        font-size: 0.88rem;
+        font-weight: 300;
+        color: #2a2826;
+        line-height: 1.75;
+      }
+      .faq-item a {
+        color: var(--gold);
+      }
 
-  <p>What's not affected: award flights on <strong>non-Lufthansa Group partners</strong> — Singapore Airlines, United, Air Canada, Thai Airways, and others bookable through Miles & More — still use a fixed partner award chart. Miles & More redemptions on SQ or UA remain predictable.</p>
+      .cta-box {
+        background: var(--black);
+        padding: 2.5rem 2rem;
+        margin-top: 3.5rem;
+      }
+      .cta-box-eyebrow {
+        font-size: 0.65rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 0.6rem;
+        font-weight: 500;
+      }
+      .cta-box h3 {
+        font-family: var(--font-display);
+        font-size: 1.5rem;
+        font-weight: 300;
+        color: var(--white);
+        margin: 0 0 0.7rem;
+        text-transform: none;
+        letter-spacing: 0;
+      }
+      .cta-box p {
+        font-size: 0.85rem;
+        color: #d0cdc8;
+        font-weight: 300;
+        margin-bottom: 1.4rem;
+        line-height: 1.7;
+      }
+      .cta-btn {
+        display: inline-block;
+        font-size: 0.75rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        background: var(--white);
+        color: var(--black);
+        padding: 0.75rem 1.75rem;
+        text-decoration: none;
+      }
+      .cta-btn:hover {
+        background: #e8e6e2;
+      }
 
-  <div class="info-box">
-    <div class="info-box-title">Dynamic pricing — timeline and scope</div>
-    <ul>
-      <li><strong>June 3, 2025:</strong> Dynamic pricing introduced for Lufthansa, SWISS, Austrian Airlines, Brussels Airlines</li>
-      <li><strong>March 3, 2026:</strong> Extended to Discover Airlines and Air Dolomiti</li>
-      <li><strong>Not affected:</strong> Partner carriers (SQ, UA, AC, TG, etc.) — these still use a fixed partner award chart</li>
-      <li><strong>Not affected:</strong> Earning rates — Cornèrcard, Swisscard, and Amex earn at the same rate as before</li>
-      <li><strong>Not affected:</strong> Lufthansa First Class close-in release windows — last-14-day inventory still appears</li>
-      <li><strong>Not affected:</strong> Miles & More Upgrade Awards — those remain on a separate fixed structure</li>
-    </ul>
-  </div>
+      footer {
+        background: var(--warm-white);
+        border-top: 0.5px solid var(--border);
+        padding: 2rem 2rem 1.5rem;
+      }
+      .footer-bottom {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+      .footer-bottom p {
+        font-size: 0.7rem;
+        color: var(--muted);
+      }
+      .footer-nav {
+        display: flex;
+        gap: 1.5rem;
+      }
+      .footer-nav a {
+        font-size: 0.72rem;
+        color: var(--muted);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      .footer-nav a:hover {
+        color: var(--black);
+      }
 
-  <h2 id="what-you-lost">What you actually lost</h2>
+      @media (max-width: 600px) {
+        .article-header,
+        .article-body {
+          padding-left: 1.25rem;
+          padding-right: 1.25rem;
+        }
+        nav {
+          padding: 0.9rem 1.25rem;
+        }
+        h1 {
+          font-size: 2rem;
+        }
+        .toc {
+          padding-left: 1.25rem;
+          padding-right: 1.25rem;
+        }
+        .price-grid-inner {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
 
-  <p>Let's not pretend the fixed award chart had no value. It did, and it's worth being honest about what disappeared.</p>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Does Miles & More dynamic pricing mean award flights are more expensive?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Not categorically. Peak-season and popular routes have often increased in price compared to the old fixed chart. Off-peak routes and flexible-date searches have in many cases become cheaper. The right answer depends entirely on when and where you are flying."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I still book SWISS Business Class from Zürich on Miles & More?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, but the price is now dynamic. SWISS (LX) flights have been included in the dynamic pricing system since June 2025. Award prices for Zürich departures on LX vary by date and demand. Data from early 2026 shows an average of roughly 73,000 miles for long-haul Business Class plus carrier surcharges."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are partner redemptions on Miles & More (Singapore Airlines, United) also dynamic?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Award flights on non-Lufthansa Group partner carriers — Singapore Airlines, United, Air Canada, Thai Airways — still use a fixed partner award chart when booked through Miles & More. Dynamic pricing applies only to Lufthansa, SWISS, Austrian Airlines, Brussels Airlines, Discover Airlines, and Air Dolomiti."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What Swiss credit cards earn Miles & More miles?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The main earning cards for Miles & More in Switzerland are the SWISS Miles & More cards (Classic, Gold, Platinum) issued by Swisscard, and the Cornèrcard Miles & More range. American Express Membership Rewards points can also be transferred to Miles & More at a 2:1 ratio."
+            }
+          }
+        ]
+      }
+    </script>
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://meilenguru.ch/meilenguru-strategy-miles-more-dynamic-pricing.html"
+    />
+    <link rel="alternate" hreflang="de" href="https://meilenguru.ch/miles-more-dynamische-preise-schweiz.html" />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://meilenguru.ch/meilenguru-strategy-miles-more-dynamic-pricing.html"
+    />
+  </head>
+  <body>
+    <nav>
+      <a href="index.html" class="logo">Meilen<span>guru</span></a>
+      <a href="blog.html" class="nav-back">← Back to Blog</a>
+      <a href="consultation.html" class="nav-cta">Book a Session</a>
+    </nav>
 
-  <p>The main thing you lost was <strong>planability</strong>. Under the old system, you could look up the award chart, see that Business Class from Europe to Southeast Asia cost 95,000 miles, set that as your savings target, and work toward it knowing the price wouldn't move. You could calculate your per-mile redemption value before opening a single search tab. Planning was straightforward because the destination was fixed.</p>
+    <div
+      style="
+        background: var(--warm-white);
+        border-bottom: 0.5px solid var(--border);
+        padding: 0.5rem 2rem;
+        font-size: 0.75rem;
+        color: var(--muted);
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 1rem;
+      "
+    >
+      <a href="miles-more-dynamische-preise-schweiz.html" style="color: var(--gold); text-decoration: none"
+        >🇩🇪 Auf Deutsch lesen →</a
+      >
+    </div>
 
-  <p>You also lost <strong>the durable sweet spots</strong>. Certain routes were known to be exceptional value on the old chart — you could share them, write about them, act on them months out. In a dynamic system, a sweet spot on a specific route can disappear next week. The knowledge of where value lives has a shorter shelf life now.</p>
-
-  <div class="pullquote">
-    <p>The fixed award chart was a promise. Dynamic pricing replaced that promise with a market. And markets reward the informed and the flexible.</p>
-  </div>
-
-  <p>One more loss worth naming: the ability to <strong>top up to an exact number</strong>. If you needed exactly 95,000 miles and had 80,000, you could buy miles or time a transfer bonus to reach your target precisely. Now you're aiming at a moving number. The right response is to build a buffer — more on that below — rather than trying to hit a specific figure.</p>
-
-  <h2 id="the-upside">The upside nobody's talking about</h2>
-
-  <p>The miles travel community greeted dynamic pricing with near-universal dread. Almost universally the reaction was: this means higher prices. A year into the new system, the data does not support that conclusion — at least not for Swiss residents who fly with any flexibility.</p>
-
-  <p>Here is the structural argument. Under the fixed award chart, a Business Class seat from Zürich to New York cost the same 80,000 miles whether you were flying Christmas Day or a Wednesday in February. The airline was effectively charging the same for a sold-out flight at peak season as for a half-empty plane in the off-season. Dynamic pricing corrects this. Off-peak dates — which are plentiful for Swiss-based travellers who can avoid school holidays and peak periods — now price meaningfully below the old fixed chart.</p>
-
-  <p>A Business Class seat from Zürich to the US East Coast, midweek in February, has been regularly pricing at 55,000–65,000 miles in the dynamic system. The old fixed rate was 80,000. That is not a worse deal. That is a better deal, for the flexible traveller.</p>
-
-  <div class="pullquote">
-    <p>Dynamic pricing didn't make miles worth less. It made the best redemptions cheaper and the worst ones more expensive. The key is knowing which you're looking at.</p>
-  </div>
-
-  <p>The second upside is <strong>last-minute opportunity</strong>. Lufthansa has always released award inventory close to departure — this is the logic behind the <a href="meilenguru-blog-lh-first-class-sin-bsl.html" style="color:var(--gold);">Lufthansa First Class redemption on this blog</a>, booked 48 hours before departure on 110,000 miles. That inventory release pattern has not changed. What has changed is that in the dynamic era, those close-in seats can price attractively when the flight is running below forecast loads. When the airline would rather fill a Business Class seat with miles than fly it empty, the dynamic price drops to reflect that. Sometimes dramatically.</p>
-
-  <p>The third upside is less discussed but real: <strong>the system occasionally misprices routes</strong>. A dynamic model is only as accurate as its demand signal inputs. On less-trafficked routes — some African cities, secondary Middle Eastern destinations, off-season long-haul — the pricing algorithm sometimes sets prices below what a rational award chart would have charged. These windows are temporary and move quickly. You have to be searching to find them. But they exist, and they represent genuine value that the old fixed chart never offered.</p>
-
-  <h2 id="sweet-spots">Sweet spots from Zürich and Geneva</h2>
-
-  <p>These are not permanent guarantees. By definition, nothing is permanent in a dynamic system. But patterns emerge from consistent searching, and right now these routes are rewarding Swiss-based redemptions.</p>
-
-  <div class="price-grid">
-    <div class="price-grid-label">Current sweet spots — ZRH / GVA departures (May 2026)</div>
-    <div class="price-grid-inner">
-      <div class="price-cell">
-        <div class="price-cell-label">Middle East (DXB, DOH, AUH)</div>
-        <div class="price-cell-value gold">40–55k</div>
+    <div class="article-header">
+      <div class="article-meta">
+        <span class="tag">Strategy</span>
+        <span class="tag">Miles & More</span>
+        <span class="meta-text">May 2026 · 14 min read</span>
       </div>
-      <div class="price-cell">
-        <div class="price-cell-label">US East Coast (off-peak)</div>
-        <div class="price-cell-value gold">55–72k</div>
+      <h1>
+        Miles & More Dynamic Pricing —<br /><em>what changed,<br />and how to win anyway</em>
+      </h1>
+      <p class="article-subtitle">
+        In June 2025, Miles & More scrapped its fixed award chart for Lufthansa Group flights and replaced it with
+        demand-based pricing. Most people saw this as bad news. For the well-positioned Swiss resident — earning miles
+        on Cornèrcard, Swisscard, or Amex and booking business class from Zürich — it is actually a better system once
+        you understand how to use it.
+      </p>
+    </div>
+
+    <div class="toc">
+      <div class="toc-title">In this guide</div>
+      <ol>
+        <li><a href="#what-changed">What changed — and when</a></li>
+        <li><a href="#what-you-lost">What you actually lost</a></li>
+        <li><a href="#the-upside">The upside nobody's talking about</a></li>
+        <li><a href="#sweet-spots">Sweet spots from Zürich and Geneva</a></li>
+        <li><a href="#how-to-search">How to search in the new system</a></li>
+        <li><a href="#swiss-cards">What Cornèrcard and Amex holders should do</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ol>
+    </div>
+
+    <div class="article-body">
+      <h2 id="what-changed">What changed —<br /><em>and when</em></h2>
+
+      <p>
+        June 3, 2025. That's the date everything shifted. Miles & More retired its fixed award chart for Lufthansa Group
+        flights and replaced it with a system where the miles price of an award ticket changes based on demand, timing,
+        route, and factors the airline won't fully disclose. From March 2026, Discover Airlines and Air Dolomiti joined
+        as well — covering effectively the full Lufthansa Group under one dynamic umbrella.
+      </p>
+
+      <p>
+        The carriers now priced dynamically: <strong>Lufthansa (LH)</strong>, <strong>SWISS (LX)</strong>,
+        <strong>Austrian Airlines (OS)</strong>, <strong>Brussels Airlines (SN)</strong>,
+        <strong>Discover Airlines</strong>, and <strong>Air Dolomiti</strong>. If you're based in Switzerland and flying
+        on SWISS or connecting through Frankfurt or Vienna, you're in the dynamic system.
+      </p>
+
+      <p>
+        What's not affected: award flights on <strong>non-Lufthansa Group partners</strong> — Singapore Airlines,
+        United, Air Canada, Thai Airways, and others bookable through Miles & More — still use a fixed partner award
+        chart. Miles & More redemptions on SQ or UA remain predictable.
+      </p>
+
+      <div class="info-box">
+        <div class="info-box-title">Dynamic pricing — timeline and scope</div>
+        <ul>
+          <li>
+            <strong>June 3, 2025:</strong> Dynamic pricing introduced for Lufthansa, SWISS, Austrian Airlines, Brussels
+            Airlines
+          </li>
+          <li><strong>March 3, 2026:</strong> Extended to Discover Airlines and Air Dolomiti</li>
+          <li>
+            <strong>Not affected:</strong> Partner carriers (SQ, UA, AC, TG, etc.) — these still use a fixed partner
+            award chart
+          </li>
+          <li>
+            <strong>Not affected:</strong> Earning rates — Cornèrcard, Swisscard, and Amex earn at the same rate as
+            before
+          </li>
+          <li>
+            <strong>Not affected:</strong> Lufthansa First Class close-in release windows — last-14-day inventory still
+            appears
+          </li>
+          <li>
+            <strong>Not affected:</strong> Miles & More Upgrade Awards — those remain on a separate fixed structure
+          </li>
+        </ul>
       </div>
-      <div class="price-cell">
-        <div class="price-cell-label">LH First Class (close-in)</div>
-        <div class="price-cell-value gold">110–130k</div>
+
+      <h2 id="what-you-lost">What you actually lost</h2>
+
+      <p>
+        Let's not pretend the fixed award chart had no value. It did, and it's worth being honest about what
+        disappeared.
+      </p>
+
+      <p>
+        The main thing you lost was <strong>planability</strong>. Under the old system, you could look up the award
+        chart, see that Business Class from Europe to Southeast Asia cost 95,000 miles, set that as your savings target,
+        and work toward it knowing the price wouldn't move. You could calculate your per-mile redemption value before
+        opening a single search tab. Planning was straightforward because the destination was fixed.
+      </p>
+
+      <p>
+        You also lost <strong>the durable sweet spots</strong>. Certain routes were known to be exceptional value on the
+        old chart — you could share them, write about them, act on them months out. In a dynamic system, a sweet spot on
+        a specific route can disappear next week. The knowledge of where value lives has a shorter shelf life now.
+      </p>
+
+      <div class="pullquote">
+        <p>
+          The fixed award chart was a promise. Dynamic pricing replaced that promise with a market. And markets reward
+          the informed and the flexible.
+        </p>
+      </div>
+
+      <p>
+        One more loss worth naming: the ability to <strong>top up to an exact number</strong>. If you needed exactly
+        95,000 miles and had 80,000, you could buy miles or time a transfer bonus to reach your target precisely. Now
+        you're aiming at a moving number. The right response is to build a buffer — more on that below — rather than
+        trying to hit a specific figure.
+      </p>
+
+      <h2 id="the-upside">The upside nobody's talking about</h2>
+
+      <p>
+        The miles travel community greeted dynamic pricing with near-universal dread. Almost universally the reaction
+        was: this means higher prices. A year into the new system, the data does not support that conclusion — at least
+        not for Swiss residents who fly with any flexibility.
+      </p>
+
+      <p>
+        Here is the structural argument. Under the fixed award chart, a Business Class seat from Zürich to New York cost
+        the same 80,000 miles whether you were flying Christmas Day or a Wednesday in February. The airline was
+        effectively charging the same for a sold-out flight at peak season as for a half-empty plane in the off-season.
+        Dynamic pricing corrects this. Off-peak dates — which are plentiful for Swiss-based travellers who can avoid
+        school holidays and peak periods — now price meaningfully below the old fixed chart.
+      </p>
+
+      <p>
+        A Business Class seat from Zürich to the US East Coast, midweek in February, has been regularly pricing at
+        55,000–65,000 miles in the dynamic system. The old fixed rate was 80,000. That is not a worse deal. That is a
+        better deal, for the flexible traveller.
+      </p>
+
+      <div class="pullquote">
+        <p>
+          Dynamic pricing didn't make miles worth less. It made the best redemptions cheaper and the worst ones more
+          expensive. The key is knowing which you're looking at.
+        </p>
+      </div>
+
+      <p>
+        The second upside is <strong>last-minute opportunity</strong>. Lufthansa has always released award inventory
+        close to departure — this is the logic behind the
+        <a href="meilenguru-blog-lh-first-class-sin-bsl.html" style="color: var(--gold)"
+          >Lufthansa First Class redemption on this blog</a
+        >, booked 48 hours before departure on 110,000 miles. That inventory release pattern has not changed. What has
+        changed is that in the dynamic era, those close-in seats can price attractively when the flight is running below
+        forecast loads. When the airline would rather fill a Business Class seat with miles than fly it empty, the
+        dynamic price drops to reflect that. Sometimes dramatically.
+      </p>
+
+      <p>
+        The third upside is less discussed but real: <strong>the system occasionally misprices routes</strong>. A
+        dynamic model is only as accurate as its demand signal inputs. On less-trafficked routes — some African cities,
+        secondary Middle Eastern destinations, off-season long-haul — the pricing algorithm sometimes sets prices below
+        what a rational award chart would have charged. These windows are temporary and move quickly. You have to be
+        searching to find them. But they exist, and they represent genuine value that the old fixed chart never offered.
+      </p>
+
+      <h2 id="sweet-spots">Sweet spots from Zürich and Geneva</h2>
+
+      <p>
+        These are not permanent guarantees. By definition, nothing is permanent in a dynamic system. But patterns emerge
+        from consistent searching, and right now these routes are rewarding Swiss-based redemptions.
+      </p>
+
+      <div class="price-grid">
+        <div class="price-grid-label">Current sweet spots — ZRH / GVA departures (May 2026)</div>
+        <div class="price-grid-inner">
+          <div class="price-cell">
+            <div class="price-cell-label">Middle East (DXB, DOH, AUH)</div>
+            <div class="price-cell-value gold">40–55k</div>
+          </div>
+          <div class="price-cell">
+            <div class="price-cell-label">US East Coast (off-peak)</div>
+            <div class="price-cell-value gold">55–72k</div>
+          </div>
+          <div class="price-cell">
+            <div class="price-cell-label">LH First Class (close-in)</div>
+            <div class="price-cell-value gold">110–130k</div>
+          </div>
+        </div>
+        <div class="price-grid-note">
+          Miles shown for Business Class unless stated. Plus carrier surcharges (typically CHF 200–550 on long-haul).
+          Average LH Group Business from ZRH across all dynamic prices: ~73,000 miles (March 2026 data). A useful
+          benchmark — anything below this is genuinely good value.
+        </div>
+      </div>
+
+      <h3>Middle East routes</h3>
+      <p>
+        Business Class redemptions to Dubai, Doha, and Abu Dhabi have been consistently pricing in the lower end of the
+        dynamic range — often 40,000–55,000 miles. Short flights, relatively modest demand in the dynamic model, and
+        useful as stepping-stones to connect onward to Southeast Asia or Australia on a separate ticket.
+      </p>
+
+      <h3>Transatlantic off-peak</h3>
+      <p>
+        Business Class to the US and Canada in January, February, October, and November prices well below the old fixed
+        chart on many dates. Midweek departures and destinations beyond New York — Chicago, Boston, Miami — sometimes
+        undercut even the better dates. A few days of flexibility can mean more than 20,000 miles difference on the same
+        route.
+      </p>
+
+      <h3>Lufthansa First Class — the close-in play</h3>
+      <p>
+        The classic play. Still works. Lufthansa First Class rarely releases award space to any programme more than 14
+        days before departure — they'd rather sell those eight seats at CHF 8,000–12,000 each. But when seats open in
+        the final window, the dynamic price is driven by load factors rather than a chart. Light loads sometimes mean
+        below-chart pricing. The right approach: have your miles ready and monitor with a tool like AwardFares. When the
+        seat appears, you book. It won't sit waiting.
+      </p>
+
+      <h3>Geneva-based travellers</h3>
+      <p>
+        One pattern worth flagging: Geneva (GVA) has strong Air France connections that fall under Flying Blue rather
+        than Miles & More. For GVA-based travellers flying to Paris and connecting, Flying Blue's monthly
+        <a href="meilenguru-strategy-flying-blue-promo-awards.html" style="color: var(--gold)">Promo Awards</a> are
+        often the more efficient option — particularly since Flying Blue still uses a more predictable pricing
+        structure. Worth knowing which programme actually serves your home airport best before committing to one
+        accumulation strategy.
+      </p>
+
+      <h2 id="how-to-search">How to search in the new system</h2>
+
+      <p>
+        The mechanics of award searching haven't changed — it has always been the unglamorous part of this approach.
+        What has changed is how you interpret and act on what you find.
+      </p>
+
+      <h3>Be date-flexible</h3>
+      <p>
+        The Miles & More award search allows a range of dates. Always use it. The miles difference between the best and
+        worst dates on the same route can easily be 20,000+ miles — sometimes considerably more. If you're targeting
+        Business Class to New York and you're flexible by two weeks, you're not choosing between 65,000 and 65,000
+        miles. You might be choosing between 58,000 and 92,000. Date flexibility is now the single most powerful tool in
+        award searching.
+      </p>
+
+      <h3>Benchmark against the cash price</h3>
+      <p>
+        The question is not just "how many miles?" It's "how many miles relative to what this seat would cost in cash?"
+        A useful rule for Swiss residents: if you're recovering more than
+        <strong>4 CHF cents of value per mile</strong>, the award is worth taking. Above 6 cents is genuinely good.
+        Above 8 cents — as in the Lufthansa First Class case documented on this blog — is exceptional. Look up the cash
+        price before you book, not after. It takes 30 seconds and anchors the whole decision.
+      </p>
+
+      <div class="info-box">
+        <div class="info-box-title">Quick per-mile value calculation</div>
+        <ul>
+          <li><strong>Cash price of seat:</strong> CHF 4,000</li>
+          <li><strong>Miles redemption:</strong> 62,000 miles + CHF 450 in carrier surcharges</li>
+          <li><strong>Value recovered:</strong> CHF 4,000 − CHF 450 = CHF 3,550</li>
+          <li>
+            <strong>Per-mile value:</strong> CHF 3,550 ÷ 62,000 = <strong>5.7 CHF cents per mile</strong> — a good deal
+          </li>
+          <li>
+            <strong>Below 4 cents:</strong> consider Flying Blue Promo Awards on the same route as an alternative before
+            booking
+          </li>
+        </ul>
+      </div>
+
+      <h3>Use AwardFares for route monitoring</h3>
+      <p>
+        AwardFares (awardfares.com) monitors award availability across multiple programmes including Miles & More. Set a
+        route alert and you'll be notified when award space opens. Particularly useful for the close-in First Class
+        strategy — you set the alert, go about your life, and get pinged when seats drop in. The monitoring tool does
+        the watching so you don't have to check the Miles & More search manually every day.
+      </p>
+
+      <h3>Transfer after confirming availability</h3>
+      <p>
+        This has not changed, but it bears repeating. Never transfer Amex Membership Rewards points to Miles & More
+        speculatively. Confirm the seat exists and the dynamic price is acceptable, then initiate the transfer.
+        Amex-to-M&M transfers complete in minutes. The risk you avoid: transferring points that sit unusable in M&M
+        because the seat disappeared while you were deciding.
+      </p>
+
+      <h3>Book immediately when you find the right price</h3>
+      <p>
+        Dynamic means prices move. A Business Class seat priced at 60,000 miles today may be 78,000 tomorrow if demand
+        signals shift or competing bookings on adjacent dates cause the algorithm to reprice. When you find a good
+        redemption, book it. The deeper analysis can happen in parallel — you do not need to sleep on a genuinely good
+        dynamic price.
+      </p>
+
+      <h2 id="swiss-cards">What Cornèrcard and Amex holders should do now</h2>
+
+      <p>
+        The dynamic pricing change affects redemption, not earning. Your accumulation strategy — routing day-to-day CHF
+        spending through the right card, timing welcome bonuses, deciding whether to hold Amex MR points or convert them
+        — is structurally unchanged. The Swiss credit card landscape for miles earning remains the same: Cornèrcard for
+        Miles & More, Amex Membership Rewards for flexible-programme optionality, and Swisscard for those embedded in
+        the SWISS ecosystem.
+      </p>
+
+      <p>Two behavioural shifts are worth making.</p>
+
+      <p>
+        <strong>Build a larger buffer than the old chart required.</strong> Under the fixed award chart, you could plan
+        to accumulate exactly 95,000 miles for a specific redemption. Under dynamic pricing, that same flight might cost
+        82,000 or 112,000 depending on the date and demand when you search. Targeting 120% of your expected redemption
+        cost before beginning your search gives you the flexibility to act on a good price without being caught short.
+        If you're aiming for Business Class to Asia, having 115,000 miles in your account before you begin searching is
+        a sensible position.
+      </p>
+
+      <p>
+        <strong>Stop waiting for the perfect moment.</strong> One of the most common patterns among Swiss miles holders
+        — before and after the dynamic pricing change — is treating their balance as something to optimise indefinitely.
+        Miles expire. Programmes change their rules. The miles sitting in your account today are worth less in three
+        years than they are now, with near certainty. The best redemption is the one you actually take. Dynamic pricing,
+        counterintuitively, makes acting on a good price more important than it was before — because a good price today
+        is genuinely no longer guaranteed tomorrow.
+      </p>
+
+      <div class="info-box">
+        <div class="info-box-title">Swiss card strategy in the dynamic pricing era</div>
+        <ul>
+          <li>
+            <strong>Cornèrcard earning:</strong> completely unaffected by dynamic pricing — earn at exactly the same
+            rate as before
+          </li>
+          <li>
+            <strong>Amex MR → M&M transfer ratio:</strong> still 2:1; transfers complete in minutes once initiated
+          </li>
+          <li><strong>Transfer timing:</strong> unchanged — confirm the seat and price, then transfer</li>
+          <li>
+            <strong>Buffer recommendation:</strong> hold ~120% of your expected redemption miles before starting your
+            search
+          </li>
+          <li>
+            <strong>Amex MR flexibility advantage:</strong> keeping points in Amex MR rather than pre-converting to M&M
+            preserves optionality — if M&M prices are high on your route, you can redirect to Flying Blue instead
+          </li>
+          <li>
+            <strong>Miles expiry reminder:</strong> M&M miles expire after 36 months of account inactivity — one small
+            earning transaction per year resets the clock
+          </li>
+        </ul>
+      </div>
+
+      <p>
+        One note specific to Swiss Amex cardholders: the flexibility value of Membership Rewards points increases in a
+        dynamic pricing environment. If you hold Amex MR and M&M prices for your target route are elevated — peak
+        season, compressed availability, sold-out dates — you still have the option to transfer to Flying Blue and find
+        a Promo Award instead. That optionality is most valuable when preserved for as long as possible. Keep points in
+        Amex MR until you have confirmed the specific seat and price you want to book. It's a small discipline that can
+        be worth 20,000+ miles in the right scenario.
+      </p>
+
+      <h2 id="faq">Frequently asked<br /><em>questions</em></h2>
+
+      <details class="faq-item">
+        <summary>Does dynamic pricing mean Miles & More awards are more expensive now?</summary>
+        <p>
+          Not categorically. Peak-season and popular routes have often increased compared to the old fixed chart.
+          Off-peak routes and flexible-date searches have in many cases become cheaper. The right answer is: it depends
+          entirely on when and where you're flying. Search with date flexibility turned on and compare. The average LH
+          Group Business Class from ZRH came in around 73,000 miles in early 2026 data — up from the fixed 80,000 chart
+          rate in some cases, but frequently below it for flexible dates.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Can I still book SWISS Business Class from Zürich with Miles & More?</summary>
+        <p>
+          Yes — but the price is now dynamic. SWISS (LX) flights have been included since June 2025. Award prices for
+          ZRH departures on LX vary by date and demand. Some dates price well below the old chart; school holiday and
+          peak-season departures can price above it. Search broadly across dates before committing to a specific
+          departure.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Are partner redemptions (Singapore Airlines, United, etc.) also dynamic?</summary>
+        <p>
+          No. Award flights on non-Lufthansa Group partner carriers booked through Miles & More — Singapore Airlines,
+          United, Air Canada, Thai Airways, and others — still use a fixed partner award chart. Dynamic pricing applies
+          only to LH, LX, OS, SN, Discover Airlines, and Air Dolomiti. This means a Singapore Airlines Business Class
+          redemption through Miles & More still has a predictable, fixed price.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Do carrier surcharges change dynamically too?</summary>
+        <p>
+          No. The cash surcharges on top of miles — often CHF 200–550 on long-haul Lufthansa Group flights — are based
+          on route and fare type, not demand. They don't change dynamically. Always factor them into your per-mile value
+          calculation; a seemingly cheap miles price can become less attractive once surcharges are included.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Should I switch from Miles & More to Flying Blue entirely?</summary>
+        <p>
+          Not necessarily. Flying Blue still offers monthly
+          <a href="meilenguru-strategy-flying-blue-promo-awards.html">Promo Awards</a> at fixed discounts — predictable
+          and often excellent value for Air France and KLM flights. But Miles & More has distinct advantages: exclusive
+          close-in access to Lufthansa First Class inventory, and the breadth of Star Alliance partner redemptions at
+          fixed prices. The strongest position for a Swiss resident is to maintain flexibility across both programmes
+          via Amex MR points, directing them to whichever programme offers the better deal at the time of booking.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>What's the best tool for monitoring Miles & More award availability?</summary>
+        <p>
+          AwardFares (awardfares.com) is the most practical option for ongoing monitoring — it tracks award space across
+          multiple programmes and can alert you when seats open on a specific route. The Miles & More website itself has
+          improved its date-range search functionality since the dynamic pricing rollout. For cash price benchmarking to
+          calculate per-mile value, Google Flights is the fastest reference tool.
+        </p>
+      </details>
+
+      <div class="cta-box">
+        <div class="cta-box-eyebrow">Want help navigating this for your specific route?</div>
+        <h3>Let's find your best redemption.</h3>
+        <p>
+          Dynamic pricing means the right answer depends on your cards, your current balance, your target destination,
+          and your timing flexibility. In 30 minutes we can check current award availability for your route, benchmark
+          the dynamic miles price against the cash alternative, and work out the fastest path to getting you there —
+          with what you've already got, or what you could build toward from your CHF spending.
+        </p>
+        <a href="consultation.html" class="cta-btn">Book a session — CHF 79 →</a>
       </div>
     </div>
-    <div class="price-grid-note">Miles shown for Business Class unless stated. Plus carrier surcharges (typically CHF 200–550 on long-haul). Average LH Group Business from ZRH across all dynamic prices: ~73,000 miles (March 2026 data). A useful benchmark — anything below this is genuinely good value.</div>
-  </div>
 
-  <h3>Middle East routes</h3>
-  <p>Business Class redemptions to Dubai, Doha, and Abu Dhabi have been consistently pricing in the lower end of the dynamic range — often 40,000–55,000 miles. Short flights, relatively modest demand in the dynamic model, and useful as stepping-stones to connect onward to Southeast Asia or Australia on a separate ticket.</p>
-
-  <h3>Transatlantic off-peak</h3>
-  <p>Business Class to the US and Canada in January, February, October, and November prices well below the old fixed chart on many dates. Midweek departures and destinations beyond New York — Chicago, Boston, Miami — sometimes undercut even the better dates. A few days of flexibility can mean more than 20,000 miles difference on the same route.</p>
-
-  <h3>Lufthansa First Class — the close-in play</h3>
-  <p>The classic play. Still works. Lufthansa First Class rarely releases award space to any programme more than 14 days before departure — they'd rather sell those eight seats at CHF 8,000–12,000 each. But when seats open in the final window, the dynamic price is driven by load factors rather than a chart. Light loads sometimes mean below-chart pricing. The right approach: have your miles ready and monitor with a tool like AwardFares. When the seat appears, you book. It won't sit waiting.</p>
-
-  <h3>Geneva-based travellers</h3>
-  <p>One pattern worth flagging: Geneva (GVA) has strong Air France connections that fall under Flying Blue rather than Miles & More. For GVA-based travellers flying to Paris and connecting, Flying Blue's monthly <a href="meilenguru-strategy-flying-blue-promo-awards.html" style="color:var(--gold);">Promo Awards</a> are often the more efficient option — particularly since Flying Blue still uses a more predictable pricing structure. Worth knowing which programme actually serves your home airport best before committing to one accumulation strategy.</p>
-
-  <h2 id="how-to-search">How to search in the new system</h2>
-
-  <p>The mechanics of award searching haven't changed — it has always been the unglamorous part of this approach. What has changed is how you interpret and act on what you find.</p>
-
-  <h3>Be date-flexible</h3>
-  <p>The Miles & More award search allows a range of dates. Always use it. The miles difference between the best and worst dates on the same route can easily be 20,000+ miles — sometimes considerably more. If you're targeting Business Class to New York and you're flexible by two weeks, you're not choosing between 65,000 and 65,000 miles. You might be choosing between 58,000 and 92,000. Date flexibility is now the single most powerful tool in award searching.</p>
-
-  <h3>Benchmark against the cash price</h3>
-  <p>The question is not just "how many miles?" It's "how many miles relative to what this seat would cost in cash?" A useful rule for Swiss residents: if you're recovering more than <strong>4 CHF cents of value per mile</strong>, the award is worth taking. Above 6 cents is genuinely good. Above 8 cents — as in the Lufthansa First Class case documented on this blog — is exceptional. Look up the cash price before you book, not after. It takes 30 seconds and anchors the whole decision.</p>
-
-  <div class="info-box">
-    <div class="info-box-title">Quick per-mile value calculation</div>
-    <ul>
-      <li><strong>Cash price of seat:</strong> CHF 4,000</li>
-      <li><strong>Miles redemption:</strong> 62,000 miles + CHF 450 in carrier surcharges</li>
-      <li><strong>Value recovered:</strong> CHF 4,000 − CHF 450 = CHF 3,550</li>
-      <li><strong>Per-mile value:</strong> CHF 3,550 ÷ 62,000 = <strong>5.7 CHF cents per mile</strong> — a good deal</li>
-      <li><strong>Below 4 cents:</strong> consider Flying Blue Promo Awards on the same route as an alternative before booking</li>
-    </ul>
-  </div>
-
-  <h3>Use AwardFares for route monitoring</h3>
-  <p>AwardFares (awardfares.com) monitors award availability across multiple programmes including Miles & More. Set a route alert and you'll be notified when award space opens. Particularly useful for the close-in First Class strategy — you set the alert, go about your life, and get pinged when seats drop in. The monitoring tool does the watching so you don't have to check the Miles & More search manually every day.</p>
-
-  <h3>Transfer after confirming availability</h3>
-  <p>This has not changed, but it bears repeating. Never transfer Amex Membership Rewards points to Miles & More speculatively. Confirm the seat exists and the dynamic price is acceptable, then initiate the transfer. Amex-to-M&M transfers complete in minutes. The risk you avoid: transferring points that sit unusable in M&M because the seat disappeared while you were deciding.</p>
-
-  <h3>Book immediately when you find the right price</h3>
-  <p>Dynamic means prices move. A Business Class seat priced at 60,000 miles today may be 78,000 tomorrow if demand signals shift or competing bookings on adjacent dates cause the algorithm to reprice. When you find a good redemption, book it. The deeper analysis can happen in parallel — you do not need to sleep on a genuinely good dynamic price.</p>
-
-  <h2 id="swiss-cards">What Cornèrcard and Amex holders should do now</h2>
-
-  <p>The dynamic pricing change affects redemption, not earning. Your accumulation strategy — routing day-to-day CHF spending through the right card, timing welcome bonuses, deciding whether to hold Amex MR points or convert them — is structurally unchanged. The Swiss credit card landscape for miles earning remains the same: Cornèrcard for Miles & More, Amex Membership Rewards for flexible-programme optionality, and Swisscard for those embedded in the SWISS ecosystem.</p>
-
-  <p>Two behavioural shifts are worth making.</p>
-
-  <p><strong>Build a larger buffer than the old chart required.</strong> Under the fixed award chart, you could plan to accumulate exactly 95,000 miles for a specific redemption. Under dynamic pricing, that same flight might cost 82,000 or 112,000 depending on the date and demand when you search. Targeting 120% of your expected redemption cost before beginning your search gives you the flexibility to act on a good price without being caught short. If you're aiming for Business Class to Asia, having 115,000 miles in your account before you begin searching is a sensible position.</p>
-
-  <p><strong>Stop waiting for the perfect moment.</strong> One of the most common patterns among Swiss miles holders — before and after the dynamic pricing change — is treating their balance as something to optimise indefinitely. Miles expire. Programmes change their rules. The miles sitting in your account today are worth less in three years than they are now, with near certainty. The best redemption is the one you actually take. Dynamic pricing, counterintuitively, makes acting on a good price more important than it was before — because a good price today is genuinely no longer guaranteed tomorrow.</p>
-
-  <div class="info-box">
-    <div class="info-box-title">Swiss card strategy in the dynamic pricing era</div>
-    <ul>
-      <li><strong>Cornèrcard earning:</strong> completely unaffected by dynamic pricing — earn at exactly the same rate as before</li>
-      <li><strong>Amex MR → M&M transfer ratio:</strong> still 2:1; transfers complete in minutes once initiated</li>
-      <li><strong>Transfer timing:</strong> unchanged — confirm the seat and price, then transfer</li>
-      <li><strong>Buffer recommendation:</strong> hold ~120% of your expected redemption miles before starting your search</li>
-      <li><strong>Amex MR flexibility advantage:</strong> keeping points in Amex MR rather than pre-converting to M&M preserves optionality — if M&M prices are high on your route, you can redirect to Flying Blue instead</li>
-      <li><strong>Miles expiry reminder:</strong> M&M miles expire after 36 months of account inactivity — one small earning transaction per year resets the clock</li>
-    </ul>
-  </div>
-
-  <p>One note specific to Swiss Amex cardholders: the flexibility value of Membership Rewards points increases in a dynamic pricing environment. If you hold Amex MR and M&M prices for your target route are elevated — peak season, compressed availability, sold-out dates — you still have the option to transfer to Flying Blue and find a Promo Award instead. That optionality is most valuable when preserved for as long as possible. Keep points in Amex MR until you have confirmed the specific seat and price you want to book. It's a small discipline that can be worth 20,000+ miles in the right scenario.</p>
-
-  <h2 id="faq">Frequently asked<br><em>questions</em></h2>
-
-  <details class="faq-item">
-    <summary>Does dynamic pricing mean Miles & More awards are more expensive now?</summary>
-    <p>Not categorically. Peak-season and popular routes have often increased compared to the old fixed chart. Off-peak routes and flexible-date searches have in many cases become cheaper. The right answer is: it depends entirely on when and where you're flying. Search with date flexibility turned on and compare. The average LH Group Business Class from ZRH came in around 73,000 miles in early 2026 data — up from the fixed 80,000 chart rate in some cases, but frequently below it for flexible dates.</p>
-  </details>
-
-  <details class="faq-item">
-    <summary>Can I still book SWISS Business Class from Zürich with Miles & More?</summary>
-    <p>Yes — but the price is now dynamic. SWISS (LX) flights have been included since June 2025. Award prices for ZRH departures on LX vary by date and demand. Some dates price well below the old chart; school holiday and peak-season departures can price above it. Search broadly across dates before committing to a specific departure.</p>
-  </details>
-
-  <details class="faq-item">
-    <summary>Are partner redemptions (Singapore Airlines, United, etc.) also dynamic?</summary>
-    <p>No. Award flights on non-Lufthansa Group partner carriers booked through Miles & More — Singapore Airlines, United, Air Canada, Thai Airways, and others — still use a fixed partner award chart. Dynamic pricing applies only to LH, LX, OS, SN, Discover Airlines, and Air Dolomiti. This means a Singapore Airlines Business Class redemption through Miles & More still has a predictable, fixed price.</p>
-  </details>
-
-  <details class="faq-item">
-    <summary>Do carrier surcharges change dynamically too?</summary>
-    <p>No. The cash surcharges on top of miles — often CHF 200–550 on long-haul Lufthansa Group flights — are based on route and fare type, not demand. They don't change dynamically. Always factor them into your per-mile value calculation; a seemingly cheap miles price can become less attractive once surcharges are included.</p>
-  </details>
-
-  <details class="faq-item">
-    <summary>Should I switch from Miles & More to Flying Blue entirely?</summary>
-    <p>Not necessarily. Flying Blue still offers monthly <a href="meilenguru-strategy-flying-blue-promo-awards.html">Promo Awards</a> at fixed discounts — predictable and often excellent value for Air France and KLM flights. But Miles & More has distinct advantages: exclusive close-in access to Lufthansa First Class inventory, and the breadth of Star Alliance partner redemptions at fixed prices. The strongest position for a Swiss resident is to maintain flexibility across both programmes via Amex MR points, directing them to whichever programme offers the better deal at the time of booking.</p>
-  </details>
-
-  <details class="faq-item">
-    <summary>What's the best tool for monitoring Miles & More award availability?</summary>
-    <p>AwardFares (awardfares.com) is the most practical option for ongoing monitoring — it tracks award space across multiple programmes and can alert you when seats open on a specific route. The Miles & More website itself has improved its date-range search functionality since the dynamic pricing rollout. For cash price benchmarking to calculate per-mile value, Google Flights is the fastest reference tool.</p>
-  </details>
-
-  <div class="cta-box">
-    <div class="cta-box-eyebrow">Want help navigating this for your specific route?</div>
-    <h3>Let's find your best redemption.</h3>
-    <p>Dynamic pricing means the right answer depends on your cards, your current balance, your target destination, and your timing flexibility. In 30 minutes we can check current award availability for your route, benchmark the dynamic miles price against the cash alternative, and work out the fastest path to getting you there — with what you've already got, or what you could build toward from your CHF spending.</p>
-    <a href="consultation.html" class="cta-btn">Book a session — CHF 79 →</a>
-  </div>
-
-</div>
-
-<footer>
-  <div class="footer-bottom">
-    <a href="index.html" class="logo" style="font-size:1.2rem;">Meilen<span style="color:var(--gold);">guru</span></a>
-    <p>© 2025 Meilenguru · meilenguru.ch · Zürich, Switzerland</p>
-    <nav class="footer-nav">
-      <a href="index.html">Home</a>
-      <a href="strategies.html">Strategies</a>
-      <a href="blog.html">Blog</a>
-      <a href="consultation.html">Book a Session</a>
-    </nav>
-  </div>
-</footer>
-</body>
+    <footer>
+      <div class="footer-bottom">
+        <a href="index.html" class="logo" style="font-size: 1.2rem"
+          >Meilen<span style="color: var(--gold)">guru</span></a
+        >
+        <p>© 2025 Meilenguru · meilenguru.ch · Zürich, Switzerland</p>
+        <nav class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="strategies.html">Strategies</a>
+          <a href="blog.html">Blog</a>
+          <a href="consultation.html">Book a Session</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
 </html>
