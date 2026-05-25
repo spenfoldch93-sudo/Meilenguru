@@ -1,4 +1,16 @@
 [[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/*.html"
+  to = "/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "https://meilenguru.netlify.app/*"
   to = "https://meilenguru.ch/:splat"
   status = 301
