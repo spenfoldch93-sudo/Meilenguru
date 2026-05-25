@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Was deine Meilen wirklich bringen — Business & First Class Benchmark | Meilenguru</title>
+    <meta
+      name="description"
+      content="Business- und First-Class-Einlösungen im Vergleich zu Barpreisen auf Routen ab der Schweiz. Was deine Meilen tatsächlich wert sind."
+    />
+    <link rel="canonical" href="https://meilenguru.ch/strategien-benchmark" />
+    <link rel="alternate" hreflang="de" href="https://meilenguru.ch/strategien-benchmark" />
+    <link rel="alternate" hreflang="en" href="https://meilenguru.ch/strategies-benchmark" />
+    <link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/strategies-benchmark" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+      :root {
+        --black: #0a0a0a; --white: #faf9f7; --warm-white: #f5f3ef;
+        --gold: #b8962e; --gold-light: #d4ae4e; --gold-dim: rgba(184, 150, 46, 0.1);
+        --muted: #888580; --border: rgba(10, 10, 10, 0.1); --border-light: rgba(10, 10, 10, 0.06);
+        --font-display: "Lora", Georgia, serif; --font-body: "DM Sans", sans-serif;
+      }
+      html { scroll-behavior: smooth; }
+      body { font-family: var(--font-body); background: var(--white); color: var(--black); font-size: 15px; line-height: 1.6; overflow-x: hidden; }
+      .lang-banner { background: var(--black); font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.5rem 2rem; display: flex; justify-content: flex-end; gap: 1.5rem; }
+      .lang-banner a { color: rgba(250, 249, 247, 0.6); text-decoration: none; transition: color 0.2s; }
+      .lang-banner a:hover { color: var(--gold-light); }
+      nav { position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.1rem 2rem; background: rgba(250, 249, 247, 0.95); backdrop-filter: blur(12px); border-bottom: 0.5px solid var(--border); }
+      .logo { font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; letter-spacing: 0.02em; color: var(--black); text-decoration: none; }
+      .logo span { color: var(--gold); }
+      .nav-links { display: flex; gap: 2rem; list-style: none; }
+      .nav-links a { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--black); text-decoration: none; font-weight: 400; transition: color 0.2s; }
+      .nav-links a:hover, .nav-links a.active { color: var(--gold); }
+      .nav-cta { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--black); color: var(--white); padding: 0.45rem 1.1rem; text-decoration: none; transition: background 0.2s; }
+      .nav-cta:hover { background: #2a2a2a; }
+      .nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+      .nav-toggle span { display: block; width: 22px; height: 1px; background: var(--black); }
+      .mobile-menu { display: none; flex-direction: column; background: var(--white); border-bottom: 0.5px solid var(--border); padding: 1.5rem 2rem; gap: 1.25rem; }
+      .mobile-menu.open { display: flex; }
+      .mobile-menu a { font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--black); text-decoration: none; }
+      .mobile-menu .mobile-cta { display: inline-block; margin-top: 0.5rem; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--black); color: var(--white); padding: 0.6rem 1.25rem; text-align: center; text-decoration: none; }
+      .disclaimer-banner { background: #fff8e8; border-bottom: 1px solid #e8d08a; padding: 0.85rem 2rem; }
+      .disclaimer-inner { max-width: 1000px; margin: 0 auto; display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.78rem; color: #7a6020; line-height: 1.55; font-weight: 300; }
+      .disclaimer-icon { font-size: 0.9rem; flex-shrink: 0; margin-top: 1px; }
+      .disclaimer-inner strong { font-weight: 500; color: #5a4510; }
+      .page-hero { background: var(--black); padding: 6rem 2rem 5rem; position: relative; overflow: hidden; }
+      .page-hero::before { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 80% at 80% 50%, rgba(184, 150, 46, 0.07) 0%, transparent 65%); pointer-events: none; }
+      .page-hero-inner { max-width: 1000px; margin: 0 auto; position: relative; z-index: 1; }
+      .page-eyebrow { font-size: 0.67rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem; font-weight: 500; }
+      .page-title { font-family: var(--font-display); font-size: clamp(2.8rem, 5.5vw, 5rem); font-weight: 300; line-height: 1.05; color: var(--white); margin-bottom: 1.5rem; }
+      .page-title em { font-style: italic; color: var(--gold); display: block; }
+      .page-subtitle { font-size: 1rem; color: rgba(250, 249, 247, 0.5); max-width: 560px; line-height: 1.8; font-weight: 300; }
+      .tab-nav { background: var(--warm-white); border-bottom: 0.5px solid var(--border); position: sticky; top: 57px; z-index: 90; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+      .tab-nav-inner { max-width: 1000px; margin: 0 auto; display: flex; gap: 0; }
+      .tab-btn { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); font-family: var(--font-body); font-weight: 400; padding: 1.1rem 2rem; border: none; background: none; cursor: pointer; border-bottom: 2px solid transparent; transition: color 0.2s, border-color 0.2s; white-space: nowrap; text-decoration: none; display: block; }
+      .tab-btn:hover { color: var(--black); }
+      .tab-btn.active { color: var(--black); border-bottom-color: var(--gold); }
+      .programme-section { padding: 5rem 2rem; scroll-margin-top: 110px; }
+      .section-inner { max-width: 1000px; margin: 0 auto; }
+      .prog-header { display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: start; margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 0.5px solid var(--border); }
+      .prog-eyebrow { font-size: 0.67rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; font-weight: 500; }
+      .prog-title { font-family: var(--font-display); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 300; line-height: 1.1; }
+      .prog-title em { font-style: italic; color: var(--gold); }
+      .prog-desc { font-size: 0.9rem; color: var(--muted); line-height: 1.8; font-weight: 300; max-width: 520px; margin-top: 1rem; }
+      .prog-badge { display: inline-flex; flex-direction: column; align-items: center; gap: 0.25rem; padding: 1.25rem 1.5rem; border: 0.5px solid var(--border); text-align: center; flex-shrink: 0; }
+      .prog-badge-num { font-family: var(--font-display); font-size: 2.2rem; font-weight: 300; color: var(--gold); line-height: 1; }
+      .prog-badge-label { font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+      .sub-heading { font-size: 0.67rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.25rem; margin-top: 2.75rem; font-weight: 500; display: flex; align-items: center; gap: 1rem; }
+      .sub-heading::after { content: ""; flex: 1; height: 0.5px; background: var(--border); }
+      .card-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--border); }
+      .earn-card { background: var(--white); padding: 1.75rem 1.5rem; position: relative; transition: background 0.2s; }
+      .earn-card:hover { background: rgba(184, 150, 46, 0.03); }
+      .earn-card-tag { font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); font-weight: 500; margin-bottom: 0.6rem; }
+      .earn-card h3 { font-family: var(--font-display); font-size: 1.15rem; font-weight: 400; margin-bottom: 0.5rem; line-height: 1.25; }
+      .earn-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.7; font-weight: 300; margin-bottom: 0.85rem; }
+      .earn-card-stat { font-family: var(--font-display); font-size: 1.6rem; font-weight: 300; color: var(--black); line-height: 1; }
+      .earn-card-stat span { color: var(--gold); font-style: italic; }
+      .earn-card-stat-label { font-size: 0.68rem; color: var(--muted); letter-spacing: 0.08em; margin-top: 0.2rem; }
+      .benchmark-table { width: 100%; border-collapse: collapse; margin-top: 0.5rem; font-size: 0.86rem; }
+      .benchmark-table thead tr { border-bottom: 0.5px solid var(--border); }
+      .benchmark-table th { font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); font-weight: 500; padding: 0.65rem 0.85rem; text-align: left; }
+      .benchmark-table td { padding: 0.9rem 0.85rem; border-bottom: 0.5px solid var(--border-light); font-weight: 300; color: #2a2826; vertical-align: top; }
+      .benchmark-table tr:last-child td { border-bottom: none; }
+      .benchmark-table td:first-child { font-weight: 500; color: var(--black); }
+      .benchmark-table .highlight-row td { background: var(--gold-dim); }
+      .benchmark-table .highlight-row td:first-child { color: var(--gold); }
+      .miles-val { font-family: var(--font-display); font-size: 1.1rem; font-weight: 400; color: var(--gold); }
+      .cash-val { font-size: 0.78rem; color: var(--muted); }
+      .tips-box { border-left: 2px solid var(--gold); background: var(--gold-dim); padding: 1.25rem 1.5rem; margin-top: 2rem; }
+      .tips-box-title { font-size: 0.67rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); font-weight: 500; margin-bottom: 0.75rem; }
+      .tips-box ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+      .tips-box ul li { font-size: 0.86rem; color: #2a2826; font-weight: 300; line-height: 1.6; padding-left: 1.1rem; position: relative; }
+      .tips-box ul li::before { content: "◈"; position: absolute; left: 0; color: var(--gold); font-size: 0.6rem; top: 4px; }
+      .cta-section { background: var(--black); padding: 5rem 2rem; text-align: center; }
+      .cta-inner { max-width: 620px; margin: 0 auto; }
+      .cta-eyebrow { font-size: 0.67rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.1rem; font-weight: 500; }
+      .cta-title { font-family: var(--font-display); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 300; color: var(--white); line-height: 1.15; margin-bottom: 1.1rem; }
+      .cta-title em { font-style: italic; color: var(--gold); }
+      .cta-text { font-size: 0.9rem; color: rgba(250, 249, 247, 0.5); line-height: 1.8; font-weight: 300; margin-bottom: 2.25rem; }
+      .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+      .btn-primary { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--white); color: var(--black); padding: 0.8rem 1.75rem; text-decoration: none; transition: background 0.2s; font-family: var(--font-body); }
+      .btn-primary:hover { background: #e8e6e2; }
+      .btn-outline { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; border: 0.5px solid rgba(250, 249, 247, 0.3); color: rgba(250, 249, 247, 0.7); padding: 0.8rem 1.75rem; text-decoration: none; transition: all 0.2s; font-family: var(--font-body); }
+      .btn-outline:hover { border-color: var(--white); color: var(--white); }
+      footer { background: var(--warm-white); border-top: 0.5px solid var(--border); padding: 2rem 2rem 1.5rem; }
+      .footer-bottom { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; }
+      .footer-bottom p { font-size: 0.7rem; color: var(--muted); letter-spacing: 0.05em; }
+      .footer-nav { display: flex; gap: 1.5rem; }
+      .footer-nav a { font-size: 0.72rem; color: var(--muted); text-decoration: none; letter-spacing: 0.05em; transition: color 0.2s; }
+      .footer-nav a:hover { color: var(--black); }
+      @media (max-width: 768px) {
+        nav { padding: 1rem 1.25rem; }
+        .nav-links, .nav-cta { display: none; }
+        .nav-toggle { display: flex; }
+        .page-hero { padding: 4rem 1.5rem 3.5rem; }
+        .programme-section { padding: 3.5rem 1.5rem; }
+        .prog-header { grid-template-columns: 1fr; }
+        .prog-badge { display: none; }
+        .card-grid-2 { grid-template-columns: 1fr; }
+        .tab-btn { padding: 1rem 1.25rem; font-size: 0.68rem; }
+        .benchmark-table { font-size: 0.78rem; }
+        .benchmark-table th, .benchmark-table td { padding: 0.6rem 0.5rem; }
+        .cta-section { padding: 4rem 1.5rem; }
+        .footer-bottom { flex-direction: column; align-items: flex-start; }
+      }
+      .tab-btn[href="strategien-benchmark.html"] { color: var(--black); border-bottom-color: var(--gold); }
+    </style>
+  </head>
+  <body>
+    <div class="lang-banner">
+      <a href="strategies-benchmark">🇬🇧 Read in English →</a>
+    </div>
+
+    <nav>
+      <a href="index.html" class="logo">Meilen<span>guru</span></a>
+      <ul class="nav-links">
+        <li><a href="strategien.html" class="active">Strategien</a></li>
+        <li><a href="empfehlungen.html">Empfehlungen</a></li>
+        <li><a href="blog-de.html">Blog</a></li>
+        <li><a href="tools-de.html">Tools</a></li>
+        <li><a href="ueber-mich.html">Über mich</a></li>
+        <li><a href="beratung.html">Beratung</a></li>
+      </ul>
+      <a href="beratung.html" class="nav-cta">Termin buchen</a>
+      <button class="nav-toggle" onclick="toggleMenu()" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="strategien.html" onclick="closeMenu()">Strategien</a>
+      <a href="empfehlungen.html" onclick="closeMenu()">Empfehlungen</a>
+      <a href="blog-de.html" onclick="closeMenu()">Blog</a>
+      <a href="tools-de.html" onclick="closeMenu()">Tools</a>
+      <a href="ueber-mich.html" onclick="closeMenu()">Über mich</a>
+      <a href="beratung.html" onclick="closeMenu()">Beratung</a>
+      <a href="beratung.html" class="mobile-cta" onclick="closeMenu()">Termin buchen</a>
+    </div>
+
+    <div class="disclaimer-banner">
+      <div class="disclaimer-inner">
+        <span class="disclaimer-icon">⚠</span>
+        <span><strong>Informationen ändern sich häufig.</strong> Meilenangaben und Barpreise basieren auf öffentlich verfügbaren Informationen und können sich ohne Vorankündigung ändern. Dynamische Preisgestaltung bedeutet, dass tatsächliche Einlösungen variieren. Meilenguru ist kein Finanzberater.</span>
+      </div>
+    </div>
+
+    <div class="page-hero">
+      <div class="page-hero-inner">
+        <p class="page-eyebrow">Wofür du sammelst</p>
+        <h1 class="page-title">Was diese Meilen<br /><em>tatsächlich bringen</em></h1>
+        <p class="page-subtitle">
+          Business- und First-Class-Einlösungen im Vergleich zu Barpreisen auf Routen, die für Schweizer Reisende relevant sind.
+        </p>
+      </div>
+    </div>
+
+    <div class="tab-nav">
+      <div class="tab-nav-inner">
+        <a href="strategien-miles-more.html" class="tab-btn">Miles & More</a>
+        <a href="strategien-flying-blue.html" class="tab-btn">Flying Blue</a>
+        <a href="strategien-amex.html" class="tab-btn">Amex MR</a>
+        <a href="strategien-benchmark.html" class="tab-btn">Der Benchmark</a>
+        <a href="empfehlungen.html" class="tab-btn" style="color: var(--gold); border-bottom-color: var(--gold)">✦ Referral-Codes →</a>
+      </div>
+    </div>
+
+    <section class="programme-section" id="benchmark">
+      <div class="section-inner">
+        <div class="prog-header">
+          <div>
+            <p class="prog-eyebrow">Wofür du sammelst</p>
+            <h2 class="prog-title">Was diese Meilen<br /><em>tatsächlich bringen</em></h2>
+            <p class="prog-desc">
+              Das ist, was das Sammeln tatsächlich ergibt. Echte Routen, echte Einlösungsbereiche, im Vergleich zu Barpreisen. Dies sind Spannen — dynamische Preisgestaltung bedeutet, dass die genaue Zahl schwankt. Aber das gibt ein realistisches Ziel vor.
+            </p>
+          </div>
+          <div class="prog-badge">
+            <div class="prog-badge-num">~8¢</div>
+            <div class="prog-badge-label">Pro Meile in Premium-Kabinen</div>
+          </div>
+        </div>
+
+        <p class="sub-heading">Miles & More — Business &amp; First Class Einlösungen</p>
+
+        <table class="benchmark-table">
+          <thead>
+            <tr>
+              <th>Route</th>
+              <th>Kabine</th>
+              <th>Fluggesellschaft</th>
+              <th>Meilen (ca.)</th>
+              <th>Barpreis-Äquivalent</th>
+              <th>Wert/Meile</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ZRH → JFK (New York)</td>
+              <td>Business</td>
+              <td>SWISS / Lufthansa</td>
+              <td>
+                <span class="miles-val">56'000–80'000</span>
+                <div class="cash-val">dynamisch · einfach</div>
+              </td>
+              <td>CHF 3'000–5'000</td>
+              <td>~5–8¢</td>
+            </tr>
+            <tr class="highlight-row">
+              <td>ZRH → JFK (New York)</td>
+              <td>First Class</td>
+              <td>SWISS / Lufthansa</td>
+              <td>
+                <span class="miles-val">91'000–130'000</span>
+                <div class="cash-val">dynamisch · einfach</div>
+              </td>
+              <td>CHF 7'000–12'000</td>
+              <td>~8–10¢</td>
+            </tr>
+            <tr>
+              <td>ZRH → NRT (Tokio)</td>
+              <td>Business</td>
+              <td>Star Alliance Partner</td>
+              <td>
+                <span class="miles-val">60'000–85'000</span>
+                <div class="cash-val">Partner-Fixpreisliste · einfach</div>
+              </td>
+              <td>CHF 4'000–7'000</td>
+              <td>~6–8¢</td>
+            </tr>
+            <tr>
+              <td>ZRH/FRA → SIN (Singapur)</td>
+              <td>Business</td>
+              <td>Singapore Airlines</td>
+              <td>
+                <span class="miles-val">65'000–90'000</span>
+                <div class="cash-val">Partner-Fixpreisliste · einfach</div>
+              </td>
+              <td>CHF 4'500–8'000</td>
+              <td>~6–9¢</td>
+            </tr>
+            <tr class="highlight-row">
+              <td>SIN → FRA → BSL</td>
+              <td>First Class</td>
+              <td>Lufthansa 747-8</td>
+              <td>
+                <span class="miles-val">110'000</span>
+                <div class="cash-val">dynamisch · 48h vor Abflug gebucht</div>
+              </td>
+              <td>CHF 9'500–11'000</td>
+              <td>~8–9¢</td>
+            </tr>
+            <tr>
+              <td>ZRH → GRU (São Paulo)</td>
+              <td>Business</td>
+              <td>SWISS / Partner</td>
+              <td>
+                <span class="miles-val">70'000–100'000</span>
+                <div class="cash-val">dynamisch · einfach</div>
+              </td>
+              <td>CHF 4'000–7'000</td>
+              <td>~5–7¢</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="sub-heading">Flying Blue — Business Class Einlösungen</p>
+
+        <table class="benchmark-table">
+          <thead>
+            <tr>
+              <th>Route</th>
+              <th>Kabine</th>
+              <th>Fluggesellschaft</th>
+              <th>Meilen (ca.)</th>
+              <th>Barpreis-Äquivalent</th>
+              <th>Hinweise</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>GVA/ZRH → JFK (New York)</td>
+              <td>Business</td>
+              <td>Air France / KLM</td>
+              <td>
+                <span class="miles-val">50'000–75'000</span>
+                <div class="cash-val">dynamisch · einfach</div>
+              </td>
+              <td>CHF 3'000–5'500</td>
+              <td>Promo Awards prüfen</td>
+            </tr>
+            <tr class="highlight-row">
+              <td>GVA/ZRH → JFK (Promo)</td>
+              <td>Business</td>
+              <td>Air France / KLM</td>
+              <td>
+                <span class="miles-val">37'500–56'000</span>
+                <div class="cash-val">Promo Award Tarif · einfach</div>
+              </td>
+              <td>CHF 3'000–5'500</td>
+              <td>25–50% Rabatt</td>
+            </tr>
+            <tr>
+              <td>GVA → NRT (Tokio)</td>
+              <td>Business</td>
+              <td>Air France</td>
+              <td>
+                <span class="miles-val">55'000–80'000</span>
+                <div class="cash-val">dynamisch · einfach</div>
+              </td>
+              <td>CHF 4'000–7'000</td>
+              <td>Via Paris CDG</td>
+            </tr>
+            <tr>
+              <td>GVA → SIN (Singapur)</td>
+              <td>Business</td>
+              <td>Air France / KLM</td>
+              <td>
+                <span class="miles-val">55'000–80'000</span>
+                <div class="cash-val">dynamisch · einfach</div>
+              </td>
+              <td>CHF 4'000–7'500</td>
+              <td>Via CDG oder AMS</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="sub-heading">Sammeln vs. Einlösen — das Fazit</p>
+
+        <div class="card-grid-2">
+          <div class="earn-card">
+            <div class="earn-card-tag">Erreichbar in Jahr 1</div>
+            <h3>Business Class nach New York</h3>
+            <p>
+              Mit dem Cornèrcard Gold Willkommensbonus (40'000 Meilen) und 12 Monaten à CHF 1'500/Monat Umsatz (18'000 Meilen) erreicht man 58'000+ Meilen — genug für eine einfache Business-Class-Einlösung nach New York an einem guten Preistag oder via Flying Blue Promo Award.
+            </p>
+            <div class="earn-card-stat"><span>~58'000</span></div>
+            <div class="earn-card-stat-label">Erreichbare Meilen Jahr 1 — ohne zu fliegen</div>
+          </div>
+          <div class="earn-card">
+            <div class="earn-card-tag">Erreichbar in Jahr 1–2</div>
+            <h3>First Class nach Asien</h3>
+            <p>
+              Cornèrcard Platinum Aktion (bis zu 85'000 Meilen) + 12 Monate Umsatz à 1 Meile/CHF 1 macht First Class nach Singapur oder Tokio allein in Jahr 1 erreichbar. Normaler Umsatz über 18–24 Monate erreicht dasselbe mit jeder Gold-Tier-Kartenkombination.
+            </p>
+            <div class="earn-card-stat"><span>~100'000</span></div>
+            <div class="earn-card-stat-label">Erreichbare Meilen Jahr 1–2 kombiniert</div>
+          </div>
+        </div>
+
+        <div class="tips-box">
+          <div class="tips-box-title">So liest man diese Benchmarks</div>
+          <ul>
+            <li>
+              <strong>Dynamische Preise bedeuten Spannen, keine Fixzahlen.</strong> Miles & More und Flying Blue berechnen Awards basierend auf Nachfrage und Timing. Die obigen Spannen spiegeln typische reale Einlösungen wider, nicht theoretische Minima.
+            </li>
+            <li>
+              <strong>Immer zuerst mit dem Barpreis vergleichen.</strong> Eine Einlösung macht nur Sinn, wenn sie den Barpreis schlägt. Ziel: Einlösungen über CHF 0,05 pro Meile in Business, CHF 0,08+ in First.
+            </li>
+            <li>
+              <strong>Die besten Konditionen gibt es noch bei Partner-Airlines.</strong> M&Ms feste Partner-Preisliste (Star Alliance Airlines ausser SWISS/LH/Austrian) bietet oft den besten Gegenwert — besonders auf Routen nach Asien, Südamerika und Afrika.
+            </li>
+            <li>
+              <strong>Die besten Einlösungen werden gefunden, nicht geplant.</strong> Meilen auf dem Konto bereit haben und regelmässig schauen — besonders Flying Blue am 1. jedes Monats — ist wichtiger als jedes Strategiedokument.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="cta-inner">
+        <p class="cta-eyebrow">Möchtest du eine persönliche Version davon?</p>
+        <h2 class="cta-title">Deine Karten. Deine Ausgaben.<br /><em>Deine Einlösung.</em></h2>
+        <p class="cta-text">
+          Die obigen Strategien sind allgemein. Deine Situation ist spezifisch. In 30 Minuten gehen wir deine tatsächlichen Karten und Ausgaben durch und finden den schnellsten Weg zu deiner ersten Business-Class-Einlösung.
+        </p>
+        <div class="cta-buttons">
+          <a href="empfehlungen.html" class="btn-primary">Referral-Codes ansehen</a>
+          <a href="beratung.html" class="btn-outline">Termin buchen — CHF 79</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-bottom">
+        <a href="index.html" class="logo" style="font-size: 1.2rem">Meilen<span style="color: var(--gold)">guru</span></a>
+        <p>© 2025 Meilenguru · meilenguru.ch · Zürich, Schweiz</p>
+        <nav class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="strategien.html">Strategien</a>
+          <a href="empfehlungen.html">Empfehlungen</a>
+          <a href="blog-de.html">Blog</a>
+          <a href="ueber-mich.html">Über mich</a>
+          <a href="beratung.html">Termin buchen</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script>
+      function toggleMenu() { document.getElementById("mobileMenu").classList.toggle("open"); }
+      function closeMenu() { document.getElementById("mobileMenu").classList.remove("open"); }
+    </script>
+  </body>
+</html>
