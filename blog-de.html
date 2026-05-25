@@ -1,0 +1,857 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog — Reiseberichte & Meilen-Strategien für die Schweiz | Meilenguru</title>
+    <meta
+      name="description"
+      content="Reiseberichte und Strategieartikel rund ums Meilen-Sammeln in der Schweiz. Business- und First-Class-Flüge mit Miles & More und Flying Blue — echte Reisen, echte Zahlen."
+    />
+    <link rel="canonical" href="https://meilenguru.ch/blog-de" />
+    <link rel="alternate" hreflang="de" href="https://meilenguru.ch/blog-de" />
+    <link rel="alternate" hreflang="en" href="https://meilenguru.ch/blog" />
+    <link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/blog" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      :root {
+        --black: #0a0a0a;
+        --white: #faf9f7;
+        --warm-white: #f5f3ef;
+        --gold: #b8962e;
+        --gold-light: #d4ae4e;
+        --muted: #888580;
+        --border: rgba(10, 10, 10, 0.1);
+        --border-mid: rgba(10, 10, 10, 0.15);
+        --font-display: "Lora", Georgia, serif;
+        --font-body: "DM Sans", sans-serif;
+      }
+      html { scroll-behavior: smooth; }
+      body {
+        font-family: var(--font-body);
+        background: var(--white);
+        color: var(--black);
+        font-size: 15px;
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      /* NAV */
+      nav {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.1rem 2rem;
+        background: rgba(250, 249, 247, 0.95);
+        backdrop-filter: blur(12px);
+        border-bottom: 0.5px solid var(--border);
+      }
+      .logo {
+        font-family: var(--font-display);
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--black);
+        text-decoration: none;
+      }
+      .logo span { color: var(--gold); }
+      .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+      }
+      .nav-links a {
+        font-size: 0.78rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--muted);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      .nav-links a:hover,
+      .nav-links a.active { color: var(--black); }
+      .nav-cta {
+        font-size: 0.72rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        background: var(--black);
+        color: var(--white);
+        padding: 0.45rem 1.1rem;
+        text-decoration: none;
+        transition: background 0.2s;
+      }
+      .nav-cta:hover { background: #2a2a2a; }
+      .nav-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 4px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 4px;
+      }
+      .nav-toggle span {
+        display: block;
+        width: 22px;
+        height: 1.5px;
+        background: var(--black);
+      }
+
+      /* MOBILE MENU */
+      .mobile-menu {
+        display: none;
+        flex-direction: column;
+        background: var(--black);
+        padding: 1.5rem 2rem;
+        gap: 1rem;
+      }
+      .mobile-menu.open { display: flex; }
+      .mobile-menu a {
+        color: rgba(250, 249, 247, 0.7);
+        text-decoration: none;
+        font-size: 0.9rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .mobile-menu a:hover { color: var(--white); }
+      .mobile-cta {
+        color: var(--gold) !important;
+        margin-top: 0.5rem;
+      }
+
+      /* LANG BANNER */
+      .lang-banner {
+        background: var(--black);
+        font-size: 0.68rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        padding: 0.5rem 2rem;
+        display: flex;
+        justify-content: flex-end;
+        gap: 1.5rem;
+      }
+      .lang-banner a {
+        color: rgba(250, 249, 247, 0.5);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      .lang-banner a:hover { color: var(--gold-light); }
+
+      /* HERO */
+      .page-hero {
+        background: var(--black);
+        padding: 5rem 2rem 4rem;
+        border-bottom: 0.5px solid rgba(255, 255, 255, 0.08);
+      }
+      .hero-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 2rem;
+        flex-wrap: wrap;
+      }
+      .hero-eyebrow {
+        font-size: 0.68rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 1rem;
+      }
+      .hero-title {
+        font-family: var(--font-display);
+        font-size: clamp(2.2rem, 5vw, 3.8rem);
+        font-weight: 300;
+        line-height: 1.08;
+        color: var(--white);
+      }
+      .hero-title em {
+        font-style: italic;
+        color: var(--gold);
+      }
+
+      /* FILTER BAR */
+      .filter-bar {
+        background: var(--warm-white);
+        border-bottom: 0.5px solid var(--border);
+        padding: 1rem 2rem;
+        display: flex;
+        align-items: center;
+        gap: 2.5rem;
+        flex-wrap: wrap;
+      }
+      .filter-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 2.5rem;
+        flex-wrap: wrap;
+      }
+      .filter-group {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+      }
+      .filter-group-label {
+        font-size: 0.62rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--muted);
+        white-space: nowrap;
+      }
+      .filter-btn {
+        font-size: 0.68rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 0.3rem 0.75rem;
+        border: 0.5px solid var(--border-mid);
+        background: none;
+        cursor: pointer;
+        font-family: var(--font-body);
+        color: var(--muted);
+        transition: all 0.15s;
+      }
+      .filter-btn:hover { border-color: var(--black); color: var(--black); }
+      .filter-btn.active { background: var(--black); color: var(--white); border-color: var(--black); }
+      .result-count {
+        font-size: 0.72rem;
+        color: var(--muted);
+        margin-left: auto;
+        white-space: nowrap;
+      }
+
+      /* BLOG GRID */
+      .blog-section {
+        padding: 3rem 2rem 6rem;
+      }
+      .blog-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+      .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+      }
+      .blog-card {
+        border: 0.5px solid var(--border);
+        background: var(--white);
+        transition: border-color 0.2s, transform 0.2s;
+        position: relative;
+      }
+      .blog-card:hover {
+        border-color: var(--black);
+        transform: translateY(-2px);
+      }
+      .blog-card.hidden { display: none; }
+      .blog-thumb {
+        height: 180px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: flex-end;
+        padding: 0.75rem 0.9rem;
+      }
+      .blog-route {
+        font-size: 0.65rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: rgba(250, 249, 247, 0.85);
+        position: relative;
+        z-index: 1;
+      }
+      .blog-rating {
+        position: absolute;
+        top: 0.75rem;
+        right: 0.9rem;
+        font-family: var(--font-display);
+        font-size: 1.1rem;
+        font-weight: 300;
+        color: var(--gold);
+      }
+      .blog-body {
+        padding: 1.25rem 1.1rem 1.4rem;
+      }
+      .blog-cats {
+        display: flex;
+        gap: 0.4rem;
+        flex-wrap: wrap;
+        margin-bottom: 0.75rem;
+      }
+      .cat-badge {
+        font-size: 0.58rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 0.22rem 0.55rem;
+        font-weight: 500;
+      }
+      .cat-trip-report { background: rgba(10, 10, 10, 0.06); color: var(--muted); }
+      .cat-business-class { background: rgba(184, 150, 46, 0.12); color: #7a6520; }
+      .cat-first-class { background: rgba(184, 150, 46, 0.2); color: #6a5518; }
+      .cat-miles-redemption { background: rgba(10, 10, 10, 0.06); color: var(--muted); }
+      .cat-cash-fare { background: rgba(10, 10, 10, 0.06); color: var(--muted); }
+      .cat-cash-upgrade { background: rgba(10, 10, 10, 0.06); color: var(--muted); }
+      .cat-budget-find { background: rgba(46, 125, 50, 0.1); color: #2e7d32; }
+      .cat-strategy { background: rgba(10, 10, 10, 0.92); color: var(--white); }
+      .blog-card h3 {
+        font-family: var(--font-display);
+        font-size: 1.05rem;
+        font-weight: 400;
+        line-height: 1.3;
+        margin-bottom: 0.5rem;
+        color: var(--black);
+      }
+      .blog-card p {
+        font-size: 0.82rem;
+        color: var(--muted);
+        font-weight: 300;
+        line-height: 1.65;
+        margin-bottom: 0.9rem;
+      }
+      .blog-meta {
+        display: flex;
+        gap: 0.5rem;
+        font-size: 0.7rem;
+        color: var(--muted);
+        font-weight: 300;
+        letter-spacing: 0.05em;
+      }
+      .auf-deutsch-badge {
+        position: absolute;
+        top: 0.6rem;
+        left: 0.75rem;
+        background: rgba(10,10,10,0.75);
+        color: rgba(250,249,247,0.9);
+        font-size: 0.55rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 0.22rem 0.5rem;
+        z-index: 2;
+      }
+
+      /* SECTION DIVIDER */
+      .section-label {
+        font-size: 0.62rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin: 3rem 0 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 0.5px solid var(--border);
+      }
+
+      /* CTA */
+      .cta-section {
+        background: var(--black);
+        padding: 4rem 2rem;
+        text-align: center;
+      }
+      .cta-inner { max-width: 640px; margin: 0 auto; }
+      .cta-eyebrow {
+        font-size: 0.62rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 1rem;
+      }
+      .cta-title {
+        font-family: var(--font-display);
+        font-size: 2.5rem;
+        font-weight: 300;
+        color: var(--white);
+        line-height: 1.15;
+        margin-bottom: 1rem;
+      }
+      .cta-title em { font-style: italic; color: var(--gold); }
+      .cta-text {
+        font-size: 0.92rem;
+        color: rgba(250, 249, 247, 0.65);
+        font-weight: 300;
+        line-height: 1.75;
+        margin-bottom: 2rem;
+      }
+      .btn-white {
+        display: inline-block;
+        font-size: 0.78rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        background: var(--white);
+        color: var(--black);
+        padding: 0.85rem 2rem;
+        text-decoration: none;
+        transition: background 0.2s;
+      }
+      .btn-white:hover { background: #e8e6e2; }
+
+      /* FOOTER */
+      footer {
+        background: var(--warm-white);
+        border-top: 0.5px solid var(--border);
+        padding: 2rem 2rem 1.5rem;
+      }
+      .footer-bottom {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+      .footer-bottom p { font-size: 0.7rem; color: var(--muted); }
+      .footer-nav { display: flex; gap: 1.5rem; }
+      .footer-nav a {
+        font-size: 0.72rem;
+        color: var(--muted);
+        text-decoration: none;
+      }
+      .footer-nav a:hover { color: var(--black); }
+
+      @media (max-width: 900px) {
+        .blog-grid { grid-template-columns: repeat(2, 1fr); }
+      }
+      @media (max-width: 768px) {
+        .nav-links, .nav-cta { display: none; }
+        .nav-toggle { display: flex; }
+        .hero-title { font-size: 2rem; }
+        .result-count { margin-left: 0; }
+      }
+      @media (max-width: 580px) {
+        .blog-grid { grid-template-columns: 1fr; }
+        .footer-bottom { flex-direction: column; align-items: flex-start; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="lang-banner">
+      <a href="blog">🇬🇧 Read in English →</a>
+    </div>
+    <nav>
+      <a href="index.html" class="logo">Meilen<span>guru</span></a>
+      <ul class="nav-links">
+        <li><a href="strategien">Strategien</a></li>
+        <li><a href="empfehlungen">Empfehlungen</a></li>
+        <li><a href="blog-de" class="active">Blog</a></li>
+        <li><a href="tools-de">Tools</a></li>
+        <li><a href="ueber-mich">Über uns</a></li>
+        <li><a href="beratung">Beratung</a></li>
+      </ul>
+      <a href="beratung" class="nav-cta">Session buchen</a>
+      <button class="nav-toggle" onclick="toggleMenu()" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="strategien" onclick="closeMenu()">Strategien</a>
+      <a href="empfehlungen" onclick="closeMenu()">Empfehlungen</a>
+      <a href="blog-de" onclick="closeMenu()">Blog</a>
+      <a href="tools-de" onclick="closeMenu()">Tools</a>
+      <a href="ueber-mich" onclick="closeMenu()">Über uns</a>
+      <a href="beratung" onclick="closeMenu()">Beratung</a>
+      <a href="beratung" class="mobile-cta" onclick="closeMenu()">Session buchen</a>
+    </div>
+
+    <div class="page-hero">
+      <div class="hero-inner">
+        <div>
+          <p class="hero-eyebrow">Reiseberichte & Strategien</p>
+          <h1 class="hero-title">Echte Flüge.<br /><em>Echte Meilen.</em></h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="filter-bar">
+      <div class="filter-inner">
+        <div class="filter-group">
+          <span class="filter-group-label">Programm:</span>
+          <button class="filter-btn active" data-filter="programme" data-value="all" onclick="filterCards('programme', 'all', this)">Alle</button>
+          <button class="filter-btn" data-filter="programme" data-value="miles-more" onclick="filterCards('programme', 'miles-more', this)">Miles & More</button>
+          <button class="filter-btn" data-filter="programme" data-value="flying-blue" onclick="filterCards('programme', 'flying-blue', this)">Flying Blue</button>
+        </div>
+        <div class="filter-group">
+          <span class="filter-group-label">Art:</span>
+          <button class="filter-btn active" data-filter="categories" data-value="all" onclick="filterCards('categories', 'all', this)">Alle</button>
+          <button class="filter-btn" data-filter="categories" data-value="trip-report" onclick="filterCards('categories', 'trip-report', this)">Reisebericht</button>
+          <button class="filter-btn" data-filter="categories" data-value="strategy" onclick="filterCards('categories', 'strategy', this)">Strategie</button>
+        </div>
+        <p class="result-count"><span id="count">0</span> Artikel</p>
+      </div>
+    </div>
+
+    <section class="blog-section">
+      <div class="blog-inner">
+        <div class="blog-grid" id="blogGrid">
+
+          <!-- REISEBERICHTE -->
+          <a
+            href="lh-first-class-sin-bsl-de"
+            class="blog-card"
+            data-programmes="miles-more"
+            data-categories="trip-report first-class miles-redemption"
+            style="text-decoration: none; color: inherit; display: block"
+          >
+            <div class="blog-thumb" style="background: #1a1a2e;">
+              <span class="auf-deutsch-badge">Auf Deutsch</span>
+              <span class="blog-route">SIN → FRA → BSL · Lufthansa · 747-8</span>
+              <span class="blog-rating">8/10</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-cats">
+                <span class="cat-badge cat-trip-report">Reisebericht</span>
+                <span class="cat-badge cat-first-class">First Class</span>
+                <span class="cat-badge cat-miles-redemption">Meilen-Einlösung</span>
+              </div>
+              <h3>Lufthansa First Class: Singapur nach Basel für 110'000 Meilen</h3>
+              <p>48 Stunden vorher gebucht. Im Bug einer 747 gesessen. CHF 250 Steuern.</p>
+              <div class="blog-meta">
+                <span>10 Min. Lesezeit</span>
+                <span>·</span>
+                <span>Lufthansa</span>
+              </div>
+            </div>
+          </a>
+
+          <a
+            href="perth-zuerich-oman-air-de"
+            class="blog-card"
+            data-programmes="flying-blue"
+            data-categories="trip-report business-class cash-fare"
+            style="text-decoration: none; color: inherit; display: block"
+          >
+            <div class="blog-thumb" style="background: #0d2137;">
+              <span class="auf-deutsch-badge">Auf Deutsch</span>
+              <span class="blog-route">PER → BKK → MCT → ZRH · Thai + Oman Air · 787</span>
+              <span class="blog-rating">9/10</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-cats">
+                <span class="cat-badge cat-trip-report">Reisebericht</span>
+                <span class="cat-badge cat-business-class">Business Class</span>
+                <span class="cat-badge cat-cash-fare">Barzahlung</span>
+              </div>
+              <h3>Perth nach Zürich via Bangkok & Muscat für CHF 2'300 Return</h3>
+              <p>Zwei Dreamliner, eine gute Lounge und ein Muscat-Stopp mitten in einer Regionalkrise, die niemand geplant hat.</p>
+              <div class="blog-meta">
+                <span>8 Min. Lesezeit</span>
+                <span>·</span>
+                <span>Oman Air + Thai</span>
+              </div>
+            </div>
+          </a>
+
+          <a
+            href="perth-singapur-zuerich-sq-swiss-de"
+            class="blog-card"
+            data-programmes="miles-more"
+            data-categories="trip-report business-class miles-redemption"
+            style="text-decoration: none; color: inherit; display: block"
+          >
+            <div class="blog-thumb" style="background: #1c2d4a;">
+              <span class="auf-deutsch-badge">Auf Deutsch</span>
+              <span class="blog-route">PER → SIN → ZRH · Singapore Airlines + SWISS</span>
+              <span class="blog-rating">9/10 vs 5/10</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-cats">
+                <span class="cat-badge cat-trip-report">Reisebericht</span>
+                <span class="cat-badge cat-business-class">Business Class</span>
+                <span class="cat-badge cat-miles-redemption">Meilen-Einlösung</span>
+              </div>
+              <h3>110'000 Meilen, Perth nach Zürich. Ein Highlight, eine Enttäuschung.</h3>
+              <p>Singapore Airlines hat geliefert. SWISS hat mich daran erinnert, warum ich Swissair vermisse.</p>
+              <div class="blog-meta">
+                <span>9 Min. Lesezeit</span>
+                <span>·</span>
+                <span>Singapore Airlines + SWISS</span>
+              </div>
+            </div>
+          </a>
+
+          <a
+            href="zuerich-cancun-tap-de"
+            class="blog-card"
+            data-programmes="miles-more"
+            data-categories="trip-report business-class cash-fare budget-find"
+            style="text-decoration: none; color: inherit; display: block"
+          >
+            <div class="blog-thumb" style="background: #1e3a2f;">
+              <span class="auf-deutsch-badge">Auf Deutsch</span>
+              <span class="blog-route">ZRH → LIS → CUN · TAP Air Portugal</span>
+              <span class="blog-rating">7/10</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-cats">
+                <span class="cat-badge cat-trip-report">Reisebericht</span>
+                <span class="cat-badge cat-business-class">Business Class</span>
+                <span class="cat-badge cat-cash-fare">Barzahlung</span>
+                <span class="cat-badge cat-budget-find">Schnäppchen</span>
+              </div>
+              <h3>Zürich nach Cancún in der Business Class für CHF 1'320 Return</h3>
+              <p>TAPs offenes Geheimnis: transatlantische Lie-flat-Betten für weniger als viele für Economy zahlen.</p>
+              <div class="blog-meta">
+                <span>7 Min. Lesezeit</span>
+                <span>·</span>
+                <span>TAP Air Portugal</span>
+              </div>
+            </div>
+          </a>
+
+          <a
+            href="singapur-zuerich-sq346-de"
+            class="blog-card"
+            data-programmes="miles-more"
+            data-categories="trip-report business-class cash-upgrade"
+            style="text-decoration: none; color: inherit; display: block"
+          >
+            <div class="blog-thumb" style="background: #1f2d3d;">
+              <span class="auf-deutsch-badge">Auf Deutsch</span>
+              <span class="blog-route">SIN → ZRH · Singapore Airlines SQ346</span>
+              <span class="blog-rating">8/10</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-cats">
+                <span class="cat-badge cat-trip-report">Reisebericht</span>
+                <span class="cat-badge cat-business-class">Business Class</span>
+                <span class="cat-badge cat-cash-upgrade">Bar-Upgrade</span>
+              </div>
+              <h3>Singapore Airlines SIN–ZRH: CHF 900 Upgrade und Pancakes über den Alpen</h3>
+              <p>Ein Bar-Upgrade beim Check-in, 13 Stunden The Office vollständig flach, und ein Frühstück, das die Ankunft in der Schweiz wie eine Belohnung anfühlen liess.</p>
+              <div class="blog-meta">
+                <span>7 Min. Lesezeit</span>
+                <span>·</span>
+                <span>Singapore Airlines</span>
+              </div>
+            </div>
+          </a>
+
+          <a
+            href="singapur-amsterdam-klm-de"
+            class="blog-card"
+            data-programmes="flying-blue"
+            data-categories="trip-report business-class cash-upgrade"
+            style="text-decoration: none; color: inherit; display: block"
+          >
+            <div class="blog-thumb" style="background: #002a5c;">
+              <span class="auf-deutsch-badge">Auf Deutsch</span>
+              <span class="blog-route">SIN → AMS · KLM · B777-300ER</span>
+              <span class="blog-rating">7/10</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-cats">
+                <span class="cat-badge cat-trip-report">Reisebericht</span>
+                <span class="cat-badge cat-business-class">Business Class</span>
+                <span class="cat-badge cat-cash-upgrade">Bar-Upgrade</span>
+              </div>
+              <h3>KLM World Business Class SIN–AMS: 14,5 Stunden, ein Miniatürhaus</h3>
+              <p>CHF 700 Upgrade auf einer der längsten Strecken der Welt. Der neue KLM-Sitz ist wirklich gut. Das kleine Porzellan-Gin-Haus ist rätselhaft.</p>
+              <div class="blog-meta">
+                <span>7 Min. Lesezeit</span>
+                <span>·</span>
+                <span>KLM</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- STRATEGIE-ARTIKEL -->
+          <a
+            href="meilen-sammeln-ohne-fliegen-schweiz"
+            class="blog-card"
+            data-programmes="miles-more"
+            data-categories="strategy miles-redemption"
+            style="text-decoration: none; color: inherit; display: block"
+          >
+            <div class="blog-thumb" style="background: #001a70; display: flex; align-items: flex-end; padding: 0.75rem 0.9rem;">
+              <span class="auf-deutsch-badge">Auf Deutsch</span>
+              <span class="blog-route" style="position: relative; z-index: 1">Miles & More · Schweiz · Ohne Fliegen</span>
+              <span class="blog-rating">Ratgeber</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-cats">
+                <span class="cat-badge cat-strategy">Strategie</span>
+                <span class="cat-badge cat-miles-redemption">Miles & More</span>
+              </div>
+              <h3>100'000 Miles & More Meilen sammeln — ohne zu fliegen</h3>
+              <p>Willkommensboni, CHF-Alltagsausgaben, Coop Supercard, Amex-Transfers. Der vollständige Schweiz-spezifische Ratgeber.</p>
+              <div class="blog-meta"><span>12 Min. Lesezeit</span><span>·</span><span>Schweiz</span></div>
+            </div>
+          </a>
+
+          <a
+            href="flying-blue-promo-awards-schweiz"
+            class="blog-card"
+            data-programmes="flying-blue"
+            data-categories="strategy miles-redemption"
+            style="text-decoration: none; color: inherit; display: block"
+          >
+            <div class="blog-thumb" style="background: #0d2b4e; display: flex; align-items: flex-end; padding: 0.75rem 0.9rem;">
+              <span class="auf-deutsch-badge">Auf Deutsch</span>
+              <span class="blog-route" style="position: relative; z-index: 1">Flying Blue · Air France / KLM · Monatliche Deals</span>
+              <span class="blog-rating">Ratgeber</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-cats">
+                <span class="cat-badge cat-strategy">Strategie</span>
+                <span class="cat-badge cat-miles-redemption">Flying Blue</span>
+              </div>
+              <h3>Flying Blue Promo Awards erklärt — für Schweizer Einwohner</h3>
+              <p>Business Class mit 25–50 % Rabatt. Erscheint am 1. jedes Monats. Die meisten wissen nicht, dass es sie gibt.</p>
+              <div class="blog-meta"><span>10 Min. Lesezeit</span><span>·</span><span>Schweiz</span></div>
+            </div>
+          </a>
+
+          <a
+            href="beste-kreditkarte-meilen-schweiz"
+            class="blog-card"
+            data-programmes="miles-more flying-blue"
+            data-categories="strategy"
+            style="text-decoration: none; color: inherit; display: block"
+          >
+            <div class="blog-thumb" style="background: #1a1a1a; display: flex; align-items: flex-end; padding: 0.75rem 0.9rem;">
+              <span class="auf-deutsch-badge">Auf Deutsch</span>
+              <span class="blog-route" style="position: relative; z-index: 1">Cornèrcard · Swisscard · Amex · Vergleich 2026</span>
+              <span class="blog-rating">Ratgeber</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-cats">
+                <span class="cat-badge cat-strategy">Strategie</span>
+              </div>
+              <h3>Die besten Schweizer Kreditkarten für Meilen 2026</h3>
+              <p>Welche Karte sammelt am meisten? Cornèrcard vs. Swisscard vs. Amex — Verdienstsätze, Gebühren und Boni verglichen.</p>
+              <div class="blog-meta"><span>11 Min. Lesezeit</span><span>·</span><span>Schweiz</span></div>
+            </div>
+          </a>
+
+          <a
+            href="flying-blue-promo-mai-2026"
+            class="blog-card"
+            data-programmes="flying-blue"
+            data-categories="strategy"
+            style="text-decoration: none; color: inherit; display: block"
+          >
+            <div class="blog-thumb" style="background: #004a77; display: flex; align-items: flex-end; padding: 0.75rem 0.9rem;">
+              <span class="auf-deutsch-badge">Auf Deutsch</span>
+              <span class="blog-route" style="position: relative; z-index: 1">Flying Blue · Promo Awards · Mai 2026</span>
+              <span class="blog-rating">Neu</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-cats">
+                <span class="cat-badge cat-strategy">Strategie</span>
+                <span class="cat-badge cat-miles-redemption">Flying Blue</span>
+              </div>
+              <h3>Flying Blue Promo Awards Mai 2026 — Übersicht für Schweizer</h3>
+              <p>Economy ab 18'750 Meilen nach Nordamerika. Business Class nur für Extra-Abonnenten. Die vollständige Übersicht.</p>
+              <div class="blog-meta"><span>8 Min. Lesezeit</span><span>·</span><span>Mai 2026</span></div>
+            </div>
+          </a>
+
+          <a
+            href="miles-more-dynamische-preise-schweiz"
+            class="blog-card"
+            data-programmes="miles-more"
+            data-categories="strategy"
+            style="text-decoration: none; color: inherit; display: block"
+          >
+            <div class="blog-thumb" style="background: #001a70; display: flex; align-items: flex-end; padding: 0.75rem 0.9rem;">
+              <span class="auf-deutsch-badge">Auf Deutsch</span>
+              <span class="blog-route" style="position: relative; z-index: 1">Miles & More · Dynamische Preise · Schweiz</span>
+              <span class="blog-rating">Ratgeber</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-cats">
+                <span class="cat-badge cat-strategy">Strategie</span>
+                <span class="cat-badge cat-miles-redemption">Miles & More</span>
+              </div>
+              <h3>Miles & More dynamische Preise — was Schweizer wissen müssen</h3>
+              <p>Die Award-Preise von Miles & More sind jetzt variabel. Wann du buchst, ist genauso wichtig wie wie viele Meilen du hast.</p>
+              <div class="blog-meta"><span>14 Min. Lesezeit</span><span>·</span><span>Schweiz</span></div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="cta-inner">
+        <p class="cta-eyebrow">Bereit, loszulegen?</p>
+        <h2 class="cta-title">30 Minuten.<br /><em>Dein Plan.</em></h2>
+        <p class="cta-text">
+          Eine persönliche Session, die auf deine CHF-Ausgaben und Reiseziele zugeschnitten ist. Keine generischen Tipps — nur das, was für dich funktioniert.
+        </p>
+        <a href="beratung" class="btn-white">Session buchen — CHF 79</a>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-bottom">
+        <a href="index.html" class="logo" style="font-size: 1.2rem"
+          >Meilen<span style="color: var(--gold)">guru</span></a
+        >
+        <p>© 2025 Meilenguru · meilenguru.ch · Zürich, Schweiz</p>
+        <nav class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="strategien">Strategien</a>
+          <a href="blog-de">Blog</a>
+          <a href="beratung">Session buchen</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script>
+      let activeFilters = { programme: 'all', categories: 'all' };
+
+      function filterCards(type, value, btn) {
+        activeFilters[type] = value;
+        document.querySelectorAll(`[data-filter="${type}"]`).forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        applyFilters();
+      }
+
+      function applyFilters() {
+        const cards = document.querySelectorAll('#blogGrid .blog-card');
+        let visible = 0;
+        cards.forEach(card => {
+          const programmes = card.dataset.programmes || '';
+          const categories = card.dataset.categories || '';
+          const matchProg = activeFilters.programme === 'all' || programmes.includes(activeFilters.programme);
+          const matchCat = activeFilters.categories === 'all' || categories.includes(activeFilters.categories);
+          if (matchProg && matchCat) {
+            card.classList.remove('hidden');
+            visible++;
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+        document.getElementById('count').textContent = visible;
+      }
+
+      function toggleMenu() {
+        document.getElementById('mobileMenu').classList.toggle('open');
+      }
+      function closeMenu() {
+        document.getElementById('mobileMenu').classList.remove('open');
+      }
+
+      applyFilters();
+    </script>
+  </body>
+</html>
