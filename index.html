@@ -906,44 +906,6 @@
           transition: opacity 0.15s;
         }
         .map-expand-btn:active { opacity: 0.6; }
-
-        .hero-map-wrap.map-expanded {
-          position: fixed;
-          inset: 0;
-          z-index: 500;
-          background: var(--warm-white);
-          padding: 3.25rem 0.75rem 1rem;
-          display: flex;
-          flex-direction: column;
-          overflow: hidden;
-        }
-        .hero-map-wrap.map-expanded #heroMap {
-          flex: 1;
-          min-height: 0;
-          width: 100%;
-          height: 100%;
-        }
-        .hero-map-wrap.map-expanded .map-expand-btn {
-          display: none;
-        }
-        .hero-map-wrap.map-expanded .map-close-btn {
-          display: flex;
-          position: absolute;
-          top: 0.7rem;
-          right: 0.75rem;
-          align-items: center;
-          gap: 0.35rem;
-          padding: 0.38rem 0.75rem;
-          font-size: 0.65rem;
-          letter-spacing: 0.1em;
-          text-transform: uppercase;
-          font-family: var(--font-body);
-          color: var(--black);
-          background: transparent;
-          border: 0.5px solid rgba(10, 10, 10, 0.2);
-          cursor: pointer;
-          z-index: 501;
-        }
       }
     </style>
   </head>
@@ -1818,14 +1780,60 @@
     <script>
       function expandMap() {
         var wrap = document.querySelector(".hero-map-wrap");
-        if (!wrap) return;
-        // Store original DOM position so we can restore it on close
+        if (!wrap || wrap._mapExpanded) return;
+        wrap._mapExpanded = true;
         wrap._mapParent = wrap.parentElement;
         wrap._mapNextSib = wrap.nextSibling;
-        // Move to body to escape .hero-right's CSS transform (from fadeUp animation),
-        // which would otherwise contain position:fixed children to .hero-right's bounds.
+        // Teleport to body to escape any transformed ancestor
         document.body.appendChild(wrap);
-        wrap.classList.add("map-expanded");
+        // Apply fullscreen layout inline — no media query or inset shorthand dependency
+        wrap.style.position = "fixed";
+        wrap.style.top = "0";
+        wrap.style.left = "0";
+        wrap.style.width = "100%";
+        wrap.style.height = "100%";
+        wrap.style.zIndex = "9000";
+        wrap.style.background = "#f5f3ef";
+        wrap.style.display = "flex";
+        wrap.style.flexDirection = "column";
+        wrap.style.padding = "3rem 0.75rem 1rem";
+        wrap.style.boxSizing = "border-box";
+        wrap.style.overflow = "hidden";
+        wrap.style.maxWidth = "none";
+        // Show close button
+        var closeBtn = wrap.querySelector(".map-close-btn");
+        if (closeBtn) {
+          closeBtn.style.display = "flex";
+          closeBtn.style.alignItems = "center";
+          closeBtn.style.gap = "0.35rem";
+          closeBtn.style.position = "absolute";
+          closeBtn.style.top = "0.7rem";
+          closeBtn.style.right = "0.75rem";
+          closeBtn.style.padding = "0.38rem 0.75rem";
+          closeBtn.style.fontSize = "0.65rem";
+          closeBtn.style.letterSpacing = "0.1em";
+          closeBtn.style.textTransform = "uppercase";
+          closeBtn.style.fontFamily = "'DM Sans', sans-serif";
+          closeBtn.style.color = "#0a0a0a";
+          closeBtn.style.background = "transparent";
+          closeBtn.style.border = "0.5px solid rgba(10,10,10,0.2)";
+          closeBtn.style.cursor = "pointer";
+          closeBtn.style.zIndex = "9001";
+        }
+        // Hide expand button
+        var expandBtn = wrap.querySelector(".map-expand-btn");
+        if (expandBtn) expandBtn.style.display = "none";
+        // Size the SVG explicitly — flex:1 alone is unreliable for SVG elements on iOS
+        var svg = document.getElementById("heroMap");
+        if (svg) {
+          var labelEl = document.getElementById("mapLabel");
+          var labelH = labelEl ? labelEl.offsetHeight + 8 : 30;
+          var svgH = window.innerHeight - 48 - 16 - labelH;
+          svg.style.display = "block";
+          svg.style.width = "100%";
+          svg.style.height = Math.max(180, svgH) + "px";
+          svg.style.flex = "none";
+        }
         document.body.style.overflow = "hidden";
         var label = document.getElementById("mapLabel");
         if (label) label.textContent = "Business Class · tap a destination";
@@ -1833,9 +1841,22 @@
       function closeMap() {
         var wrap = document.querySelector(".hero-map-wrap");
         if (!wrap) return;
-        wrap.classList.remove("map-expanded");
+        wrap._mapExpanded = false;
+        // Clear all inline styles applied on expand
+        var propsToReset = ["position","top","left","width","height","zIndex","background",
+          "display","flexDirection","padding","boxSizing","overflow","maxWidth"];
+        propsToReset.forEach(function(p) { wrap.style[p] = ""; });
+        // Reset close button
+        var closeBtn = wrap.querySelector(".map-close-btn");
+        if (closeBtn) closeBtn.style.cssText = "";
+        // Reset expand button (CSS will re-show it on mobile)
+        var expandBtn = wrap.querySelector(".map-expand-btn");
+        if (expandBtn) expandBtn.style.display = "";
+        // Reset SVG
+        var svg = document.getElementById("heroMap");
+        if (svg) { svg.style.width = "100%"; svg.style.height = ""; svg.style.flex = ""; }
         document.body.style.overflow = "";
-        // Restore to original position in .hero-right
+        // Restore DOM position inside .hero-right
         if (wrap._mapParent) {
           if (wrap._mapNextSib) {
             wrap._mapParent.insertBefore(wrap, wrap._mapNextSib);
@@ -1844,7 +1865,7 @@
           }
         }
         var label = document.getElementById("mapLabel");
-        if (label) label.textContent = label.dataset.orig || "Business Class · hover a destination";
+        if (label) label.textContent = (label.dataset && label.dataset.orig) || "Business Class · hover a destination";
         var tt = document.getElementById("heroTooltip");
         if (tt) tt.style.display = "none";
       }
