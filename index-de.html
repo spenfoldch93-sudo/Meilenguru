@@ -1788,11 +1788,21 @@
         heroSvg.style.cssText = "display:block;width:100%;height:" + svgH + "px;padding:0 12px 12px;box-sizing:border-box;flex-shrink:0;";
         ol.appendChild(heroSvg);
         if (heroTt) { heroTt.style.display = "none"; ol.appendChild(heroTt); }
-        var calWidget = document.querySelector('[data-cal-widget]');
-        if (calWidget) { calWidget.style.display = "none"; ol._calWidget = calWidget; }
+        var hiddenEls = [];
+        Array.prototype.forEach.call(document.querySelectorAll('body > *'), function(el) {
+          if (window.getComputedStyle(el).position === 'fixed') {
+            el.style.setProperty('display', 'none', 'important');
+            hiddenEls.push(el);
+          }
+        });
+        ol._hiddenEls = hiddenEls;
+        document.body.style.overflowY = 'hidden';
+        ol.addEventListener('touchmove', function(e) { e.preventDefault(); }, { passive: false });
         var onResize = function() {
-          var sv = document.getElementById("heroMap");
-          if (sv) sv.style.height = Math.max(200, window.innerHeight - 80) + "px";
+          setTimeout(function() {
+            var sv = document.getElementById("heroMap");
+            if (sv) sv.style.height = Math.max(200, window.innerHeight - 80) + "px";
+          }, 50);
         };
         window.addEventListener("resize", onResize);
         ol._resizeHandler = onResize;
@@ -1824,7 +1834,8 @@
       function closeMap() {
         var ol = document.getElementById("mapExpandOverlay");
         if (!ol) return;
-        if (ol._calWidget) ol._calWidget.style.display = "";
+        if (ol._hiddenEls) ol._hiddenEls.forEach(function(el) { el.style.removeProperty('display'); });
+        document.body.style.overflowY = '';
         if (ol._resizeHandler) window.removeEventListener("resize", ol._resizeHandler);
         var heroSvg = document.getElementById("heroMap");
         var heroTt = document.getElementById("heroTooltip");

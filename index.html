@@ -1815,13 +1815,28 @@
         ol.appendChild(heroSvg);
         // Move tooltip too so position:absolute resolves within overlay
         if (heroTt) { heroTt.style.display = "none"; ol.appendChild(heroTt); }
-        // Hide Cal.com floating button while overlay is open
-        var calWidget = document.querySelector('[data-cal-widget]');
-        if (calWidget) { calWidget.style.display = "none"; ol._calWidget = calWidget; }
-        // Resize SVG when device rotates so the map fills the new viewport
+        // Hide every fixed-position direct child of body (catches Cal.com widget
+        // regardless of whether the MutationObserver has marked it yet)
+        var hiddenEls = [];
+        Array.prototype.forEach.call(document.querySelectorAll('body > *'), function(el) {
+          if (window.getComputedStyle(el).position === 'fixed') {
+            el.style.setProperty('display', 'none', 'important');
+            hiddenEls.push(el);
+          }
+        });
+        ol._hiddenEls = hiddenEls;
+        // Prevent background body scroll on iOS. The overlay lives in <html> (not
+        // <body>), so body overflow:hidden does not break our position:fixed overlay.
+        document.body.style.overflowY = 'hidden';
+        // Block touchmove on the overlay itself to stop iOS scroll-through
+        ol.addEventListener('touchmove', function(e) { e.preventDefault(); }, { passive: false });
+        // Resize SVG when device rotates. setTimeout lets iOS settle before reading
+        // window.innerHeight, which can be stale immediately after orientationchange.
         var onResize = function() {
-          var sv = document.getElementById("heroMap");
-          if (sv) sv.style.height = Math.max(200, window.innerHeight - 80) + "px";
+          setTimeout(function() {
+            var sv = document.getElementById("heroMap");
+            if (sv) sv.style.height = Math.max(200, window.innerHeight - 80) + "px";
+          }, 50);
         };
         window.addEventListener("resize", onResize);
         ol._resizeHandler = onResize;
@@ -1854,8 +1869,10 @@
       function closeMap() {
         var ol = document.getElementById("mapExpandOverlay");
         if (!ol) return;
-        // Restore Cal.com widget
-        if (ol._calWidget) ol._calWidget.style.display = "";
+        // Restore hidden fixed elements (Cal.com widget, etc.)
+        if (ol._hiddenEls) ol._hiddenEls.forEach(function(el) { el.style.removeProperty('display'); });
+        // Restore body scroll
+        document.body.style.overflowY = '';
         // Remove resize listener
         if (ol._resizeHandler) window.removeEventListener("resize", ol._resizeHandler);
         var heroSvg = document.getElementById("heroMap");
