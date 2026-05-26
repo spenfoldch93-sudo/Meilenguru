@@ -1731,7 +1731,10 @@
           if (btn && btn.textContent.trim().length < 40) {
             btn.style.fontFamily = '"DM Sans", sans-serif';
             var wrap = btn.parentElement;
-            if (wrap) wrap.style.fontFamily = '"DM Sans", sans-serif';
+            if (wrap) {
+              wrap.style.fontFamily = '"DM Sans", sans-serif';
+              wrap.setAttribute('data-cal-widget', 'true');
+            }
           }
         });
         obs.observe(document.body, { childList: true, subtree: true });
@@ -1812,6 +1815,16 @@
         ol.appendChild(heroSvg);
         // Move tooltip too so position:absolute resolves within overlay
         if (heroTt) { heroTt.style.display = "none"; ol.appendChild(heroTt); }
+        // Hide Cal.com floating button while overlay is open
+        var calWidget = document.querySelector('[data-cal-widget]');
+        if (calWidget) { calWidget.style.display = "none"; ol._calWidget = calWidget; }
+        // Resize SVG when device rotates so the map fills the new viewport
+        var onResize = function() {
+          var sv = document.getElementById("heroMap");
+          if (sv) sv.style.height = Math.max(200, window.innerHeight - 80) + "px";
+        };
+        window.addEventListener("resize", onResize);
+        ol._resizeHandler = onResize;
         // Portrait-mode rotation hint
         if (!document.getElementById("mapRotateKF")) {
           var kf = document.createElement("style");
@@ -1841,6 +1854,10 @@
       function closeMap() {
         var ol = document.getElementById("mapExpandOverlay");
         if (!ol) return;
+        // Restore Cal.com widget
+        if (ol._calWidget) ol._calWidget.style.display = "";
+        // Remove resize listener
+        if (ol._resizeHandler) window.removeEventListener("resize", ol._resizeHandler);
         var heroSvg = document.getElementById("heroMap");
         var heroTt = document.getElementById("heroTooltip");
         if (heroTt) {
