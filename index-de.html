@@ -1785,6 +1785,29 @@
         heroSvg.style.cssText = "display:block;width:100%;height:" + svgH + "px;padding:0 12px 12px;box-sizing:border-box;flex-shrink:0;";
         ol.appendChild(heroSvg);
         if (heroTt) { heroTt.style.display = "none"; ol.appendChild(heroTt); }
+        if (!document.getElementById("mapRotateKF")) {
+          var kf = document.createElement("style");
+          kf.id = "mapRotateKF";
+          kf.textContent = "@keyframes mapPhoneRotate{0%,20%{transform:rotate(0deg)}50%,70%{transform:rotate(-90deg)}100%{transform:rotate(0deg)}}";
+          document.head.appendChild(kf);
+        }
+        if (window.matchMedia("(orientation:portrait)").matches) {
+          var hint = document.createElement("div");
+          hint.id = "mapRotateHint";
+          hint.style.cssText = "position:absolute;bottom:28px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:9px;background:rgba(10,10,10,0.72);color:#f5f3ef;padding:8px 16px;font-size:11px;font-family:'DM Sans',sans-serif;letter-spacing:0.08em;white-space:nowrap;pointer-events:none;";
+          hint.innerHTML = '<svg style="animation:mapPhoneRotate 2.2s ease-in-out infinite;flex-shrink:0;" width="14" height="18" viewBox="0 0 14 18" fill="none"><rect x="1" y="1" width="12" height="16" rx="1.5" stroke="currentColor" stroke-width="1.2"/><circle cx="7" cy="14" r="0.8" fill="currentColor"/></svg><span>Für bessere Ansicht drehen</span>';
+          ol.appendChild(hint);
+          var dismissHint = function() {
+            if (!hint.parentNode) return;
+            hint.style.transition = "opacity 0.5s";
+            hint.style.opacity = "0";
+            setTimeout(function() { if (hint.parentNode) hint.parentNode.removeChild(hint); }, 550);
+          };
+          setTimeout(dismissHint, 4000);
+          var onOrient = function() { if (window.matchMedia("(orientation:landscape)").matches) dismissHint(); };
+          window.addEventListener("orientationchange", onOrient);
+          window.addEventListener("resize", onOrient);
+        }
         document.documentElement.appendChild(ol);
       }
       function closeMap() {
