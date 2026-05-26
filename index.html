@@ -911,6 +911,11 @@
       <a href="consultation.html" class="mobile-cta" onclick="closeMenu()">Book a Session</a>
     </div>
 
+    <!-- LANG BANNER -->
+    <div class="lang-banner">
+      <a href="index-de">🇩🇪 Auf Deutsch lesen →</a>
+    </div>
+
     <!-- HERO -->
     <section class="hero" style="padding: 0">
       <div class="hero-left">
@@ -1674,18 +1679,25 @@
         <div class="lang-switcher">
           <a href="#">EN</a>
           <a href="#">FR</a>
-          <a href="#">DE</a>
+          <a href="index-de">DE</a>
         </div>
       </div>
     </footer>
 
     <!-- Cal.com floating button font override -->
-    <style>
-      [data-cal-namespace] button,
-      [data-cal-namespace] * {
-        font-family: "DM Sans", sans-serif !important;
-      }
-    </style>
+    <script>
+      (function () {
+        var obs = new MutationObserver(function () {
+          var btn = document.querySelector('body > div button');
+          if (btn && btn.textContent.trim().length < 40) {
+            btn.style.fontFamily = '"DM Sans", sans-serif';
+            var wrap = btn.parentElement;
+            if (wrap) wrap.style.fontFamily = '"DM Sans", sans-serif';
+          }
+        });
+        obs.observe(document.body, { childList: true, subtree: true });
+      })();
+    </script>
 
     <!-- Cal.com floating booking button -->
     <script type="text/javascript">

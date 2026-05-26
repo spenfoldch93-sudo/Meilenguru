@@ -1665,12 +1665,19 @@
     </footer>
 
     <!-- Cal.com floating button font override -->
-    <style>
-      [data-cal-namespace] button,
-      [data-cal-namespace] * {
-        font-family: "DM Sans", sans-serif !important;
-      }
-    </style>
+    <script>
+      (function () {
+        var obs = new MutationObserver(function () {
+          var btn = document.querySelector('body > div button');
+          if (btn && btn.textContent.trim().length < 40) {
+            btn.style.fontFamily = '"DM Sans", sans-serif';
+            var wrap = btn.parentElement;
+            if (wrap) wrap.style.fontFamily = '"DM Sans", sans-serif';
+          }
+        });
+        obs.observe(document.body, { childList: true, subtree: true });
+      })();
+    </script>
 
     <!-- Cal.com floating booking button -->
     <script type="text/javascript">
