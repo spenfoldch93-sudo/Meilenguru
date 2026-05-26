@@ -1779,95 +1779,60 @@
 
     <script>
       function expandMap() {
-        var wrap = document.querySelector(".hero-map-wrap");
-        if (!wrap || wrap._mapExpanded) return;
-        wrap._mapExpanded = true;
-        wrap._mapParent = wrap.parentElement;
-        wrap._mapNextSib = wrap.nextSibling;
-        // Teleport to body to escape any transformed ancestor
-        document.body.appendChild(wrap);
-        // Apply fullscreen layout inline — no media query or inset shorthand dependency
-        wrap.style.position = "fixed";
-        wrap.style.top = "0";
-        wrap.style.left = "0";
-        wrap.style.width = "100%";
-        wrap.style.height = "100%";
-        wrap.style.zIndex = "9000";
-        wrap.style.background = "#f5f3ef";
-        wrap.style.display = "flex";
-        wrap.style.flexDirection = "column";
-        wrap.style.padding = "3rem 0.75rem 1rem";
-        wrap.style.boxSizing = "border-box";
-        wrap.style.overflow = "hidden";
-        wrap.style.maxWidth = "none";
-        // Show close button
-        var closeBtn = wrap.querySelector(".map-close-btn");
-        if (closeBtn) {
-          closeBtn.style.display = "flex";
-          closeBtn.style.alignItems = "center";
-          closeBtn.style.gap = "0.35rem";
-          closeBtn.style.position = "absolute";
-          closeBtn.style.top = "0.7rem";
-          closeBtn.style.right = "0.75rem";
-          closeBtn.style.padding = "0.38rem 0.75rem";
-          closeBtn.style.fontSize = "0.65rem";
-          closeBtn.style.letterSpacing = "0.1em";
-          closeBtn.style.textTransform = "uppercase";
-          closeBtn.style.fontFamily = "'DM Sans', sans-serif";
-          closeBtn.style.color = "#0a0a0a";
-          closeBtn.style.background = "transparent";
-          closeBtn.style.border = "0.5px solid rgba(10,10,10,0.2)";
-          closeBtn.style.cursor = "pointer";
-          closeBtn.style.zIndex = "9001";
+        var heroSvg = document.getElementById("heroMap");
+        var heroTt = document.getElementById("heroTooltip");
+        if (!heroSvg || heroSvg._expanded) return;
+        heroSvg._expanded = true;
+        heroSvg._origParent = heroSvg.parentElement;
+        heroSvg._origNextSib = heroSvg.nextSibling;
+        if (heroTt) {
+          heroSvg._ttOrigParent = heroTt.parentElement;
+          heroSvg._ttOrigNextSib = heroTt.nextSibling;
         }
-        // Hide expand button
-        var expandBtn = wrap.querySelector(".map-expand-btn");
-        if (expandBtn) expandBtn.style.display = "none";
-        // Size the SVG explicitly — flex:1 alone is unreliable for SVG elements on iOS
-        var svg = document.getElementById("heroMap");
-        if (svg) {
-          var labelEl = document.getElementById("mapLabel");
-          var labelH = labelEl ? labelEl.offsetHeight + 8 : 30;
-          var svgH = window.innerHeight - 48 - 16 - labelH;
-          svg.style.display = "block";
-          svg.style.width = "100%";
-          svg.style.height = Math.max(180, svgH) + "px";
-          svg.style.flex = "none";
-        }
-        document.body.style.overflow = "hidden";
-        var label = document.getElementById("mapLabel");
-        if (label) label.textContent = "Business Class · tap a destination";
+        // Build a fresh overlay appended to <html> (not <body>).
+        // body { overflow-x: hidden } makes body a scroll container on iOS Safari,
+        // which breaks position:fixed on body children. <html> has no overflow set.
+        var ol = document.createElement("div");
+        ol.id = "mapExpandOverlay";
+        ol.style.cssText = "position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;background:#f5f3ef;overflow:hidden;display:flex;flex-direction:column;box-sizing:border-box;";
+        // Close button
+        var cb = document.createElement("button");
+        cb.style.cssText = "position:absolute;top:10px;right:10px;z-index:1;display:flex;align-items:center;gap:6px;padding:6px 12px;background:transparent;border:0.5px solid rgba(10,10,10,0.2);cursor:pointer;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#0a0a0a;";
+        cb.innerHTML = '<svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M1 1l7 7M8 1L1 8" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>Close';
+        cb.onclick = closeMap;
+        ol.appendChild(cb);
+        // Label
+        var lbl = document.createElement("div");
+        lbl.style.cssText = "padding:44px 12px 6px;flex-shrink:0;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:#888580;font-weight:500;font-family:'DM Sans',sans-serif;";
+        lbl.textContent = "Business Class · tap a destination";
+        ol.appendChild(lbl);
+        // Move SVG in with explicit height (flex:1 unreliable for SVG on iOS)
+        var svgH = Math.max(200, window.innerHeight - 80);
+        heroSvg.style.cssText = "display:block;width:100%;height:" + svgH + "px;padding:0 12px 12px;box-sizing:border-box;flex-shrink:0;";
+        ol.appendChild(heroSvg);
+        // Move tooltip too so position:absolute resolves within overlay
+        if (heroTt) { heroTt.style.display = "none"; ol.appendChild(heroTt); }
+        document.documentElement.appendChild(ol);
       }
       function closeMap() {
-        var wrap = document.querySelector(".hero-map-wrap");
-        if (!wrap) return;
-        wrap._mapExpanded = false;
-        // Clear all inline styles applied on expand
-        var propsToReset = ["position","top","left","width","height","zIndex","background",
-          "display","flexDirection","padding","boxSizing","overflow","maxWidth"];
-        propsToReset.forEach(function(p) { wrap.style[p] = ""; });
-        // Reset close button
-        var closeBtn = wrap.querySelector(".map-close-btn");
-        if (closeBtn) closeBtn.style.cssText = "";
-        // Reset expand button (CSS will re-show it on mobile)
-        var expandBtn = wrap.querySelector(".map-expand-btn");
-        if (expandBtn) expandBtn.style.display = "";
-        // Reset SVG
-        var svg = document.getElementById("heroMap");
-        if (svg) { svg.style.width = "100%"; svg.style.height = ""; svg.style.flex = ""; }
-        document.body.style.overflow = "";
-        // Restore DOM position inside .hero-right
-        if (wrap._mapParent) {
-          if (wrap._mapNextSib) {
-            wrap._mapParent.insertBefore(wrap, wrap._mapNextSib);
-          } else {
-            wrap._mapParent.appendChild(wrap);
+        var ol = document.getElementById("mapExpandOverlay");
+        if (!ol) return;
+        var heroSvg = document.getElementById("heroMap");
+        var heroTt = document.getElementById("heroTooltip");
+        if (heroTt) {
+          heroTt.style.display = "none";
+          if (heroSvg && heroSvg._ttOrigParent) {
+            heroSvg._ttOrigParent.insertBefore(heroTt, heroSvg._ttOrigNextSib || null);
           }
         }
-        var label = document.getElementById("mapLabel");
-        if (label) label.textContent = (label.dataset && label.dataset.orig) || "Business Class · hover a destination";
-        var tt = document.getElementById("heroTooltip");
-        if (tt) tt.style.display = "none";
+        if (heroSvg) {
+          heroSvg._expanded = false;
+          heroSvg.style.cssText = "width:100%;display:block;border-radius:2px;";
+          if (heroSvg._origParent) {
+            heroSvg._origParent.insertBefore(heroSvg, heroSvg._origNextSib || null);
+          }
+        }
+        ol.parentNode.removeChild(ol);
       }
       document.addEventListener("keydown", function (e) {
         if (e.key === "Escape") closeMap();
@@ -1910,7 +1875,13 @@
         var pathGen = d3.geoPath(proj);
         var svg = d3.select("#heroMap");
         var tooltip = document.getElementById("heroTooltip");
-        var mapWrap = document.querySelector(".hero-map-wrap");
+        var mapWrap = {
+          getBoundingClientRect: function () {
+            var s = document.getElementById("heroMap");
+            return s && s.parentElement ? s.parentElement.getBoundingClientRect()
+              : document.querySelector(".hero-map-wrap").getBoundingClientRect();
+          }
+        };
         var zrhPt = proj(zrh);
 
         d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json")
