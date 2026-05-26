@@ -923,6 +923,7 @@
           flex: 1;
           min-height: 0;
           width: 100%;
+          height: 100%;
         }
         .hero-map-wrap.map-expanded .map-expand-btn {
           display: none;
@@ -1797,17 +1798,29 @@
     <script>
       function expandMap() {
         var wrap = document.querySelector(".hero-map-wrap");
-        var label = document.getElementById("mapLabel");
+        if (!wrap) return;
+        wrap._mapParent = wrap.parentElement;
+        wrap._mapNextSib = wrap.nextSibling;
+        document.body.appendChild(wrap);
         wrap.classList.add("map-expanded");
         document.body.style.overflow = "hidden";
-        if (label) label.textContent = "Business Class · tap a destination";
+        var label = document.getElementById("mapLabel");
+        if (label) label.textContent = "Business Class · Destination antippen";
       }
       function closeMap() {
         var wrap = document.querySelector(".hero-map-wrap");
-        var label = document.getElementById("mapLabel");
+        if (!wrap) return;
         wrap.classList.remove("map-expanded");
         document.body.style.overflow = "";
-        if (label) label.textContent = label.dataset.orig || label.textContent;
+        if (wrap._mapParent) {
+          if (wrap._mapNextSib) {
+            wrap._mapParent.insertBefore(wrap, wrap._mapNextSib);
+          } else {
+            wrap._mapParent.appendChild(wrap);
+          }
+        }
+        var label = document.getElementById("mapLabel");
+        if (label) label.textContent = label.dataset.orig || "Business Class · Destination anklicken";
         var tt = document.getElementById("heroTooltip");
         if (tt) tt.style.display = "none";
       }
