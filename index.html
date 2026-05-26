@@ -882,6 +882,68 @@
           font-size: 1.3rem;
         }
       }
+
+      /* ── MAP EXPAND (mobile only) ── */
+      .map-expand-btn,
+      .map-close-btn { display: none; }
+
+      @media (max-width: 768px) {
+        .map-expand-btn {
+          display: flex;
+          align-items: center;
+          gap: 0.4rem;
+          margin-top: 0.9rem;
+          padding: 0.42rem 0.85rem;
+          font-size: 0.65rem;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          font-family: var(--font-body);
+          color: var(--gold);
+          background: transparent;
+          border: 0.5px solid rgba(184, 150, 46, 0.45);
+          cursor: pointer;
+          width: fit-content;
+          transition: opacity 0.15s;
+        }
+        .map-expand-btn:active { opacity: 0.6; }
+
+        .hero-map-wrap.map-expanded {
+          position: fixed;
+          inset: 0;
+          z-index: 500;
+          background: var(--warm-white);
+          padding: 3.25rem 0.75rem 1rem;
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+        }
+        .hero-map-wrap.map-expanded #heroMap {
+          flex: 1;
+          min-height: 0;
+          width: 100%;
+        }
+        .hero-map-wrap.map-expanded .map-expand-btn {
+          display: none;
+        }
+        .hero-map-wrap.map-expanded .map-close-btn {
+          display: flex;
+          position: absolute;
+          top: 0.7rem;
+          right: 0.75rem;
+          align-items: center;
+          gap: 0.35rem;
+          padding: 0.38rem 0.75rem;
+          font-size: 0.65rem;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          font-family: var(--font-body);
+          color: var(--black);
+          background: transparent;
+          border: 0.5px solid rgba(10, 10, 10, 0.2);
+          cursor: pointer;
+          z-index: 501;
+        }
+      }
     </style>
   </head>
   <body>
@@ -938,7 +1000,15 @@
       </div>
       <div class="hero-right">
         <div class="hero-map-wrap">
+          <button class="map-close-btn" onclick="closeMap()">
+            <svg width="9" height="9" viewBox="0 0 9 9" fill="none" style="flex-shrink:0">
+              <path d="M1 1l7 7M8 1L1 8" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+            </svg>
+            Close
+          </button>
           <div
+            id="mapLabel"
+            data-orig="Business Class · hover a destination"
             style="
               font-size: 0.62rem;
               letter-spacing: 0.12em;
@@ -1039,6 +1109,12 @@
               >Flight path from ZRH</span
             >
           </div>
+          <button class="map-expand-btn" onclick="expandMap()">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" style="flex-shrink:0">
+              <path d="M1 4V1h3M6 1h3v3M9 6v3H6M4 9H1V6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Enlarge map
+          </button>
           <div
             id="heroTooltip"
             style="
@@ -1739,7 +1815,26 @@
     </script>
 
     <script>
-      function toggleMenu() {
+      function expandMap() {
+        var wrap = document.querySelector(".hero-map-wrap");
+        var label = document.getElementById("mapLabel");
+        wrap.classList.add("map-expanded");
+        document.body.style.overflow = "hidden";
+        if (label) label.textContent = "Business Class · tap a destination";
+      }
+      function closeMap() {
+        var wrap = document.querySelector(".hero-map-wrap");
+        var label = document.getElementById("mapLabel");
+        wrap.classList.remove("map-expanded");
+        document.body.style.overflow = "";
+        if (label) label.textContent = label.dataset.orig || label.textContent;
+        var tt = document.getElementById("heroTooltip");
+        if (tt) tt.style.display = "none";
+      }
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") closeMap();
+      });
+            function toggleMenu() {
         const menu = document.getElementById("mobileMenu");
         menu.classList.toggle("open");
       }
@@ -1899,6 +1994,26 @@
                 .on("mouseout", function () {
                   d3.select(this).select("circle").attr("r", r);
                   tooltip.style.display = "none";
+                })
+                .on("touchstart", function (event) {
+                  event.preventDefault();
+                  d3.select(this).select("circle").attr("r", r + 2);
+                  document.getElementById("ht-city").textContent = dest.city + " (" + dest.code + ")";
+                  document.getElementById("ht-mm").textContent = "M&M: ~" + (dest.mm / 1000).toFixed(0) + "k miles one-way";
+                  document.getElementById("ht-fb").textContent = "Flying Blue: ~" + (dest.fb / 1000).toFixed(0) + "k miles one-way";
+                  var touch = event.touches[0] || event.changedTouches[0];
+                  var wrapBox = mapWrap.getBoundingClientRect();
+                  var ttW = 175;
+                  var lx = touch.clientX - wrapBox.left;
+                  var ly = touch.clientY - wrapBox.top;
+                  var left = lx + 12 + ttW > wrapBox.width ? lx - ttW - 6 : lx + 12;
+                  tooltip.style.left = Math.max(0, left) + "px";
+                  tooltip.style.top = Math.max(4, ly - 55) + "px";
+                  tooltip.style.display = "block";
+                }, { passive: false })
+                .on("touchend", function () {
+                  d3.select(this).select("circle").attr("r", r);
+                  setTimeout(function () { tooltip.style.display = "none"; }, 2500);
                 });
             });
           })
