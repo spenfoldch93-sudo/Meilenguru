@@ -487,6 +487,7 @@
         letter-spacing: 0.1em;
         text-transform: uppercase;
         color: var(--gold);
+        text-decoration: none;
         border-bottom: 0.5px solid var(--gold);
         padding-bottom: 1px;
       }
@@ -938,7 +939,7 @@
 
     <!-- LANG BANNER -->
     <div class="lang-banner">
-      <a href="index-de"><img src="https://cdn.jsdelivr.net/npm/twemoji@14.0.2/assets/svg/1f1e9-1f1ea.svg" height="13" width="13" alt="🇩🇪" style="vertical-align:-1px;margin-right:0.2em"> Auf Deutsch lesen →</a>
+      <a href="index-de"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1e9-1f1ea.svg" height="13" width="13" alt="🇩🇪" style="vertical-align:-1px;margin-right:0.2em"> Auf Deutsch lesen →</a>
     </div>
 
     <!-- HERO -->
@@ -1291,7 +1292,7 @@
     <section id="programmes" class="programmes-section">
       <div class="section-inner">
         <p class="section-label">The two programmes that matter</p>
-        <h2 class="section-title">Two programmes.<br /><em>Endless free upgrades.</em></h2>
+        <h2 class="section-title">Two programmes.<br /><em>Endless strategies.</em></h2>
         <div class="programmes-grid">
           <div class="prog-card">
             <svg
@@ -1797,7 +1798,7 @@
         // which breaks position:fixed on body children. <html> has no overflow set.
         var ol = document.createElement("div");
         ol.id = "mapExpandOverlay";
-        ol.style.cssText = "position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;background:#f5f3ef;overflow:hidden;display:flex;flex-direction:column;box-sizing:border-box;";
+        ol.style.cssText = "position:fixed;top:0;left:0;width:100%;height:100%;z-index:2147483647;background:#f5f3ef;overflow:hidden;display:flex;flex-direction:column;box-sizing:border-box;";
         // Close button
         var cb = document.createElement("button");
         cb.style.cssText = "position:absolute;top:10px;right:10px;z-index:1;display:flex;align-items:center;gap:6px;padding:6px 12px;background:transparent;border:0.5px solid rgba(10,10,10,0.2);cursor:pointer;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#0a0a0a;";
@@ -1818,7 +1819,7 @@
         // Hide every fixed-position direct child of body (catches Cal.com widget
         // regardless of whether the MutationObserver has marked it yet)
         var hiddenEls = [];
-        Array.prototype.forEach.call(document.querySelectorAll('body > *'), function(el) {
+        Array.prototype.forEach.call(document.querySelectorAll('body > *, body > * > *, body > * > * > *'), function(el) {
           if (window.getComputedStyle(el).position === 'fixed') {
             el.style.setProperty('display', 'none', 'important');
             hiddenEls.push(el);

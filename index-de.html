@@ -489,6 +489,7 @@
         letter-spacing: 0.1em;
         text-transform: uppercase;
         color: var(--gold);
+        text-decoration: none;
         border-bottom: 0.5px solid var(--gold);
         padding-bottom: 1px;
       }
@@ -940,7 +941,7 @@
 
     <!-- LANG BANNER -->
     <div class="lang-banner">
-      <a href="/"><img src="https://cdn.jsdelivr.net/npm/twemoji@14.0.2/assets/svg/1f1ec-1f1e7.svg" height="13" width="13" alt="🇬🇧" style="vertical-align:-1px;margin-right:0.2em"> Read in English →</a>
+      <a href="/"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ec-1f1e7.svg" height="13" width="13" alt="🇬🇧" style="vertical-align:-1px;margin-right:0.2em"> Read in English →</a>
     </div>
 
     <!-- HERO -->
@@ -1289,7 +1290,7 @@
     <section id="programmes" class="programmes-section">
       <div class="section-inner">
         <p class="section-label">Die zwei Programme, die zählen</p>
-        <h2 class="section-title">Zwei Programme.<br /><em>Endlose Gratis-Upgrades.</em></h2>
+        <h2 class="section-title">Zwei Programme.<br /><em>Endlose Strategien.</em></h2>
         <div class="programmes-grid">
           <div class="prog-card">
             <svg
@@ -1774,7 +1775,7 @@
         }
         var ol = document.createElement("div");
         ol.id = "mapExpandOverlay";
-        ol.style.cssText = "position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;background:#f5f3ef;overflow:hidden;display:flex;flex-direction:column;box-sizing:border-box;";
+        ol.style.cssText = "position:fixed;top:0;left:0;width:100%;height:100%;z-index:2147483647;background:#f5f3ef;overflow:hidden;display:flex;flex-direction:column;box-sizing:border-box;";
         var cb = document.createElement("button");
         cb.style.cssText = "position:absolute;top:10px;right:10px;z-index:1;display:flex;align-items:center;gap:6px;padding:6px 12px;background:transparent;border:0.5px solid rgba(10,10,10,0.2);cursor:pointer;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#0a0a0a;";
         cb.innerHTML = '<svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M1 1l7 7M8 1L1 8" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>Schliessen';
@@ -1789,7 +1790,7 @@
         ol.appendChild(heroSvg);
         if (heroTt) { heroTt.style.display = "none"; ol.appendChild(heroTt); }
         var hiddenEls = [];
-        Array.prototype.forEach.call(document.querySelectorAll('body > *'), function(el) {
+        Array.prototype.forEach.call(document.querySelectorAll('body > *, body > * > *, body > * > * > *'), function(el) {
           if (window.getComputedStyle(el).position === 'fixed') {
             el.style.setProperty('display', 'none', 'important');
             hiddenEls.push(el);
