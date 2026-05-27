@@ -104,3 +104,7 @@ git add <changed-files>
 git commit -m "description of change"
 git push origin main
 ```
+
+## Recurring tasks
+
+At session start, re-arm the weekly referral audit cron (see `~/.claude/CLAUDE.md` for details). The audit prompt lives at `~/.claude/referral-audit-prompt.md`.
