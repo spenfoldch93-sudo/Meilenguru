@@ -70,6 +70,15 @@
       .logo span {
         color: var(--gold);
       }
+      .logo::before {
+        content: "";
+        display: inline-block;
+        width: 0.75em;
+        height: 0.75em;
+        background: url("/plane.svg") no-repeat center/contain;
+        vertical-align: -0.05em;
+        margin-right: 0.2em;
+      }
       .nav-links {
         display: flex;
         gap: 2rem;
