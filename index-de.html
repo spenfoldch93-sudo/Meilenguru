@@ -920,7 +920,80 @@
         }
         .map-expand-btn:active { opacity: 0.6; }
       }
+    
+      /* ── NEWSLETTER ── */
+      .newsletter-strip {
+        background: var(--black);
+        padding: 3.5rem 2rem;
+      }
+      .newsletter-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        flex-wrap: wrap;
+      }
+      .newsletter-text h3 {
+        font-family: var(--font-display);
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: var(--white);
+        margin-bottom: 0.3rem;
+      }
+      .newsletter-text p {
+        font-size: 0.83rem;
+        color: rgba(250, 249, 247, 0.5);
+        font-weight: 300;
+        max-width: 380px;
+      }
+      .newsletter-form {
+        display: flex;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+      }
+      .newsletter-form input[type="email"] {
+        background: rgba(250,249,247,0.07);
+        border: 0.5px solid rgba(250,249,247,0.2);
+        color: var(--white);
+        padding: 0.65rem 1.1rem;
+        font-family: var(--font-body);
+        font-size: 0.85rem;
+        outline: none;
+        min-width: 240px;
+      }
+      .newsletter-form input[type="email"]::placeholder {
+        color: rgba(250,249,247,0.3);
+      }
+      .newsletter-form button {
+        background: var(--gold);
+        color: var(--black);
+        border: none;
+        padding: 0.65rem 1.4rem;
+        font-family: var(--font-body);
+        font-size: 0.73rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      .newsletter-form button:hover { background: var(--gold-light); }
     </style>
+      <meta property="og:type" content="website">
+    <meta property="og:url" content="https://meilenguru.ch/index-de">
+    <meta property="og:title" content="Meilen sammeln & Business Class fliegen aus der Schweiz | Meilenguru">
+    <meta property="og:description" content="Miles &amp; More und Flying Blue Meilen mit alltäglichen CHF-Ausgaben in der Schweiz sammeln. Cornèrcard, Amex Membership Rewards, Business-Class-Prämienflüge ab Zürich — und ein Leitfaden zur neuen dynamischen Preisgestaltung. Beratung CHF 79.">
+    <meta property="og:image" content="https://meilenguru.ch/og-image.png">
+    <meta property="og:locale" content="de_CH">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Meilen sammeln & Business Class fliegen aus der Schweiz | Meilenguru">
+    <meta name="twitter:description" content="Miles &amp; More und Flying Blue Meilen mit alltäglichen CHF-Ausgaben in der Schweiz sammeln. Cornèrcard, Amex Membership Rewards, Business-Class-Prämienflüge ab Zürich — und ein Leitfaden zur neuen dynamischen Preisgestaltung. Beratung CHF 79.">
+    <meta name="twitter:image" content="https://meilenguru.ch/og-image.png">
+    <link rel="alternate" hreflang="en" href="https://meilenguru.ch/">
+    <link rel="alternate" hreflang="de" href="https://meilenguru.ch/index-de">
+    <link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/">
   </head>
   <body>
     <nav>
@@ -930,6 +1003,7 @@
         <li><a href="empfehlungen">Empfehlungen</a></li>
         <li><a href="blog-de">Blog</a></li>
         <li><a href="tools-de">Tools</a></li>
+        <li><a href="faq-de.html">FAQ</a></li>
         <li><a href="ueber-mich">Über mich</a></li>
         <li><a href="beratung">Beratung</a></li>
       </ul>
@@ -944,6 +1018,7 @@
       <a href="empfehlungen" onclick="closeMenu()">Empfehlungen</a>
       <a href="blog-de" onclick="closeMenu()">Blog</a>
       <a href="tools-de" onclick="closeMenu()">Tools</a>
+      <a href="faq-de.html" onclick="closeMenu()">FAQ</a>
       <a href="ueber-mich" onclick="closeMenu()">Über mich</a>
       <a href="beratung" onclick="closeMenu()">Beratung</a>
       <a href="beratung" class="mobile-cta" onclick="closeMenu()">Session buchen</a>
@@ -1669,6 +1744,23 @@
       </div>
     </section>
 
+    
+    <!-- NEWSLETTER -->
+    <section class="newsletter-strip">
+      <div class="newsletter-inner">
+        <div class="newsletter-text">
+          <h3>Eine E-Mail. Wenn es wichtig ist.</h3>
+          <p>Promo-Awards, Transferboni, Änderungen die sich lohnen. Kein Füllmaterial.</p>
+        </div>
+        <form class="newsletter-form" name="newsletter-de" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="newsletter-de">
+          <p hidden><label>Nicht ausfüllen: <input name="bot-field"></label></p>
+          <input type="email" name="email" placeholder="deine@email.com" required>
+          <button type="submit">Abonnieren</button>
+        </form>
+      </div>
+    </section>
+
     <!-- FOOTER -->
     <footer>
       <div class="footer-inner">
@@ -1692,6 +1784,7 @@
             <li><a href="strategien-benchmark">Prämien einlösen</a></li>
             <li><a href="strategien-benchmark">Sweet Spots</a></li>
             <li><a href="strategien-flying-blue">Promo Awards</a></li>
+                      <li><a href="faq-de.html">FAQ</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -1705,7 +1798,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2025 Meilenguru · meilenguru.ch · Zürich, Schweiz</p>
+        <p>© 2026 Meilenguru · meilenguru.ch · Zürich, Schweiz</p>
         <div class="lang-switcher">
           <a href="/">EN</a>
           <a href="#">FR</a>

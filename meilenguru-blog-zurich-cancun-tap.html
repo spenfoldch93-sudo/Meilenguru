@@ -478,6 +478,66 @@
           width: 100%;
         }
       }
+    
+      /* ── NEWSLETTER ── */
+      .newsletter-strip {
+        background: var(--black);
+        padding: 3.5rem 2rem;
+      }
+      .newsletter-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        flex-wrap: wrap;
+      }
+      .newsletter-text h3 {
+        font-family: var(--font-display);
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: var(--white);
+        margin-bottom: 0.3rem;
+      }
+      .newsletter-text p {
+        font-size: 0.83rem;
+        color: rgba(250, 249, 247, 0.5);
+        font-weight: 300;
+        max-width: 380px;
+      }
+      .newsletter-form {
+        display: flex;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+      }
+      .newsletter-form input[type="email"] {
+        background: rgba(250,249,247,0.07);
+        border: 0.5px solid rgba(250,249,247,0.2);
+        color: var(--white);
+        padding: 0.65rem 1.1rem;
+        font-family: var(--font-body);
+        font-size: 0.85rem;
+        outline: none;
+        min-width: 240px;
+      }
+      .newsletter-form input[type="email"]::placeholder {
+        color: rgba(250,249,247,0.3);
+      }
+      .newsletter-form button {
+        background: var(--gold);
+        color: var(--black);
+        border: none;
+        padding: 0.65rem 1.4rem;
+        font-family: var(--font-body);
+        font-size: 0.73rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      .newsletter-form button:hover { background: var(--gold-light); }
     </style>
 
     <script type="application/ld+json">
@@ -502,6 +562,19 @@
         "inLanguage": "en"
       }
     </script>
+      <meta property="og:type" content="website">
+    <meta property="og:url" content="https://meilenguru.ch/meilenguru-blog-zurich-cancun-tap">
+    <meta property="og:title" content="Zürich–Cancún Business Class: CHF 1,320 Return, TAP | Meilenguru">
+    <meta property="og:description" content="Trip report: TAP Air Portugal Business Class, Zürich to Cancún via Lisbon for CHF 1,320 return. Lie-flat bed on an A330-900neo at an economy price. Rated 7/10.">
+    <meta property="og:image" content="https://meilenguru.ch/og-image.png">
+    <meta property="og:locale" content="en_GB">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Zürich–Cancún Business Class: CHF 1,320 Return, TAP | Meilenguru">
+    <meta name="twitter:description" content="Trip report: TAP Air Portugal Business Class, Zürich to Cancún via Lisbon for CHF 1,320 return. Lie-flat bed on an A330-900neo at an economy price. Rated 7/10.">
+    <meta name="twitter:image" content="https://meilenguru.ch/og-image.png">
+    <link rel="alternate" hreflang="en" href="https://meilenguru.ch/meilenguru-blog-zurich-cancun-tap">
+    <link rel="alternate" hreflang="de" href="https://meilenguru.ch/zuerich-cancun-tap-de">
+    <link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/meilenguru-blog-zurich-cancun-tap">
   </head>
   <body>
     <nav>
@@ -794,12 +867,29 @@
       </div>
     </div>
 
+    
+    <!-- NEWSLETTER -->
+    <section class="newsletter-strip">
+      <div class="newsletter-inner">
+        <div class="newsletter-text">
+          <h3>One email. When it matters.</h3>
+          <p>Promo awards, transfer bonuses, changes worth acting on. No filler.</p>
+        </div>
+        <form class="newsletter-form" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="newsletter">
+          <p hidden><label>Skip: <input name="bot-field"></label></p>
+          <input type="email" name="email" placeholder="your@email.com" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
     <footer>
       <div class="footer-bottom">
         <a href="index.html" class="logo" style="font-size: 1.2rem"
           >Meilen<span style="color: var(--gold)">guru</span></a
         >
-        <p>© 2025 Meilenguru · meilenguru.ch · Zürich, Switzerland</p>
+        <p>© 2026 Meilenguru · meilenguru.ch · Zürich, Switzerland</p>
         <nav class="footer-nav">
           <a href="index.html">Home</a>
           <a href="strategies.html">Strategies</a>
