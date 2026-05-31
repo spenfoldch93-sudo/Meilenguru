@@ -677,6 +677,33 @@
       .social-links a { color: var(--muted); transition: color 0.2s; display: flex; align-items: center; }
       .social-links a:hover { color: var(--gold); }
       .social-links svg { width: 16px; height: 16px; }
+
+      /* ── LOUNGE TOOL ── */
+      .lounge-filters { margin-bottom: 2.5rem; display: flex; gap: 1rem; flex-wrap: wrap; align-items: flex-end; }
+      .lounge-regions { display: flex; flex-direction: column; gap: 3rem; }
+      .lounge-region-label { font-size: 0.67rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); font-weight: 500; margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 0.5px solid var(--border); }
+      .lounge-airport-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
+      .lounge-airport-card { background: var(--white); border: 0.5px solid var(--border); padding: 1.5rem; transition: border-color 0.2s; }
+      .lounge-airport-card.hidden { display: none; }
+      .lounge-airport-header { display: flex; align-items: baseline; gap: 0.6rem; margin-bottom: 1rem; }
+      .lounge-iata { font-family: var(--font-display); font-size: 1.5rem; font-weight: 300; color: var(--gold); line-height: 1; }
+      .lounge-city { font-size: 0.82rem; color: var(--muted); font-weight: 300; }
+      .lounge-list { display: flex; flex-direction: column; gap: 0; }
+      .lounge-item { border-top: 0.5px solid var(--border); padding: 0.75rem 0 0; margin-top: 0.75rem; }
+      .lounge-item:first-child { border-top: none; padding-top: 0; margin-top: 0; }
+      .lounge-item.hidden { display: none; }
+      .lounge-name { font-size: 0.88rem; font-weight: 500; color: var(--black); margin-bottom: 0.15rem; }
+      .lounge-terminal { font-size: 0.75rem; color: var(--muted); margin-bottom: 0.4rem; font-weight: 300; }
+      .lounge-badges { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+      .lounge-badge { font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.18rem 0.5rem; border: 0.5px solid; font-weight: 500; }
+      .lounge-badge.priority-pass { color: #3a6b4a; border-color: #3a6b4a; background: rgba(58,107,74,0.06); }
+      .lounge-badge.mm-senator { color: var(--gold); border-color: var(--gold); background: rgba(184,150,46,0.06); }
+      .lounge-badge.mm-hon { color: #7a4e00; border-color: #b87220; background: rgba(122,78,0,0.07); }
+      .lounge-badge.flying-blue-plat { color: #2a5fa5; border-color: #2a5fa5; background: rgba(42,95,165,0.06); }
+      .lounge-badge.ticket-biz { color: var(--muted); border-color: var(--border-mid); }
+      .lounge-region.empty { display: none; }
+      .lounge-no-match { font-size: 0.88rem; color: var(--muted); padding: 1rem 0; display: none; }
+      @media (max-width: 768px) { .lounge-airport-grid { grid-template-columns: 1fr; } }
     </style>
       <meta property="og:type" content="website">
     <meta property="og:url" content="https://meilenguru.ch/tools">
@@ -881,6 +908,39 @@
           </div>
           <div class="map-legend-item"><span class="map-legend-line"></span>Flight path from ZRH</div>
         </div>
+      </div>
+    </section>
+
+    <!-- LOUNGE FINDER -->
+    <section class="tool-section" id="lounges">
+      <div class="tool-inner">
+        <div class="tool-header">
+          <p class="tool-eyebrow">Tool 03 — Lounge finder</p>
+          <h2 class="tool-title">Which lounges can you<br /><em>actually get into?</em></h2>
+          <p class="tool-subtitle">
+            Filter by your card or status to see every lounge accessible to you at Swiss airports and the major international hubs Swiss travellers pass through most.
+          </p>
+        </div>
+
+        <div class="lounge-filters">
+          <div class="form-group" style="max-width:460px;margin-bottom:0">
+            <label class="form-label" for="l-access">Your access method</label>
+            <select class="form-select" id="l-access" onchange="filterLounges()">
+              <option value="all">Show all lounges</option>
+              <option value="priority-pass">Priority Pass (Amex Platinum / Alpian / Diners)</option>
+              <option value="mm-senator">Miles &amp; More Senator — Star Alliance Gold</option>
+              <option value="mm-hon">Miles &amp; More HON Circle</option>
+              <option value="flying-blue-plat">Flying Blue Platinum — SkyTeam Elite Plus</option>
+              <option value="ticket-biz">Business / First Class ticket (carrier-specific)</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="loungeContainer" class="lounge-regions"></div>
+
+        <p class="calc-disclaimer" style="margin-top:2rem">
+          Access rules change without notice — always verify on the programme's website or lounge's own page before your trip. Ticket-based access requires you to be departing on that carrier's flight from the same terminal. Data current as of June 2026.
+        </p>
       </div>
     </section>
 
@@ -1226,6 +1286,136 @@
             .attr("font-family", "DM Sans, sans-serif")
             .text("Map loading failed — check your connection and reload.");
         });
+
+      /* ── LOUNGE FINDER ── */
+      const loungeData = [
+        { region: 'Switzerland', airport: 'ZRH', city: 'Zurich', lounges: [
+          { name: 'Swiss Business Lounge', terminal: 'Airside A & E', access: ['mm-senator','mm-hon','ticket-biz'] },
+          { name: 'Swiss Senator Lounge', terminal: 'Airside E', access: ['mm-senator','mm-hon'] },
+          { name: 'Swissport Executive Lounge', terminal: 'Airside A', access: ['priority-pass'] },
+          { name: 'Aspire Lounge', terminal: 'Airside E', access: ['priority-pass'] },
+        ]},
+        { region: 'Switzerland', airport: 'GVA', city: 'Geneva', lounges: [
+          { name: 'Swiss Lounge', terminal: 'Airside', access: ['mm-senator','mm-hon','ticket-biz'] },
+          { name: 'Swissport Executive Lounge', terminal: 'Airside', access: ['priority-pass'] },
+        ]},
+        { region: 'Switzerland', airport: 'BSL', city: 'Basel EuroAirport', lounges: [
+          { name: 'Airport Lounge Basel', terminal: 'Airside (French sector)', access: ['priority-pass'] },
+        ]},
+        { region: 'Europe', airport: 'LHR', city: 'London Heathrow', lounges: [
+          { name: 'Lufthansa / Swiss Lounge', terminal: 'T2 (Star Alliance)', access: ['mm-senator','mm-hon','ticket-biz'] },
+          { name: 'Plaza Premium Lounge', terminal: 'T2', access: ['priority-pass'] },
+          { name: 'Aspire Lounge', terminal: 'T3', access: ['priority-pass'] },
+          { name: 'No. 1 Traveller Lounge', terminal: 'T3', access: ['priority-pass'] },
+        ]},
+        { region: 'Europe', airport: 'MUC', city: 'Munich', lounges: [
+          { name: 'Lufthansa Business Lounge', terminal: 'T2 Satellite', access: ['mm-senator','mm-hon','ticket-biz'] },
+          { name: 'Lufthansa Senator Lounge', terminal: 'T2 Satellite', access: ['mm-senator','mm-hon'] },
+          { name: 'Aspire Lounge', terminal: 'T1', access: ['priority-pass'] },
+        ]},
+        { region: 'Europe', airport: 'FRA', city: 'Frankfurt', lounges: [
+          { name: 'Lufthansa Business Lounge', terminal: 'T1 (B & C gates)', access: ['mm-senator','mm-hon','ticket-biz'] },
+          { name: 'Lufthansa Senator Lounge', terminal: 'T1 (B & C gates)', access: ['mm-senator','mm-hon'] },
+          { name: 'Lufthansa First Class Terminal', terminal: 'Standalone (shuttle from T1)', access: ['mm-hon'] },
+          { name: 'Aspire Lounge', terminal: 'T1 (A gates)', access: ['priority-pass'] },
+        ]},
+        { region: 'Europe', airport: 'ARN', city: 'Stockholm Arlanda', lounges: [
+          { name: 'SAS Gold Lounge', terminal: 'T5', access: ['mm-senator','mm-hon'] },
+          { name: 'Aspire Lounge', terminal: 'T5', access: ['priority-pass'] },
+        ]},
+        { region: 'Europe', airport: 'AMS', city: 'Amsterdam Schiphol', lounges: [
+          { name: 'KLM Crown Lounge (Schengen)', terminal: 'Departure Hall 3', access: ['flying-blue-plat','ticket-biz'] },
+          { name: 'KLM Crown Lounge (Non-Schengen)', terminal: 'Lounge 25', access: ['flying-blue-plat','ticket-biz'] },
+          { name: 'Aspire Lounge', terminal: 'Departure Hall 2', access: ['priority-pass'] },
+        ]},
+        { region: 'Europe', airport: 'CDG', city: 'Paris Charles de Gaulle', lounges: [
+          { name: 'Air France Business Lounge', terminal: '2E (Hall K/L)', access: ['flying-blue-plat','ticket-biz'] },
+          { name: 'Air France La Première Lounge', terminal: '2E (Hall L)', access: ['ticket-biz'] },
+          { name: 'Aspire Lounge', terminal: '2F', access: ['priority-pass'] },
+        ]},
+        { region: 'Global Hubs', airport: 'DXB', city: 'Dubai', lounges: [
+          { name: 'Emirates Business Lounge', terminal: 'T3 (Concourse B/C)', access: ['ticket-biz'] },
+          { name: 'Marhaba Lounge', terminal: 'T1 & T3', access: ['priority-pass'] },
+          { name: 'Plaza Premium Lounge', terminal: 'T3', access: ['priority-pass'] },
+        ]},
+        { region: 'Global Hubs', airport: 'DOH', city: 'Doha Hamad', lounges: [
+          { name: 'Qatar Airways Al Mourjan Lounge', terminal: 'Main terminal', access: ['ticket-biz'] },
+          { name: 'Plaza Premium Lounge', terminal: 'Main terminal', access: ['priority-pass'] },
+        ]},
+        { region: 'Global Hubs', airport: 'SIN', city: 'Singapore Changi', lounges: [
+          { name: 'SilverKris Business Class Lounge', terminal: 'T3 (SQ)', access: ['mm-senator','mm-hon','ticket-biz'] },
+          { name: 'SilverKris First Class Lounge', terminal: 'T3 (SQ) — SQ First ticket only', access: ['ticket-biz'] },
+          { name: 'SATS Premier Lounge', terminal: 'T1', access: ['priority-pass'] },
+          { name: 'Plaza Premium Lounge', terminal: 'T2', access: ['priority-pass'] },
+        ]},
+      ];
+
+      const badgeLabels = {
+        'priority-pass': 'Priority Pass',
+        'mm-senator': 'M&amp;M Senator',
+        'mm-hon': 'HON Circle',
+        'flying-blue-plat': 'FB Platinum',
+        'ticket-biz': 'Biz/First ticket',
+      };
+
+      function buildLoungeUI() {
+        const container = document.getElementById('loungeContainer');
+        const regions = [...new Set(loungeData.map(a => a.region))];
+        container.innerHTML = regions.map(region => `
+          <div class="lounge-region" data-region="${region}">
+            <p class="lounge-region-label">${region}</p>
+            <div class="lounge-airport-grid">
+              ${loungeData.filter(a => a.region === region).map(ap => `
+                <div class="lounge-airport-card" data-airport="${ap.airport}" data-access="${[...new Set(ap.lounges.flatMap(l => l.access))].join(',')}">
+                  <div class="lounge-airport-header">
+                    <span class="lounge-iata">${ap.airport}</span>
+                    <span class="lounge-city">${ap.city}</span>
+                  </div>
+                  <div class="lounge-list">
+                    ${ap.lounges.map(l => `
+                      <div class="lounge-item" data-access="${l.access.join(',')}">
+                        <div class="lounge-name">${l.name}</div>
+                        <div class="lounge-terminal">${l.terminal}</div>
+                        <div class="lounge-badges">
+                          ${l.access.map(a => `<span class="lounge-badge ${a}">${badgeLabels[a]||a}</span>`).join('')}
+                        </div>
+                      </div>
+                    `).join('')}
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        `).join('');
+      }
+
+      function filterLounges() {
+        const filter = document.getElementById('l-access').value;
+        document.querySelectorAll('.lounge-airport-card').forEach(card => {
+          if (filter === 'all') {
+            card.classList.remove('hidden');
+            card.querySelectorAll('.lounge-item').forEach(item => item.classList.remove('hidden'));
+          } else {
+            const cardAccess = card.dataset.access.split(',');
+            if (!cardAccess.includes(filter)) {
+              card.classList.add('hidden');
+            } else {
+              card.classList.remove('hidden');
+              card.querySelectorAll('.lounge-item').forEach(item => {
+                const itemAccess = item.dataset.access.split(',');
+                if (itemAccess.includes(filter)) { item.classList.remove('hidden'); }
+                else { item.classList.add('hidden'); }
+              });
+            }
+          }
+        });
+        document.querySelectorAll('.lounge-region').forEach(region => {
+          const visible = region.querySelectorAll('.lounge-airport-card:not(.hidden)').length;
+          region.classList.toggle('empty', visible === 0);
+        });
+      }
+
+      buildLoungeUI();
     </script>
   </body>
 </html>
