@@ -580,6 +580,18 @@
         height: 100%;
         border: none;
       }
+    
+      .breadcrumb {
+        max-width: 780px;
+        margin: 1.5rem auto 0;
+        padding: 0 2rem;
+        font-size: 0.72rem;
+        letter-spacing: 0.04em;
+        color: var(--muted);
+      }
+      .breadcrumb a { color: var(--muted); text-decoration: none; }
+      .breadcrumb a:hover { color: var(--gold); }
+      .breadcrumb span[aria-hidden] { margin: 0 0.4em; color: var(--border); }
     </style>
 
     <script type="application/ld+json">
@@ -614,6 +626,31 @@
     <meta name="twitter:title" content="KLM Business Class SIN–AMS: CHF 700 Upgrade | Meilenguru">
     <meta name="twitter:description" content="Trip report: KLM World Business Class upgrade for CHF 700, Singapore to Amsterdam. New 1-2-1 seat, 14.5 hours, and a miniature Delft gin house explained.">
     <meta name="twitter:image" content="https://meilenguru.ch/og-image.png">
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://meilenguru.ch/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://meilenguru.ch/blog"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "KLM World Business Class SIN–AMS: 14.5 Hours, One Miniature House"
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <nav>
@@ -640,6 +677,9 @@
       >
     </div>
 
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a><span aria-hidden="true">/</span><a href="/blog">Blog</a><span aria-hidden="true">/</span><span aria-current="page">KLM World Business Class SIN–AMS: 14.5 Hours, One Miniature </span>
+    </nav>
     <div class="article-header">
       <div class="article-meta">
         <span class="tag">Trip Report</span>

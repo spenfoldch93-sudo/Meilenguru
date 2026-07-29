@@ -594,6 +594,18 @@
         height: 100%;
         border: none;
       }
+    
+      .breadcrumb {
+        max-width: 780px;
+        margin: 1.5rem auto 0;
+        padding: 0 2rem;
+        font-size: 0.72rem;
+        letter-spacing: 0.04em;
+        color: var(--muted);
+      }
+      .breadcrumb a { color: var(--muted); text-decoration: none; }
+      .breadcrumb a:hover { color: var(--gold); }
+      .breadcrumb span[aria-hidden] { margin: 0 0.4em; color: var(--border); }
     </style>
 
     <script type="application/ld+json">
@@ -628,6 +640,31 @@
     <meta name="twitter:title" content="Perth–Zürich on Miles: Singapore Airlines vs SWISS Business">
     <meta name="twitter:description" content="Trip report: 110,000 Miles & More miles, Perth to Zürich via Singapore. Singapore Airlines delivered. SWISS did not. A tale of two Business Class products.">
     <meta name="twitter:image" content="https://meilenguru.ch/og-image.png">
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://meilenguru.ch/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://meilenguru.ch/blog"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "110,000 Miles, Perth to Zürich. One Highlight, One Letdown."
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <nav>
@@ -654,6 +691,9 @@
       >
     </div>
 
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a><span aria-hidden="true">/</span><a href="/blog">Blog</a><span aria-hidden="true">/</span><span aria-current="page">110,000 Miles, Perth to Zürich. One Highlight, One Letdown.</span>
+    </nav>
     <div class="article-header">
       <div class="article-meta">
         <span class="tag">Trip Report</span>

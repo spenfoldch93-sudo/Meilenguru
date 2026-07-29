@@ -629,6 +629,18 @@
         height: 100%;
         border: none;
       }
+    
+      .breadcrumb {
+        max-width: 780px;
+        margin: 1.5rem auto 0;
+        padding: 0 2rem;
+        font-size: 0.72rem;
+        letter-spacing: 0.04em;
+        color: var(--muted);
+      }
+      .breadcrumb a { color: var(--muted); text-decoration: none; }
+      .breadcrumb a:hover { color: var(--gold); }
+      .breadcrumb span[aria-hidden] { margin: 0 0.4em; color: var(--border); }
     </style>
 
     <script type="application/ld+json">
@@ -663,6 +675,31 @@
     <meta name="twitter:title" content="Singapore Airlines SIN–ZRH: CHF 900 Upgrade & Alps Views">
     <meta name="twitter:description" content="Trip report: Singapore Airlines SQ346 Business Class upgrade for CHF 900, Singapore to Zürich. The Office flat, bacon pancakes, and the Alps on approach. Rated 8/10.">
     <meta name="twitter:image" content="https://meilenguru.ch/og-image.png">
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://meilenguru.ch/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://meilenguru.ch/blog"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Singapore Airlines SIN–ZRH: A CHF 900 Upgrade and Pancakes Over the Alps"
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <nav>
@@ -689,6 +726,9 @@
       >
     </div>
 
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a><span aria-hidden="true">/</span><a href="/blog">Blog</a><span aria-hidden="true">/</span><span aria-current="page">Singapore Airlines SIN–ZRH: A CHF 900 Upgrade and Pancakes O</span>
+    </nav>
     <div class="article-header">
       <div class="article-meta">
         <span class="tag">Trip Report</span>

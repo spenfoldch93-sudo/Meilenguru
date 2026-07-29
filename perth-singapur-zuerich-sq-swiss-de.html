@@ -594,6 +594,18 @@
         height: 100%;
         border: none;
       }
+    
+      .breadcrumb {
+        max-width: 780px;
+        margin: 1.5rem auto 0;
+        padding: 0 2rem;
+        font-size: 0.72rem;
+        letter-spacing: 0.04em;
+        color: var(--muted);
+      }
+      .breadcrumb a { color: var(--muted); text-decoration: none; }
+      .breadcrumb a:hover { color: var(--gold); }
+      .breadcrumb span[aria-hidden] { margin: 0 0.4em; color: var(--border); }
     </style>
 
     <script type="application/ld+json">
@@ -628,6 +640,31 @@
     <meta name="twitter:title" content="Perth–Zürich mit Meilen: Singapore Airlines vs. SWISS Business">
     <meta name="twitter:description" content="Reisebericht: 110'000 Miles & More Meilen, Perth nach Zürich via Singapur. Singapore Airlines hat geliefert. SWISS nicht. Eine Geschichte zweier Business-Class-Produkte.">
     <meta name="twitter:image" content="https://meilenguru.ch/og-image.png">
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Startseite",
+            "item": "https://meilenguru.ch/index-de"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://meilenguru.ch/blog-de"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "110'000 Meilen, Perth nach Zürich. Ein Highlight, eine Enttäuschung."
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <nav>
@@ -654,6 +691,9 @@
       >
     </div>
 
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/index-de">Startseite</a><span aria-hidden="true">/</span><a href="/blog-de">Blog</a><span aria-hidden="true">/</span><span aria-current="page">110'000 Meilen, Perth nach Zürich. Ein Highlight, eine Enttä</span>
+    </nav>
     <div class="article-header">
       <div class="article-meta">
         <span class="tag">Reisebericht</span>

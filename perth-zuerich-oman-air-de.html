@@ -628,6 +628,18 @@
         height: 100%;
         border: none;
       }
+    
+      .breadcrumb {
+        max-width: 780px;
+        margin: 1.5rem auto 0;
+        padding: 0 2rem;
+        font-size: 0.72rem;
+        letter-spacing: 0.04em;
+        color: var(--muted);
+      }
+      .breadcrumb a { color: var(--muted); text-decoration: none; }
+      .breadcrumb a:hover { color: var(--gold); }
+      .breadcrumb span[aria-hidden] { margin: 0 0.4em; color: var(--border); }
     </style>
 
     <script type="application/ld+json">
@@ -662,6 +674,31 @@
     <meta name="twitter:title" content="Perth–Zürich via Muskat: Oman Air Business Class, CHF 2'300">
     <meta name="twitter:description" content="Reisebericht: Perth nach Zürich mit Oman Air via Bangkok und Muskat. Zwei Dreamliner, CHF 2'300 retour und ein Muskat-Zwischenstopp, den niemand geplant hatte. Bewertet 9/10.">
     <meta name="twitter:image" content="https://meilenguru.ch/og-image.png">
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Startseite",
+            "item": "https://meilenguru.ch/index-de"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://meilenguru.ch/blog-de"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Perth nach Zürich via Bangkok & Muscat für CHF 2'300 Retour"
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <nav>
@@ -688,6 +725,9 @@
       >
     </div>
 
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/index-de">Startseite</a><span aria-hidden="true">/</span><a href="/blog-de">Blog</a><span aria-hidden="true">/</span><span aria-current="page">Perth nach Zürich via Bangkok & Muscat für CHF 2'300 Retour</span>
+    </nav>
     <div class="article-header">
       <div class="article-meta">
         <span class="tag">Reisebericht</span>
