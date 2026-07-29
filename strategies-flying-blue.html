@@ -1004,7 +1004,18 @@
       .social-links a { color: var(--muted); transition: color 0.2s; display: flex; align-items: center; }
       .social-links a:hover { color: var(--gold); }
       .social-links svg { width: 16px; height: 16px; }
-    </style>
+          .breadcrumb {
+        max-width: 1100px;
+        margin: 1.25rem auto 0;
+        padding: 0 2rem;
+        font-size: 0.72rem;
+        letter-spacing: 0.04em;
+        color: var(--muted);
+      }
+      .breadcrumb a { color: var(--muted); text-decoration: none; }
+      .breadcrumb a:hover { color: var(--gold); }
+      .breadcrumb span[aria-hidden] { margin: 0 0.4em; color: var(--border); }
+</style>
       <meta property="og:type" content="website">
     <meta property="og:url" content="https://meilenguru.ch/strategies-flying-blue">
     <meta property="og:title" content="Flying Blue for Swiss Residents — Promo Awards Guide | Meilenguru">
@@ -1035,7 +1046,32 @@
         "inLanguage": "en"
       }
     </script>
-  </head>
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://meilenguru.ch/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Strategies",
+            "item": "https://meilenguru.ch/strategies"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Flying Blue"
+          }
+        ]
+      }
+    </script>
+</head>
   <body>
     <div class="lang-banner">
       <a href="strategien-flying-blue"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1e9-1f1ea.svg" height="13" width="13" alt="🇩🇪" style="vertical-align:-1px;margin-right:0.2em"> Auf Deutsch lesen →</a>
@@ -1085,6 +1121,10 @@
         >
       </div>
     </div>
+
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a><span aria-hidden="true">/</span><a href="/strategies">Strategies</a><span aria-hidden="true">/</span><span aria-current="page">Flying Blue</span>
+    </nav>
 
     <div class="page-hero">
       <div class="page-hero-inner">

@@ -220,7 +220,18 @@
       .social-links a { color: var(--muted); transition: color 0.2s; display: flex; align-items: center; }
       .social-links a:hover { color: var(--gold); }
       .social-links svg { width: 16px; height: 16px; }
-    </style>
+          .breadcrumb {
+        max-width: 1100px;
+        margin: 1.25rem auto 0;
+        padding: 0 2rem;
+        font-size: 0.72rem;
+        letter-spacing: 0.04em;
+        color: var(--muted);
+      }
+      .breadcrumb a { color: var(--muted); text-decoration: none; }
+      .breadcrumb a:hover { color: var(--gold); }
+      .breadcrumb span[aria-hidden] { margin: 0 0.4em; color: var(--border); }
+</style>
       <meta property="og:type" content="website">
     <meta property="og:url" content="https://meilenguru.ch/strategien-flying-blue">
     <meta property="og:title" content="Flying Blue Strategie für die Schweiz 2026 — Promo Awards & Transfers | Meilenguru">
@@ -251,7 +262,32 @@
         "inLanguage": "de-CH"
       }
     </script>
-  </head>
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Startseite",
+            "item": "https://meilenguru.ch/index-de"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Strategien",
+            "item": "https://meilenguru.ch/strategien"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Flying Blue"
+          }
+        ]
+      }
+    </script>
+</head>
   <body>
     <div class="lang-banner">
       <a href="strategies-flying-blue"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ec-1f1e7.svg" height="13" width="13" alt="🇬🇧" style="vertical-align:-1px;margin-right:0.2em"> Read in English →</a>
@@ -293,6 +329,10 @@
         <span><strong>Informationen ändern sich häufig.</strong> Willkommensboni, Sammelraten, Transferverhältnisse und Jahresgebühren basieren auf öffentlich verfügbaren Informationen und können sich ohne Vorankündigung ändern. Aktuelle Konditionen immer direkt beim Kartenanbieter prüfen. Meilenguru ist kein Finanzberater.</span>
       </div>
     </div>
+
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/index-de">Startseite</a><span aria-hidden="true">/</span><a href="/strategien">Strategien</a><span aria-hidden="true">/</span><span aria-current="page">Flying Blue</span>
+    </nav>
 
     <div class="page-hero">
       <div class="page-hero-inner">

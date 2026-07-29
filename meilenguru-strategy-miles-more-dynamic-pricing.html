@@ -528,7 +528,18 @@
       .social-links a { color: var(--muted); transition: color 0.2s; display: flex; align-items: center; }
       .social-links a:hover { color: var(--gold); }
       .social-links svg { width: 16px; height: 16px; }
-    </style>
+          .breadcrumb {
+        max-width: 780px;
+        margin: 1.5rem auto 0;
+        padding: 0 2rem;
+        font-size: 0.72rem;
+        letter-spacing: 0.04em;
+        color: var(--muted);
+      }
+      .breadcrumb a { color: var(--muted); text-decoration: none; }
+      .breadcrumb a:hover { color: var(--gold); }
+      .breadcrumb span[aria-hidden] { margin: 0 0.4em; color: var(--border); }
+</style>
 
     <script type="application/ld+json">
       {
@@ -580,7 +591,32 @@
     <meta name="twitter:title" content="Miles & More Dynamic Pricing: What Changed in 2025 and How to Win | Meilenguru">
     <meta name="twitter:description" content="Miles & More switched to dynamic award pricing in June 2025. What it means for Swiss residents earning miles on Cornèrcard and Amex — and where the real sweet spots are now from Zürich and Geneva.">
     <meta name="twitter:image" content="https://meilenguru.ch/og-image.png">
-  </head>
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://meilenguru.ch/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://meilenguru.ch/blog"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Dynamic Pricing"
+          }
+        ]
+      }
+    </script>
+</head>
   <body>
     <nav>
       <a href="index.html" class="logo">Meilen<span>guru</span></a>
@@ -605,6 +641,10 @@
         ><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1e9-1f1ea.svg" height="13" width="13" alt="🇩🇪" style="vertical-align:-1px;margin-right:0.2em"> Auf Deutsch lesen →</a
       >
     </div>
+
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a><span aria-hidden="true">/</span><a href="/blog">Blog</a><span aria-hidden="true">/</span><span aria-current="page">Dynamic Pricing</span>
+    </nav>
 
     <div class="article-header">
       <div class="article-meta">

@@ -647,7 +647,18 @@
       .social-links a { color: var(--muted); transition: color 0.2s; display: flex; align-items: center; }
       .social-links a:hover { color: var(--gold); }
       .social-links svg { width: 16px; height: 16px; }
-    </style>
+          .breadcrumb {
+        max-width: 780px;
+        margin: 1.5rem auto 0;
+        padding: 0 2rem;
+        font-size: 0.72rem;
+        letter-spacing: 0.04em;
+        color: var(--muted);
+      }
+      .breadcrumb a { color: var(--muted); text-decoration: none; }
+      .breadcrumb a:hover { color: var(--gold); }
+      .breadcrumb span[aria-hidden] { margin: 0 0.4em; color: var(--border); }
+</style>
       <meta property="og:type" content="website">
     <meta property="og:url" content="https://meilenguru.ch/flying-blue-promo-awards-schweiz">
     <meta property="og:title" content="Flying Blue Promo Awards Schweiz — monatliche Rabatte erklärt">
@@ -658,7 +669,32 @@
     <meta name="twitter:title" content="Flying Blue Promo Awards Schweiz — monatliche Rabatte erklärt">
     <meta name="twitter:description" content="Flying Blue Promo Awards: Jeden Monat bis zu 50% Rabatt auf Business-Class-Einlösungen. Wie Schweizer sie finden, buchen und mit Amex-Transfers kombinieren.">
     <meta name="twitter:image" content="https://meilenguru.ch/og-image.png">
-  </head>
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Startseite",
+            "item": "https://meilenguru.ch/index-de"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://meilenguru.ch/blog-de"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Flying Blue Promo Awards"
+          }
+        ]
+      }
+    </script>
+</head>
   <body>
     <nav>
       <a href="index.html" class="logo">Meilen<span>guru</span></a>
@@ -672,6 +708,10 @@
       >
       <span>Schweiz · Mai 2026</span>
     </div>
+
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/index-de">Startseite</a><span aria-hidden="true">/</span><a href="/blog-de">Blog</a><span aria-hidden="true">/</span><span aria-current="page">Flying Blue Promo Awards</span>
+    </nav>
 
     <div class="article-header">
       <div class="article-meta">

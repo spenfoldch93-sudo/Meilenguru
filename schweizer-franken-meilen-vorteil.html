@@ -84,7 +84,18 @@
       .social-links a:hover { color: var(--gold); }
       .social-links svg { width: 16px; height: 16px; }
       @media (max-width: 768px) { nav { padding: 1rem 1.25rem; } article { padding: 3rem 1.25rem 4rem; } }
-    </style>
+          .breadcrumb {
+        max-width: 780px;
+        margin: 1.5rem auto 0;
+        padding: 0 2rem;
+        font-size: 0.72rem;
+        letter-spacing: 0.04em;
+        color: var(--muted);
+      }
+      .breadcrumb a { color: var(--muted); text-decoration: none; }
+      .breadcrumb a:hover { color: var(--gold); }
+      .breadcrumb span[aria-hidden] { margin: 0 0.4em; color: var(--border); }
+</style>
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://meilenguru.ch/schweizer-franken-meilen-vorteil">
     <meta property="og:title" content="Warum Schweizer Einwohner mehr von Meilen profitieren | Meilenguru">
@@ -116,7 +127,32 @@
         "inLanguage": "de-CH"
       }
     </script>
-  </head>
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Startseite",
+            "item": "https://meilenguru.ch/index-de"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://meilenguru.ch/blog-de"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Franken-Vorteil"
+          }
+        ]
+      }
+    </script>
+</head>
   <body>
     <div class="lang-banner">
       <a href="meilenguru-swiss-franc-miles-advantage"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ec-1f1e7.svg" height="13" width="13" alt="🇬🇧" style="vertical-align:-1px;margin-right:0.2em"> Read in English →</a>
@@ -125,6 +161,10 @@
       <a href="index-de.html" class="logo">Meilen<span>guru</span></a>
       <a href="blog-de" class="nav-back">← Blog</a>
       <a href="beratung" class="nav-cta">Session buchen</a>
+    </nav>
+
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/index-de">Startseite</a><span aria-hidden="true">/</span><a href="/blog-de">Blog</a><span aria-hidden="true">/</span><span aria-current="page">Franken-Vorteil</span>
     </nav>
 
     <article>

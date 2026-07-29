@@ -530,7 +530,18 @@
       .social-links a { color: var(--muted); transition: color 0.2s; display: flex; align-items: center; }
       .social-links a:hover { color: var(--gold); }
       .social-links svg { width: 16px; height: 16px; }
-    </style>
+          .breadcrumb {
+        max-width: 780px;
+        margin: 1.5rem auto 0;
+        padding: 0 2rem;
+        font-size: 0.72rem;
+        letter-spacing: 0.04em;
+        color: var(--muted);
+      }
+      .breadcrumb a { color: var(--muted); text-decoration: none; }
+      .breadcrumb a:hover { color: var(--gold); }
+      .breadcrumb span[aria-hidden] { margin: 0 0.4em; color: var(--border); }
+</style>
       <meta property="og:type" content="website">
     <meta property="og:url" content="https://meilenguru.ch/flying-blue-promo-mai-2026">
     <meta property="og:title" content="Flying Blue Promo Awards Mai 2026 — Für Schweizer Einwohner | Meilenguru">
@@ -541,7 +552,32 @@
     <meta name="twitter:title" content="Flying Blue Promo Awards Mai 2026 — Für Schweizer Einwohner | Meilenguru">
     <meta name="twitter:description" content="Flying Blue Mai 2026 Promo Awards: Economy-Deals ab Europa in die USA ab 18'750 Meilen. Business-Class-Rabatte diesen Monat nur für Flying Blue Extra-Abonnenten. Die ehrliche Übersicht für Schweizer.">
     <meta name="twitter:image" content="https://meilenguru.ch/og-image.png">
-  </head>
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Startseite",
+            "item": "https://meilenguru.ch/index-de"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://meilenguru.ch/blog-de"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Flying Blue Mai 2026"
+          }
+        ]
+      }
+    </script>
+</head>
   <body>
     <nav>
       <a href="index.html" class="logo">Meilen<span>guru</span></a>
@@ -566,6 +602,10 @@
         ><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ec-1f1e7.svg" height="13" width="13" alt="🇬🇧" style="vertical-align:-1px;margin-right:0.2em"> Read in English →</a
       >
     </div>
+
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/index-de">Startseite</a><span aria-hidden="true">/</span><a href="/blog-de">Blog</a><span aria-hidden="true">/</span><span aria-current="page">Flying Blue Mai 2026</span>
+    </nav>
 
     <div class="article-header">
       <div class="article-meta">

@@ -148,7 +148,18 @@
       .social-links a { color: var(--muted); transition: color 0.2s; display: flex; align-items: center; }
       .social-links a:hover { color: var(--gold); }
       .social-links svg { width: 16px; height: 16px; }
-    </style>
+          .breadcrumb {
+        max-width: 1100px;
+        margin: 1.25rem auto 0;
+        padding: 0 2rem;
+        font-size: 0.72rem;
+        letter-spacing: 0.04em;
+        color: var(--muted);
+      }
+      .breadcrumb a { color: var(--muted); text-decoration: none; }
+      .breadcrumb a:hover { color: var(--gold); }
+      .breadcrumb span[aria-hidden] { margin: 0 0.4em; color: var(--border); }
+</style>
       <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -275,7 +286,26 @@
         ]
       }
     </script>
-  </head>
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Startseite",
+            "item": "https://meilenguru.ch/index-de"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "FAQ"
+          }
+        ]
+      }
+    </script>
+</head>
   <body>
     <nav>
       <a href="index-de.html" class="logo">Meilen<span>guru</span></a>
@@ -311,6 +341,10 @@
     </div>
 
     <!-- HERO -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/index-de">Startseite</a><span aria-hidden="true">/</span><span aria-current="page">FAQ</span>
+    </nav>
+
     <section class="faq-hero">
       <p class="eyebrow">Häufige Fragen</p>
       <h1>Alles, was du fragen wolltest — <br /><em>aber nicht gefragt hast.</em></h1>

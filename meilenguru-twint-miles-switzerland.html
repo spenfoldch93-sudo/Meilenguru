@@ -90,7 +90,18 @@
       .social-links a:hover { color: var(--gold); }
       .social-links svg { width: 16px; height: 16px; }
       @media (max-width: 768px) { nav { padding: 1rem 1.25rem; } article { padding: 3rem 1.25rem 4rem; } }
-    </style>
+          .breadcrumb {
+        max-width: 780px;
+        margin: 1.5rem auto 0;
+        padding: 0 2rem;
+        font-size: 0.72rem;
+        letter-spacing: 0.04em;
+        color: var(--muted);
+      }
+      .breadcrumb a { color: var(--muted); text-decoration: none; }
+      .breadcrumb a:hover { color: var(--gold); }
+      .breadcrumb span[aria-hidden] { margin: 0 0.4em; color: var(--border); }
+</style>
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://meilenguru.ch/meilenguru-twint-miles-switzerland">
     <meta property="og:title" content="TWINT Doesn't Earn Miles — What to Use Instead | Meilenguru">
@@ -122,7 +133,32 @@
         "inLanguage": "en"
       }
     </script>
-  </head>
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://meilenguru.ch/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://meilenguru.ch/blog"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "TWINT & Miles"
+          }
+        ]
+      }
+    </script>
+</head>
   <body>
     <div class="lang-banner">
       <a href="twint-meilen-schweiz"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1e9-1f1ea.svg" height="13" width="13" alt="🇩🇪" style="vertical-align:-1px;margin-right:0.2em"> Auf Deutsch lesen →</a>
@@ -131,6 +167,10 @@
       <a href="index.html" class="logo">Meilen<span>guru</span></a>
       <a href="blog.html" class="nav-back">← Blog</a>
       <a href="consultation.html" class="nav-cta">Book a Session</a>
+    </nav>
+
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a><span aria-hidden="true">/</span><a href="/blog">Blog</a><span aria-hidden="true">/</span><span aria-current="page">TWINT & Miles</span>
     </nav>
 
     <article>
