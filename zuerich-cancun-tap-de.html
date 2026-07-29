@@ -546,6 +546,51 @@
       .social-links a { color: var(--muted); transition: color 0.2s; display: flex; align-items: center; }
       .social-links a:hover { color: var(--gold); }
       .social-links svg { width: 16px; height: 16px; }
+    
+      /* ── VIDEO REVIEW ── */
+      .video-review {
+        border: 0.5px solid var(--border);
+        padding: 1.75rem 1.75rem 2rem;
+        margin: 2.5rem 0;
+        background: var(--warm-white);
+      }
+      .video-review-eyebrow {
+        font-size: 0.68rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--gold);
+        font-weight: 500;
+        margin-bottom: 0.75rem;
+      }
+      .video-review h3 {
+        font-family: var(--font-display);
+        font-weight: 300;
+        font-size: 1.4rem;
+        margin: 0 0 0.75rem;
+      }
+      .video-review-note {
+        font-size: 0.9rem;
+        font-weight: 300;
+        color: #2a2826;
+        line-height: 1.75;
+        margin: 0 0 1.25rem;
+        max-width: 640px;
+      }
+      .video-embed {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+      }
+      .video-embed iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
     </style>
 
     <script type="application/ld+json">
@@ -801,6 +846,16 @@
           <div class="verdict-notes">
             Bei diesem Preis ist die Bewertung bedingungslos. Ein Lie-Flat-Bett in die Karibik für das, was die meisten Airlines für Economy verlangen, ist kein Produkt zum Kritisieren. Es ist ein Produkt, das du buchen solltest, bevor es verschwindet.
           </div>
+        </div>
+      </div>
+
+      
+      <div class="video-review">
+        <p class="video-review-eyebrow">✦ Video-Review</p>
+        <h3>Selbst ansehen</h3>
+        <p class="video-review-note">The Flip Flop Traveller ist einer der zwei Kanäle, denen ich am meisten vertraue für ehrliche, unabhängige Airline-Reviews. Ihr Trip Report zur TAP Portugal A330-900 Business Class zeigt dasselbe Flugzeug und dieselbe Kabine wie diese Einlösung — sehenswert vor der Buchung.</p>
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/WOvRsIwaVKs" title="Super TIGHT on TAP PORTUGAL — A330-900 Business Class Trip Report — The Flip Flop Traveller" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
         </div>
       </div>
 
