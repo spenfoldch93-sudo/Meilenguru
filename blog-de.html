@@ -242,6 +242,18 @@
       }
       .filter-btn:hover { border-color: var(--black); color: var(--black); }
       .filter-btn.active { background: var(--black); color: var(--white); border-color: var(--black); }
+      .search-input-de {
+        font-family: var(--font-body);
+        font-size: 0.72rem;
+        color: var(--black);
+        background: none;
+        border: none;
+        border-bottom: 1px solid var(--border-mid);
+        padding: 0.4rem 0.25rem;
+        width: 160px;
+      }
+      .search-input-de::placeholder { color: var(--muted); }
+      .search-input-de:focus { outline: none; border-bottom-color: var(--gold); }
       .result-count {
         font-size: 0.72rem;
         color: var(--muted);
@@ -584,6 +596,9 @@
           <button class="filter-btn active" data-filter="categories" data-value="all" onclick="filterCards('categories', 'all', this)">Alle</button>
           <button class="filter-btn" data-filter="categories" data-value="trip-report" onclick="filterCards('categories', 'trip-report', this)">Reisebericht</button>
           <button class="filter-btn" data-filter="categories" data-value="strategy" onclick="filterCards('categories', 'strategy', this)">Strategie</button>
+        </div>
+        <div class="filter-group">
+          <input type="text" id="blogSearchDe" class="search-input-de" placeholder="Artikel suchen…" aria-label="Artikel suchen">
         </div>
         <p class="result-count"><span id="count">17</span> Artikel</p>
       </div>
@@ -1092,13 +1107,20 @@
 
       function applyFilters() {
         const cards = document.querySelectorAll('#blogGrid .blog-card');
+        const query = (document.getElementById('blogSearchDe').value || '').trim().toLowerCase();
         let visible = 0;
         cards.forEach(card => {
           const programmes = card.dataset.programmes || '';
           const categories = card.dataset.categories || '';
           const matchProg = activeFilters.programme === 'all' || programmes.includes(activeFilters.programme);
           const matchCat = activeFilters.categories === 'all' || categories.includes(activeFilters.categories);
-          if (matchProg && matchCat) {
+          let matchQuery = true;
+          if (query) {
+            const title = (card.querySelector('h3')?.textContent || '').toLowerCase();
+            const text = (card.querySelector('p')?.textContent || '').toLowerCase();
+            matchQuery = title.includes(query) || text.includes(query);
+          }
+          if (matchProg && matchCat && matchQuery) {
             card.classList.remove('hidden');
             visible++;
           } else {
@@ -1107,6 +1129,12 @@
         });
         document.getElementById('count').textContent = visible;
       }
+
+      let searchDebounceDe;
+      document.getElementById('blogSearchDe').addEventListener('input', () => {
+        clearTimeout(searchDebounceDe);
+        searchDebounceDe = setTimeout(applyFilters, 120);
+      });
 
       function toggleMenu() {
         document.getElementById('mobileMenu').classList.toggle('open');

@@ -273,6 +273,30 @@
         outline: 2px solid var(--gold);
         outline-offset: -2px;
       }
+      .search-group {
+        margin-left: auto;
+        margin-right: 0;
+        border-right: none;
+        padding-right: 0;
+      }
+      .search-input {
+        font-family: var(--font-body);
+        font-size: 0.78rem;
+        color: var(--black);
+        background: none;
+        border: none;
+        border-bottom: 1px solid var(--border);
+        padding: 0.9rem 0.25rem;
+        width: 180px;
+        transition: border-color 0.2s;
+      }
+      .search-input::placeholder {
+        color: var(--muted);
+      }
+      .search-input:focus {
+        outline: none;
+        border-bottom-color: var(--gold);
+      }
 
       /* BLOG GRID */
       .blog-section {
@@ -730,6 +754,10 @@
           <span class="filter-group-label">Type</span>
           <button class="filter-btn" data-filter="trip-report" data-type="category">Trip Reports</button>
           <button class="filter-btn" data-filter="strategy" data-type="category">Strategy</button>
+        </div>
+
+        <div class="filter-group search-group">
+          <input type="text" id="blogSearch" class="search-input" placeholder="Search articles…" aria-label="Search articles">
         </div>
       </div>
     </div>
@@ -1449,6 +1477,8 @@
         const noResults = document.getElementById("noResults");
         const grid = document.getElementById("blogGrid");
 
+        const query = (document.getElementById("blogSearch").value || "").trim().toLowerCase();
+
         let visible = 0;
         cards.forEach((card) => {
           const programmes = (card.getAttribute("data-programmes") || "").toLowerCase();
@@ -1461,6 +1491,12 @@
             show = programmes.split(" ").includes(activeFilter);
           } else if (type === "category") {
             show = categories.split(" ").includes(activeFilter);
+          }
+
+          if (show && query) {
+            const title = (card.querySelector("h3")?.textContent || "").toLowerCase();
+            const text = (card.querySelector("p")?.textContent || "").toLowerCase();
+            show = title.includes(query) || text.includes(query);
           }
 
           card.style.display = show ? "block" : "none";
@@ -1478,6 +1514,12 @@
           btn.classList.add("active");
           applyFilter();
         });
+      });
+
+      let searchDebounce;
+      document.getElementById("blogSearch").addEventListener("input", () => {
+        clearTimeout(searchDebounce);
+        searchDebounce = setTimeout(applyFilter, 120);
       });
 
       // Run on load to initialise count correctly
