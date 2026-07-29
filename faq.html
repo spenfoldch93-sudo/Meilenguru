@@ -48,6 +48,7 @@
       body { font-family: var(--font-body); background: var(--white); color: var(--black); font-size: 15px; line-height: 1.6; }
 
       /* ── NAV ── */
+      .nav-sticky-wrap { position: sticky; top: 0; z-index: 100; }
       nav {
         position: sticky; top: 0; z-index: 100;
         display: flex; align-items: center; justify-content: space-between;
@@ -219,7 +220,8 @@
     </style>
   </head>
   <body>
-    <nav>
+    <div class="nav-sticky-wrap">
+<nav>
       <a href="index.html" class="logo">Meilen<span>guru</span></a>
       <ul class="nav-links">
         <li><a href="strategies.html">Strategies</a></li>
@@ -245,6 +247,7 @@
       <a href="about.html">About</a>
       <a href="consultation.html">Consult</a>
       <a href="consultation.html" class="mobile-cta">Book a Session</a>
+    </div>
     </div>
 
     <div class="lang-banner">

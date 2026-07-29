@@ -34,6 +34,7 @@
         text-transform: none;
       }
       .lang-banner a:hover { color: var(--gold-light); }
+      .nav-sticky-wrap { position: sticky; top: 0; z-index: 100; }
       nav { position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.1rem 2rem; background: rgba(250, 249, 247, 0.95); backdrop-filter: blur(12px); border-bottom: 0.5px solid var(--border); }
       .logo { font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; letter-spacing: 0.02em; color: var(--black); text-decoration: none; }
       .logo span { color: var(--gold); }
@@ -238,7 +239,8 @@
       <a href="strategies-flying-blue"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ec-1f1e7.svg" height="13" width="13" alt="🇬🇧" style="vertical-align:-1px;margin-right:0.2em"> Read in English →</a>
     </div>
 
-    <nav>
+    <div class="nav-sticky-wrap">
+<nav>
       <a href="index.html" class="logo">Meilen<span>guru</span></a>
       <ul class="nav-links">
         <li><a href="strategien.html" class="active">Strategien</a></li>
@@ -264,6 +266,7 @@
       <a href="ueber-mich.html" onclick="closeMenu()">Über mich</a>
       <a href="beratung.html" onclick="closeMenu()">Beratung</a>
       <a href="beratung.html" class="mobile-cta" onclick="closeMenu()">Termin buchen</a>
+    </div>
     </div>
 
     <div class="disclaimer-banner">

@@ -74,6 +74,7 @@
       }
 
       /* ── NAV ── */
+      .nav-sticky-wrap { position: sticky; top: 0; z-index: 100; }
       nav {
         position: sticky;
         top: 0;
@@ -1001,7 +1002,8 @@
     <link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/">
   </head>
   <body>
-    <nav>
+    <div class="nav-sticky-wrap">
+<nav>
       <a href="#" class="logo">Meilen<span>guru</span></a>
       <ul class="nav-links">
         <li><a href="strategien">Strategien</a></li>
@@ -1027,6 +1029,7 @@
       <a href="ueber-mich" onclick="closeMenu()">Über mich</a>
       <a href="beratung" onclick="closeMenu()">Beratung</a>
       <a href="beratung" class="mobile-cta" onclick="closeMenu()">Session buchen</a>
+    </div>
     </div>
 
     <!-- LANG BANNER -->

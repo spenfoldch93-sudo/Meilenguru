@@ -65,6 +65,7 @@
         text-transform: none;
       }
       .lang-banner a:hover { color: var(--gold-light); }
+      .nav-sticky-wrap { position: sticky; top: 0; z-index: 100; }
       nav {
         position: sticky;
         top: 0;
@@ -745,7 +746,8 @@
     <div class="lang-banner">
       <a href="referrals"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ec-1f1e7.svg" height="13" width="13" alt="🇬🇧" style="vertical-align:-1px;margin-right:0.2em"> Read in English →</a>
     </div>
-    <nav>
+    <div class="nav-sticky-wrap">
+<nav>
       <a href="index.html" class="logo">Meilen<span>guru</span></a>
       <ul class="nav-links">
         <li><a href="strategien">Strategien</a></li>
@@ -771,6 +773,7 @@
       <a href="ueber-mich" onclick="closeMenu()">Über uns</a>
       <a href="beratung" onclick="closeMenu()">Beratung</a>
       <a href="beratung" class="mobile-cta" onclick="closeMenu()">Session buchen</a>
+    </div>
     </div>
 
     <!-- DISCLAIMER -->

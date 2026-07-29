@@ -73,6 +73,11 @@
       }
 
       /* ── NAV ── */
+      .nav-sticky-wrap {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
       nav {
         position: sticky;
         top: 0;
@@ -1000,6 +1005,7 @@
     <link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/">
   </head>
   <body>
+    <div class="nav-sticky-wrap">
     <nav>
       <a href="#" class="logo">Meilen<span>guru</span></a>
       <ul class="nav-links">
@@ -1026,6 +1032,7 @@
       <a href="about.html" onclick="closeMenu()">About</a>
       <a href="consultation.html" onclick="closeMenu()">Consult</a>
       <a href="consultation.html" class="mobile-cta" onclick="closeMenu()">Book a Session</a>
+    </div>
     </div>
 
     <!-- LANG BANNER -->
