@@ -38,14 +38,13 @@
         --font-display: "Lora", Georgia, serif;
         --font-body: "DM Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji";
       }
-      html { scroll-behavior: smooth; }
+      html { scroll-behavior: smooth; overflow-x: hidden; }
       body {
         font-family: var(--font-body);
         background: var(--white);
         color: var(--black);
         font-size: 15px;
         line-height: 1.6;
-        overflow-x: hidden;
       }
 
       /* NAV */
@@ -586,7 +585,7 @@
           <button class="filter-btn" data-filter="categories" data-value="trip-report" onclick="filterCards('categories', 'trip-report', this)">Reisebericht</button>
           <button class="filter-btn" data-filter="categories" data-value="strategy" onclick="filterCards('categories', 'strategy', this)">Strategie</button>
         </div>
-        <p class="result-count"><span id="count">0</span> Artikel</p>
+        <p class="result-count"><span id="count">17</span> Artikel</p>
       </div>
     </div>
 
@@ -840,7 +839,12 @@
             data-categories="strategy"
             style="text-decoration: none; color: inherit; display: block"
           >
-            <div class="blog-thumb" style="background: #004a77; display: flex; align-items: flex-end; padding: 0.75rem 0.9rem;">
+            <div class="blog-thumb" style="background: #004a77; display: flex; align-items: flex-end; padding: 0.75rem 0.9rem; position: relative;">
+              <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center">
+                <div style="background: var(--white); padding: 0.5rem 1rem; display: flex; align-items: center">
+                  <img src="logo_flyingblue-RVB_couleur_1.png" alt="Flying Blue" height="30" style="display: block">
+                </div>
+              </div>
               <span class="auf-deutsch-badge">Auf Deutsch</span>
               <span class="blog-route" style="position: relative; z-index: 1">Flying Blue · Promo Awards · Mai 2026</span>
               <span class="blog-rating">Neu</span>
@@ -863,7 +867,12 @@
             data-categories="strategy"
             style="text-decoration: none; color: inherit; display: block"
           >
-            <div class="blog-thumb" style="background: #001a70; display: flex; align-items: flex-end; padding: 0.75rem 0.9rem;">
+            <div class="blog-thumb" style="background: #001a70; display: flex; align-items: flex-end; padding: 0.75rem 0.9rem; position: relative;">
+              <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center">
+                <div style="background: var(--white); padding: 0.6rem 1.1rem; display: flex; align-items: center">
+                  <img src="logo-mm.svg" alt="Miles &amp; More" height="26" style="display: block">
+                </div>
+              </div>
               <span class="auf-deutsch-badge">Auf Deutsch</span>
               <span class="blog-route" style="position: relative; z-index: 1">Miles & More · Dynamische Preise · Schweiz</span>
               <span class="blog-rating">Ratgeber</span>
@@ -886,7 +895,8 @@
             data-categories="strategy"
             style="text-decoration: none; color: inherit; display: block"
           >
-            <div class="blog-thumb" style="background:#1a2a4a;display:flex;align-items:flex-end;padding:0.75rem 0.9rem;">
+            <div class="blog-thumb" style="background:#1a2a4a;display:flex;align-items:flex-end;padding:0.75rem 0.9rem;position:relative;">
+              <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;"><div style="background:var(--white);padding:0.5rem 0.9rem;display:flex;align-items:center;gap:0.7rem;"><img src="logo-revolut.svg" alt="Revolut" height="16" style="display:block"><div style="width:0.5px;height:16px;background:var(--border);"></div><img src="logo-amex-clean.png" alt="American Express" height="14" style="display:block"></div></div>
               <span class="auf-deutsch-badge">Auf Deutsch</span>
               <span class="blog-route" style="position:relative;z-index:1;">Strategie · Schweiz · Karten-Duo</span>
               <span class="blog-rating">Ratgeber</span>
@@ -906,7 +916,8 @@
             data-categories="strategy"
             style="text-decoration: none; color: inherit; display: block"
           >
-            <div class="blog-thumb" style="background:#1e1e1e;display:flex;align-items:flex-end;padding:0.75rem 0.9rem;">
+            <div class="blog-thumb" style="background:#1e1e1e;display:flex;align-items:flex-end;padding:0.75rem 0.9rem;position:relative;">
+              <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0.85;"><span style="font-family:var(--font-display);font-size:1.9rem;font-weight:300;color:white;">Meilen<span style="color:#b8962e">guru</span></span></div>
               <span class="auf-deutsch-badge">Auf Deutsch</span>
               <span class="blog-route" style="position:relative;z-index:1;">Erklärer · Schweiz · TWINT</span>
               <span class="blog-rating">Erklärer</span>
@@ -926,7 +937,8 @@
             data-categories="strategy"
             style="text-decoration: none; color: inherit; display: block"
           >
-            <div class="blog-thumb" style="background:#0f2a1a;display:flex;align-items:flex-end;padding:0.75rem 0.9rem;">
+            <div class="blog-thumb" style="background:#0f2a1a;display:flex;align-items:flex-end;padding:0.75rem 0.9rem;position:relative;">
+              <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0.85;"><span style="font-family:var(--font-display);font-size:1.9rem;font-weight:300;color:white;">Meilen<span style="color:#b8962e">guru</span></span></div>
               <span class="auf-deutsch-badge">Auf Deutsch</span>
               <span class="blog-route" style="position:relative;z-index:1;">Strategie · Schweiz · Geschäftsausgaben</span>
               <span class="blog-rating">Ratgeber</span>
@@ -946,7 +958,8 @@
             data-categories="strategy"
             style="text-decoration: none; color: inherit; display: block"
           >
-            <div class="blog-thumb" style="background:#1a1a3a;display:flex;align-items:flex-end;padding:0.75rem 0.9rem;">
+            <div class="blog-thumb" style="background:#1a1a3a;display:flex;align-items:flex-end;padding:0.75rem 0.9rem;position:relative;">
+              <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0.85;"><span style="font-family:var(--font-display);font-size:1.9rem;font-weight:300;color:white;">Meilen<span style="color:#b8962e">guru</span></span></div>
               <span class="auf-deutsch-badge">Auf Deutsch</span>
               <span class="blog-route" style="position:relative;z-index:1;">Einblick · Schweiz · CHF-Vorteil</span>
               <span class="blog-rating">Einblick</span>
@@ -966,7 +979,8 @@
             data-categories="strategy"
             style="text-decoration: none; color: inherit; display: block"
           >
-            <div class="blog-thumb" style="background:#2a1a0a;display:flex;align-items:flex-end;padding:0.75rem 0.9rem;">
+            <div class="blog-thumb" style="background:#2a1a0a;display:flex;align-items:flex-end;padding:0.75rem 0.9rem;position:relative;">
+              <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0.85;"><span style="font-family:var(--font-display);font-size:1.9rem;font-weight:300;color:white;">Meilen<span style="color:#b8962e">guru</span></span></div>
               <span class="auf-deutsch-badge">Auf Deutsch</span>
               <span class="blog-route" style="position:relative;z-index:1;">Strategie · Grenzgänger · Grenzpendler</span>
               <span class="blog-rating">Ratgeber</span>
@@ -986,7 +1000,8 @@
             data-categories="strategy"
             style="text-decoration: none; color: inherit; display: block"
           >
-            <div class="blog-thumb" style="background:#1a2a1a;display:flex;align-items:flex-end;padding:0.75rem 0.9rem;">
+            <div class="blog-thumb" style="background:#1a2a1a;display:flex;align-items:flex-end;padding:0.75rem 0.9rem;position:relative;">
+              <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0.85;"><span style="font-family:var(--font-display);font-size:1.9rem;font-weight:300;color:white;">Meilen<span style="color:#b8962e">guru</span></span></div>
               <span class="auf-deutsch-badge">Auf Deutsch</span>
               <span class="blog-route" style="position:relative;z-index:1;">Vergleich · Schweiz · Reka vs. Meilen</span>
               <span class="blog-rating">Vergleich</span>

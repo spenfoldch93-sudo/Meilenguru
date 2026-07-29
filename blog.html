@@ -35,7 +35,7 @@
         --font-body: "DM Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji";
       }
       html {
-        scroll-behavior: smooth;
+        scroll-behavior: smooth; overflow-x: hidden;
       }
       body {
         font-family: var(--font-body);
@@ -43,7 +43,6 @@
         color: var(--black);
         font-size: 15px;
         line-height: 1.6;
-        overflow-x: hidden;
       }
 
       /* NAV */
@@ -735,7 +734,7 @@
     <!-- BLOG GRID -->
     <section class="blog-section">
       <div class="blog-inner">
-        <p class="result-count"><span id="count">13</span> articles</p>
+        <p class="result-count"><span id="count">17</span> articles</p>
         <div class="blog-grid" id="blogGrid">
           <a
             href="meilenguru-blog-lh-first-class-sin-bsl.html"
@@ -1127,17 +1126,9 @@
               "
             >
               <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center">
-                <span
-                  style="
-                    font-family: &quot;Lora&quot;, Georgia, serif;
-                    font-size: 4rem;
-                    font-weight: 300;
-                    color: rgba(255, 255, 255, 0.08);
-                    line-height: 1;
-                    text-align: center;
-                  "
-                  >May<br />2026</span
-                >
+                <div style="background: var(--white); padding: 0.5rem 1rem; display: flex; align-items: center">
+                  <img src="logo_flyingblue-RVB_couleur_1.png" alt="Flying Blue" height="30" style="display: block">
+                </div>
               </div>
               <span class="blog-route" style="position: relative; z-index: 1"
                 >Flying Blue · Air France / KLM · May 2026</span
@@ -1171,216 +1162,6 @@
           </a>
 
           <a
-            href="meilen-sammeln-ohne-fliegen-schweiz.html"
-            class="blog-card"
-            data-programmes="miles-more"
-            data-categories="strategy miles-redemption"
-            data-airline="various"
-            style="text-decoration: none; color: inherit; display: block"
-          >
-            <div
-              class="blog-thumb"
-              style="
-                background: #001a70;
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-end;
-                padding: 0.75rem 0.9rem;
-                position: relative;
-              "
-            >
-              <div
-                style="
-                  position: absolute;
-                  inset: 0;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  opacity: 0.08;
-                "
-              >
-                <span
-                  style="
-                    font-family: &quot;Lora&quot;, Georgia, serif;
-                    font-size: 5rem;
-                    font-weight: 300;
-                    color: white;
-                    line-height: 1;
-                    text-align: center;
-                  "
-                  >DE</span
-                >
-              </div>
-              <span class="blog-route" style="position: relative; z-index: 1"
-                >Miles & More · Schweiz · Auf Deutsch</span
-              >
-              <span
-                class="blog-rating"
-                style="
-                  position: absolute;
-                  top: 0.75rem;
-                  right: 0.9rem;
-                  font-family: &quot;Lora&quot;, Georgia, serif;
-                  font-size: 1.1rem;
-                  font-weight: 300;
-                  color: #b8962e;
-                "
-                >DE</span
-              >
-            </div>
-            <div class="blog-body">
-              <div class="blog-cats">
-                <span class="cat-badge cat-strategy">Strategie</span
-                ><span class="cat-badge cat-miles-redemption">Miles & More</span>
-              </div>
-              <h3>100'000 Miles & More Meilen sammeln — ohne einen einzigen Flug</h3>
-              <p>
-                Der vollständige Schweizer Guide: Cornèrcard, Swisscard, Coop Supercard, Amex-Transfers. Mit
-                Empfehlungscodes.
-              </p>
-              <div class="blog-meta"><span>12 Min.</span><span>·</span><span>Auf Deutsch</span></div>
-            </div>
-          </a>
-
-          <a
-            href="flying-blue-promo-awards-schweiz.html"
-            class="blog-card"
-            data-programmes="flying-blue"
-            data-categories="strategy"
-            data-airline="air france klm"
-            style="text-decoration: none; color: inherit; display: block"
-          >
-            <div
-              class="blog-thumb"
-              style="
-                background: #001f6b;
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-end;
-                padding: 0.75rem 0.9rem;
-                position: relative;
-              "
-            >
-              <div
-                style="
-                  position: absolute;
-                  inset: 0;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  opacity: 0.08;
-                "
-              >
-                <span
-                  style="
-                    font-family: &quot;Lora&quot;, Georgia, serif;
-                    font-size: 5rem;
-                    font-weight: 300;
-                    color: white;
-                    line-height: 1;
-                    text-align: center;
-                  "
-                  >DE</span
-                >
-              </div>
-              <span class="blog-route" style="position: relative; z-index: 1"
-                >Flying Blue · Promo Awards · Auf Deutsch</span
-              >
-              <span
-                class="blog-rating"
-                style="
-                  position: absolute;
-                  top: 0.75rem;
-                  right: 0.9rem;
-                  font-family: &quot;Lora&quot;, Georgia, serif;
-                  font-size: 1.1rem;
-                  font-weight: 300;
-                  color: #b8962e;
-                "
-                >DE</span
-              >
-            </div>
-            <div class="blog-body">
-              <div class="blog-cats">
-                <span class="cat-badge cat-strategy">Strategie</span
-                ><span class="cat-badge cat-miles-redemption">Flying Blue</span>
-              </div>
-              <h3>Flying Blue Promo Awards für Schweizer erklärt</h3>
-              <p>
-                Monatliche Rabatte von 25–50% auf Prämienflüge. Wie du sie findest, buchst und mit Amex kombinierst.
-              </p>
-              <div class="blog-meta"><span>10 Min.</span><span>·</span><span>Auf Deutsch</span></div>
-            </div>
-          </a>
-
-          <a
-            href="beste-kreditkarte-meilen-schweiz.html"
-            class="blog-card"
-            data-programmes="miles-more flying-blue"
-            data-categories="strategy"
-            data-airline="various"
-            style="text-decoration: none; color: inherit; display: block"
-          >
-            <div
-              class="blog-thumb"
-              style="
-                background: #0a0a0a;
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-end;
-                padding: 0.75rem 0.9rem;
-                position: relative;
-              "
-            >
-              <div
-                style="
-                  position: absolute;
-                  inset: 0;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  opacity: 0.08;
-                "
-              >
-                <span
-                  style="
-                    font-family: &quot;Lora&quot;, Georgia, serif;
-                    font-size: 5rem;
-                    font-weight: 300;
-                    color: white;
-                    line-height: 1;
-                    text-align: center;
-                  "
-                  >DE</span
-                >
-              </div>
-              <span class="blog-route" style="position: relative; z-index: 1"
-                >Cornèrcard · Swisscard · Amex · 2025/2026</span
-              >
-              <span
-                class="blog-rating"
-                style="
-                  position: absolute;
-                  top: 0.75rem;
-                  right: 0.9rem;
-                  font-family: &quot;Lora&quot;, Georgia, serif;
-                  font-size: 1.1rem;
-                  font-weight: 300;
-                  color: #b8962e;
-                "
-                >DE</span
-              >
-            </div>
-            <div class="blog-body">
-              <div class="blog-cats"><span class="cat-badge cat-strategy">Strategie</span></div>
-              <h3>Beste Schweizer Kreditkarten für Meilen — 2025/2026</h3>
-              <p>
-                Cornèrcard vs Swisscard vs Amex. Verdienstsätze, Willkommensboni, Jahresgebühren und Empfehlungscodes.
-              </p>
-              <div class="blog-meta"><span>11 Min.</span><span>·</span><span>Auf Deutsch</span></div>
-            </div>
-          </a>
-          <a
             href="meilenguru-strategy-miles-more-dynamic-pricing.html"
             class="blog-card"
             data-programmes="miles-more"
@@ -1406,21 +1187,11 @@
                   display: flex;
                   align-items: center;
                   justify-content: center;
-                  opacity: 0.06;
                 "
               >
-                <span
-                  style="
-                    font-family: &quot;Lora&quot;, Georgia, serif;
-                    font-size: 4rem;
-                    font-weight: 300;
-                    color: white;
-                    line-height: 1;
-                    text-align: center;
-                    letter-spacing: 0.05em;
-                  "
-                  >M&M</span
-                >
+                <div style="background: var(--white); padding: 0.6rem 1.1rem; display: flex; align-items: center">
+                  <img src="logo-mm.svg" alt="Miles &amp; More" height="26" style="display: block">
+                </div>
               </div>
               <span class="blog-route" style="position: relative; z-index: 1"
                 >Miles & More · Lufthansa Group · Dynamic Pricing 2025</span
@@ -1452,77 +1223,6 @@
               <div class="blog-meta"><span>14 min read</span><span>·</span><span>Strategy Guide</span></div>
             </div>
           </a>
-          <a
-            href="miles-more-dynamische-preise-schweiz.html"
-            class="blog-card"
-            data-programmes="miles-more"
-            data-categories="strategy"
-            data-airline="lufthansa swiss"
-            style="text-decoration: none; color: inherit; display: block"
-          >
-            <div
-              class="blog-thumb"
-              style="
-                background: #111111;
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-end;
-                padding: 0.75rem 0.9rem;
-                position: relative;
-              "
-            >
-              <div
-                style="
-                  position: absolute;
-                  inset: 0;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  opacity: 0.08;
-                "
-              >
-                <span
-                  style="
-                    font-family: &quot;Lora&quot;, Georgia, serif;
-                    font-size: 5rem;
-                    font-weight: 300;
-                    color: white;
-                    line-height: 1;
-                    text-align: center;
-                  "
-                  >DE</span
-                >
-              </div>
-              <span class="blog-route" style="position: relative; z-index: 1"
-                >Miles & More · Dynamische Preise · Auf Deutsch</span
-              >
-              <span
-                class="blog-rating"
-                style="
-                  position: absolute;
-                  top: 0.75rem;
-                  right: 0.9rem;
-                  font-family: &quot;Lora&quot;, Georgia, serif;
-                  font-size: 1.1rem;
-                  font-weight: 300;
-                  color: #b8962e;
-                "
-                >DE</span
-              >
-            </div>
-            <div class="blog-body">
-              <div class="blog-cats">
-                <span class="cat-badge cat-strategy">Strategie</span>
-                <span class="cat-badge cat-miles-redemption">Miles & More</span>
-              </div>
-              <h3>Miles & More dynamische Preise — Was sich 2025 geändert hat und wie man trotzdem gewinnt</h3>
-              <p>
-                Prämienpreise für LH-Gruppe-Flüge sind seit Juni 2025 dynamisch. Was das für Schweizer Meilen-Sammler
-                bedeutet — und wo die echten Schnäppchen ab Zürich jetzt zu finden sind.
-              </p>
-              <div class="blog-meta"><span>14 Min.</span><span>·</span><span>Auf Deutsch</span></div>
-            </div>
-          </a>
 
           <a
             href="meilenguru-revolut-amex-miles.html"
@@ -1533,7 +1233,7 @@
             style="text-decoration: none; color: inherit; display: block"
           >
             <div class="blog-thumb" style="background:#1a2a4a;display:flex;flex-direction:column;justify-content:flex-end;padding:0.75rem 0.9rem;position:relative;">
-              <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0.08;"><span style="font-family:&quot;Lora&quot;,Georgia,serif;font-size:5rem;font-weight:300;color:white;line-height:1;">EN</span></div>
+              <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;"><div style="background:var(--white);padding:0.5rem 0.9rem;display:flex;align-items:center;gap:0.7rem;"><img src="logo-revolut.svg" alt="Revolut" height="16" style="display:block"><div style="width:0.5px;height:16px;background:var(--border);"></div><img src="logo-amex-clean.png" alt="American Express" height="14" style="display:block"></div></div>
               <span class="blog-route" style="position:relative;z-index:1;">Strategy · Switzerland · Dual-Card</span>
               <span class="blog-rating" style="position:absolute;top:0.75rem;right:0.9rem;font-family:&quot;Lora&quot;,Georgia,serif;font-size:1.1rem;font-weight:300;color:#b8962e;">EN</span>
             </div>
@@ -1554,7 +1254,7 @@
             style="text-decoration: none; color: inherit; display: block"
           >
             <div class="blog-thumb" style="background:#1e1e1e;display:flex;flex-direction:column;justify-content:flex-end;padding:0.75rem 0.9rem;position:relative;">
-              <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0.08;"><span style="font-family:&quot;Lora&quot;,Georgia,serif;font-size:5rem;font-weight:300;color:white;line-height:1;">EN</span></div>
+              <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0.85;"><span style="font-family:var(--font-display);font-size:1.9rem;font-weight:300;color:white;">Meilen<span style="color:#b8962e">guru</span></span></div>
               <span class="blog-route" style="position:relative;z-index:1;">Explainer · Switzerland · TWINT</span>
               <span class="blog-rating" style="position:absolute;top:0.75rem;right:0.9rem;font-family:&quot;Lora&quot;,Georgia,serif;font-size:1.1rem;font-weight:300;color:#b8962e;">EN</span>
             </div>
@@ -1575,7 +1275,7 @@
             style="text-decoration: none; color: inherit; display: block"
           >
             <div class="blog-thumb" style="background:#0f2a1a;display:flex;flex-direction:column;justify-content:flex-end;padding:0.75rem 0.9rem;position:relative;">
-              <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0.08;"><span style="font-family:&quot;Lora&quot;,Georgia,serif;font-size:5rem;font-weight:300;color:white;line-height:1;">EN</span></div>
+              <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0.85;"><span style="font-family:var(--font-display);font-size:1.9rem;font-weight:300;color:white;">Meilen<span style="color:#b8962e">guru</span></span></div>
               <span class="blog-route" style="position:relative;z-index:1;">Strategy · Switzerland · Business &amp; Freelance</span>
               <span class="blog-rating" style="position:absolute;top:0.75rem;right:0.9rem;font-family:&quot;Lora&quot;,Georgia,serif;font-size:1.1rem;font-weight:300;color:#b8962e;">EN</span>
             </div>
@@ -1596,7 +1296,7 @@
             style="text-decoration: none; color: inherit; display: block"
           >
             <div class="blog-thumb" style="background:#1a1a3a;display:flex;flex-direction:column;justify-content:flex-end;padding:0.75rem 0.9rem;position:relative;">
-              <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0.08;"><span style="font-family:&quot;Lora&quot;,Georgia,serif;font-size:5rem;font-weight:300;color:white;line-height:1;">EN</span></div>
+              <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0.85;"><span style="font-family:var(--font-display);font-size:1.9rem;font-weight:300;color:white;">Meilen<span style="color:#b8962e">guru</span></span></div>
               <span class="blog-route" style="position:relative;z-index:1;">Insight · Switzerland · CHF Advantage</span>
               <span class="blog-rating" style="position:absolute;top:0.75rem;right:0.9rem;font-family:&quot;Lora&quot;,Georgia,serif;font-size:1.1rem;font-weight:300;color:#b8962e;">EN</span>
             </div>
@@ -1617,7 +1317,7 @@
             style="text-decoration: none; color: inherit; display: block"
           >
             <div class="blog-thumb" style="background:#2a1a0a;display:flex;flex-direction:column;justify-content:flex-end;padding:0.75rem 0.9rem;position:relative;">
-              <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0.08;"><span style="font-family:&quot;Lora&quot;,Georgia,serif;font-size:5rem;font-weight:300;color:white;line-height:1;">EN</span></div>
+              <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0.85;"><span style="font-family:var(--font-display);font-size:1.9rem;font-weight:300;color:white;">Meilen<span style="color:#b8962e">guru</span></span></div>
               <span class="blog-route" style="position:relative;z-index:1;">Strategy · Grenzgänger · Cross-Border</span>
               <span class="blog-rating" style="position:absolute;top:0.75rem;right:0.9rem;font-family:&quot;Lora&quot;,Georgia,serif;font-size:1.1rem;font-weight:300;color:#b8962e;">EN</span>
             </div>
@@ -1638,7 +1338,7 @@
             style="text-decoration: none; color: inherit; display: block"
           >
             <div class="blog-thumb" style="background:#1a2a1a;display:flex;flex-direction:column;justify-content:flex-end;padding:0.75rem 0.9rem;position:relative;">
-              <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0.08;"><span style="font-family:&quot;Lora&quot;,Georgia,serif;font-size:5rem;font-weight:300;color:white;line-height:1;">EN</span></div>
+              <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0.85;"><span style="font-family:var(--font-display);font-size:1.9rem;font-weight:300;color:white;">Meilen<span style="color:#b8962e">guru</span></span></div>
               <span class="blog-route" style="position:relative;z-index:1;">Comparison · Switzerland · Reka vs Miles</span>
               <span class="blog-rating" style="position:absolute;top:0.75rem;right:0.9rem;font-family:&quot;Lora&quot;,Georgia,serif;font-size:1.1rem;font-weight:300;color:#b8962e;">EN</span>
             </div>
