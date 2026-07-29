@@ -1,0 +1,63 @@
+# .html -> clean URL redirects (Netlify pretty-URL serving both was leaving
+# every page live at two URLs, splitting ranking signals and search-console
+# indexing status). Generated list — regenerate if new top-level .html pages
+# are added to the repo.
+
+/index.html                                              /                                                         301!
+/about.html                                               /about                                                    301!
+/beratung.html                                            /beratung                                                 301!
+/beste-kreditkarte-meilen-schweiz.html                    /beste-kreditkarte-meilen-schweiz                         301!
+/blog.html                                                /blog                                                     301!
+/blog-de.html                                             /blog-de                                                  301!
+/business-meilen-schweiz.html                             /business-meilen-schweiz                                  301!
+/consultation.html                                        /consultation                                             301!
+/empfehlungen.html                                        /empfehlungen                                             301!
+/faq.html                                                 /faq                                                      301!
+/faq-de.html                                              /faq-de                                                   301!
+/flying-blue-promo-awards-schweiz.html                    /flying-blue-promo-awards-schweiz                         301!
+/flying-blue-promo-mai-2026.html                          /flying-blue-promo-mai-2026                               301!
+/grenzgaenger-meilen-schweiz.html                         /grenzgaenger-meilen-schweiz                              301!
+/index-de.html                                            /index-de                                                 301!
+/lh-first-class-sin-bsl-de.html                           /lh-first-class-sin-bsl-de                                301!
+/meilen-sammeln-ohne-fliegen-schweiz.html                 /meilen-sammeln-ohne-fliegen-schweiz                      301!
+/meilen-vs-reka-schweiz.html                              /meilen-vs-reka-schweiz                                   301!
+/meilenguru-blog-lh-first-class-sin-bsl.html              /meilenguru-blog-lh-first-class-sin-bsl                   301!
+/meilenguru-blog-perth-singapore-zurich-sq-swiss.html     /meilenguru-blog-perth-singapore-zurich-sq-swiss          301!
+/meilenguru-blog-perth-zurich-oman-air.html               /meilenguru-blog-perth-zurich-oman-air                    301!
+/meilenguru-blog-singapore-amsterdam-klm.html             /meilenguru-blog-singapore-amsterdam-klm                  301!
+/meilenguru-blog-singapore-zurich-sq346.html              /meilenguru-blog-singapore-zurich-sq346                   301!
+/meilenguru-blog-zurich-cancun-tap.html                   /meilenguru-blog-zurich-cancun-tap                        301!
+/meilenguru-business-miles-switzerland.html               /meilenguru-business-miles-switzerland                    301!
+/meilenguru-flying-blue-promo-may-2026.html               /meilenguru-flying-blue-promo-may-2026                    301!
+/meilenguru-grenzgaenger-miles.html                       /meilenguru-grenzgaenger-miles                            301!
+/meilenguru-miles-vs-reka-switzerland.html                /meilenguru-miles-vs-reka-switzerland                     301!
+/meilenguru-revolut-amex-miles.html                       /meilenguru-revolut-amex-miles                            301!
+/meilenguru-strategy-100k-miles-without-flying.html       /meilenguru-strategy-100k-miles-without-flying            301!
+/meilenguru-strategy-best-swiss-credit-cards-miles.html   /meilenguru-strategy-best-swiss-credit-cards-miles        301!
+/meilenguru-strategy-flying-blue-promo-awards.html        /meilenguru-strategy-flying-blue-promo-awards             301!
+/meilenguru-strategy-miles-more-dynamic-pricing.html      /meilenguru-strategy-miles-more-dynamic-pricing           301!
+/meilenguru-swiss-franc-miles-advantage.html              /meilenguru-swiss-franc-miles-advantage                   301!
+/meilenguru-twint-miles-switzerland.html                  /meilenguru-twint-miles-switzerland                       301!
+/miles-more-dynamische-preise-schweiz.html                /miles-more-dynamische-preise-schweiz                     301!
+/perth-singapur-zuerich-sq-swiss-de.html                  /perth-singapur-zuerich-sq-swiss-de                       301!
+/perth-zuerich-oman-air-de.html                           /perth-zuerich-oman-air-de                                301!
+/referrals.html                                           /referrals                                                301!
+/revolut-amex-meilen-schweiz.html                         /revolut-amex-meilen-schweiz                              301!
+/schweizer-franken-meilen-vorteil.html                    /schweizer-franken-meilen-vorteil                         301!
+/singapur-amsterdam-klm-de.html                           /singapur-amsterdam-klm-de                                301!
+/singapur-zuerich-sq346-de.html                           /singapur-zuerich-sq346-de                                301!
+/strategien.html                                          /strategien                                               301!
+/strategien-amex.html                                     /strategien-amex                                          301!
+/strategien-benchmark.html                                /strategien-benchmark                                     301!
+/strategien-flying-blue.html                              /strategien-flying-blue                                   301!
+/strategien-miles-more.html                               /strategien-miles-more                                    301!
+/strategies.html                                          /strategies                                               301!
+/strategies-amex.html                                     /strategies-amex                                          301!
+/strategies-benchmark.html                                /strategies-benchmark                                     301!
+/strategies-flying-blue.html                              /strategies-flying-blue                                   301!
+/strategies-miles-more.html                               /strategies-miles-more                                    301!
+/tools.html                                               /tools                                                    301!
+/tools-de.html                                            /tools-de                                                 301!
+/twint-meilen-schweiz.html                                /twint-meilen-schweiz                                     301!
+/ueber-mich.html                                          /ueber-mich                                               301!
+/zuerich-cancun-tap-de.html                               /zuerich-cancun-tap-de                                    301!

@@ -742,6 +742,13 @@
         text-decoration: none;
         transition: color 0.2s;
       }
+      .lang-switcher .current {
+        font-size: 0.67rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--black);
+        font-weight: 500;
+      }
       .lang-switcher a:hover {
         color: var(--black);
       }
@@ -1650,8 +1657,7 @@
         </div>
         <div class="lang-switcher">
           <a href="/">EN</a>
-          <a href="#">FR</a>
-          <a href="#">DE</a>
+          <span class="current">DE</span>
         </div>
       </div>
     </footer>

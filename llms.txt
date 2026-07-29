@@ -1,0 +1,36 @@
+# Meilenguru
+
+> Meilenguru is a bilingual (German/English) site about earning airline miles
+> and flying Business Class from Switzerland. It covers the Miles & More and
+> Flying Blue loyalty programmes, Swiss credit cards (Amex, Cornèrcard,
+> Swisscard), award redemption strategies, real trip reports, and a paid
+> 30-minute personal consultation. Content is Swiss-specific: CHF pricing,
+> Swiss card issuers, and departures from Zürich, Geneva and Basel.
+
+Languages: German (primary, Swiss audience) and English, as full parallel
+page pairs — every guide and article exists in both.
+
+## Main pages
+
+- https://meilenguru.ch/ — English homepage
+- https://meilenguru.ch/index-de — German homepage
+- https://meilenguru.ch/strategies — Earning-strategy hub (Miles & More, Flying Blue, Amex, benchmark comparison)
+- https://meilenguru.ch/strategien — German strategy hub
+- https://meilenguru.ch/beste-kreditkarte-meilen-schweiz — Best Swiss credit cards for earning miles (German)
+- https://meilenguru.ch/meilenguru-strategy-best-swiss-credit-cards-miles — English twin
+- https://meilenguru.ch/referrals — Referral codes for Swiss card welcome bonuses
+- https://meilenguru.ch/empfehlungen — German twin
+- https://meilenguru.ch/tools — Free miles calculator, destination map and lounge finder
+- https://meilenguru.ch/tools-de — German twin
+- https://meilenguru.ch/blog — Trip reports and strategy articles
+- https://meilenguru.ch/blog-de — German twin
+- https://meilenguru.ch/faq — Frequently asked questions
+- https://meilenguru.ch/faq-de — German twin
+- https://meilenguru.ch/consultation — Paid 30-minute miles strategy consultation
+- https://meilenguru.ch/beratung — German twin
+- https://meilenguru.ch/about — About the site
+- https://meilenguru.ch/ueber-mich — German twin
+
+## Sitemap
+
+https://meilenguru.ch/sitemap.xml

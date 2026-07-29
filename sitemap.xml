@@ -1,351 +1,410 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://meilenguru.ch/</loc>
-    <lastmod>2026-05-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/index-de" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/" />
   </url>
   <url>
     <loc>https://meilenguru.ch/about</loc>
-    <lastmod>2026-05-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://meilenguru.ch/faq</loc>
-    <lastmod>2026-05-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://meilenguru.ch/faq-de</loc>
-    <lastmod>2026-05-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://meilenguru.ch/blog</loc>
-    <lastmod>2026-05-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://meilenguru.ch/consultation</loc>
-    <lastmod>2026-05-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://meilenguru.ch/referrals</loc>
-    <lastmod>2026-05-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://meilenguru.ch/strategies</loc>
-    <lastmod>2026-05-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://meilenguru.ch/strategies-miles-more</loc>
-    <lastmod>2026-05-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://meilenguru.ch/strategies-flying-blue</loc>
-    <lastmod>2026-05-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://meilenguru.ch/strategies-amex</loc>
-    <lastmod>2026-05-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://meilenguru.ch/strategies-benchmark</loc>
-    <lastmod>2026-05-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meilenguru.ch/meilenguru-strategy-100k-miles-without-flying</loc>
-    <lastmod>2026-05-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://meilenguru.ch/meilenguru-strategy-best-swiss-credit-cards-miles</loc>
-    <lastmod>2026-05-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://meilenguru.ch/meilenguru-strategy-flying-blue-promo-awards</loc>
-    <lastmod>2026-05-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://meilenguru.ch/meilenguru-strategy-miles-more-dynamic-pricing</loc>
-    <lastmod>2026-05-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://meilenguru.ch/meilenguru-blog-lh-first-class-sin-bsl</loc>
-    <lastmod>2026-05-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meilenguru.ch/meilenguru-blog-perth-zurich-oman-air</loc>
-    <lastmod>2026-05-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meilenguru.ch/meilenguru-blog-perth-singapore-zurich-sq-swiss</loc>
-    <lastmod>2026-05-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meilenguru.ch/meilenguru-blog-zurich-cancun-tap</loc>
-    <lastmod>2026-05-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meilenguru.ch/meilenguru-blog-singapore-zurich-sq346</loc>
-    <lastmod>2026-05-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meilenguru.ch/meilenguru-blog-singapore-amsterdam-klm</loc>
-    <lastmod>2026-05-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meilenguru.ch/meilenguru-flying-blue-promo-may-2026</loc>
-    <lastmod>2026-05-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://meilenguru.ch/meilen-sammeln-ohne-fliegen-schweiz</loc>
-    <lastmod>2026-05-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://meilenguru.ch/flying-blue-promo-awards-schweiz</loc>
-    <lastmod>2026-05-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://meilenguru.ch/beste-kreditkarte-meilen-schweiz</loc>
-    <lastmod>2026-05-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://meilenguru.ch/miles-more-dynamische-preise-schweiz</loc>
-    <lastmod>2026-05-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://meilenguru.ch/strategien</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://meilenguru.ch/strategien-miles-more</loc>
-    <lastmod>2026-05-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://meilenguru.ch/strategien-flying-blue</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://meilenguru.ch/strategien-amex</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://meilenguru.ch/strategien-benchmark</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meilenguru.ch/ueber-mich</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/about" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/ueber-mich" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/about" />
   </url>
   <url>
     <loc>https://meilenguru.ch/beratung</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/beratung" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/consultation" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/consultation" />
   </url>
   <url>
-    <loc>https://meilenguru.ch/empfehlungen</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://meilenguru.ch/beste-kreditkarte-meilen-schweiz</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/beste-kreditkarte-meilen-schweiz" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/meilenguru-strategy-best-swiss-credit-cards-miles" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/meilenguru-strategy-best-swiss-credit-cards-miles" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/blog</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/blog" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/blog-de" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/blog" />
   </url>
   <url>
     <loc>https://meilenguru.ch/blog-de</loc>
-    <lastmod>2026-05-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://meilenguru.ch/flying-blue-promo-mai-2026</loc>
-    <lastmod>2026-05-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://meilenguru.ch/singapur-amsterdam-klm-de</loc>
-    <lastmod>2026-05-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meilenguru.ch/zuerich-cancun-tap-de</loc>
-    <lastmod>2026-05-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meilenguru.ch/lh-first-class-sin-bsl-de</loc>
-    <lastmod>2026-05-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meilenguru.ch/singapur-zuerich-sq346-de</loc>
-    <lastmod>2026-05-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meilenguru.ch/perth-singapur-zuerich-sq-swiss-de</loc>
-    <lastmod>2026-05-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meilenguru.ch/perth-zuerich-oman-air-de</loc>
-    <lastmod>2026-05-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meilenguru.ch/index-de</loc>
-    <lastmod>2026-05-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://meilenguru.ch/meilenguru-revolut-amex-miles</loc>
-    <lastmod>2026-05-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://meilenguru.ch/revolut-amex-meilen-schweiz</loc>
-    <lastmod>2026-05-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://meilenguru.ch/meilenguru-twint-miles-switzerland</loc>
-    <lastmod>2026-05-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meilenguru.ch/twint-meilen-schweiz</loc>
-    <lastmod>2026-05-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meilenguru.ch/meilenguru-business-miles-switzerland</loc>
-    <lastmod>2026-05-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/blog-de" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/blog" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/blog" />
   </url>
   <url>
     <loc>https://meilenguru.ch/business-meilen-schweiz</loc>
-    <lastmod>2026-05-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/business-meilen-schweiz" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/meilenguru-business-miles-switzerland" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/meilenguru-business-miles-switzerland" />
   </url>
   <url>
-    <loc>https://meilenguru.ch/meilenguru-swiss-franc-miles-advantage</loc>
-    <lastmod>2026-05-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://meilenguru.ch/consultation</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/consultation" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/beratung" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/consultation" />
   </url>
   <url>
-    <loc>https://meilenguru.ch/schweizer-franken-meilen-vorteil</loc>
-    <lastmod>2026-05-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://meilenguru.ch/empfehlungen</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/empfehlungen" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/referrals" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/referrals" />
   </url>
   <url>
-    <loc>https://meilenguru.ch/meilenguru-grenzgaenger-miles</loc>
-    <lastmod>2026-05-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://meilenguru.ch/faq</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/faq" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/faq-de" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/faq" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/faq-de</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/faq-de" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/faq" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/faq" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/flying-blue-promo-awards-schweiz</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/flying-blue-promo-awards-schweiz" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/meilenguru-strategy-flying-blue-promo-awards" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/meilenguru-strategy-flying-blue-promo-awards" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/flying-blue-promo-mai-2026</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/flying-blue-promo-mai-2026" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/meilenguru-flying-blue-promo-may-2026" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/meilenguru-flying-blue-promo-may-2026" />
   </url>
   <url>
     <loc>https://meilenguru.ch/grenzgaenger-meilen-schweiz</loc>
-    <lastmod>2026-05-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/grenzgaenger-meilen-schweiz" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/meilenguru-grenzgaenger-miles" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/meilenguru-grenzgaenger-miles" />
   </url>
   <url>
-    <loc>https://meilenguru.ch/meilenguru-miles-vs-reka-switzerland</loc>
-    <lastmod>2026-05-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://meilenguru.ch/index-de</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/index-de" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/lh-first-class-sin-bsl-de</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/lh-first-class-sin-bsl-de" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/meilenguru-blog-lh-first-class-sin-bsl" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/meilenguru-blog-lh-first-class-sin-bsl" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/meilen-sammeln-ohne-fliegen-schweiz</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/meilen-sammeln-ohne-fliegen-schweiz" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/meilenguru-strategy-100k-miles-without-flying" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/meilenguru-strategy-100k-miles-without-flying" />
   </url>
   <url>
     <loc>https://meilenguru.ch/meilen-vs-reka-schweiz</loc>
-    <lastmod>2026-05-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/meilen-vs-reka-schweiz" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/meilenguru-miles-vs-reka-switzerland" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/meilenguru-miles-vs-reka-switzerland" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/meilenguru-blog-lh-first-class-sin-bsl</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/meilenguru-blog-lh-first-class-sin-bsl" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/lh-first-class-sin-bsl-de" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/meilenguru-blog-lh-first-class-sin-bsl" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/meilenguru-blog-perth-singapore-zurich-sq-swiss</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/meilenguru-blog-perth-singapore-zurich-sq-swiss" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/perth-singapur-zuerich-sq-swiss-de" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/meilenguru-blog-perth-singapore-zurich-sq-swiss" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/meilenguru-blog-perth-zurich-oman-air</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/meilenguru-blog-perth-zurich-oman-air" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/perth-zuerich-oman-air-de" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/meilenguru-blog-perth-zurich-oman-air" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/meilenguru-blog-singapore-amsterdam-klm</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/meilenguru-blog-singapore-amsterdam-klm" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/singapur-amsterdam-klm-de" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/meilenguru-blog-singapore-amsterdam-klm" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/meilenguru-blog-singapore-zurich-sq346</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/meilenguru-blog-singapore-zurich-sq346" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/singapur-zuerich-sq346-de" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/meilenguru-blog-singapore-zurich-sq346" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/meilenguru-blog-zurich-cancun-tap</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/meilenguru-blog-zurich-cancun-tap" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/zuerich-cancun-tap-de" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/meilenguru-blog-zurich-cancun-tap" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/meilenguru-business-miles-switzerland</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/meilenguru-business-miles-switzerland" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/business-meilen-schweiz" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/meilenguru-business-miles-switzerland" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/meilenguru-flying-blue-promo-may-2026</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/meilenguru-flying-blue-promo-may-2026" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/flying-blue-promo-mai-2026" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/meilenguru-flying-blue-promo-may-2026" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/meilenguru-grenzgaenger-miles</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/meilenguru-grenzgaenger-miles" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/grenzgaenger-meilen-schweiz" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/meilenguru-grenzgaenger-miles" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/meilenguru-miles-vs-reka-switzerland</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/meilenguru-miles-vs-reka-switzerland" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/meilen-vs-reka-schweiz" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/meilenguru-miles-vs-reka-switzerland" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/meilenguru-revolut-amex-miles</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/meilenguru-revolut-amex-miles" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/revolut-amex-meilen-schweiz" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/meilenguru-revolut-amex-miles" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/meilenguru-strategy-100k-miles-without-flying</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/meilenguru-strategy-100k-miles-without-flying" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/meilen-sammeln-ohne-fliegen-schweiz" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/meilenguru-strategy-100k-miles-without-flying" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/meilenguru-strategy-best-swiss-credit-cards-miles</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/meilenguru-strategy-best-swiss-credit-cards-miles" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/beste-kreditkarte-meilen-schweiz" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/meilenguru-strategy-best-swiss-credit-cards-miles" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/meilenguru-strategy-flying-blue-promo-awards</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/meilenguru-strategy-flying-blue-promo-awards" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/flying-blue-promo-awards-schweiz" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/meilenguru-strategy-flying-blue-promo-awards" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/meilenguru-strategy-miles-more-dynamic-pricing</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/meilenguru-strategy-miles-more-dynamic-pricing" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/miles-more-dynamische-preise-schweiz" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/meilenguru-strategy-miles-more-dynamic-pricing" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/meilenguru-swiss-franc-miles-advantage</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/meilenguru-swiss-franc-miles-advantage" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/schweizer-franken-meilen-vorteil" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/meilenguru-swiss-franc-miles-advantage" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/meilenguru-twint-miles-switzerland</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/meilenguru-twint-miles-switzerland" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/twint-meilen-schweiz" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/meilenguru-twint-miles-switzerland" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/miles-more-dynamische-preise-schweiz</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/miles-more-dynamische-preise-schweiz" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/meilenguru-strategy-miles-more-dynamic-pricing" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/meilenguru-strategy-miles-more-dynamic-pricing" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/perth-singapur-zuerich-sq-swiss-de</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/perth-singapur-zuerich-sq-swiss-de" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/meilenguru-blog-perth-singapore-zurich-sq-swiss" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/meilenguru-blog-perth-singapore-zurich-sq-swiss" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/perth-zuerich-oman-air-de</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/perth-zuerich-oman-air-de" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/meilenguru-blog-perth-zurich-oman-air" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/meilenguru-blog-perth-zurich-oman-air" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/referrals</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/referrals" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/empfehlungen" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/referrals" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/revolut-amex-meilen-schweiz</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/revolut-amex-meilen-schweiz" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/meilenguru-revolut-amex-miles" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/meilenguru-revolut-amex-miles" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/schweizer-franken-meilen-vorteil</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/schweizer-franken-meilen-vorteil" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/meilenguru-swiss-franc-miles-advantage" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/meilenguru-swiss-franc-miles-advantage" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/singapur-amsterdam-klm-de</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/singapur-amsterdam-klm-de" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/meilenguru-blog-singapore-amsterdam-klm" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/meilenguru-blog-singapore-amsterdam-klm" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/singapur-zuerich-sq346-de</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/singapur-zuerich-sq346-de" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/meilenguru-blog-singapore-zurich-sq346" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/meilenguru-blog-singapore-zurich-sq346" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/strategien</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/strategien" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/strategies" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/strategies" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/strategien-amex</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/strategien-amex" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/strategies-amex" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/strategies-amex" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/strategien-benchmark</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/strategien-benchmark" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/strategies-benchmark" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/strategies-benchmark" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/strategien-flying-blue</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/strategien-flying-blue" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/strategies-flying-blue" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/strategies-flying-blue" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/strategien-miles-more</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/strategien-miles-more" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/strategies-miles-more" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/strategies-miles-more" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/strategies</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/strategies" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/strategien" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/strategies" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/strategies-amex</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/strategies-amex" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/strategien-amex" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/strategies-amex" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/strategies-benchmark</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/strategies-benchmark" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/strategien-benchmark" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/strategies-benchmark" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/strategies-flying-blue</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/strategies-flying-blue" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/strategien-flying-blue" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/strategies-flying-blue" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/strategies-miles-more</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/strategies-miles-more" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/strategien-miles-more" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/strategies-miles-more" />
   </url>
   <url>
     <loc>https://meilenguru.ch/tools</loc>
-    <lastmod>2026-05-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/tools" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/tools-de" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/tools" />
   </url>
   <url>
     <loc>https://meilenguru.ch/tools-de</loc>
-    <lastmod>2026-05-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/tools-de" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/tools" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/tools" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/twint-meilen-schweiz</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/twint-meilen-schweiz" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/meilenguru-twint-miles-switzerland" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/meilenguru-twint-miles-switzerland" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/ueber-mich</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/ueber-mich" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/about" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/about" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/zuerich-cancun-tap-de</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/zuerich-cancun-tap-de" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/meilenguru-blog-zurich-cancun-tap" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/meilenguru-blog-zurich-cancun-tap" />
   </url>
 </urlset>
