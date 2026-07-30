@@ -1205,14 +1205,18 @@
                   display: inline-block;
                   width: 18px;
                   height: 2px;
-                  background: var(--gold);
+                  background-image: repeating-linear-gradient(to right, var(--gold) 0, var(--gold) 3px, transparent 3px, transparent 6px);
                   flex-shrink: 0;
-                  border-radius: 1px;
                 "
               ></span
               >Flugroute ab ZRH</span
             >
           </div>
+          <p style="font-size: 0.68rem; color: var(--muted); font-weight: 300; line-height: 1.6; margin-top: 0.75rem; max-width: 480px;">
+            Die angezeigten Werte sind geschätzte Durchschnittspreise zur Orientierung — die tatsächlichen Kosten
+            variieren je nach Datum, Strecke und dynamischer Echtzeit-Bepreisung. Immer den aktuellen Preis direkt auf
+            der Website des Programms prüfen.
+          </p>
           <button class="map-expand-btn" onclick="expandMap()">
             <svg width="10" height="10" viewBox="0 0 10 10" fill="none" style="flex-shrink:0">
               <path d="M1 4V1h3M6 1h3v3M9 6v3H6M4 9H1V6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>

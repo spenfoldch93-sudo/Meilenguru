@@ -1211,14 +1211,17 @@
                   display: inline-block;
                   width: 18px;
                   height: 2px;
-                  background: var(--gold);
+                  background-image: repeating-linear-gradient(to right, var(--gold) 0, var(--gold) 3px, transparent 3px, transparent 6px);
                   flex-shrink: 0;
-                  border-radius: 1px;
                 "
               ></span
               >Flight path from ZRH</span
             >
           </div>
+          <p style="font-size: 0.68rem; color: var(--muted); font-weight: 300; line-height: 1.6; margin-top: 0.75rem; max-width: 480px;">
+            Figures shown are estimated, average mileage prices for illustration — actual pricing varies by date,
+            route, and real-time dynamic pricing. Always confirm the current cost on the programme's own site.
+          </p>
           <button class="map-expand-btn" onclick="expandMap()">
             <svg width="10" height="10" viewBox="0 0 10 10" fill="none" style="flex-shrink:0">
               <path d="M1 4V1h3M6 1h3v3M9 6v3H6M4 9H1V6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
