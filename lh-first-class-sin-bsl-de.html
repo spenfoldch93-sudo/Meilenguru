@@ -43,6 +43,60 @@
         font-size: 16px;
         line-height: 1.75;
       }
+      nav {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.1rem 2rem;
+        background: rgba(250, 249, 247, 0.95);
+        backdrop-filter: blur(12px);
+        border-bottom: 0.5px solid var(--border);
+      }
+      .logo {
+        font-family: var(--font-display);
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--black);
+        text-decoration: none;
+      }
+      .logo span {
+        color: var(--gold);
+      }
+      .logo::before {
+        content: "";
+        display: inline-block;
+        width: 0.75em;
+        height: 0.75em;
+        background: url("/plane.svg") no-repeat center/contain;
+        vertical-align: -0.05em;
+        margin-right: 0.2em;
+      }
+      .nav-back {
+        font-size: 0.72rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--muted);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      .nav-back:hover {
+        color: var(--gold);
+      }
+      .nav-cta {
+        font-size: 0.72rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        background: var(--black);
+        color: var(--white);
+        padding: 0.45rem 1.1rem;
+        text-decoration: none;
+      }
+      .nav-cta:hover {
+        background: #2a2a2a;
+      }
       .article-header {
         max-width: 780px;
         margin: 0 auto;
@@ -580,6 +634,12 @@
     </script>
   </head>
   <body>
+    <nav>
+      <a href="index.html" class="logo">Meilen<span>guru</span></a>
+      <a href="blog-de" class="nav-back">← Zurück zum Blog</a>
+      <a href="beratung" class="nav-cta">Session buchen</a>
+    </nav>
+
     <div
       style="
         background: var(--warm-white);
