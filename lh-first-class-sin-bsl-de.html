@@ -516,7 +516,48 @@
       .social-links a { color: var(--muted); transition: color 0.2s; display: flex; align-items: center; }
       .social-links a:hover { color: var(--gold); }
       .social-links svg { width: 16px; height: 16px; }
-    
+      footer {
+        background: var(--warm-white);
+        border-top: 0.5px solid var(--border);
+        padding: 2rem 2rem 1.5rem;
+      }
+      .footer-bottom {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+      .footer-bottom p {
+        font-size: 0.7rem;
+        color: var(--muted);
+      }
+      .footer-nav {
+        display: flex;
+        gap: 1.5rem;
+      }
+      .footer-nav a {
+        font-size: 0.72rem;
+        color: var(--muted);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      .footer-nav a:hover {
+        color: var(--black);
+      }
+      .footer-disclaimer {
+        max-width: 1100px;
+        margin: 1rem auto 0;
+        padding: 1rem 2rem 0;
+        border-top: 0.5px solid var(--border);
+        font-size: 0.68rem;
+        color: var(--muted);
+        text-align: center;
+        line-height: 1.6;
+      }
+
       /* ── VIDEO REVIEW ── */
       .video-review {
         border: 0.5px solid var(--border);
@@ -965,11 +1006,62 @@
         <div class="cta-box-eyebrow">Du möchtest deine eigene Einlösung wie diese finden?</div>
         <h3>Lass uns dein Setup herausfinden.</h3>
         <p>
-          In 30 minutes we'll go through your current cards, identify the fastest path to your first redemption, and
-          work out the timing. Based on your situation in Switzerland.
+          In 30 Minuten gehen wir durch deine aktuellen Karten, finden den schnellsten Weg zu deiner ersten Einlösung
+          und klären das Timing — bezogen auf deine Situation in der Schweiz.
         </p>
         <a href="beratung" class="cta-btn">Session buchen — CHF 79 →</a>
       </div>
     </div>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter-strip">
+      <div class="newsletter-inner">
+        <div class="newsletter-text">
+          <h3>Eine E-Mail. Wenn es zählt.</h3>
+          <p>Promo-Prämien, Transferboni, Änderungen, die sich lohnen. Kein Füllmaterial.</p>
+        </div>
+        <form class="newsletter-form" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="newsletter">
+          <p hidden><label>Skip: <input name="bot-field"></label></p>
+          <input type="email" name="email" placeholder="deine@email.ch" required>
+          <button type="submit">Abonnieren</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-bottom">
+        <a href="index.html" class="logo" style="font-size: 1.2rem"
+          >Meilen<span style="color: var(--gold)">guru</span></a
+        >
+        <p>© 2026 Meilenguru · meilenguru.ch · Zürich, Schweiz</p>
+        <div class="social-links">
+          <a href="https://instagram.com/meilenguru" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+            </svg>
+          </a>
+          <a href="https://tiktok.com/@meilenguru" target="_blank" rel="noopener" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.77 1.52V6.79a4.85 4.85 0 01-1-.1z"/>
+            </svg>
+          </a>
+          <a href="https://facebook.com/meilenguru" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+        </div>
+        <nav class="footer-nav">
+          <a href="index-de.html">Startseite</a>
+          <a href="strategien.html">Strategien</a>
+          <a href="blog-de.html">Blog</a>
+          <a href="beratung">Session buchen</a>
+        </nav>
+      </div>
+      <p class="footer-disclaimer">Meilenguru ist eine unabhängige Website und steht in keiner Verbindung zu und wird nicht unterstützt von Miles &amp; More, Flying Blue, American Express, Swisscard, Viseca oder Cornèrcard. Alle Markenzeichen gehören ihren jeweiligen Eigentümern.</p>
+    </footer>
   </body>
 </html>
