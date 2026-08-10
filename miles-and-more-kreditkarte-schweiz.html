@@ -1157,33 +1157,5 @@
       </div>
           <p class="footer-disclaimer">Meilenguru ist eine unabhängige Website und steht in keiner Verbindung zu und wird nicht unterstützt von Miles &amp; More, Flying Blue, American Express, Swisscard, Viseca oder Cornèrcard. Alle Markenzeichen gehören ihren jeweiligen Eigentümern.</p>
     </footer>
-    <script>
-      function copyCode(btn, code) {
-        navigator.clipboard
-          .writeText(code)
-          .then(() => {
-            btn.textContent = "Kopiert!";
-            btn.classList.add("copied");
-            setTimeout(() => {
-              btn.textContent = "Kopieren";
-              btn.classList.remove("copied");
-            }, 2000);
-          })
-          .catch(() => {
-            const el = document.createElement("textarea");
-            el.value = code;
-            document.body.appendChild(el);
-            el.select();
-            document.execCommand("copy");
-            document.body.removeChild(el);
-            btn.textContent = "Kopiert!";
-            btn.classList.add("copied");
-            setTimeout(() => {
-              btn.textContent = "Kopieren";
-              btn.classList.remove("copied");
-            }, 2000);
-          });
-      }
-    </script>
   </body>
 </html>
