@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="max-snippet:-1, max-image-preview:large">
+    <title>Privacy Policy | Meilenguru</title>
+    <meta
+      name="description"
+      content="Privacy policy for meilenguru.ch: what data we collect, why, and your rights under Swiss data protection law."
+    />
+    <link rel="canonical" href="https://meilenguru.ch/privacy-policy" />
+    <link rel="alternate" hreflang="en" href="https://meilenguru.ch/privacy-policy" />
+    <link rel="alternate" hreflang="de" href="https://meilenguru.ch/datenschutz" />
+    <link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/datenschutz" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Privacy Policy",
+        "description": "Privacy policy for meilenguru.ch: what data we collect, why, and your rights under Swiss data protection law.",
+        "publisher": { "@type": "Organization", "name": "Meilenguru", "url": "https://meilenguru.ch" },
+        "inLanguage": "en"
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      :root {
+        --black: #0a0a0a;
+        --white: #faf9f7;
+        --warm-white: #f5f3ef;
+        --gold: #b8962e;
+        --gold-light: #d4ae4e;
+        --muted: #888580;
+        --border: rgba(10, 10, 10, 0.1);
+        --font-display: "Lora", Georgia, serif;
+        --font-body: "DM Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji";
+      }
+      html {
+        scroll-behavior: smooth; overflow-x: hidden;
+      }
+      body {
+        font-family: var(--font-body);
+        background: var(--white);
+        color: var(--black);
+        font-size: 15px;
+        line-height: 1.6;
+      }
+      nav:not(.breadcrumb) {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.1rem 2rem;
+        background: rgba(250, 249, 247, 0.95);
+        backdrop-filter: blur(12px);
+        border-bottom: 0.5px solid var(--border);
+      }
+      .logo {
+        font-family: var(--font-display);
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--black);
+        text-decoration: none;
+      }
+      .logo span { color: var(--gold); }
+      .logo::before {
+        content: "";
+        display: inline-block;
+        width: 0.75em;
+        height: 0.75em;
+        background: url("/plane.svg") no-repeat center/contain;
+        vertical-align: -0.05em;
+        margin-right: 0.2em;
+      }
+      .nav-back {
+        font-size: 0.72rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--muted);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      .nav-back:hover { color: var(--gold); }
+      .breadcrumb {
+        max-width: 780px;
+        margin: 1.5rem auto 0;
+        padding: 0 2rem;
+        font-size: 0.72rem;
+        letter-spacing: 0.04em;
+        color: var(--muted);
+      }
+      .breadcrumb a { color: var(--muted); text-decoration: none; }
+      .breadcrumb a:hover { color: var(--gold); }
+      .breadcrumb span[aria-hidden] { margin: 0 0.4em; color: var(--border); }
+      .article-header {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 3.5rem 2rem 2rem;
+      }
+      h1 {
+        font-family: var(--font-display);
+        font-size: clamp(2.1rem, 4.5vw, 3rem);
+        font-weight: 300;
+        line-height: 1.1;
+        margin-bottom: 0.75rem;
+      }
+      .article-subtitle {
+        font-size: 0.95rem;
+        color: var(--muted);
+        font-weight: 300;
+        line-height: 1.7;
+        max-width: 560px;
+      }
+      .toc {
+        background: var(--warm-white);
+        border-left: 2px solid var(--gold);
+        padding: 1.25rem 2rem;
+        margin: 2rem auto 0;
+        max-width: 720px;
+      }
+      .toc-title {
+        font-size: 0.65rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--gold);
+        font-weight: 500;
+        margin-bottom: 0.75rem;
+      }
+      .toc ol { padding-left: 1.25rem; display: flex; flex-direction: column; gap: 0.3rem; }
+      .toc li { font-size: 0.85rem; font-weight: 300; }
+      .toc a { color: var(--black); text-decoration: none; }
+      .toc a:hover { color: var(--gold); }
+      .article-body {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 2rem 2rem 5rem;
+      }
+      .article-body h2 {
+        font-family: var(--font-display);
+        font-size: 1.4rem;
+        font-weight: 400;
+        margin: 2.5rem 0 0.9rem;
+        scroll-margin-top: 80px;
+      }
+      .article-body h2:first-of-type { margin-top: 0; }
+      .article-body h3 {
+        font-size: 0.82rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--muted);
+        font-weight: 500;
+        margin: 1.5rem 0 0.6rem;
+      }
+      .article-body p {
+        margin-bottom: 1.1rem;
+        font-weight: 300;
+        color: #2a2826;
+        line-height: 1.8;
+        font-size: 0.92rem;
+      }
+      .article-body p strong { font-weight: 500; color: var(--black); }
+      .article-body a { color: var(--gold); text-decoration: none; border-bottom: 0.5px solid var(--gold); }
+      .article-body ul { margin: 0 0 1.1rem 1.2rem; }
+      .article-body li {
+        font-size: 0.92rem;
+        color: #2a2826;
+        font-weight: 300;
+        line-height: 1.8;
+        margin-bottom: 0.4rem;
+      }
+      .info-box {
+        border: 0.5px solid var(--border);
+        padding: 1.4rem 1.5rem 1.2rem;
+        margin: 1.5rem 0;
+        background: var(--warm-white);
+      }
+      .info-box-title {
+        font-size: 0.65rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--gold);
+        font-weight: 500;
+        margin-bottom: 0.75rem;
+      }
+      footer {
+        background: var(--warm-white);
+        border-top: 0.5px solid var(--border);
+        padding: 2rem 2rem 1.5rem;
+      }
+      .footer-bottom {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+      .footer-bottom p { font-size: 0.7rem; color: var(--muted); letter-spacing: 0.05em; }
+      .footer-nav { display: flex; gap: 1.5rem; }
+      .footer-nav a { font-size: 0.72rem; color: var(--muted); text-decoration: none; letter-spacing: 0.05em; transition: color 0.2s; }
+      .footer-nav a:hover { color: var(--black); }
+      .footer-disclaimer {
+        max-width: 1100px;
+        margin: 1rem auto 0;
+        padding: 1rem 2rem 0;
+        border-top: 0.5px solid var(--border);
+        font-size: 0.68rem;
+        color: var(--muted);
+        text-align: center;
+        line-height: 1.6;
+      }
+      .social-links { display: flex; gap: 0.9rem; align-items: center; }
+      .social-links a { color: var(--muted); transition: color 0.2s; display: flex; align-items: center; }
+      .social-links a:hover { color: var(--gold); }
+      .social-links svg { width: 16px; height: 16px; }
+      @media (max-width: 600px) {
+        .article-header, .article-body, .toc { padding-left: 1.25rem; padding-right: 1.25rem; }
+        nav { padding: 0.9rem 1.25rem; }
+        h1 { font-size: 1.9rem; }
+      }
+    </style>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://meilenguru.ch/privacy-policy">
+    <meta property="og:title" content="Privacy Policy | Meilenguru">
+    <meta property="og:description" content="Privacy policy for meilenguru.ch: what data we collect, why, and your rights under Swiss data protection law.">
+    <meta property="og:image" content="https://meilenguru.ch/og-image.png">
+    <meta property="og:locale" content="en_GB">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Privacy Policy | Meilenguru">
+    <meta name="twitter:description" content="Privacy policy for meilenguru.ch: what data we collect, why, and your rights under Swiss data protection law.">
+    <meta name="twitter:image" content="https://meilenguru.ch/og-image.png">
+  </head>
+  <body>
+    <nav>
+      <a href="index.html" class="logo">Meilen<span>guru</span></a>
+      <a href="index.html" class="nav-back">← Back to Home</a>
+    </nav>
+
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">Privacy Policy</span>
+    </nav>
+
+    <div class="article-header">
+      <h1>Privacy Policy</h1>
+      <p class="article-subtitle">
+        What data meilenguru.ch collects, why, and what rights you have under Switzerland's revised Federal Act
+        on Data Protection (revFADP).
+      </p>
+    </div>
+
+    <div class="toc">
+      <p class="toc-title">What's covered</p>
+      <ol>
+        <li><a href="#controller">Data controller</a></li>
+        <li><a href="#newsletter">Newsletter</a></li>
+        <li><a href="#booking">Consultation booking</a></li>
+        <li><a href="#hosting">Hosting</a></li>
+        <li><a href="#third-party">Third parties outside Switzerland/EU</a></li>
+        <li><a href="#cookies">Cookies</a></li>
+        <li><a href="#rights">Your rights</a></li>
+      </ol>
+    </div>
+
+    <div class="article-body">
+      <h2 id="controller">Data controller</h2>
+      <p>
+        The controller responsible for data processing on this site is Sam Penfold, operator of meilenguru.ch.
+        Contact: <a href="mailto:hello@meilenguru.ch">hello@meilenguru.ch</a>. Further details are in the
+        <a href="legal-notice.html">Legal Notice</a>.
+      </p>
+
+      <h2 id="newsletter">Newsletter</h2>
+      <p>
+        If you sign up for the newsletter, we collect your email address. It's used solely to send you the
+        newsletter and is never shared with third parties for marketing purposes. Sign-ups are processed via a
+        form handled by Netlify, Inc. (USA) — see <a href="#third-party">Third parties</a> below. You can
+        unsubscribe at any time using the link in any email, or by writing to
+        <a href="mailto:hello@meilenguru.ch">hello@meilenguru.ch</a>.
+      </p>
+
+      <h2 id="booking">Consultation booking</h2>
+      <p>
+        When you book a paid consultation (CHF 79) through the booking page, the following data is processed:
+      </p>
+      <ul>
+        <li><strong>Scheduling:</strong> name, email address, and chosen time slot — processed through the
+          Cal.com booking widget (Cal.com, Inc., USA)</li>
+        <li><strong>Payment:</strong> payment details for the CHF 79 fee — processed directly by Stripe (Stripe,
+          Inc., USA) as part of the Cal.com booking flow. Payment data (e.g. card numbers) never passes through
+          our own servers</li>
+      </ul>
+      <p>
+        This data is retained to deliver the booked consultation and, where legally required, for accounting
+        purposes.
+      </p>
+
+      <h2 id="hosting">Hosting</h2>
+      <p>
+        This site is hosted by Netlify, Inc. (USA). When you visit the site, Netlify automatically processes
+        standard technical access data (e.g. IP address, time of access, page requested), as is technically
+        necessary for any website hosting.
+      </p>
+
+      <h2 id="third-party">Third parties outside Switzerland/EU</h2>
+      <p>
+        Netlify, Cal.com, and Stripe are US-based companies, so data transfer to the US can't be ruled out. All
+        three are established, internationally operating services with their own privacy policies — you can
+        review them directly:
+        <a href="https://www.netlify.com/privacy/" target="_blank" rel="noopener">Netlify</a>,
+        <a href="https://cal.com/privacy" target="_blank" rel="noopener">Cal.com</a>,
+        <a href="https://stripe.com/privacy" target="_blank" rel="noopener">Stripe</a>.
+      </p>
+
+      <h2 id="cookies">Cookies</h2>
+      <p>
+        This site itself does not use analytics or tracking cookies — no Google Analytics or comparable tool is
+        in use. The embedded Cal.com booking widget may set cookies necessary for its own functionality; this is
+        outside our control and governed by Cal.com's own privacy policy.
+      </p>
+
+      <div class="info-box">
+        <div class="info-box-title">In short</div>
+        <p style="margin-bottom: 0">
+          No ad cookies, no tracking, no reselling your data. The only data flows happen when you actively sign
+          up for the newsletter or book a consultation.
+        </p>
+      </div>
+
+      <h2 id="rights">Your rights</h2>
+      <p>
+        Under Swiss data protection law, you have the right to request information about the data held about
+        you, to have inaccurate data corrected, to have data deleted, and to object to its processing. Reach out
+        to <a href="mailto:hello@meilenguru.ch">hello@meilenguru.ch</a> for any of this. You can also raise
+        concerns with the Swiss Federal Data Protection and Information Commissioner (FDPIC).
+      </p>
+      <p style="font-size: 0.82rem; color: var(--muted); font-style: italic;">
+        This policy was written in good faith but doesn't replace legal advice. For a binding assessment of your
+        specific situation, consult a qualified professional.
+      </p>
+    </div>
+
+    <footer>
+      <div class="footer-bottom">
+        <a href="index.html" class="logo" style="font-size: 1.2rem"
+          >Meilen<span style="color: var(--gold)">guru</span></a
+        >
+        <p>© 2026 Meilenguru · meilenguru.ch · Zürich, Switzerland</p>
+        <div class="social-links">
+          <a href="https://instagram.com/meilenguru" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+            </svg>
+          </a>
+          <a href="https://tiktok.com/@meilenguru" target="_blank" rel="noopener" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.77 1.52V6.79a4.85 4.85 0 01-1-.1z"/>
+            </svg>
+          </a>
+          <a href="https://facebook.com/meilenguru" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+        </div>
+        <nav class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="strategies.html">Strategies</a>
+          <a href="blog.html">Blog</a>
+          <a href="consultation.html">Book a Session</a>
+        </nav>
+      </div>
+      <p class="footer-disclaimer">Meilenguru is an independent site and is not affiliated with or endorsed by Miles &amp; More, Flying Blue, American Express, Swisscard, Viseca, or Cornèrcard. All trademarks belong to their respective owners.</p>
+    </footer>
+  </body>
+</html>
