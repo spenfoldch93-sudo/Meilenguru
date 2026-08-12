@@ -91,6 +91,11 @@ Defined as CSS custom properties at the top of each page:
 | `--font-display` | Cormorant Garamond (serif) |
 | `--font-body` | DM Sans (sans-serif) |
 
+## Content style rules
+
+- Never use en-dashes (`–`) anywhere in page content — for ranges, compound words, or route pairs (e.g. "Zürich–Cancún", "2-3 years"), use a regular hyphen (`-`) instead.
+- Em-dashes (`—`) are fine and used intentionally throughout the site for asides/parentheticals — this rule does not apply to them.
+
 ## Deployment
 
 The site is hosted on **Netlify**. Pushes to the `main` branch on GitHub trigger an automatic deploy. No build command is needed — Netlify serves the files directly.
