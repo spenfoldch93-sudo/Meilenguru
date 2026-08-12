@@ -477,4 +477,46 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/meilenguru-blog-zurich-cancun-tap" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/meilenguru-blog-zurich-cancun-tap" />
   </url>
+  <url>
+    <loc>https://meilenguru.ch/impressum</loc>
+    <lastmod>2026-08-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/impressum" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/legal-notice" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/impressum" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/legal-notice</loc>
+    <lastmod>2026-08-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/legal-notice" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/impressum" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/impressum" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/datenschutz</loc>
+    <lastmod>2026-08-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/datenschutz" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/datenschutz" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/privacy-policy</loc>
+    <lastmod>2026-08-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/datenschutz" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/datenschutz" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/methodik</loc>
+    <lastmod>2026-08-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/methodik" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/methodology" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/methodik" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/methodology</loc>
+    <lastmod>2026-08-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/methodology" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/methodik" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/methodik" />
+  </url>
 </urlset>
