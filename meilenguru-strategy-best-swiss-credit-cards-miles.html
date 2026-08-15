@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="max-snippet:-1, max-image-preview:large">
     <title>Best Swiss Miles Credit Cards 2026: Cornèrcard vs Swisscard</title>
@@ -62,23 +63,21 @@
         border-bottom: 0.5px solid var(--border);
       }
       .logo {
-        font-family: var(--font-display);
-        font-size: 1.5rem;
-        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.7em;
+        font-family: var(--font-body);
+        font-size: 1rem;
+        font-weight: 500;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
         color: var(--black);
         text-decoration: none;
       }
-      .logo span {
-        color: var(--gold);
-      }
-      .logo::before {
-        content: "";
-        display: inline-block;
-        width: 0.75em;
-        height: 0.75em;
-        background: url("/plane.svg") no-repeat center/contain;
-        vertical-align: -0.05em;
-        margin-right: 0.2em;
+      .logo svg {
+        width: 2.6em;
+        height: 2.6em;
+        flex-shrink: 0;
       }
       .nav-back {
         font-size: 0.72rem;
@@ -851,7 +850,20 @@
 </head>
   <body>
     <nav>
-      <a href="index.html" class="logo">Meilen<span>guru</span></a>
+      <a href="index.html" class="logo">
+        <svg viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+          <g fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="100" cy="100" r="95"></circle>
+            <circle cx="100" cy="100" r="86"></circle>
+            <circle cx="100" cy="100" r="30"></circle>
+          </g>
+          <circle cx="100" cy="100" r="59" fill="none" stroke="currentColor" stroke-width="52" stroke-dasharray="1.4 8.897"></circle>
+          <g transform="translate(100 100) rotate(-20) scale(1.5)">
+            <path d="M14 0A11.75 11.75 0 0 1 -9.5 0A7.75 7.75 0 0 1 6 0A4.75 4.75 0 0 1 -3.5 0A2.65 2.65 0 0 1 1.8 0" fill="none" stroke="#b89830" stroke-width="1.35" stroke-linecap="round"></path>
+          </g>
+        </svg>
+        <span>Meilenguru</span>
+      </a>
       <a href="blog.html" class="nav-back">← Back to Blog</a>
       <a href="consultation.html" class="nav-cta">Book a Session</a>
     </nav>
@@ -1498,9 +1510,20 @@
 
     <footer>
       <div class="footer-bottom">
-        <a href="index.html" class="logo" style="font-size: 1.2rem"
-          >Meilen<span style="color: var(--gold)">guru</span></a
-        >
+        <a href="index.html" class="logo" style="font-size: 0.85rem">
+          <svg viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+            <g fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="100" cy="100" r="95"></circle>
+              <circle cx="100" cy="100" r="86"></circle>
+              <circle cx="100" cy="100" r="30"></circle>
+            </g>
+            <circle cx="100" cy="100" r="59" fill="none" stroke="currentColor" stroke-width="52" stroke-dasharray="1.4 8.897"></circle>
+            <g transform="translate(100 100) rotate(-20) scale(1.5)">
+              <path d="M14 0A11.75 11.75 0 0 1 -9.5 0A7.75 7.75 0 0 1 6 0A4.75 4.75 0 0 1 -3.5 0A2.65 2.65 0 0 1 1.8 0" fill="none" stroke="#b89830" stroke-width="1.35" stroke-linecap="round"></path>
+            </g>
+          </svg>
+          <span>Meilenguru</span>
+        </a>
         <p>© 2026 Meilenguru · meilenguru.ch · Zürich, Switzerland</p>
         <div class="social-links">
           <a href="https://instagram.com/meilenguru" target="_blank" rel="noopener" aria-label="Instagram">
