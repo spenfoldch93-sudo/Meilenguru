@@ -492,6 +492,10 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/impressum" />
   </url>
   <url>
+    <loc>https://meilenguru.ch/links</loc>
+    <lastmod>2026-08-15</lastmod>
+  </url>
+  <url>
     <loc>https://meilenguru.ch/datenschutz</loc>
     <lastmod>2026-08-12</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/datenschutz" />
