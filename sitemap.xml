@@ -66,7 +66,7 @@
   </url>
   <url>
     <loc>https://meilenguru.ch/empfehlungen</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-08-23</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/empfehlungen" />
     <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/referrals" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/empfehlungen" />
@@ -353,7 +353,7 @@
   </url>
   <url>
     <loc>https://meilenguru.ch/referrals</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-08-23</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/referrals" />
     <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/empfehlungen" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/empfehlungen" />
@@ -546,5 +546,75 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/methodology" />
     <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/methodik" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/methodik" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/meilenguru-cornercard-miles-more-gold-review</loc>
+    <lastmod>2026-08-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/meilenguru-cornercard-miles-more-gold-review" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/cornercard-miles-more-gold-test-schweiz" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/cornercard-miles-more-gold-test-schweiz" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/cornercard-miles-more-gold-test-schweiz</loc>
+    <lastmod>2026-08-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/cornercard-miles-more-gold-test-schweiz" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/meilenguru-cornercard-miles-more-gold-review" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/cornercard-miles-more-gold-test-schweiz" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/meilenguru-cornercard-miles-more-platinum-review</loc>
+    <lastmod>2026-08-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/meilenguru-cornercard-miles-more-platinum-review" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/cornercard-miles-more-platinum-test-schweiz" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/cornercard-miles-more-platinum-test-schweiz" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/cornercard-miles-more-platinum-test-schweiz</loc>
+    <lastmod>2026-08-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/cornercard-miles-more-platinum-test-schweiz" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/meilenguru-cornercard-miles-more-platinum-review" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/cornercard-miles-more-platinum-test-schweiz" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/meilenguru-amex-platinum-switzerland-review</loc>
+    <lastmod>2026-08-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/meilenguru-amex-platinum-switzerland-review" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/amex-platinum-schweiz-test" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/amex-platinum-schweiz-test" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/amex-platinum-schweiz-test</loc>
+    <lastmod>2026-08-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/amex-platinum-schweiz-test" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/meilenguru-amex-platinum-switzerland-review" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/amex-platinum-schweiz-test" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/meilenguru-amex-gold-switzerland-review</loc>
+    <lastmod>2026-08-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/meilenguru-amex-gold-switzerland-review" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/amex-gold-schweiz-test" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/amex-gold-schweiz-test" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/amex-gold-schweiz-test</loc>
+    <lastmod>2026-08-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/amex-gold-schweiz-test" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/meilenguru-amex-gold-switzerland-review" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/amex-gold-schweiz-test" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/meilenguru-swiss-miles-more-platinum-review</loc>
+    <lastmod>2026-08-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/meilenguru-swiss-miles-more-platinum-review" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/swiss-miles-more-platinum-test-schweiz" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/swiss-miles-more-platinum-test-schweiz" />
+  </url>
+  <url>
+    <loc>https://meilenguru.ch/swiss-miles-more-platinum-test-schweiz</loc>
+    <lastmod>2026-08-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://meilenguru.ch/swiss-miles-more-platinum-test-schweiz" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://meilenguru.ch/meilenguru-swiss-miles-more-platinum-review" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meilenguru.ch/swiss-miles-more-platinum-test-schweiz" />
   </url>
 </urlset>
