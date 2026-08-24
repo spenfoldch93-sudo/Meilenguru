@@ -977,6 +977,11 @@
               <p class="result-amex-value" id="r-amex">—</p>
             </div>
 
+            <div class="result-amex" id="r-direct-box">
+              <p class="result-amex-label">Prefer to skip the transfer?</p>
+              <p class="result-amex-value" id="r-direct" style="font-size: 1rem; line-height: 1.5; font-family: var(--font-body); font-weight: 400;"></p>
+            </div>
+
             <p class="result-note" id="r-note"></p>
           </div>
         </div>
@@ -1223,6 +1228,11 @@
         fb: "Flying Blue is fully dynamic. Check Promo Awards on the 1st of each month — discounts of 25-50% mean these estimates may be significantly lower for certain routes.",
       };
 
+      const directCardCopy = {
+        mm: 'Cornèrcard or Swisscard credit Miles & More directly on everyday spend — no transfer step. See the <a href="meilenguru-strategy-best-swiss-credit-cards-miles.html" style="color: var(--gold-light)">full card comparison →</a>',
+        fb: 'The <a href="meilenguru-viseca-flying-blue-world-mastercard.html" style="color: var(--gold-light)">Viseca Flying Blue World Mastercard</a> credits Flying Blue directly on everyday spend — no transfer step.',
+      };
+
       function fmtMiles(n) {
         return (n >= 1000 ? (n / 1000).toFixed(0) + ",000" : n).toString();
       }
@@ -1255,11 +1265,15 @@
         document.getElementById("r-note").textContent = calcNotes[prog];
 
         const amexBox = document.getElementById("r-amex-box");
+        const directBox = document.getElementById("r-direct-box");
         if (useAmex) {
           amexBox.style.display = "block";
+          directBox.style.display = "none";
           document.getElementById("r-amex").textContent = fmtMiles(amexPts) + " MR pts";
         } else {
           amexBox.style.display = "none";
+          directBox.style.display = "block";
+          document.getElementById("r-direct").innerHTML = directCardCopy[prog];
         }
       }
 

@@ -792,6 +792,11 @@
               <p class="result-amex-value" id="r-amex">—</p>
             </div>
 
+            <div class="result-amex" id="r-direct-box">
+              <p class="result-amex-label">Lieber ohne Transfer?</p>
+              <p class="result-amex-value" id="r-direct" style="font-size: 1rem; line-height: 1.5; font-family: var(--font-body); font-weight: 400;"></p>
+            </div>
+
             <p class="result-note" id="r-note"></p>
           </div>
         </div>
@@ -1031,6 +1036,11 @@
         fb: "Flying Blue ist vollständig dynamisch. Promo Awards am 1. jeden Monats prüfen — Rabatte von 25-50 % können diese Schätzungen für bestimmte Strecken deutlich senken.",
       };
 
+      const directCardCopy = {
+        mm: 'Cornèrcard oder Swisscard schreiben Miles & More direkt auf Alltagsausgaben gut — ohne Transferschritt. Siehe den <a href="beste-kreditkarte-meilen-schweiz.html" style="color: var(--gold-light)">vollständigen Kartenvergleich →</a>',
+        fb: 'Die <a href="viseca-flying-blue-world-mastercard-schweiz.html" style="color: var(--gold-light)">Viseca Flying Blue World Mastercard</a> schreibt Flying Blue direkt auf Alltagsausgaben gut — ohne Transferschritt.',
+      };
+
       function fmtMiles(n) {
         return (n >= 1000 ? (n / 1000).toFixed(0) + "'000" : n).toString();
       }
@@ -1063,11 +1073,15 @@
         document.getElementById("r-note").textContent = calcNotes[prog];
 
         const amexBox = document.getElementById("r-amex-box");
+        const directBox = document.getElementById("r-direct-box");
         if (useAmex) {
           amexBox.style.display = "block";
+          directBox.style.display = "none";
           document.getElementById("r-amex").textContent = fmtMiles(amexPts) + " MR Pkt.";
         } else {
           amexBox.style.display = "none";
+          directBox.style.display = "block";
+          document.getElementById("r-direct").innerHTML = directCardCopy[prog];
         }
       }
 
