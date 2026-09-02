@@ -4,6 +4,82 @@
   status = 301
   force = true
 
+# Netlify's automatic .html -> clean-URL redirect stopped covering pages
+# added after the site grew past ~90 pages (likely an auto-generated
+# redirect-rule cap). These 14 pages were serving duplicate content at
+# both the .html URL and the clean URL with no redirect between them.
+# Explicit rules here are reliable regardless of that cap.
+[[redirects]]
+  from = "/amex-gold-schweiz-test.html"
+  to = "/amex-gold-schweiz-test"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/amex-platinum-schweiz-test.html"
+  to = "/amex-platinum-schweiz-test"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/cornercard-miles-more-gold-test-schweiz.html"
+  to = "/cornercard-miles-more-gold-test-schweiz"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/cornercard-miles-more-platinum-test-schweiz.html"
+  to = "/cornercard-miles-more-platinum-test-schweiz"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/flying-blue-verfuegbarkeits-radar-q3-2026.html"
+  to = "/flying-blue-verfuegbarkeits-radar-q3-2026"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/meilenguru-amex-gold-switzerland-review.html"
+  to = "/meilenguru-amex-gold-switzerland-review"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/meilenguru-amex-platinum-switzerland-review.html"
+  to = "/meilenguru-amex-platinum-switzerland-review"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/meilenguru-cornercard-miles-more-gold-review.html"
+  to = "/meilenguru-cornercard-miles-more-gold-review"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/meilenguru-cornercard-miles-more-platinum-review.html"
+  to = "/meilenguru-cornercard-miles-more-platinum-review"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/meilenguru-flying-blue-business-availability-radar-q3-2026.html"
+  to = "/meilenguru-flying-blue-business-availability-radar-q3-2026"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/meilenguru-flying-blue-promo-september-2026.html"
+  to = "/meilenguru-flying-blue-promo-september-2026"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/meilenguru-swiss-miles-more-platinum-review.html"
+  to = "/meilenguru-swiss-miles-more-platinum-review"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/meilenguru-viseca-flying-blue-world-mastercard.html"
+  to = "/meilenguru-viseca-flying-blue-world-mastercard"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/viseca-flying-blue-world-mastercard-schweiz.html"
+  to = "/viseca-flying-blue-world-mastercard-schweiz"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.values]
