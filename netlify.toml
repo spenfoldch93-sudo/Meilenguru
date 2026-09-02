@@ -79,6 +79,16 @@
   to = "/viseca-flying-blue-world-mastercard-schweiz"
   status = 301
   force = true
+[[redirects]]
+  from = "/terms-of-service.html"
+  to = "/terms-of-service"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/agb.html"
+  to = "/agb"
+  status = 301
+  force = true
 
 [[headers]]
   for = "/*"
