@@ -417,6 +417,30 @@
         line-height: 1.65;
         font-weight: 300;
       }
+      .rechner-tabelle-wrap { max-width: 1100px; margin: 3rem auto 0; padding: 0 2rem; }
+      .rechner-tabelle-title {
+        font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;
+        color: var(--gold); font-weight: 500; margin-bottom: 0.6rem;
+      }
+      .rechner-tabelle-wrap h3 {
+        font-family: var(--font-display); font-size: 1.3rem; font-weight: 400; margin-bottom: 1.25rem;
+      }
+      .rechner-table { width: 100%; border-collapse: collapse; font-size: 0.84rem; }
+      .rechner-table th {
+        font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase;
+        color: var(--muted); font-weight: 500; text-align: left;
+        padding: 0.65rem 0.85rem; border-bottom: 1px solid var(--border);
+      }
+      .rechner-table td {
+        padding: 0.75rem 0.85rem; border-bottom: 0.5px solid var(--border);
+        font-weight: 300; color: #2a2826;
+      }
+      .rechner-table td:first-child { font-weight: 500; color: var(--black); }
+      .rechner-table tr:last-child td { border-bottom: none; }
+      @media (max-width: 600px) {
+        .rechner-table { font-size: 0.76rem; }
+        .rechner-table th, .rechner-table td { padding: 0.55rem 0.5rem; }
+      }
 
       /* MAP */
       .map-container {
@@ -889,10 +913,11 @@
       <div class="tool-inner">
         <div class="tool-header">
           <p class="tool-eyebrow">Tool 01 — Miles calculator</p>
-          <h2 class="tool-title">How many miles <br /><em>do you actually need?</em></h2>
+          <h2 class="tool-title">Miles calculator: how many miles <br /><em>do you actually need?</em></h2>
           <p class="tool-subtitle">
-            Select your programme, cabin, and destination. The calculator shows estimated miles required, taxes, cash
-            equivalent, and value per mile.
+            The miles calculator for Miles &amp; More (Lufthansa, SWISS, Star Alliance) and Flying Blue. Select your
+            programme, cabin, and destination — it shows estimated miles required, taxes, cash equivalent, and value
+            per mile.
           </p>
         </div>
 
@@ -997,6 +1022,38 @@
 
             <p class="result-note" id="r-note"></p>
           </div>
+        </div>
+
+        <div class="rechner-tabelle-wrap">
+          <p class="rechner-tabelle-title">Miles calculator table</p>
+          <h3>Lufthansa, SWISS &amp; Star Alliance <em>(Miles &amp; More)</em></h3>
+          <div style="overflow-x: auto;">
+            <table class="rechner-table">
+              <thead>
+                <tr>
+                  <th>Destination</th>
+                  <th>Business Class</th>
+                  <th>First Class</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Europe — short-haul</td><td>35,000 miles</td><td>60,000 miles</td></tr>
+                <tr><td>Europe — long-haul</td><td>50,000 miles</td><td>80,000 miles</td></tr>
+                <tr><td>Middle East</td><td>45,000 miles</td><td>70,000 miles</td></tr>
+                <tr><td>South Asia</td><td>55,000 miles</td><td>90,000 miles</td></tr>
+                <tr><td>East Africa</td><td>60,000 miles</td><td>100,000 miles</td></tr>
+                <tr><td>Southeast Asia</td><td>65,000 miles</td><td>100,000 miles</td></tr>
+                <tr><td>North America</td><td>70,000 miles</td><td>110,000 miles</td></tr>
+                <tr><td>East Asia</td><td>75,000 miles</td><td>120,000 miles</td></tr>
+                <tr><td>Latin America / Caribbean</td><td>80,000 miles</td><td>130,000 miles</td></tr>
+                <tr><td>Australia / New Zealand</td><td>110,000 miles</td><td>160,000 miles</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="calc-disclaimer">
+            Reference figures for one-way, Business/First Class, Miles &amp; More. Miles &amp; More uses dynamic
+            pricing on many routes — actual costs vary. Always confirm on miles-and-more.com before booking.
+          </p>
         </div>
       </div>
     </section>

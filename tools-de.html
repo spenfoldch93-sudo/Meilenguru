@@ -346,6 +346,30 @@
       }
       .result-note { font-size: 0.78rem; color: rgba(250, 249, 247, 0.35); line-height: 1.65; font-weight: 300; }
       .calc-disclaimer { font-size: 0.75rem; color: var(--muted); margin-top: 1.5rem; line-height: 1.65; font-weight: 300; }
+      .rechner-tabelle-wrap { max-width: 1100px; margin: 3rem auto 0; padding: 0 2rem; }
+      .rechner-tabelle-title {
+        font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;
+        color: var(--gold); font-weight: 500; margin-bottom: 0.6rem;
+      }
+      .rechner-tabelle-wrap h3 {
+        font-family: var(--font-display); font-size: 1.3rem; font-weight: 400; margin-bottom: 1.25rem;
+      }
+      .rechner-table { width: 100%; border-collapse: collapse; font-size: 0.84rem; }
+      .rechner-table th {
+        font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase;
+        color: var(--muted); font-weight: 500; text-align: left;
+        padding: 0.65rem 0.85rem; border-bottom: 1px solid var(--border);
+      }
+      .rechner-table td {
+        padding: 0.75rem 0.85rem; border-bottom: 0.5px solid var(--border);
+        font-weight: 300; color: #2a2826;
+      }
+      .rechner-table td:first-child { font-weight: 500; color: var(--black); }
+      .rechner-table tr:last-child td { border-bottom: none; }
+      @media (max-width: 600px) {
+        .rechner-table { font-size: 0.76rem; }
+        .rechner-table th, .rechner-table td { padding: 0.55rem 0.5rem; }
+      }
       /* MAP */
       .map-container {
         position: relative;
@@ -706,9 +730,11 @@
       <div class="tool-inner">
         <div class="tool-header">
           <p class="tool-eyebrow">Tool 01 — Meilenrechner</p>
-          <h2 class="tool-title">Wie viele Meilen <br /><em>brauchst du wirklich?</em></h2>
+          <h2 class="tool-title">Meilenrechner: Wie viele Meilen <br /><em>brauchst du wirklich?</em></h2>
           <p class="tool-subtitle">
-            Programm, Kabinenklasse und Ziel auswählen. Der Rechner zeigt geschätzte Meilen, Steuern, Barwert und Wert pro Meile.
+            Der Meilenrechner für Miles &amp; More (Lufthansa, SWISS, Star Alliance) und Flying Blue. Programm,
+            Kabinenklasse und Ziel auswählen — der Rechner zeigt geschätzte Meilen, Steuern, Barwert und Wert pro
+            Meile.
           </p>
         </div>
 
@@ -811,6 +837,39 @@
 
             <p class="result-note" id="r-note"></p>
           </div>
+        </div>
+
+        <div class="rechner-tabelle-wrap">
+          <p class="rechner-tabelle-title">Meilenrechner Tabelle</p>
+          <h3>Lufthansa, SWISS &amp; Star Alliance <em>(Miles &amp; More)</em></h3>
+          <div style="overflow-x: auto;">
+            <table class="rechner-table">
+              <thead>
+                <tr>
+                  <th>Ziel</th>
+                  <th>Business Class</th>
+                  <th>First Class</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Europa — Kurzstrecke</td><td>35'000 Meilen</td><td>60'000 Meilen</td></tr>
+                <tr><td>Europa — Langstrecke</td><td>50'000 Meilen</td><td>80'000 Meilen</td></tr>
+                <tr><td>Naher Osten</td><td>45'000 Meilen</td><td>70'000 Meilen</td></tr>
+                <tr><td>Südasien</td><td>55'000 Meilen</td><td>90'000 Meilen</td></tr>
+                <tr><td>Ostafrika</td><td>60'000 Meilen</td><td>100'000 Meilen</td></tr>
+                <tr><td>Südostasien</td><td>65'000 Meilen</td><td>100'000 Meilen</td></tr>
+                <tr><td>Nordamerika</td><td>70'000 Meilen</td><td>110'000 Meilen</td></tr>
+                <tr><td>Ostasien</td><td>75'000 Meilen</td><td>120'000 Meilen</td></tr>
+                <tr><td>Lateinamerika / Karibik</td><td>80'000 Meilen</td><td>130'000 Meilen</td></tr>
+                <tr><td>Australien / Neuseeland</td><td>110'000 Meilen</td><td>160'000 Meilen</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="calc-disclaimer">
+            Richtwerte für einen Flug, Business/First Class, Miles &amp; More. Miles &amp; More nutzt dynamische
+            Preise auf vielen Strecken — die tatsächlichen Kosten weichen ab. Immer vor der Buchung auf
+            miles-and-more.com bestätigen.
+          </p>
         </div>
       </div>
     </section>
