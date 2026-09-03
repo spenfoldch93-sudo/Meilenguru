@@ -89,6 +89,16 @@
   to = "/agb"
   status = 301
   force = true
+[[redirects]]
+  from = "/lounge-access-credit-card-switzerland.html"
+  to = "/lounge-access-credit-card-switzerland"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/kreditkarte-lounge-zugang-schweiz.html"
+  to = "/kreditkarte-lounge-zugang-schweiz"
+  status = 301
+  force = true
 
 [[headers]]
   for = "/*"
