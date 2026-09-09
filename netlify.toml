@@ -99,6 +99,86 @@
   to = "/kreditkarte-lounge-zugang-schweiz"
   status = 301
   force = true
+[[redirects]]
+  from = "/flying-blue-hub.html"
+  to = "/flying-blue-hub"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/flying-blue-hub-schweiz.html"
+  to = "/flying-blue-hub-schweiz"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/earn-flying-blue-miles-switzerland.html"
+  to = "/earn-flying-blue-miles-switzerland"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/flying-blue-meilen-sammeln-schweiz.html"
+  to = "/flying-blue-meilen-sammeln-schweiz"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/meilenguru-flying-blue-promo-october-2026.html"
+  to = "/meilenguru-flying-blue-promo-october-2026"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/flying-blue-promo-oktober-2026.html"
+  to = "/flying-blue-promo-oktober-2026"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/meilenguru-flying-blue-promo-november-2026.html"
+  to = "/meilenguru-flying-blue-promo-november-2026"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/flying-blue-promo-november-2026.html"
+  to = "/flying-blue-promo-november-2026"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/meilenguru-flying-blue-promo-december-2026.html"
+  to = "/meilenguru-flying-blue-promo-december-2026"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/flying-blue-promo-dezember-2026.html"
+  to = "/flying-blue-promo-dezember-2026"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/meilenguru-flying-blue-promo-january-2027.html"
+  to = "/meilenguru-flying-blue-promo-january-2027"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/flying-blue-promo-januar-2027.html"
+  to = "/flying-blue-promo-januar-2027"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/meilenguru-blog-seoul-paris-zurich-af.html"
+  to = "/meilenguru-blog-seoul-paris-zurich-af"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/seoul-paris-zuerich-af-de.html"
+  to = "/seoul-paris-zuerich-af-de"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/meilenguru-blog-bangkok-paris-zurich-af.html"
+  to = "/meilenguru-blog-bangkok-paris-zurich-af"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/bangkok-paris-zuerich-af-de.html"
+  to = "/bangkok-paris-zuerich-af-de"
+  status = 301
+  force = true
 
 [[headers]]
   for = "/*"
