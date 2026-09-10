@@ -1,0 +1,82 @@
+/* Meilenguru shared stylesheet - responsive rules.
+   Must load AFTER each page's own <style> block. */
+
+@media (max-width: 768px) {
+  .map-expand-btn {
+    display: flex; align-items: center; gap: 0.4rem; margin-top: 0.9rem; padding: 0.42rem 0.85rem; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; font-family: var(--font-body); color: var(--gold); background: transparent; border: 0.5px solid rgba(184, 150, 46, 0.45); cursor: pointer; width: fit-content; transition: opacity 0.15s
+  }
+  .lounge-airport-grid { grid-template-columns: 1fr }
+  .map-expand-btn:active { opacity: 0.6 }
+  .nav-toggle { display: flex }
+  .faq-hero { padding: 4rem 1.5rem 3rem }
+  .tool-section { padding: 3.5rem 1.25rem }
+  .programme-section { padding: 3.5rem 1.5rem }
+  .faq-body { padding: 3rem 1.5rem 4rem }
+  .hero-stat { text-align: left }
+  .prog-header { grid-template-columns: 1fr }
+  .page-header { padding: 3.5rem 1.5rem 3rem }
+  .page-section { padding: 3.5rem 1.5rem }
+  .prog-badge { display: none }
+  .ref-grid { grid-template-columns: 1fr }
+  .card-grid { grid-template-columns: 1fr }
+  .perks-inner { grid-template-columns: 1fr 1fr }
+  .hero-map-wrap { max-width: 100% }
+  .promo-grid { grid-template-columns: 1fr }
+  .card-grid-2 { grid-template-columns: 1fr }
+  .flight-visual { max-width: 100% }
+  .card-grid-4 { grid-template-columns: 1fr 1fr }
+  .stat-cell { padding: 1.25rem 1rem }
+  .steps-row { grid-template-columns: 1fr 1fr }
+  .booking-grid { grid-template-columns: 1fr; gap: 2rem }
+  .stat-num { font-size: 2rem }
+  .flight-stat { flex: 1; padding: 1.1rem 1rem }
+  .transfer-grid { grid-template-columns: 1fr 1fr }
+  .booking-section { padding: 3rem 1.5rem 4rem }
+  .benchmark-table { font-size: 0.78rem }
+  .flight-stat-num { font-size: 1.8rem }
+  .benchmark-table th,.benchmark-table td { padding: 0.6rem 0.5rem }
+  .tab-btn { padding: 1rem 1.25rem; font-size: 0.68rem }
+  .story-section { padding: 4rem 1.5rem }
+  .value-example { display: block; margin: 0.5rem 0 }
+  .story-inner { grid-template-columns: 1fr; gap: 2.5rem }
+  .steps { grid-template-columns: 1fr }
+  .step { border-right: none; border-bottom: 0.5px solid var(--border) }
+  .story-nav { display: none }
+  .step:last-child { border-bottom: none }
+  .story-chapters { gap: 3.5rem }
+  .chapter p { max-width: 100% }
+  .programmes-grid { grid-template-columns: 1fr }
+  .highlight-box { grid-template-columns: 1fr; gap: 1.25rem }
+  .prog-card.full { grid-column: 1; grid-template-columns: 1fr }
+  .philosophy-section { padding: 4rem 1.5rem }
+  .prog-divider {
+    border-left: none; border-top: 0.5px solid var(--border); padding-left: 0; padding-top: 1.5rem
+  }
+  .principles { grid-template-columns: 1fr }
+  .principle { border-right: none; border-bottom: 0.5px solid rgba(250, 249, 247, 0.08) }
+  .principle:last-child { border-bottom: none }
+  .consult-inner { grid-template-columns: 1fr; gap: 2.5rem }
+  .consult-section .section-title { max-width: 100% }
+}
+
+@media (max-width: 480px) {
+  .perks-inner { grid-template-columns: 1fr }
+  .steps-row { grid-template-columns: 1fr }
+  .card-grid-4 { grid-template-columns: 1fr }
+  .story-section { padding: 3.5rem 1.25rem }
+  .transfer-grid { grid-template-columns: 1fr }
+  .hero-badges { gap: 0.4rem }
+  .hero-ctas { flex-direction: column; align-items: flex-start }
+}
+
+@media (max-width: 600px) {
+  .rechner-table { font-size: 0.76rem }
+  .rechner-table th,.rechner-table td { padding: 0.55rem 0.5rem }
+  .card-stats { grid-template-columns: 1fr 1fr }
+  .card-pros-cons { grid-template-columns: 1fr }
+  .image-grid { grid-template-columns: 1fr }
+  .price-grid-inner { grid-template-columns: 1fr }
+  .comparison-table { font-size: 0.75rem }
+  .comparison-table th,.comparison-table td { padding: 0.6rem 0.5rem }
+}
+

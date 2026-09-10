@@ -36,16 +36,9 @@
       href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
-    <style>
-      *,
-      *::before,
-      *::after {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      :root {
+    <link rel="stylesheet" href="/assets/site.css">
+<style>
+:root {
         --black: #0a0a0a;
         --white: #faf9f7;
         --warm-white: #f5f3ef;
@@ -58,18 +51,15 @@
         --font-display: "Lora", Georgia, serif;
         --font-body: "DM Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji";
       }
-
-      html { scroll-behavior: smooth; overflow-x: hidden; }
-
-      body {
+html { scroll-behavior: smooth; overflow-x: hidden; }
+body {
         font-family: var(--font-body);
         background: var(--white);
         color: var(--black);
         font-size: 15px;
         line-height: 1.6;
       }
-
-      .lang-banner {
+.lang-banner {
         background: var(--black);
         font-size: 0.68rem;
         letter-spacing: 0.12em;
@@ -79,17 +69,14 @@
         justify-content: flex-end;
         gap: 1.5rem;
       }
-      .lang-banner a {
+.lang-banner a {
         color: rgba(250, 249, 247, 0.5);
         text-decoration: none;
         transition: color 0.2s;
         letter-spacing: 0;
         text-transform: none;
       }
-      .lang-banner a:hover { color: var(--gold-light); }
-
-      .nav-sticky-wrap { position: sticky; top: 0; z-index: 100; }
-      nav:not(.breadcrumb) {
+nav:not(.breadcrumb) {
         position: sticky;
         top: 0;
         z-index: 100;
@@ -101,29 +88,12 @@
         backdrop-filter: blur(12px);
         border-bottom: 0.5px solid var(--border);
       }
-      .logo {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.7em;
-        font-family: var(--font-body);
-        font-size: 1rem;
-        font-weight: 500;
-        letter-spacing: 0.2em;
-        text-transform: uppercase;
-        color: var(--black);
-        text-decoration: none;
-      }
-      .logo svg {
-        width: 2.6em;
-        height: 2.6em;
-        flex-shrink: 0;
-      }
-      .nav-links {
+.nav-links {
         display: flex;
         gap: 2rem;
         list-style: none;
       }
-      .nav-links a {
+.nav-links a {
         font-size: 0.75rem;
         letter-spacing: 0.12em;
         text-transform: uppercase;
@@ -132,8 +102,8 @@
         font-weight: 400;
         transition: color 0.2s;
       }
-      .nav-links a:hover, .nav-links a.active { color: var(--gold); }
-      .nav-cta {
+.nav-links a:hover, .nav-links a.active { color: var(--gold); }
+.nav-cta {
         font-size: 0.72rem;
         letter-spacing: 0.1em;
         text-transform: uppercase;
@@ -143,8 +113,8 @@
         text-decoration: none;
         transition: background 0.2s;
       }
-      .nav-cta:hover { background: #2a2a2a; }
-      .nav-toggle {
+.nav-cta:hover { background: #2a2a2a; }
+.nav-toggle {
         display: none;
         flex-direction: column;
         gap: 5px;
@@ -153,14 +123,14 @@
         border: none;
         padding: 4px;
       }
-      .nav-toggle span {
+.nav-toggle span {
         display: block;
         width: 22px;
         height: 1px;
         background: var(--black);
         transition: all 0.3s;
       }
-      .mobile-menu {
+.mobile-menu {
         display: none;
         flex-direction: column;
         background: var(--white);
@@ -168,15 +138,14 @@
         padding: 1.5rem 2rem;
         gap: 1.25rem;
       }
-      .mobile-menu.open { display: flex; }
-      .mobile-menu a {
+.mobile-menu a {
         font-size: 0.8rem;
         letter-spacing: 0.12em;
         text-transform: uppercase;
         color: var(--black);
         text-decoration: none;
       }
-      .mobile-menu .mobile-cta {
+.mobile-menu .mobile-cta {
         display: inline-block;
         margin-top: 0.5rem;
         font-size: 0.75rem;
@@ -188,14 +157,13 @@
         text-align: center;
         text-decoration: none;
       }
-
-      .hero {
+.hero {
         background: var(--black);
         padding: 7rem 2rem 0;
         overflow: hidden;
         position: relative;
       }
-      .hero::before {
+.hero::before {
         content: "";
         position: absolute;
         inset: 0;
@@ -204,7 +172,7 @@
           radial-gradient(ellipse 50% 80% at 10% 80%, rgba(184, 150, 46, 0.04) 0%, transparent 60%);
         pointer-events: none;
       }
-      .hero-inner {
+.hero-inner {
         max-width: 1000px;
         margin: 0 auto;
         display: grid;
@@ -214,8 +182,8 @@
         position: relative;
         z-index: 1;
       }
-      .hero-left { padding-bottom: 5rem; }
-      .hero-eyebrow {
+.hero-left { padding-bottom: 5rem; }
+.hero-eyebrow {
         font-size: 0.67rem;
         letter-spacing: 0.2em;
         text-transform: uppercase;
@@ -225,7 +193,7 @@
         opacity: 0;
         animation: fadeUp 0.7s 0.1s ease forwards;
       }
-      .hero-title {
+.hero-title {
         font-family: var(--font-display);
         font-size: clamp(3rem, 6vw, 5.5rem);
         font-weight: 300;
@@ -236,21 +204,12 @@
         opacity: 0;
         animation: fadeUp 0.7s 0.2s ease forwards;
       }
-      .hero-title em {
+.hero-title em {
         font-style: italic;
         color: var(--gold);
         display: block;
       }
-      .hero-intro {
-        font-size: 1.05rem;
-        color: rgba(250, 249, 247, 0.55);
-        line-height: 1.8;
-        font-weight: 300;
-        max-width: 420px;
-        opacity: 0;
-        animation: fadeUp 0.7s 0.3s ease forwards;
-      }
-      .hero-right {
+.hero-right {
         align-self: stretch;
         display: flex;
         align-items: flex-end;
@@ -258,144 +217,13 @@
         opacity: 0;
         animation: fadeUp 0.7s 0.2s ease forwards;
       }
-      .flight-visual {
-        width: 100%;
-        max-width: 380px;
-        padding-bottom: 4rem;
-      }
-      .flight-stat-stack {
-        display: flex;
-        flex-direction: column;
-        gap: 1px;
-        background: rgba(250, 249, 247, 0.08);
-      }
-      .flight-stat {
-        background: rgba(10, 10, 10, 0.6);
-        backdrop-filter: blur(8px);
-        padding: 1.5rem 1.75rem;
-        border-left: 2px solid var(--gold);
-        transition: border-color 0.2s;
-      }
-      .flight-stat:hover { border-left-color: var(--gold-light); }
-      .flight-stat-num {
-        font-family: var(--font-display);
-        font-size: 2.5rem;
-        font-weight: 300;
-        color: var(--white);
-        line-height: 1;
-        margin-bottom: 0.3rem;
-      }
-      .flight-stat-num span { color: var(--gold); font-style: italic; }
-      .flight-stat-label {
-        font-size: 0.7rem;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        color: rgba(250, 249, 247, 0.4);
-      }
-
-      .story-section { padding: 7rem 2rem; }
-      .story-inner {
-        max-width: 1000px;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: 200px 1fr;
-        gap: 5rem;
-      }
-      .story-nav {
-        position: sticky;
-        top: 7rem;
-        align-self: start;
-      }
-      .story-nav-label {
-        font-size: 0.62rem;
-        letter-spacing: 0.18em;
-        text-transform: uppercase;
-        color: var(--muted);
-        margin-bottom: 1.25rem;
-        font-weight: 500;
-      }
-      .story-nav ul {
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        gap: 0;
-        border-left: 0.5px solid var(--border);
-      }
-      .story-nav ul li a {
-        display: block;
-        font-size: 0.78rem;
-        color: var(--muted);
-        text-decoration: none;
-        padding: 0.6rem 0 0.6rem 1.25rem;
-        border-left: 2px solid transparent;
-        margin-left: -0.5px;
-        transition: color 0.2s, border-color 0.2s;
-        font-weight: 300;
-        line-height: 1.4;
-      }
-      .story-nav ul li a:hover {
-        color: var(--black);
-        border-left-color: var(--gold);
-      }
-
-      .story-chapters {
-        display: flex;
-        flex-direction: column;
-        gap: 5rem;
-      }
-      .chapter { scroll-margin-top: 7rem; }
-      .chapter-marker {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        margin-bottom: 1.75rem;
-      }
-      .chapter-num {
-        font-family: var(--font-display);
-        font-size: 0.85rem;
-        font-weight: 400;
-        color: var(--gold);
-        letter-spacing: 0.08em;
-        flex-shrink: 0;
-      }
-      .chapter-line {
-        height: 0.5px;
-        background: var(--border);
-        flex: 1;
-      }
-      .chapter-tag {
-        font-size: 0.62rem;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-        color: var(--muted);
-        flex-shrink: 0;
-      }
-      .chapter h2 {
-        font-family: var(--font-display);
-        font-size: clamp(1.9rem, 3.5vw, 2.8rem);
-        font-weight: 300;
-        line-height: 1.15;
-        margin-bottom: 1.5rem;
-        letter-spacing: -0.01em;
-      }
-      .chapter h2 em { font-style: italic; color: var(--gold); }
-      .chapter p {
-        font-size: 0.95rem;
-        color: #3a3836;
-        line-height: 1.85;
-        font-weight: 300;
-        margin-bottom: 1.25rem;
-        max-width: 580px;
-      }
-      .chapter p:last-child { margin-bottom: 0; }
-
-      .pullquote {
+.pullquote {
         border-left: 2px solid var(--gold);
         padding: 1.1rem 1.75rem;
         margin: 2rem 0;
         background: var(--warm-white);
       }
-      .pullquote p {
+.pullquote p {
         font-family: var(--font-display);
         font-size: 1.35rem;
         font-weight: 300;
@@ -405,109 +233,17 @@
         margin: 0;
         max-width: 100%;
       }
-
-      .highlight-box {
-        border: 0.5px solid var(--border-gold);
-        background: var(--gold-dim);
-        padding: 1.25rem 1.5rem;
-        margin: 1.75rem 0;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
-      }
-      .highlight-item { text-align: center; }
-      .highlight-num {
-        font-family: var(--font-display);
-        font-size: 2rem;
-        font-weight: 300;
-        color: var(--gold);
-        line-height: 1;
-        margin-bottom: 0.3rem;
-      }
-      .highlight-label {
-        font-size: 0.68rem;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: var(--muted);
-      }
-
-      .philosophy-section {
-        background: var(--black);
-        padding: 6rem 2rem;
-        position: relative;
-        overflow: hidden;
-      }
-      .philosophy-section::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: radial-gradient(ellipse 60% 80% at 80% 50%, rgba(184, 150, 46, 0.06) 0%, transparent 70%);
-        pointer-events: none;
-      }
-      .philosophy-inner {
-        max-width: 1000px;
-        margin: 0 auto;
-        position: relative;
-        z-index: 1;
-      }
-      .philosophy-label {
-        font-size: 0.67rem;
-        letter-spacing: 0.2em;
-        text-transform: uppercase;
-        color: var(--gold);
-        margin-bottom: 1.25rem;
-        font-weight: 500;
-      }
-      .philosophy-title {
-        font-family: var(--font-display);
-        font-size: clamp(2.2rem, 4vw, 3.5rem);
-        font-weight: 300;
-        line-height: 1.1;
-        color: var(--white);
-        margin-bottom: 3.5rem;
-        max-width: 600px;
-      }
-      .philosophy-title em { font-style: italic; color: var(--gold); }
-      .principles {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 0;
-        border: 0.5px solid rgba(250, 249, 247, 0.08);
-      }
-      .principle {
-        padding: 2rem 1.75rem;
-        border-right: 0.5px solid rgba(250, 249, 247, 0.08);
-        transition: background 0.2s;
-      }
-      .principle:hover { background: rgba(184, 150, 46, 0.04); }
-      .principle:last-child { border-right: none; }
-      .principle-icon { color: var(--gold); font-size: 1rem; margin-bottom: 1rem; }
-      .principle h3 {
-        font-family: var(--font-display);
-        font-size: 1.3rem;
-        font-weight: 400;
-        color: var(--white);
-        margin-bottom: 0.65rem;
-        line-height: 1.2;
-      }
-      .principle p {
-        font-size: 0.83rem;
-        color: rgba(250, 249, 247, 0.45);
-        line-height: 1.75;
-        font-weight: 300;
-      }
-
-      .cta-section {
+.cta-section {
         padding: 6rem 2rem;
         background: var(--warm-white);
         border-top: 0.5px solid var(--border);
       }
-      .cta-inner {
+.cta-inner {
         max-width: 700px;
         margin: 0 auto;
         text-align: center;
       }
-      .cta-eyebrow {
+.cta-eyebrow {
         font-size: 0.67rem;
         letter-spacing: 0.2em;
         text-transform: uppercase;
@@ -515,15 +251,15 @@
         margin-bottom: 1.25rem;
         font-weight: 500;
       }
-      .cta-title {
+.cta-title {
         font-family: var(--font-display);
         font-size: clamp(2.2rem, 4vw, 3.2rem);
         font-weight: 300;
         line-height: 1.15;
         margin-bottom: 1.25rem;
       }
-      .cta-title em { font-style: italic; color: var(--gold); }
-      .cta-text {
+.cta-title em { font-style: italic; color: var(--gold); }
+.cta-text {
         font-size: 0.93rem;
         color: var(--muted);
         line-height: 1.8;
@@ -533,13 +269,7 @@
         margin-left: auto;
         margin-right: auto;
       }
-      .cta-buttons {
-        display: flex;
-        gap: 1rem;
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-      .btn-primary {
+.btn-primary {
         font-size: 0.75rem;
         letter-spacing: 0.1em;
         text-transform: uppercase;
@@ -553,8 +283,8 @@
         cursor: pointer;
         border: none;
       }
-      .btn-primary:hover { background: #2a2a2a; }
-      .btn-outline {
+.btn-primary:hover { background: #2a2a2a; }
+.btn-outline {
         font-size: 0.75rem;
         letter-spacing: 0.1em;
         text-transform: uppercase;
@@ -566,14 +296,13 @@
         font-family: var(--font-body);
         font-weight: 400;
       }
-      .btn-outline:hover { background: var(--black); color: var(--white); }
-
-      footer {
+.btn-outline:hover { background: var(--black); color: var(--white); }
+footer {
         background: var(--warm-white);
         border-top: 0.5px solid var(--border);
         padding: 2rem 2rem 1.5rem;
       }
-      .footer-bottom {
+.footer-bottom {
         max-width: 1100px;
         margin: 0 auto;
         display: flex;
@@ -582,121 +311,29 @@
         flex-wrap: wrap;
         gap: 0.75rem;
       }
-      .footer-bottom p { font-size: 0.7rem; color: var(--muted); letter-spacing: 0.05em; }
-      .footer-nav { display: flex; gap: 1.5rem; }
-      .footer-nav a {
+.footer-bottom p { font-size: 0.7rem; color: var(--muted); letter-spacing: 0.05em; }
+.footer-nav { display: flex; gap: 1.5rem; }
+.footer-nav a {
         font-size: 0.72rem;
         color: var(--muted);
         text-decoration: none;
         letter-spacing: 0.05em;
         transition: color 0.2s;
       }
-      .footer-nav a:hover { color: var(--black); }
-
-      @keyframes fadeUp {
+.footer-nav a:hover { color: var(--black); }
+@keyframes fadeUp {
         from { opacity: 0; transform: translateY(20px); }
         to { opacity: 1; transform: translateY(0); }
       }
-
-      @media (max-width: 768px) {
-        nav { padding: 1rem 1.25rem; }
-        .nav-links { display: none; }
-        .nav-cta { display: none; }
-        .nav-toggle { display: flex; }
-        .hero { padding: 4.5rem 1.5rem 0; }
-        .hero-inner { grid-template-columns: 1fr; gap: 3rem; }
-        .hero-left { padding-bottom: 0; }
-        .hero-right { justify-content: flex-start; padding-bottom: 3rem; }
-        .flight-visual { max-width: 100%; }
-        .flight-stat-stack { flex-direction: row; gap: 1px; }
-        .flight-stat { flex: 1; padding: 1.1rem 1rem; }
-        .flight-stat-num { font-size: 1.8rem; }
-        .story-section { padding: 4rem 1.5rem; }
-        .story-inner { grid-template-columns: 1fr; gap: 2.5rem; }
-        .story-nav { display: none; }
-        .story-chapters { gap: 3.5rem; }
-        .chapter p { max-width: 100%; }
-        .highlight-box { grid-template-columns: 1fr; gap: 1.25rem; }
-        .philosophy-section { padding: 4rem 1.5rem; }
-        .principles { grid-template-columns: 1fr; }
-        .principle { border-right: none; border-bottom: 0.5px solid rgba(250, 249, 247, 0.08); }
-        .principle:last-child { border-bottom: none; }
-        .cta-section { padding: 4rem 1.5rem; }
-        .cta-buttons { flex-direction: column; align-items: center; }
-        .footer-bottom { flex-direction: column; align-items: flex-start; }
-      }
-      @media (max-width: 480px) {
-        .hero { padding: 3.5rem 1.25rem 0; }
-        .story-section { padding: 3.5rem 1.25rem; }
-        .flight-stat-stack { flex-direction: column; }
-      }
-    
-      /* ── NEWSLETTER ── */
-      .newsletter-strip {
-        background: var(--black);
-        padding: 3.5rem 2rem;
-      }
-      .newsletter-inner {
-        max-width: 1100px;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 2rem;
-        flex-wrap: wrap;
-      }
-      .newsletter-text h3 {
-        font-family: var(--font-display);
-        font-size: 1.5rem;
-        font-weight: 400;
-        color: var(--white);
-        margin-bottom: 0.3rem;
-      }
-      .newsletter-text p {
+/* ── NEWSLETTER ── */
+.newsletter-text p {
         font-size: 0.83rem;
         color: rgba(250, 249, 247, 0.5);
         font-weight: 300;
         max-width: 380px;
       }
-      .newsletter-form {
-        display: flex;
-        gap: 0.75rem;
-        flex-wrap: wrap;
-      }
-      .newsletter-form input[type="email"] {
-        background: rgba(250,249,247,0.07);
-        border: 0.5px solid rgba(250,249,247,0.2);
-        color: var(--white);
-        padding: 0.65rem 1.1rem;
-        font-family: var(--font-body);
-        font-size: 0.85rem;
-        outline: none;
-        min-width: 240px;
-      }
-      .newsletter-form input[type="email"]::placeholder {
-        color: rgba(250,249,247,0.3);
-      }
-      .newsletter-form button {
-        background: var(--gold);
-        color: var(--black);
-        border: none;
-        padding: 0.65rem 1.4rem;
-        font-family: var(--font-body);
-        font-size: 0.73rem;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        font-weight: 500;
-        cursor: pointer;
-        transition: background 0.2s;
-      }
-      .newsletter-form button:hover { background: var(--gold-light); }
-    
-      /* ── SOCIAL LINKS ── */
-      .social-links { display: flex; gap: 0.9rem; align-items: center; }
-      .social-links a { color: var(--muted); transition: color 0.2s; display: flex; align-items: center; }
-      .social-links a:hover { color: var(--gold); }
-      .social-links svg { width: 16px; height: 16px; }
-          .breadcrumb {
+/* ── SOCIAL LINKS ── */
+.breadcrumb {
         max-width: 1100px;
         margin: 1.25rem auto 0;
         padding: 0 2rem;
@@ -704,10 +341,7 @@
         letter-spacing: 0.04em;
         color: var(--muted);
       }
-      .breadcrumb a { color: var(--muted); text-decoration: none; }
-      .breadcrumb a:hover { color: var(--gold); }
-      .breadcrumb span[aria-hidden] { margin: 0 0.4em; color: var(--border); }
-      .footer-disclaimer {
+.footer-disclaimer {
         max-width: 1100px;
         margin: 1rem auto 0;
         padding: 1rem 2rem 0;
@@ -717,6 +351,26 @@
         text-align: center;
         line-height: 1.6;
       }
+</style>
+<link rel="stylesheet" href="/assets/site-media.css">
+<style>
+@media (max-width: 768px) {
+nav { padding: 1rem 1.25rem; }
+.nav-links { display: none; }
+.nav-cta { display: none; }
+.hero { padding: 4.5rem 1.5rem 0; }
+.hero-inner { grid-template-columns: 1fr; gap: 3rem; }
+.hero-left { padding-bottom: 0; }
+.hero-right { justify-content: flex-start; padding-bottom: 3rem; }
+.flight-stat-stack { flex-direction: row; gap: 1px; }
+.cta-section { padding: 4rem 1.5rem; }
+.cta-buttons { flex-direction: column; align-items: center; }
+.footer-bottom { flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 480px) {
+.hero { padding: 3.5rem 1.25rem 0; }
+.flight-stat-stack { flex-direction: column; }
+}
 </style>
       <meta property="og:type" content="website">
     <meta property="og:url" content="https://meilenguru.ch/ueber-mich">

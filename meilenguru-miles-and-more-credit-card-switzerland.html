@@ -79,15 +79,9 @@
       href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
-    <style>
-      *,
-      *::before,
-      *::after {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      :root {
+    <link rel="stylesheet" href="/assets/site.css">
+<style>
+:root {
         --black: #0a0a0a;
         --white: #faf9f7;
         --warm-white: #f5f3ef;
@@ -98,17 +92,17 @@
         --font-display: "Lora", Georgia, serif;
         --font-body: "DM Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji";
       }
-      html {
+html {
         scroll-behavior: smooth; overflow-x: hidden;
       }
-      body {
+body {
         font-family: var(--font-body);
         background: var(--white);
         color: var(--black);
         font-size: 15px;
         line-height: 1.6;
       }
-      nav:not(.breadcrumb) {
+nav:not(.breadcrumb) {
         position: sticky;
         top: 0;
         z-index: 100;
@@ -120,34 +114,14 @@
         backdrop-filter: blur(12px);
         border-bottom: 0.5px solid var(--border);
       }
-      .logo {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.7em;
-        font-family: var(--font-body);
-        font-size: 1rem;
-        font-weight: 500;
-        letter-spacing: 0.2em;
-        text-transform: uppercase;
-        color: var(--black);
-        text-decoration: none;
-      }
-      .logo svg {
-        width: 2.6em;
-        height: 2.6em;
-        flex-shrink: 0;
-      }
-      .nav-back {
+.nav-back {
         font-size: 0.72rem;
         letter-spacing: 0.1em;
         text-transform: uppercase;
         color: var(--muted);
         text-decoration: none;
       }
-      .nav-back:hover {
-        color: var(--gold);
-      }
-      .nav-cta {
+.nav-cta {
         font-size: 0.72rem;
         letter-spacing: 0.1em;
         text-transform: uppercase;
@@ -156,36 +130,22 @@
         padding: 0.45rem 1.1rem;
         text-decoration: none;
       }
-      .nav-cta:hover {
+.nav-cta:hover {
         background: #2a2a2a;
       }
-      .lang-notice {
-        background: var(--warm-white);
-        border-bottom: 0.5px solid var(--border);
-        padding: 0.5rem 2rem;
-        font-size: 0.75rem;
-        color: var(--muted);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .lang-notice a {
-        color: var(--gold);
-        text-decoration: none;
-      }
-      .article-header {
+.article-header {
         max-width: 780px;
         margin: 0 auto;
         padding: 5rem 2rem 3rem;
       }
-      .article-meta {
+.article-meta {
         display: flex;
         gap: 0.75rem;
         align-items: center;
         margin-bottom: 1.5rem;
         flex-wrap: wrap;
       }
-      .tag {
+.tag {
         font-size: 0.67rem;
         letter-spacing: 0.14em;
         text-transform: uppercase;
@@ -194,22 +154,22 @@
         padding: 0.28rem 0.7rem;
         font-weight: 500;
       }
-      .meta-text {
+.meta-text {
         font-size: 0.77rem;
         color: var(--muted);
       }
-      h1 {
+h1 {
         font-family: var(--font-display);
         font-size: clamp(2.2rem, 5vw, 3.6rem);
         font-weight: 300;
         line-height: 1.1;
         margin-bottom: 1.25rem;
       }
-      h1 em {
+h1 em {
         font-style: italic;
         color: var(--gold);
       }
-      .article-subtitle {
+.article-subtitle {
         font-size: 1.05rem;
         color: var(--muted);
         font-weight: 300;
@@ -217,7 +177,7 @@
         max-width: 580px;
         margin-bottom: 2rem;
       }
-      .toc {
+.toc {
         background: var(--warm-white);
         border-left: 2px solid var(--gold);
         padding: 1.25rem 2rem;
@@ -226,52 +186,27 @@
         margin-left: auto;
         margin-right: auto;
       }
-      .toc-title {
-        font-size: 0.65rem;
-        letter-spacing: 0.15em;
-        text-transform: uppercase;
-        color: var(--gold);
-        font-weight: 500;
-        margin-bottom: 0.75rem;
-      }
-      .toc ol {
-        padding-left: 1.25rem;
-        display: flex;
-        flex-direction: column;
-        gap: 0.3rem;
-      }
-      .toc li {
-        font-size: 0.85rem;
-        font-weight: 300;
-      }
-      .toc a {
-        color: var(--black);
-        text-decoration: none;
-      }
-      .toc a:hover {
-        color: var(--gold);
-      }
-      .article-body {
+.article-body {
         max-width: 700px;
         margin: 0 auto;
         padding: 0 2rem 6rem;
       }
-      .article-body p {
+.article-body p {
         margin-bottom: 1.4rem;
         font-weight: 300;
         color: #2a2826;
         line-height: 1.85;
       }
-      .article-body p strong {
+.article-body p strong {
         font-weight: 500;
         color: var(--black);
       }
-      .article-body a {
+.article-body a {
         color: var(--gold);
         text-decoration: none;
         border-bottom: 0.5px solid var(--gold);
       }
-      h2 {
+h2 {
         font-family: var(--font-display);
         font-size: 1.85rem;
         font-weight: 400;
@@ -279,11 +214,11 @@
         margin: 3.5rem 0 1.1rem;
         scroll-margin-top: 80px;
       }
-      h2 em {
+h2 em {
         font-style: italic;
         color: var(--gold);
       }
-      h3 {
+h3 {
         font-size: 0.82rem;
         letter-spacing: 0.14em;
         text-transform: uppercase;
@@ -291,157 +226,29 @@
         font-weight: 500;
         margin: 2.5rem 0 0.75rem;
       }
-      .card-block {
-        border: 0.5px solid var(--border);
-        margin: 2.5rem 0;
-        overflow: hidden;
-      }
-      .card-block-header {
-        background: var(--black);
-        padding: 1.25rem 1.5rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .card-block-name {
-        font-family: var(--font-display);
-        font-size: 1.35rem;
-        font-weight: 400;
-        color: var(--white);
-      }
-      .card-block-badge {
-        font-size: 0.62rem;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        background: rgba(184, 150, 46, 0.2);
-        color: var(--gold);
-        padding: 0.25rem 0.65rem;
-        font-weight: 500;
-      }
-      .card-block-body {
-        padding: 1.25rem 1.5rem;
-      }
-      .card-stats {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1px;
-        background: var(--border);
-        margin-bottom: 1.25rem;
-      }
-      .card-stat {
-        background: var(--warm-white);
-        padding: 0.85rem 1rem;
-      }
-      .card-stat-label {
-        font-size: 0.6rem;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: var(--muted);
-        font-weight: 500;
-        margin-bottom: 0.3rem;
-      }
-      .card-stat-value {
-        font-family: var(--font-display);
-        font-size: 1.25rem;
-        font-weight: 300;
-        color: var(--black);
-      }
-      .card-stat-value.gold {
+.card-stat-value.gold {
         color: var(--gold);
       }
-      .card-pros-cons {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-        margin-top: 1rem;
-      }
-      .card-pros h4,
-      .card-cons h4 {
-        font-size: 0.62rem;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        font-weight: 500;
-        margin-bottom: 0.5rem;
-      }
-      .card-pros h4 {
-        color: #2d6a4f;
-      }
-      .card-cons h4 {
-        color: #c0392b;
-      }
-      .card-pros ul,
-      .card-cons ul {
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        gap: 0.4rem;
-      }
-      .card-pros ul li,
-      .card-cons ul li {
-        font-size: 0.83rem;
-        font-weight: 300;
-        color: #2a2826;
-        padding-left: 1.1rem;
-        position: relative;
-        line-height: 1.55;
-      }
-      .card-pros ul li::before {
-        content: "✓";
-        position: absolute;
-        left: 0;
-        color: #2d6a4f;
-        font-size: 0.75rem;
-      }
-      .card-cons ul li::before {
-        content: "✗";
-        position: absolute;
-        left: 0;
-        color: #c0392b;
-        font-size: 0.75rem;
-      }
-      .card-block-link {
-        padding: 1rem 1.5rem;
-        border-top: 0.5px solid var(--border);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .card-block-link a {
-        font-size: 0.72rem;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: var(--gold);
-        text-decoration: none;
-        border-bottom: 0.5px solid var(--gold);
-      }
-      .referral-box {
+.referral-box {
         background: var(--black);
         padding: 1.5rem;
         margin: 1.5rem 0;
       }
-      .referral-box-label {
-        font-size: 0.62rem;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-        color: var(--gold);
-        font-weight: 500;
-        margin-bottom: 0.75rem;
-      }
-      .referral-box-title {
+.referral-box-title {
         font-family: var(--font-display);
         font-size: 1.1rem;
         font-weight: 300;
         color: var(--white);
         margin-bottom: 0.4rem;
       }
-      .referral-box-desc {
+.referral-box-desc {
         font-size: 0.82rem;
         color: #d0cdc8;
         font-weight: 300;
         line-height: 1.65;
         margin-bottom: 0.85rem;
       }
-      .referral-code-wrap {
+.referral-code-wrap {
         background: rgba(184, 150, 46, 0.1);
         border: 0.5px solid rgba(184, 150, 46, 0.3);
         padding: 0.65rem 1rem;
@@ -450,14 +257,14 @@
         justify-content: space-between;
         margin-bottom: 0.65rem;
       }
-      .referral-code {
+.referral-code {
         font-family: "Courier New", monospace;
         font-size: 0.95rem;
         color: var(--gold);
         letter-spacing: 0.1em;
         font-weight: 700;
       }
-      .referral-copy {
+.referral-copy {
         font-size: 0.62rem;
         letter-spacing: 0.1em;
         text-transform: uppercase;
@@ -469,66 +276,13 @@
         font-family: var(--font-body);
         transition: all 0.2s;
       }
-      .referral-copy:hover {
-        color: var(--white);
-        border-color: #aaa8a4;
-      }
-      .referral-copy.copied {
-        color: #4caf50;
-        border-color: #4caf50;
-      }
-      .referral-link {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.35rem;
-        font-size: 0.7rem;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: var(--gold);
-        text-decoration: none;
-        border-bottom: 0.5px solid var(--gold);
-      }
-      .comparison-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 2rem 0;
-        font-size: 0.84rem;
-      }
-      .comparison-table th {
-        background: var(--black);
-        color: var(--white);
-        padding: 0.85rem;
-        text-align: left;
-        font-size: 0.65rem;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        font-weight: 500;
-      }
-      .comparison-table td {
-        padding: 0.85rem;
-        border-bottom: 0.5px solid var(--border);
-        font-weight: 300;
-        vertical-align: top;
-      }
-      .comparison-table tr:last-child td {
-        border-bottom: none;
-      }
-      .comparison-table td:first-child {
-        font-weight: 500;
-        color: var(--black);
-        background: var(--warm-white);
-      }
-      .best {
-        color: #2d6a4f;
-        font-weight: 500;
-      }
-      .info-box {
+.info-box {
         border: 0.5px solid var(--border);
         padding: 1.6rem 1.6rem 1.4rem;
         margin: 2rem 0;
         background: var(--warm-white);
       }
-      .info-box-title {
+.info-box-title {
         font-size: 0.65rem;
         letter-spacing: 0.15em;
         text-transform: uppercase;
@@ -536,13 +290,13 @@
         font-weight: 500;
         margin-bottom: 0.9rem;
       }
-      .info-box ul {
+.info-box ul {
         list-style: none;
         display: flex;
         flex-direction: column;
         gap: 0.55rem;
       }
-      .info-box ul li {
+.info-box ul li {
         font-size: 0.88rem;
         font-weight: 300;
         color: #2a2826;
@@ -550,7 +304,7 @@
         position: relative;
         line-height: 1.6;
       }
-      .info-box ul li::before {
+.info-box ul li::before {
         content: "◈";
         position: absolute;
         left: 0;
@@ -558,17 +312,17 @@
         font-size: 0.6rem;
         top: 4px;
       }
-      .info-box ul li strong {
+.info-box ul li strong {
         font-weight: 500;
         color: var(--black);
       }
-      .pullquote {
+.pullquote {
         border-left: 2px solid var(--gold);
         padding: 1rem 1.75rem;
         margin: 2.5rem 0;
         background: var(--warm-white);
       }
-      .pullquote p {
+.pullquote p {
         font-family: var(--font-display);
         font-size: 1.3rem;
         font-weight: 300;
@@ -577,51 +331,13 @@
         color: var(--black) !important;
         margin: 0;
       }
-      .section-divider {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        margin: 3rem 0;
-      }
-      .section-divider::before,
-      .section-divider::after {
-        content: "";
-        flex: 1;
-        height: 0.5px;
-        background: var(--border);
-      }
-      .section-divider span {
+.section-divider span {
         font-size: 0.62rem;
         letter-spacing: 0.15em;
         color: var(--muted);
         text-transform: uppercase;
       }
-      .faq-box {
-        border: 0.5px solid var(--border);
-        margin: 1.5rem 0;
-      }
-      .faq-box details {
-        padding: 1.25rem 1.5rem;
-        border-bottom: 0.5px solid var(--border);
-      }
-      .faq-box details:last-child {
-        border-bottom: none;
-      }
-      .faq-box summary {
-        font-family: var(--font-display);
-        font-size: 1.1rem;
-        font-weight: 400;
-        cursor: pointer;
-        list-style: none;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .faq-box summary span {
-        color: var(--gold);
-        font-size: 1.2rem;
-      }
-      .faq-box p {
+.faq-box p {
         margin-top: 0.85rem;
         font-size: 0.88rem;
         font-weight: 300;
@@ -629,12 +345,12 @@
         line-height: 1.75;
         margin-bottom: 0;
       }
-      .cta-box {
+.cta-box {
         background: var(--black);
         padding: 2.5rem 2rem;
         margin-top: 3.5rem;
       }
-      .cta-box-eyebrow {
+.cta-box-eyebrow {
         font-size: 0.65rem;
         letter-spacing: 0.15em;
         text-transform: uppercase;
@@ -642,7 +358,7 @@
         margin-bottom: 0.6rem;
         font-weight: 500;
       }
-      .cta-box h3 {
+.cta-box h3 {
         font-family: var(--font-display);
         font-size: 1.5rem;
         font-weight: 300;
@@ -651,14 +367,14 @@
         text-transform: none;
         letter-spacing: 0;
       }
-      .cta-box p {
+.cta-box p {
         font-size: 0.85rem;
         color: #d0cdc8;
         font-weight: 300;
         margin-bottom: 1.4rem;
         line-height: 1.7;
       }
-      .cta-btn {
+.cta-btn {
         display: inline-block;
         font-size: 0.75rem;
         letter-spacing: 0.1em;
@@ -668,15 +384,15 @@
         padding: 0.75rem 1.75rem;
         text-decoration: none;
       }
-      .cta-btn:hover {
+.cta-btn:hover {
         background: #e8e6e2;
       }
-      footer {
+footer {
         background: var(--warm-white);
         border-top: 0.5px solid var(--border);
         padding: 2rem 2rem 1.5rem;
       }
-      .footer-bottom {
+.footer-bottom {
         max-width: 1100px;
         margin: 0 auto;
         display: flex;
@@ -685,115 +401,31 @@
         flex-wrap: wrap;
         gap: 0.75rem;
       }
-      .footer-bottom p {
+.footer-bottom p {
         font-size: 0.7rem;
         color: var(--muted);
       }
-      .footer-nav {
+.footer-nav {
         display: flex;
         gap: 1.5rem;
       }
-      .footer-nav a {
+.footer-nav a {
         font-size: 0.72rem;
         color: var(--muted);
         text-decoration: none;
       }
-      .footer-nav a:hover {
+.footer-nav a:hover {
         color: var(--black);
       }
-      @media (max-width: 600px) {
-        .article-header,
-        .article-body {
-          padding-left: 1.25rem;
-          padding-right: 1.25rem;
-        }
-        nav {
-          padding: 0.9rem 1.25rem;
-        }
-        h1 {
-          font-size: 2rem;
-        }
-        .card-stats {
-          grid-template-columns: 1fr 1fr;
-        }
-        .card-pros-cons {
-          grid-template-columns: 1fr;
-        }
-        .comparison-table {
-          font-size: 0.75rem;
-        }
-        .comparison-table th,
-        .comparison-table td {
-          padding: 0.6rem 0.5rem;
-        }
-      }
-    
-      /* ── NEWSLETTER ── */
-      .newsletter-strip {
-        background: var(--black);
-        padding: 3.5rem 2rem;
-      }
-      .newsletter-inner {
-        max-width: 1100px;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 2rem;
-        flex-wrap: wrap;
-      }
-      .newsletter-text h3 {
-        font-family: var(--font-display);
-        font-size: 1.5rem;
-        font-weight: 400;
-        color: var(--white);
-        margin-bottom: 0.3rem;
-      }
-      .newsletter-text p {
+/* ── NEWSLETTER ── */
+.newsletter-text p {
         font-size: 0.83rem;
         color: rgba(250, 249, 247, 0.5);
         font-weight: 300;
         max-width: 380px;
       }
-      .newsletter-form {
-        display: flex;
-        gap: 0.75rem;
-        flex-wrap: wrap;
-      }
-      .newsletter-form input[type="email"] {
-        background: rgba(250,249,247,0.07);
-        border: 0.5px solid rgba(250,249,247,0.2);
-        color: var(--white);
-        padding: 0.65rem 1.1rem;
-        font-family: var(--font-body);
-        font-size: 0.85rem;
-        outline: none;
-        min-width: 240px;
-      }
-      .newsletter-form input[type="email"]::placeholder {
-        color: rgba(250,249,247,0.3);
-      }
-      .newsletter-form button {
-        background: var(--gold);
-        color: var(--black);
-        border: none;
-        padding: 0.65rem 1.4rem;
-        font-family: var(--font-body);
-        font-size: 0.73rem;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        font-weight: 500;
-        cursor: pointer;
-        transition: background 0.2s;
-      }
-      .newsletter-form button:hover { background: var(--gold-light); }
-    
-      /* ── SOCIAL LINKS ── */
-      .social-links { display: flex; gap: 0.9rem; align-items: center; }
-      .social-links a { color: var(--muted); transition: color 0.2s; display: flex; align-items: center; }
-      .social-links a:hover { color: var(--gold); }
-      .social-links svg { width: 16px; height: 16px; }
-      .breadcrumb {
+/* ── SOCIAL LINKS ── */
+.breadcrumb {
         max-width: 780px;
         margin: 1.5rem auto 0;
         padding: 0 2rem;
@@ -801,10 +433,7 @@
         letter-spacing: 0.04em;
         color: var(--muted);
       }
-      .breadcrumb a { color: var(--muted); text-decoration: none; }
-      .breadcrumb a:hover { color: var(--gold); }
-      .breadcrumb span[aria-hidden] { margin: 0 0.4em; color: var(--border); }
-          .footer-disclaimer {
+.footer-disclaimer {
         max-width: 1100px;
         margin: 1rem auto 0;
         padding: 1rem 2rem 0;
@@ -814,6 +443,22 @@
         text-align: center;
         line-height: 1.6;
       }
+</style>
+<link rel="stylesheet" href="/assets/site-media.css">
+<style>
+@media (max-width: 600px) {
+.article-header,
+        .article-body {
+          padding-left: 1.25rem;
+          padding-right: 1.25rem;
+        }
+nav {
+          padding: 0.9rem 1.25rem;
+        }
+h1 {
+          font-size: 2rem;
+        }
+}
 </style>
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://meilenguru.ch/meilenguru-miles-and-more-credit-card-switzerland">

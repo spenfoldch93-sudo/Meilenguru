@@ -36,16 +36,9 @@
       href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
-    <style>
-      *,
-      *::before,
-      *::after {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      :root {
+    <link rel="stylesheet" href="/assets/site.css">
+<style>
+:root {
         --black: #0a0a0a;
         --white: #faf9f7;
         --warm-white: #f5f3ef;
@@ -62,21 +55,18 @@
         --font-display: "Lora", Georgia, serif;
         --font-body: "DM Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji";
       }
-
-      html {
+html {
         scroll-behavior: smooth; overflow-x: hidden;
       }
-
-      body {
+body {
         font-family: var(--font-body);
         background: var(--white);
         color: var(--black);
         font-size: 15px;
         line-height: 1.6;
       }
-
-      /* ── LANG BANNER ── */
-      .lang-banner {
+/* ── LANG BANNER ── */
+.lang-banner {
         background: var(--black);
         font-size: 0.68rem;
         letter-spacing: 0.12em;
@@ -86,20 +76,15 @@
         justify-content: flex-end;
         gap: 1.5rem;
       }
-      .lang-banner a {
+.lang-banner a {
         color: rgba(250, 249, 247, 0.6);
         text-decoration: none;
         transition: color 0.2s;
         letter-spacing: 0;
         text-transform: none;
       }
-      .lang-banner a:hover {
-        color: var(--gold-light);
-      }
-
-      /* ── NAV ── */
-      .nav-sticky-wrap { position: sticky; top: 0; z-index: 100; }
-      nav:not(.breadcrumb) {
+/* ── NAV ── */
+nav:not(.breadcrumb) {
         position: sticky;
         top: 0;
         z-index: 100;
@@ -111,29 +96,12 @@
         backdrop-filter: blur(12px);
         border-bottom: 0.5px solid var(--border);
       }
-      .logo {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.7em;
-        font-family: var(--font-body);
-        font-size: 1rem;
-        font-weight: 500;
-        letter-spacing: 0.2em;
-        text-transform: uppercase;
-        color: var(--black);
-        text-decoration: none;
-      }
-      .logo svg {
-        width: 2.6em;
-        height: 2.6em;
-        flex-shrink: 0;
-      }
-      .nav-links {
+.nav-links {
         display: flex;
         gap: 2rem;
         list-style: none;
       }
-      .nav-links a {
+.nav-links a {
         font-size: 0.8rem;
         letter-spacing: 0.08em;
         text-transform: uppercase;
@@ -141,11 +109,11 @@
         text-decoration: none;
         transition: color 0.2s;
       }
-      .nav-links a:hover,
+.nav-links a:hover,
       .nav-links a.active {
         color: var(--black);
       }
-      .nav-cta {
+.nav-cta {
         font-size: 0.72rem;
         letter-spacing: 0.1em;
         text-transform: uppercase;
@@ -155,10 +123,10 @@
         text-decoration: none;
         transition: background 0.2s;
       }
-      .nav-cta:hover {
+.nav-cta:hover {
         background: #9a7d26;
       }
-      .nav-toggle {
+.nav-toggle {
         display: none;
         flex-direction: column;
         gap: 5px;
@@ -167,14 +135,14 @@
         cursor: pointer;
         padding: 4px;
       }
-      .nav-toggle span {
+.nav-toggle span {
         display: block;
         width: 22px;
         height: 1.5px;
         background: var(--black);
         transition: all 0.3s;
       }
-      .mobile-menu {
+.mobile-menu {
         display: none;
         flex-direction: column;
         background: var(--white);
@@ -182,10 +150,7 @@
         padding: 1rem 2rem;
         gap: 0.75rem;
       }
-      .mobile-menu.open {
-        display: flex;
-      }
-      .mobile-menu a {
+.mobile-menu a {
         font-size: 0.85rem;
         letter-spacing: 0.06em;
         text-transform: uppercase;
@@ -194,7 +159,7 @@
         padding: 0.4rem 0;
         border-bottom: 0.5px solid var(--border-light);
       }
-      .mobile-menu .mobile-cta {
+.mobile-menu .mobile-cta {
         background: var(--gold);
         color: var(--white);
         padding: 0.75rem 1.5rem;
@@ -202,14 +167,13 @@
         margin-top: 0.5rem;
         border-bottom: none;
       }
-
-      /* ── DISCLAIMER ── */
-      .disclaimer-banner {
+/* ── DISCLAIMER ── */
+.disclaimer-banner {
         background: #fffbf0;
         border-bottom: 0.5px solid #e8d89a;
         padding: 0.8rem 2rem;
       }
-      .disclaimer-inner {
+.disclaimer-inner {
         max-width: 900px;
         margin: 0 auto;
         display: flex;
@@ -220,23 +184,22 @@
         line-height: 1.6;
         font-weight: 300;
       }
-      .disclaimer-icon {
+.disclaimer-icon {
         flex-shrink: 0;
         font-size: 0.8rem;
         margin-top: 0.05rem;
       }
-
-      /* ── PAGE HERO ── */
-      .page-hero {
+/* ── PAGE HERO ── */
+.page-hero {
         background: var(--black);
         color: var(--white);
         padding: 5rem 2rem 4rem;
       }
-      .page-hero-inner {
+.page-hero-inner {
         max-width: 680px;
         margin: 0 auto;
       }
-      .page-eyebrow {
+.page-eyebrow {
         font-size: 0.68rem;
         letter-spacing: 0.18em;
         text-transform: uppercase;
@@ -244,37 +207,36 @@
         font-weight: 500;
         margin-bottom: 1rem;
       }
-      .page-title {
+.page-title {
         font-family: var(--font-display);
         font-size: clamp(2.2rem, 5vw, 3.5rem);
         font-weight: 300;
         line-height: 1.1;
         margin-bottom: 1.25rem;
       }
-      .page-title em {
+.page-title em {
         font-style: italic;
         color: var(--gold-light);
       }
-      .page-subtitle {
+.page-subtitle {
         font-size: 1rem;
         font-weight: 300;
         color: rgba(250, 249, 247, 0.7);
         line-height: 1.7;
         max-width: 520px;
       }
-
-      /* ── CTA SECTION ── */
-      .cta-section {
+/* ── CTA SECTION ── */
+.cta-section {
         background: var(--black);
         color: var(--white);
         padding: 5rem 2rem;
         text-align: center;
       }
-      .cta-inner {
+.cta-inner {
         max-width: 620px;
         margin: 0 auto;
       }
-      .cta-eyebrow {
+.cta-eyebrow {
         font-size: 0.68rem;
         letter-spacing: 0.18em;
         text-transform: uppercase;
@@ -282,31 +244,25 @@
         font-weight: 500;
         margin-bottom: 1rem;
       }
-      .cta-title {
+.cta-title {
         font-family: var(--font-display);
         font-size: clamp(1.8rem, 4vw, 2.8rem);
         font-weight: 300;
         line-height: 1.2;
         margin-bottom: 1.25rem;
       }
-      .cta-title em {
+.cta-title em {
         font-style: italic;
         color: var(--gold-light);
       }
-      .cta-text {
+.cta-text {
         font-size: 0.95rem;
         font-weight: 300;
         color: rgba(250, 249, 247, 0.7);
         line-height: 1.8;
         margin-bottom: 2rem;
       }
-      .cta-buttons {
-        display: flex;
-        gap: 1rem;
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-      .btn-primary {
+.btn-primary {
         font-size: 0.72rem;
         letter-spacing: 0.1em;
         text-transform: uppercase;
@@ -316,10 +272,10 @@
         text-decoration: none;
         transition: background 0.2s;
       }
-      .btn-primary:hover {
+.btn-primary:hover {
         background: #9a7d26;
       }
-      .btn-outline {
+.btn-outline {
         font-size: 0.72rem;
         letter-spacing: 0.1em;
         text-transform: uppercase;
@@ -330,18 +286,17 @@
         border: 0.5px solid rgba(250, 249, 247, 0.3);
         transition: border-color 0.2s;
       }
-      .btn-outline:hover {
+.btn-outline:hover {
         border-color: var(--gold);
         color: var(--gold-light);
       }
-
-      /* ── FOOTER ── */
-      footer {
+/* ── FOOTER ── */
+footer {
         background: var(--black);
         color: var(--white);
         padding: 1.5rem 2rem;
       }
-      .footer-bottom {
+.footer-bottom {
         max-width: 1100px;
         margin: 0 auto;
         display: flex;
@@ -350,18 +305,18 @@
         gap: 1rem;
         flex-wrap: wrap;
       }
-      .footer-bottom p {
+.footer-bottom p {
         font-size: 0.72rem;
         color: rgba(250, 249, 247, 0.35);
         font-weight: 300;
         letter-spacing: 0.04em;
       }
-      .footer-nav {
+.footer-nav {
         display: flex;
         gap: 1.5rem;
         flex-wrap: wrap;
       }
-      .footer-nav a {
+.footer-nav a {
         font-size: 0.7rem;
         letter-spacing: 0.08em;
         text-transform: uppercase;
@@ -369,99 +324,19 @@
         text-decoration: none;
         transition: color 0.2s;
       }
-      .footer-nav a:hover {
+.footer-nav a:hover {
         color: var(--gold-light);
       }
-
-      /* ── RESPONSIVE ── */
-      @media (max-width: 768px) {
-        .nav-links,
-        .nav-cta {
-          display: none;
-        }
-        .nav-toggle {
-          display: flex;
-        }
-        .cta-section {
-          padding: 4rem 1.5rem;
-        }
-        .footer-bottom {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-      }
-      @media (max-width: 480px) {
-        .card-grid-4 {
-          grid-template-columns: 1fr;
-        }
-      }
-    
-      /* ── NEWSLETTER ── */
-      .newsletter-strip {
-        background: var(--black);
-        padding: 3.5rem 2rem;
-      }
-      .newsletter-inner {
-        max-width: 1100px;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 2rem;
-        flex-wrap: wrap;
-      }
-      .newsletter-text h3 {
-        font-family: var(--font-display);
-        font-size: 1.5rem;
-        font-weight: 400;
-        color: var(--white);
-        margin-bottom: 0.3rem;
-      }
-      .newsletter-text p {
+/* ── RESPONSIVE ── */
+/* ── NEWSLETTER ── */
+.newsletter-text p {
         font-size: 0.83rem;
         color: rgba(250, 249, 247, 0.5);
         font-weight: 300;
         max-width: 380px;
       }
-      .newsletter-form {
-        display: flex;
-        gap: 0.75rem;
-        flex-wrap: wrap;
-      }
-      .newsletter-form input[type="email"] {
-        background: rgba(250,249,247,0.07);
-        border: 0.5px solid rgba(250,249,247,0.2);
-        color: var(--white);
-        padding: 0.65rem 1.1rem;
-        font-family: var(--font-body);
-        font-size: 0.85rem;
-        outline: none;
-        min-width: 240px;
-      }
-      .newsletter-form input[type="email"]::placeholder {
-        color: rgba(250,249,247,0.3);
-      }
-      .newsletter-form button {
-        background: var(--gold);
-        color: var(--black);
-        border: none;
-        padding: 0.65rem 1.4rem;
-        font-family: var(--font-body);
-        font-size: 0.73rem;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        font-weight: 500;
-        cursor: pointer;
-        transition: background 0.2s;
-      }
-      .newsletter-form button:hover { background: var(--gold-light); }
-    
-      /* ── SOCIAL LINKS ── */
-      .social-links { display: flex; gap: 0.9rem; align-items: center; }
-      .social-links a { color: var(--muted); transition: color 0.2s; display: flex; align-items: center; }
-      .social-links a:hover { color: var(--gold); }
-      .social-links svg { width: 16px; height: 16px; }
-          .breadcrumb {
+/* ── SOCIAL LINKS ── */
+.breadcrumb {
         max-width: 1100px;
         margin: 1.25rem auto 0;
         padding: 0 2rem;
@@ -469,10 +344,7 @@
         letter-spacing: 0.04em;
         color: var(--muted);
       }
-      .breadcrumb a { color: var(--muted); text-decoration: none; }
-      .breadcrumb a:hover { color: var(--gold); }
-      .breadcrumb span[aria-hidden] { margin: 0 0.4em; color: var(--border); }
-      .footer-disclaimer {
+.footer-disclaimer {
         max-width: 1100px;
         margin: 1rem auto 0;
         padding: 1rem 2rem 0;
@@ -482,6 +354,22 @@
         text-align: center;
         line-height: 1.6;
       }
+</style>
+<link rel="stylesheet" href="/assets/site-media.css">
+<style>
+@media (max-width: 768px) {
+.nav-links,
+        .nav-cta {
+          display: none;
+        }
+.cta-section {
+          padding: 4rem 1.5rem;
+        }
+.footer-bottom {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+}
 </style>
       <meta property="og:type" content="website">
     <meta property="og:url" content="https://meilenguru.ch/strategien">

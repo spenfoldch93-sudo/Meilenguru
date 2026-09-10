@@ -1,87 +1,72 @@
 # Meilenguru
 
-A static HTML website for Swiss-based frequent flyer mile earning and redemption advice. The site targets Swiss residents who want to accumulate Miles & More and Flying Blue miles from everyday CHF spending in order to book business/first class flights. It is deployed on Netlify at **meilenguru.ch**.
+Static HTML site for Swiss-based frequent-flyer advice — earning Miles & More and
+Flying Blue miles from everyday CHF spending, and redeeming them for business and
+first class. Deployed on Netlify at **meilenguru.ch**. Bilingual: English pages and
+German pages exist as separate files.
 
-## What the site covers
+## Working here efficiently
 
-- Strategies for earning miles via Swiss credit cards (Amex, etc.) and partner programmes
-- Flying Blue and Miles & More programme guides
-- Real trip reports (blog posts) showing award redemptions
-- A paid 30-minute consultation offering (CHF 79)
-- Referral links and tools pages
+This repo is ~114 hand-written HTML pages. Reading one costs roughly 6,000–15,000
+tokens, so how a task is approached matters more than usual.
 
-## File structure
+- **Never read the whole site.** Use `grep`/`rg` to find the pages that matter, then
+  read only those. `rg -l "Bundle & Go" *.html` beats opening files to look.
+- **For a change across many pages, write a script** (`sed -i`, or a short Python
+  read-modify-write) instead of opening each page. A script never loads page content
+  into context. `scripts/seo_check.py` is an existing example.
+- **Edit, don't rewrite.** Targeted string replacements cost a fraction of re-emitting
+  a whole page.
+- **Styling changes usually belong in `assets/`, not in a page** — see below.
+- Prefer one task per session. Files read earlier stay in context and are re-sent on
+  every subsequent turn.
 
-All files live flat in the project root — there are no subdirectories beyond `.git`.
+## Layout
 
-### Pages
+```
+*.html              ~114 pages, flat in the repo root
+assets/site.css     shared base styles
+assets/site-media.css  shared responsive styles
+cookie-consent.js   the only page script
+docs/               working notes (SEO report, language-migration proposal)
+scripts/            seo_check.py
+netlify.toml        redirects + security headers
+_redirects          URL redirects
+sitemap.xml, robots.txt, llms.txt
+```
 
-| File | Purpose |
-|------|---------|
-| `index.html` | Homepage — overview, hero, value proposition |
-| `blog.html` | Blog index listing all trip reports and strategy articles |
-| `strategies.html` | Overview of earning strategies |
-| `strategies-flying-blue.html` | Flying Blue-specific strategy guide |
-| `strategies-miles-more.html` | Miles & More-specific strategy guide |
-| `strategies-amex.html` | American Express earning strategy |
-| `strategies-benchmark.html` | Benchmark / comparison page |
-| `about.html` | About page |
-| `consultation.html` | Consultation booking page |
-| `referrals.html` | Referral links page |
-| `tools.html` | Tools and calculators page |
+Page naming is not fully consistent — the same article can exist as
+`meilenguru-strategy-<topic>.html` (EN) and `<thema>-schweiz.html` (DE), and some
+older pages use other patterns. Grep for the headline rather than guessing a filename.
 
-### Blog / article pages
+## CSS architecture
 
-| File | Topic |
-|------|-------|
-| `meilenguru-blog-perth-singapore-zurich-sq-swiss.html` | Trip report: Perth → Singapore → Zurich on SQ (Swiss miles) |
-| `meilenguru-blog-perth-zurich-oman-air.html` | Trip report: Perth → Zurich on Oman Air |
-| `meilenguru-blog-singapore-zurich-sq346.html` | Trip report: Singapore → Zurich on SQ346 |
-| `meilenguru-blog-singapore-amsterdam-klm.html` | Trip report: Singapore → Amsterdam on KLM |
-| `meilenguru-blog-zurich-cancun-tap.html` | Trip report: Zurich → Cancun on TAP |
-| `meilenguru-blog-lh-first-class-sin-bsl.html` | Trip report: Lufthansa First Class Singapore → Basel |
-| `meilenguru-strategy-flying-blue-promo-awards.html` | Strategy: Flying Blue promo awards |
-| `meilenguru-strategy-100k-miles-without-flying.html` | Strategy: earning 100k miles without flying |
-| `meilenguru-strategy-best-swiss-credit-cards-miles.html` | Strategy: best Swiss credit cards for miles |
-| `meilenguru-flying-blue-promo-may-2026.html` | Flying Blue May 2026 promo awards |
-| `meilen-sammeln-ohne-fliegen-schweiz.html` | DE: earning miles without flying (Switzerland) |
-| `flying-blue-promo-awards-schweiz.html` | DE: Flying Blue promo awards (Switzerland) |
-| `beste-kreditkarte-meilen-schweiz.html` | DE: best credit cards for miles (Switzerland) |
+Styles load in three stages, and the order is load-bearing:
 
-### Assets
+1. `assets/site.css` — rules that were byte-identical on every page using them
+2. the page's own `<style>` — anything specific to that page
+3. `assets/site-media.css` — shared `@media` rules, which must come *after* the
+   page's `<style>` so base rules never override breakpoints
 
-| File | Purpose |
-|------|---------|
-| `logo-fb.png` | Flying Blue logo |
-| `logo-mm.png` | Miles & More logo |
-| `logo-amex.png` | American Express logo |
-| `logo_flyingblue-RVB_couleur_1.png` | Flying Blue full colour logo |
-| `Miles-More-Logo-500x281.png` | Miles & More banner logo |
-| `Miles_&_More_Lufthansa_Logo.svg.png` | Lufthansa / M&M combined logo |
-| `American Express.png` | Amex card image |
-| `Flying-Blue-1024x538-18.jpg` | Flying Blue hero image |
-| `Oman_Air.jpeg` | Oman Air cabin photo |
-| `Oman_Air_Food.jpeg` | Oman Air food photo |
-| `Thai_Business.jpeg` | Thai Airways business class photo |
-| `pexels-davegarcia-32641818.jpg` | Stock travel photo |
+Some pages add a second `<style>` after step 3 for their own media queries.
 
-### Config / meta
+Rules when touching CSS:
 
-| File | Purpose |
-|------|---------|
-| `netlify.toml` | Netlify deployment config — redirects netlify.app → meilenguru.ch, sets security headers |
-| `sitemap.xml` | XML sitemap for search engines |
-
-## Tech stack
-
-Pure static HTML/CSS — no build step, no framework, no JavaScript bundler. Styles are written inline inside `<style>` tags in each HTML file. Fonts are loaded from Google Fonts (Cormorant Garamond + DM Sans).
+- A change that should apply site-wide goes in `assets/site.css`. One edit, not 114.
+- A rule that differs on even one page stayed inline on purpose — the shared files
+  only hold rules that were identical everywhere, because a page-level override
+  cannot un-set a property the shared rule adds.
+- **Keep a selector's media queries together.** If `.foo` has both a `@768` and a
+  `@480` rule, both live in the same place. Splitting them between `site-media.css`
+  and a page's `<style>` inverts the breakpoints.
+- Design tokens are CSS custom properties on `:root`. `:root` is *not* shared —
+  several pages define extra variables — so a new global token must be added to
+  each page that needs it, or promoted into `site.css` only if every page agrees.
 
 ## Design system
 
-Defined as CSS custom properties at the top of each page:
-
 | Variable | Value |
-|----------|-------|
+|---|---|
 | `--black` | `#0a0a0a` |
 | `--white` | `#faf9f7` |
 | `--warm-white` | `#f5f3ef` |
@@ -91,18 +76,18 @@ Defined as CSS custom properties at the top of each page:
 | `--font-display` | Cormorant Garamond (serif) |
 | `--font-body` | DM Sans (sans-serif) |
 
+Fonts load from Google Fonts. No build step, no framework, no bundler.
+
 ## Content style rules
 
-- Never use en-dashes (`–`) anywhere in page content — for ranges, compound words, or route pairs (e.g. "Zürich–Cancún", "2-3 years"), use a regular hyphen (`-`) instead.
-- Em-dashes (`—`) are fine and used intentionally throughout the site for asides/parentheticals — this rule does not apply to them.
+- Never use en-dashes (`–`) in page content. For ranges, compound words and route
+  pairs ("Zürich-Cancún", "2-3 years") use a plain hyphen (`-`).
+- Em-dashes (`—`) are fine and used deliberately for asides.
 
 ## Deployment
 
-The site is hosted on **Netlify**. Pushes to the `main` branch on GitHub trigger an automatic deploy. No build command is needed — Netlify serves the files directly.
-
-## Workflow
-
-After making any changes, commit and push to GitHub so the site deploys automatically:
+Netlify serves the files directly; no build command. Pushing to `main` on GitHub
+deploys automatically.
 
 ```bash
 git add <changed-files>
@@ -110,6 +95,10 @@ git commit -m "description of change"
 git push origin main
 ```
 
+Because there is no build step, a broken CSS edit ships as-is. After a change that
+touches shared styles, check a page at desktop and mobile width before pushing.
+
 ## Recurring tasks
 
-At session start, re-arm the weekly referral audit cron (see `~/.claude/CLAUDE.md` for details). The audit prompt lives at `~/.claude/referral-audit-prompt.md`.
+At session start, re-arm the weekly referral audit cron (see `~/.claude/CLAUDE.md`).
+The audit prompt lives at `~/.claude/referral-audit-prompt.md`.
