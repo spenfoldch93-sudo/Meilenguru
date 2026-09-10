@@ -55,6 +55,25 @@
 
   document.body.appendChild(banner);
 
+  // The Cal.com floating "Book Consultation" button renders inside a shadow
+  // root with z-index 2147483647 (max possible) and sits fixed bottom-right —
+  // it always renders on top of this banner, and on mobile (where the header
+  // CTA is hidden) it's the only booking button visible, so it ends up
+  // blocking the Accept/Decline buttons. Hide it for as long as the banner
+  // is open; it reappears the moment the banner is dismissed.
+  function setCalButtonHidden(hidden) {
+    var cal = document.querySelector("cal-floating-button");
+    if (cal) cal.style.display = hidden ? "none" : "";
+  }
+  setCalButtonHidden(true);
+  var calObserver = new MutationObserver(function () {
+    if (document.querySelector("cal-floating-button")) {
+      setCalButtonHidden(true);
+      calObserver.disconnect();
+    }
+  });
+  calObserver.observe(document.body, { childList: true, subtree: true });
+
   banner.addEventListener("click", function (e) {
     var action = e.target.getAttribute("data-consent");
     if (!action) return;
@@ -65,5 +84,7 @@
       localStorage.setItem(STORAGE_KEY, "denied");
     }
     banner.remove();
+    calObserver.disconnect();
+    setCalButtonHidden(false);
   });
 })();
