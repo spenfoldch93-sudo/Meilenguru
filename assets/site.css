@@ -934,7 +934,7 @@
    page (--black, --white, --gold, --gold-light, --muted, the two font vars),
    not the extra gold-dim/border-gold tokens some pages omit. */
 .card-recommend {
-  background: var(--black); padding: 2.5rem; margin: 2rem 0; display: flex; flex-direction: column; gap: 1.25rem
+  background: var(--black); padding: 2.5rem 2rem; margin: 0 auto 2rem; max-width: 780px; display: flex; flex-direction: column; gap: 1.25rem
 }
 .card-recommend .card-recommend-eyebrow {
   font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-light); font-weight: 500
