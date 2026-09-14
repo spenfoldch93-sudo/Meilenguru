@@ -927,3 +927,40 @@
 .lounge-badge.ticket-biz { color: var(--muted); border-color: var(--border-mid) }
 .lounge-region.empty { display: none }
 
+/* Prominent partner-card recommendation block (standalone, black box) and the
+   compact tag + button pair used to raise CTA visibility inside an existing
+   grid card, where a full block would break the grid. Introduced 2026-09-14
+   for the Viseca Flying Blue pilot; only relies on tokens defined on every
+   page (--black, --white, --gold, --gold-light, --muted, the two font vars),
+   not the extra gold-dim/border-gold tokens some pages omit. */
+.card-recommend {
+  background: var(--black); padding: 2.5rem; margin: 2rem 0; display: flex; flex-direction: column; gap: 1.25rem
+}
+.card-recommend .card-recommend-eyebrow {
+  font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-light); font-weight: 500
+}
+.card-recommend-headline {
+  font-family: var(--font-display); font-size: 1.75rem; font-weight: 400; color: var(--white); line-height: 1.2
+}
+.card-recommend .card-recommend-sub {
+  font-size: 0.9rem; color: rgba(250, 249, 247, 0.65); font-weight: 300; line-height: 1.6; max-width: 42em
+}
+.card-recommend-points { list-style: none; display: grid; gap: 0.6rem }
+.card-recommend .card-recommend-points li {
+  font-size: 0.85rem; color: rgba(250, 249, 247, 0.85); font-weight: 300; line-height: 1.55; padding-left: 1.3rem; position: relative
+}
+.card-recommend-points li::before { content: "✓"; position: absolute; left: 0; color: var(--gold-light); font-weight: 500 }
+.card-recommend-points li strong { color: var(--white); font-weight: 500 }
+.card-recommend .card-recommend-cta {
+  display: inline-block; align-self: flex-start; background: var(--gold); color: var(--black); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; padding: 0.9rem 1.75rem; text-decoration: none; border-bottom: none; transition: background 0.2s
+}
+.card-recommend .card-recommend-cta:hover { background: var(--gold-light) }
+.card-recommend .card-recommend-fine { font-size: 0.7rem; color: rgba(250, 249, 247, 0.35); font-weight: 300 }
+.earn-card .card-recommend-tag, .promo-card .card-recommend-tag, .link-box .card-recommend-tag {
+  display: inline-block; font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); font-weight: 500; margin-bottom: 0.5rem
+}
+.earn-card .card-recommend-btn, .promo-card .card-recommend-btn, .link-box .card-recommend-btn {
+  display: inline-block; background: var(--gold); color: var(--black); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; padding: 0.65rem 1.25rem; text-decoration: none; border-bottom: none; transition: background 0.2s
+}
+.earn-card .card-recommend-btn:hover, .promo-card .card-recommend-btn:hover, .link-box .card-recommend-btn:hover { background: var(--gold-light) }
+
