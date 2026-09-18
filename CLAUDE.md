@@ -100,5 +100,22 @@ touches shared styles, check a page at desktop and mobile width before pushing.
 
 ## Recurring tasks
 
-At session start, re-arm the weekly referral audit cron (see `~/.claude/CLAUDE.md`).
-The audit prompt lives at `~/.claude/referral-audit-prompt.md`.
+A weekly audit runs on its own — a macOS `launchd` LaunchAgent
+(`com.meilenguru.weeklyaudit`, plist at
+`~/Library/LaunchAgents/com.meilenguru.weeklyaudit.plist`) fires
+`~/.claude/meilenguru-weekly-audit.sh` at every login and daily at 9:07am; the
+script gates actual execution to roughly once every 7 days. It runs `claude -p`
+headlessly against `~/.claude/referral-audit-prompt.md`, which covers the whole
+site — welcome-bonus figures, `referrals.html` / `empfehlungen.html` and every
+card's dedicated review page (the on-site page is called "Card offers";
+"referrals"/`empfehlungen` is a legacy filename left over from when the site ran
+referral links, which it no longer does), the monthly Flying Blue Promo Awards
+post, the availability radar, and the homepage ticker — and commits + pushes any
+fixes directly. Logs at `~/.claude/logs/meilenguru-audit.log`.
+
+This is OS-level automation: it runs regardless of whether you're working here
+via Claude Code (terminal) or Claude Desktop, and needs no re-arming or
+session-start action. Full audit instructions live in
+`~/.claude/referral-audit-prompt.md`, not in this repo. Don't set up a second
+recurring job for this (local cron or a Cowork scheduled routine) — this is the
+only one, and it already covers the full card-offers scope.
